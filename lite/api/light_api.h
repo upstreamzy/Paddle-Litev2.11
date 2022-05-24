@@ -45,9 +45,13 @@ class LITE_API LightPredictor {
   // from memory.
   LightPredictor(const std::string& lite_model_file,
                  bool model_from_memory = false) {
+    printf("constructor function of LightPredictor is begaining\n");
     scope_ = std::make_shared<Scope>();
+    printf("constructor function of LightPredictor is Scope's constructor\n");
     program_desc_ = std::make_shared<cpp::ProgramDesc>();
+    printf("constructor function of LightPredictor is ProgramDesc's constructor\n");
     Build(lite_model_file, model_from_memory);
+    printf("constructor function of LightPredictor is Build ending\n");
   }
 
   // NOTE: This is a deprecated API and will be removed in latter release.

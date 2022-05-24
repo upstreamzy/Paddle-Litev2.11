@@ -322,6 +322,7 @@ namespace lite_api {
 template <>
 std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(
     const CxxConfig &config) {
+  printf("In cxx_api_impl.cc CreatePaddlePredictor  function which invoke Init function\n");
   static std::mutex mutex_conf;
   std::unique_lock<std::mutex> lck(mutex_conf);
   auto x = std::make_shared<lite::CxxPaddleApiImpl>();

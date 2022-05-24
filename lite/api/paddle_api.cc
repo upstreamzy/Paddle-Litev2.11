@@ -300,6 +300,7 @@ void PaddlePredictor::SaveOptimizedModel(const std::string &model_dir,
 
 template <typename ConfigT>
 std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(const ConfigT &) {
+  printf("In paddle_api.cc no namespace CreatePaddlePredictor\n");
   return std::shared_ptr<PaddlePredictor>();
 }
 

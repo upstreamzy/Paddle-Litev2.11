@@ -25,21 +25,33 @@ namespace lite {
 void LightPredictor::Build(const std::string& lite_model_file,
                            bool model_from_memory) {
   if (model_from_memory) {
+    printf("model_from_memory == TRUE\n");
     LoadModelNaiveFromMemory(
         lite_model_file, scope_.get(), program_desc_.get());
+        printf("LoadModelNaiveFromMemory\n");
   } else {
+    printf("In LightPredictor class of Build function LoadModelNaiveFromFile is begainning\n");
     LoadModelNaiveFromFile(lite_model_file, scope_.get(), program_desc_.get());
+    printf("In LightPredictor class of Build function LoadModelNaiveFromFile is ending\n");
   }
 
   // For weight quantization of post training, load the int8/16 weights
   // for optimized model, and dequant it to fp32.
+  printf("In LightPredictor class of Build function DequantizeWeight() is begainning\n");
   DequantizeWeight();
+  printf("In LightPredictor class of Build function DequantizeWeight() is ending\n");
 #ifdef ENABLE_ARM_FP16
   // fp16 Weight convert
+  printf("In LightPredictor class of Build function WeightFP32ToFP16() is ending\n");
   WeightFP32ToFP16();
+  printf("In LightPredictor class of Build function WeightFP32ToFP16() is ending\n");
 #endif
+  printf("In LightPredictor class of Build function BuildRuntimeProgram() is begainning\n");
   BuildRuntimeProgram(program_desc_);
+  printf("In LightPredictor class of Build function BuildRuntimeProgram() is ending\n");
+  printf("In LightPredictor class of Build function PrepareFeedFetch() is begainning\n");
   PrepareFeedFetch();
+  printf("In LightPredictor class of Build function PrepareFeedFetch() is ending\n");
 }
 
 void LightPredictor::Build(const std::string& model_dir,

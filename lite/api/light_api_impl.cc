@@ -23,7 +23,7 @@
 #endif
 #include "lite/core/parallel_defines.h"
 #include "lite/core/thread_pool.h"
-
+#include <cstdio>
 #if (defined LITE_WITH_X86) && (defined PADDLE_WITH_MKLML) && \
     !(defined LITE_ON_MODEL_OPTIMIZE_TOOL)
 #include "lite/backends/x86/mklml.h"
@@ -34,7 +34,9 @@ namespace lite {
 
 void LightPredictorImpl::Init(const lite_api::MobileConfig& config) {
   // LightPredictor Only support NaiveBuffer backend in publish lib
+  printf("In LightPredictorImpl class Init function\n");
   if (config.lite_model_file().empty()) {
+    printf("Init function config.lite_model_file().empty() != NULL\n");
     raw_predictor_.reset(
         new LightPredictor(config.model_dir(),
                            config.model_buffer(),
@@ -42,12 +44,19 @@ void LightPredictorImpl::Init(const lite_api::MobileConfig& config) {
                            config.is_model_from_memory(),
                            lite_api::LiteModelType::kNaiveBuffer));
   } else {
+    printf("Init function config.lite_model_file().empty() == NULL\n");
     raw_predictor_.reset(new LightPredictor(config.lite_model_file(),
                                             config.is_model_from_memory()));
+    printf("raw_predictor_.reset function is ending\n");
   }
+  printf("config.power_mode() invoke begaining\n");
   mode_ = config.power_mode();
+  printf("config.threads() invoke begainning\n");
   threads_ = config.threads();
+
+  printf("ifdef LITE_USE_THREAD_POOL is begainning\n");
 #ifdef LITE_USE_THREAD_POOL
+  printf("whether is AcquireThreadPool ");
   int thread_num = ThreadPool::Init(threads_);
   if (thread_num > 1) {
     ThreadPool::AcquireThreadPool();
@@ -67,6 +76,7 @@ void LightPredictorImpl::Init(const lite_api::MobileConfig& config) {
 
 #if defined(LITE_ON_MODEL_OPTIMIZE_TOOL) || defined(LITE_WITH_PYTHON) || \
     defined(LITE_WITH_NNADAPTER)
+    printf("kNNAdapter\n");
   // Use scope to store the model-level configuration for the subgraph kernel
   Context<TargetType::kNNAdapter>::SetNNAdapterDeviceNames(
       raw_predictor_->scope(), config.nnadapter_device_names());
@@ -89,6 +99,7 @@ void LightPredictorImpl::Init(const lite_api::MobileConfig& config) {
 #ifdef LITE_WITH_STATIC_MKL
   MKL_Set_Num_Threads(real_num_threads);
 #else
+  printf("x86::MKL_Set_Num_Threads(real_num_threads)\n");
   x86::MKL_Set_Num_Threads(real_num_threads);
 #endif
   VLOG(3) << "x86_math_num_threads() is set successfully and the "
@@ -171,6 +182,7 @@ namespace lite_api {
 template <>
 std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(
     const MobileConfig& config) {
+  printf("In light_api_impl.cc CreatePaddlePredictor  function which invoke Init function\n");
   auto x = std::make_shared<lite::LightPredictorImpl>();
   x->Init(config);
   return x;
