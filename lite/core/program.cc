@@ -260,6 +260,10 @@ RuntimeProgram::RuntimeProgram(
     Scope* exec_scope,
     int block_idx)
     : exec_scope_(exec_scope) {
+  
+  printf("In RuntimeProgram constructor function of three args\n");
+  printf("Create runtime program from sub_block desc according to block_idx and program_desc, which is used for while/conditional_block/subgraph op.\n");
+  
   CHECK(program_desc);
   auto block_size = program_desc->BlocksSize();
   CHECK(block_size) << "No block found!";
@@ -269,6 +273,7 @@ RuntimeProgram::RuntimeProgram(
   auto block_desc = program_desc->GetBlock<cpp::BlockDesc>(block_idx);
   instructions_.resize(kRootBlockIdx + 1);
   auto op_size = block_desc->OpsSize();
+  printf("In RuntimeProgram class of 3 args constructor function , program_desc has been ready\n");
   for (size_t op_idx = 0; op_idx < op_size; op_idx++) {
     auto op_desc = block_desc->GetOp<cpp::OpDesc>(op_idx);
     CHECK(op_desc);
@@ -295,6 +300,9 @@ RuntimeProgram::RuntimeProgram(
         "' is not supported by Paddle-Lite.";
 #endif
     CHECK(op) << ops_error_message;
+
+    printf("In RuntimeProgram class of 3 args constructor function CHECK(op) is ending\n");
+
 
     if (op_type == "while") {
       static_cast<operators::WhileOp*>(op.get())->SetProgramDesc(program_desc);
@@ -338,12 +346,19 @@ RuntimeProgram::RuntimeProgram(
           op_type + "' is not supported by Paddle-Lite.";
 #endif
 
+      printf("In RuntimeProgram class of 3 args constructor function auto kernels = op->CreateKernels({place});\n");
+      
       auto kernels = op->CreateKernels({place});
       if (kernels.size() == 0 && place.target == TargetType::kARM) {
         place.target = TargetType::kHost;
         kernels = op->CreateKernels({place});
       }
       CHECK_GT(kernels.size(), 0) << kernels_error_message;
+
+
+      printf("In RuntimeProgram class of 3 args constructor function CHECK_GT(kernels.size(), 0) is ending\n");
+
+
       auto it = std::find_if(
           kernels.begin(), kernels.end(), [&](std::unique_ptr<KernelBase>& it) {
             return it->alias() == alias;
@@ -369,6 +384,7 @@ RuntimeProgram::RuntimeProgram(
     }
     instructions_[kRootBlockIdx].emplace_back(std::move(op), std::move(kernel));
   }
+  printf("In RuntimeProgram class of 3 args constructor function , the iterator of ops has been ready\n");
   Init();
 }
 

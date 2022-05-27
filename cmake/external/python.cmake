@@ -39,7 +39,7 @@ print(s.get_config_var('LDVERSION') or s.get_config_var('VERSION'));
     # Convert the process output into a list
     string(REGEX REPLACE ";" "\\\\;" _PYTHON_VALUES ${_PYTHON_VALUES})
     string(REGEX REPLACE "\n" ";" _PYTHON_VALUES ${_PYTHON_VALUES})
-    list(GET _PYTHON_VALUES 0 PYTHON_PREFIX)
+    list(GET _PYTHON_VALUES 0 )
     list(GET _PYTHON_VALUES 1 PYTHON_LIBRARY_SUFFIX)
 
     # Make sure all directory separators are '/'

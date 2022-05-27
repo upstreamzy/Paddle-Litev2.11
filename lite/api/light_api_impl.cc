@@ -182,7 +182,7 @@ namespace lite_api {
 template <>
 std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(
     const MobileConfig& config) {
-  printf("In light_api_impl.cc CreatePaddlePredictor  function which invoke Init function\n");
+  printf("In light_api_impl.cc CreatePaddlePredictor  function\n");
   auto x = std::make_shared<lite::LightPredictorImpl>();
   x->Init(config);
   return x;

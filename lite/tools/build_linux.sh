@@ -12,8 +12,8 @@ TOOLCHAIN=gcc
 # ON or OFF, default OFF.
 WITH_EXTRA=ON
 # controls whether to compile python lib, default is OFF.
-WITH_PYTHON=OFF
-PY_VERSION=""
+WITH_PYTHON=ON
+PY_VERSION="3.7"
 # ON or OFF, default is OFF
 WITH_STATIC_LIB=OFF
 # controls whether to compile cv functions into lib, default is OFF.
@@ -107,7 +107,7 @@ readonly workspace=$PWD/$(dirname $0)/../../
 readonly CMAKE_COMMON_OPTIONS="-DWITH_LITE=ON \
                             -DCMAKE_BUILD_TYPE=Release \
                             -DWITH_MKLDNN=OFF \
-                            -DWITH_TESTING=OFF"
+                            -DWITH_TESTING=ON"
 
 # function of set options for benchmark
 function set_benchmark_options {

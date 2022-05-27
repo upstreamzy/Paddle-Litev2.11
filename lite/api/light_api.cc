@@ -207,13 +207,16 @@ void LightPredictor::PrepareFeedFetch() {
 
 void LightPredictor::BuildRuntimeProgram(
     const std::shared_ptr<const cpp::ProgramDesc>& program_desc) {
+  printf("In LightPredictro class of BuildRuntimeProgram function beganing\n");
   auto* exe_scope = &scope_->NewScope();
   // Prepare workspace
+  printf("In LightPredictro class of BuildRuntimeProgram function Prepare workspace\n");
   scope_->Var("feed")->GetMutable<std::vector<lite::Tensor>>();
   scope_->Var("fetch")->GetMutable<std::vector<lite::Tensor>>();
   CHECK(program_desc);
   auto block_size = program_desc->BlocksSize();
   CHECK(block_size);
+  printf("In LightPredictro class of BuildRuntimeProgram function , program_desc has been ready\n");
   for (size_t block_idx = 0; block_idx < block_size; ++block_idx) {
     auto block_desc = program_desc->GetBlock<cpp::BlockDesc>(block_idx);
     auto var_size = block_desc->VarsSize();
@@ -240,6 +243,7 @@ void LightPredictor::BuildRuntimeProgram(
   }
   // Only extracting the ops and generate the runtime program from the main
   // block desc
+  printf("In LightPredictro class of BuildRuntimeProgram function Only extracting the ops and generate the runtime program from the main block desc\n");
   program_.reset(new RuntimeProgram(program_desc, exe_scope, kRootBlockIdx));
 }
 
