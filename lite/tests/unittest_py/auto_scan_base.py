@@ -611,12 +611,13 @@ class AutoScanBaseTest(unittest.TestCase):
 
             # baseline: cpu no ir_optim run
             base_config = self.create_inference_config(ir_optim=False)
+            logging.info("The AutoScanBaseTest class's run_model_test base_config local-value is : {}".format(base_config))
             results.append(
                 self.run_test_config(model, params, base_config, feed_data))
             flag_precision_fp16 = False
             for paddlelite_config in paddlelite_configs:
                 pred_config = paddlelite_config.value()
-                logging.info("The AutoScanBaseTest class's run_model_test paddlelite_config.value() pred_config part-vlaue is : {}".format(pred_config))
+                logging.info("The AutoScanBaseTest class's run_model_test paddlelite_config.value() pred_config local-vlaue is : {}".format(pred_config))
                 try:
                     result, opt_model_bytes = self.run_lite_config(
                         model, params, feed_data, pred_config, args.server_ip)

@@ -373,7 +373,7 @@ void ConfigBase::set_power_mode(paddle::lite_api::PowerMode mode) {
 }
 
 void ConfigBase::set_threads(int threads) {
-  printf("CxxConfig class base class 's set_threads is running and threads is %d \n", threads);
+  printf("ConfigBase class base class 's set_threads is running and threads is %d \n", threads);
 #ifdef LITE_WITH_ARM
   lite::DeviceInfo::Global().SetRunMode(mode_, threads);
   mode_ = lite::DeviceInfo::Global().mode();

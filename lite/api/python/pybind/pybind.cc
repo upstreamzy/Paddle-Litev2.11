@@ -33,7 +33,7 @@
 #include "lite/api/paddle_api.h"
 #include "lite/api/python/pybind/tensor_py.h"
 #include "lite/core/tensor.h"
-
+#include <cstdio.h>
 namespace py = pybind11;
 
 namespace paddle {
@@ -116,6 +116,7 @@ void BindLiteApi(py::module *m) {
 #ifndef LITE_ON_TINY_PUBLISH
   m->def("create_paddle_predictor",
          [](const CxxConfig &config) -> std::unique_ptr<CxxPaddleApiImpl> {
+           printf("In pybind.cc create_paddle_predictor \n");
            auto x = std::unique_ptr<CxxPaddleApiImpl>(new CxxPaddleApiImpl());
            x->Init(config);
            return std::move(x);

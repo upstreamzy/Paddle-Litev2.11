@@ -326,6 +326,7 @@ std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(
   static std::mutex mutex_conf;
   std::unique_lock<std::mutex> lck(mutex_conf);
   auto x = std::make_shared<lite::CxxPaddleApiImpl>();
+  printf("In cxx_api_impl.cc CreatePaddlePredictor  function which invoke Init function\n");
   x->Init(config);
   return x;
 }

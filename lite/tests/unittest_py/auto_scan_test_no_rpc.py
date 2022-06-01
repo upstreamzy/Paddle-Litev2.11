@@ -59,6 +59,7 @@ def ParsePaddleLiteConfig(self, config):
     if "valid_targets" in config:
         valid_places = []
         for place_str in config["valid_targets"]:
+            logging.info("ParsePaddleLiteConfig function place_str is {}".format(place_str))
             valid_places.append(ParsePlaceInfo(place_str))
         lite_config.set_valid_places(valid_places)
     if "thread" in config:
@@ -99,7 +100,10 @@ class AutoScanTest(AutoScanBaseTest):
         config = ParsePaddleLiteConfig(self, pred_config)
         config.set_model_buffer(model, len(model), params, len(params))
         predictor = create_paddle_predictor(config)
-
+        logging.info("The AutoScanTest class run_lite_config function create_paddle_predictor is {}".format(create_paddle_predictor(config)))
+        logging.info("The AutoScanTest class run_lite_config function create_paddle_predictor is {}".format(create_paddle_predictor))
+        # logging.info("The AutoScanTest class run_lite_config function create_paddle_predictor is {}".format(create_paddle_predictor()))
+        
         # 3. optimized model
         predictor.save_optimized_pb_model(self.cache_dir + "/opt_model/")
         with open(self.cache_dir + "/opt_model/model", "rb") as f:
