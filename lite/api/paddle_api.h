@@ -404,7 +404,11 @@ class LITE_API CxxConfig : public ConfigBase {
  public:
   void set_valid_places(const std::vector<Place>& x) { 
       valid_places_ = x; 
-       printf("CxxConfig class base class 's set_valid_places is running and valid_places_ is %d \n", valid_places_);
+      printf("CxxConfig class base class 's set_valid_places is running and then print valid_places_\n");
+      for (int i = 0; i < x.size(); i++)
+      {
+        //std::cout << x[i] << std::endl;
+      }
     }
   void set_model_file(const std::string& path) { model_file_ = path; }
   void set_param_file(const std::string& path) { param_file_ = path; }

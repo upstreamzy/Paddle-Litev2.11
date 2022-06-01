@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+import logging
 import sys
 import tempfile
 import os
@@ -61,6 +61,7 @@ class TestMobileNetV1(AutoScanTest):
         oh = ih
         in_shape = [1, 3, ih, oh]
         inputs = {"inputs": TensorConfig(shape=in_shape)}
+        logging.info("The TestMobileNetV1 class 's function prepare_input_data return value is {}".format(inputs))
         return inputs
 
     def sample_predictor_configs(self):
@@ -76,7 +77,7 @@ class TestMobileNetV1(AutoScanTest):
             model=model,
             params=params,
             min_success_num=1,
-            max_examples=10)
+            max_examples=1)
 
 
 if __name__ == "__main__":

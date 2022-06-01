@@ -187,10 +187,12 @@ class AutoScanBaseTest(unittest.TestCase):
         Test a single case.
         '''
         pred_config.set_model_buffer(model, len(model), params, len(params))
+        logging.info("In AutoScanBaseTest class 's run_test_config function pred_config is {}".format(pred_config))
         predictor = paddle_infer.create_predictor(pred_config)
+        logging.info("In AutoScanBaseTest class 's run_test_config function predictor is {}".format(predictor))
         self.available_passes_in_framework = self.available_passes_in_framework | set(
             pred_config.pass_builder().all_passes())
-
+        logging.info("In AutoScanBaseTest class 's run_test_config function self.available_passes_in_framework is {}".format(self.available_passes_in_framework))
         for name in feed_data:
             input_tensor = predictor.get_input_handle(name)
             input_tensor.copy_from_cpu(feed_data[name]['data'])
@@ -595,6 +597,7 @@ class AutoScanBaseTest(unittest.TestCase):
     def run_model_test(self, inputs_configs=None, model=None, params=None):
         status = True
         paddlelite_configs, _, (atol_, rtol_) = self.sample_predictor_configs()
+        logging.info("The AutoScanBaseTest class's run_model_test local paddlelite_configs param is : {}".format(paddlelite_configs))
         for inputs_config in inputs_configs:
             logging.info("The AutoScanBaseTest class's run_model_test inputs_config param is : {}".format(inputs_config))
             feed_data = {}
@@ -729,6 +732,7 @@ class AutoScanBaseTest(unittest.TestCase):
             return self.sample_program_configs(draw)
 
         def inputs_generator(draw):
+            logging.info("The AutoScanBaseTest inputs_generator is running")
             return self.prepare_input_data(draw)
 
         def run_test(prog_config):
@@ -902,6 +906,7 @@ class AutoScanBaseTest(unittest.TestCase):
     @staticmethod
     def target_to_predictor_configs(self, target: str) -> List[CxxConfig]:
         configs_ = []
+        logging.info("self.valid_places is {}".format(self.valid_places))
         for elem_ in self.valid_places:
             logging.info("elem_ in self.valid_places is {}".format(elem_))
             if target in elem_[0]:
