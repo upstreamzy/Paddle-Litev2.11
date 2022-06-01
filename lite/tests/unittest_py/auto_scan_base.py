@@ -596,6 +596,7 @@ class AutoScanBaseTest(unittest.TestCase):
         status = True
         paddlelite_configs, _, (atol_, rtol_) = self.sample_predictor_configs()
         for inputs_config in inputs_configs:
+            logging.info("The AutoScanBaseTest class's run_model_test inputs_config param is : {}".format(inputs_config))
             feed_data = {}
             for name, tensor_config in inputs_config.items():
                 feed_data[name] = {
@@ -612,7 +613,7 @@ class AutoScanBaseTest(unittest.TestCase):
             flag_precision_fp16 = False
             for paddlelite_config in paddlelite_configs:
                 pred_config = paddlelite_config.value()
-
+                logging.info("The AutoScanBaseTest class's run_model_test paddlelite_config.value() pred_config part-vlaue is : {}".format(pred_config))
                 try:
                     result, opt_model_bytes = self.run_lite_config(
                         model, params, feed_data, pred_config, args.server_ip)
@@ -902,9 +903,12 @@ class AutoScanBaseTest(unittest.TestCase):
     def target_to_predictor_configs(self, target: str) -> List[CxxConfig]:
         configs_ = []
         for elem_ in self.valid_places:
+            logging.info("elem_ in self.valid_places is {}".format(elem_))
             if target in elem_[0]:
+                logging.info("self.thread_num  is   {}".format(self.thread_num))
                 for thread_ in self.thread_num:
                     config_ = CxxConfig()
+                    logging.info("config_  is   {}".format(config_))
                     config_.set_valid_places(elem_)
                     config_.set_threads(thread_)
                     if target.upper() == "NNADAPTER":

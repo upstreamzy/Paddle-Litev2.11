@@ -402,7 +402,10 @@ class LITE_API CxxConfig : public ConfigBase {
   std::string mixed_precision_quantization_config_buffer_;
 
  public:
-  void set_valid_places(const std::vector<Place>& x) { valid_places_ = x; }
+  void set_valid_places(const std::vector<Place>& x) { 
+      valid_places_ = x; 
+       printf("CxxConfig class base class 's set_valid_places is running and valid_places_ is %d \n", valid_places_);
+    }
   void set_model_file(const std::string& path) { model_file_ = path; }
   void set_param_file(const std::string& path) { param_file_ = path; }
   void set_model_buffer(const char* model_buffer,
@@ -426,7 +429,10 @@ class LITE_API CxxConfig : public ConfigBase {
   const std::vector<std::string>& get_passes_internal() const {
     return passes_internal_;
   }
-  const std::vector<Place>& valid_places() const { return valid_places_; }
+  const std::vector<Place>& valid_places() const { 
+     
+      return valid_places_; 
+    }
   std::string model_file() const { return model_file_; }
   std::string param_file() const { return param_file_; }
   bool is_model_from_memory() const { return static_cast<bool>(model_buffer_); }

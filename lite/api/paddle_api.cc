@@ -305,7 +305,9 @@ std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(const ConfigT &) {
 }
 
 ConfigBase::ConfigBase(PowerMode mode, int threads) {
+  printf("In ConfigBase constructor on the LITE_WITH_ARM \n");
 #ifdef LITE_WITH_ARM
+  printf("In ConfigBase constructor the LITE_WITH_ARM is on \n")
   lite::DeviceInfo::Init();
   lite::DeviceInfo::Global().SetRunMode(mode, threads);
   mode_ = lite::DeviceInfo::Global().mode();
@@ -371,6 +373,7 @@ void ConfigBase::set_power_mode(paddle::lite_api::PowerMode mode) {
 }
 
 void ConfigBase::set_threads(int threads) {
+  printf("CxxConfig class base class 's set_threads is running and threads is %d \n", threads);
 #ifdef LITE_WITH_ARM
   lite::DeviceInfo::Global().SetRunMode(mode_, threads);
   mode_ = lite::DeviceInfo::Global().mode();
