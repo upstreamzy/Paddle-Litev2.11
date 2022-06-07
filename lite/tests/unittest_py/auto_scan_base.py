@@ -188,6 +188,7 @@ class AutoScanBaseTest(unittest.TestCase):
         '''
         pred_config.set_model_buffer(model, len(model), params, len(params))
         logging.info("In AutoScanBaseTest class 's run_test_config function pred_config is {}".format(pred_config))
+        logging.info("In AutoScanBaseTest class 's run_test_config function will be invoking paddle_infer.create_predictor {}".format(paddle_infer.create_predictor))
         predictor = paddle_infer.create_predictor(pred_config)
         logging.info("In AutoScanBaseTest class 's run_test_config function predictor is {}".format(predictor))
         self.available_passes_in_framework = self.available_passes_in_framework | set(
@@ -907,15 +908,17 @@ class AutoScanBaseTest(unittest.TestCase):
     @staticmethod
     def target_to_predictor_configs(self, target: str) -> List[CxxConfig]:
         configs_ = []
-        logging.info("self.valid_places is {}".format(self.valid_places))
+        # logging.info("self.valid_places is {}".format(self.valid_places))
         for elem_ in self.valid_places:
-            logging.info("elem_ in self.valid_places is {}".format(elem_))
+            # logging.info("elem_ in self.valid_places is {}".format(elem_))
             if target in elem_[0]:
-                logging.info("self.thread_num  is   {}".format(self.thread_num))
+                # logging.info("self.thread_num  is   {}".format(self.thread_num))
                 for thread_ in self.thread_num:
                     config_ = CxxConfig()
-                    logging.info("config_  is   {}".format(config_))
+                    # logging.info("config_  is   {}".format(config_))
+                    logging.info("CxxConfig class 's set_valid_places will be running")
                     config_.set_valid_places(elem_)
+                    logging.info("CxxConfig class 's set_threads will be running")
                     config_.set_threads(thread_)
                     if target.upper() == "NNADAPTER":
                         self.nnadapter_config_set(self, config_)

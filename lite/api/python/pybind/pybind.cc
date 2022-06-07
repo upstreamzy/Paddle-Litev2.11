@@ -33,7 +33,7 @@
 #include "lite/api/paddle_api.h"
 #include "lite/api/python/pybind/tensor_py.h"
 #include "lite/core/tensor.h"
-#include <cstdio.h>
+#include <cstdio>
 namespace py = pybind11;
 
 namespace paddle {

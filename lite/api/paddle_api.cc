@@ -305,7 +305,7 @@ std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(const ConfigT &) {
 }
 
 ConfigBase::ConfigBase(PowerMode mode, int threads) {
-  printf("In ConfigBase constructor on the LITE_WITH_ARM \n");
+  printf("In ConfigBase constructor which have 2 params on the LITE_WITH_ARM \n");
 #ifdef LITE_WITH_ARM
   printf("In ConfigBase constructor the LITE_WITH_ARM is on \n")
   lite::DeviceInfo::Init();

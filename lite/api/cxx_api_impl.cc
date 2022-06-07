@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+#include "cstdio"
 #include "lite/api/cxx_api.h"
 #include <memory>
 #include <mutex>  //NOLINT
@@ -41,6 +41,7 @@ namespace paddle {
 namespace lite {
 
 void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
+  printf("CxxPaddleApiImpl class Init function is running \n");
   config_ = config;
   mode_ = config.power_mode();
   threads_ = config.threads();
@@ -318,7 +319,7 @@ bool CxxPaddleApiImpl::TryShrinkMemory() {
 }  // namespace lite
 
 namespace lite_api {
-
+//此函数正好和pybind.cc中暴露给python用的createpaddlepredictor对应
 template <>
 std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(
     const CxxConfig &config) {
@@ -326,7 +327,7 @@ std::shared_ptr<PaddlePredictor> CreatePaddlePredictor(
   static std::mutex mutex_conf;
   std::unique_lock<std::mutex> lck(mutex_conf);
   auto x = std::make_shared<lite::CxxPaddleApiImpl>();
-  printf("In cxx_api_impl.cc CreatePaddlePredictor  function which invoke Init function\n");
+  // printf("In cxx_api_impl.cc CreatePaddlePredictor  function which invoke Init function\n");
   x->Init(config);
   return x;
 }

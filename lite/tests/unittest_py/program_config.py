@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+import logging
 from typing import Optional, List, Callable, Dict, Any, Set
 import numpy as np
 import paddle
@@ -341,9 +341,11 @@ class CxxConfig:
         self.config["discarded_passes"] = []
 
     def set_valid_places(self, places):
+        logging.info("program_config.py CxxConfig set_valid_places is running")
         self.config["valid_targets"] = places
 
     def set_threads(self, thread):
+        logging.info("program_config.py CxxConfig set_threads is running")
         self.config["thread"] = thread
 
     def set_power_mode(self, mode):
