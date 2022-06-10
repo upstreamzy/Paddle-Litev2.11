@@ -20,7 +20,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-
+#include <cstdio>
 #include "lite/api/paddle_use_passes.h"
 #include "lite/utils/io.h"
 
@@ -295,6 +295,7 @@ void Predictor::Build(const lite_api::CxxConfig &config,
                       const std::vector<Place> &valid_places,
                       const std::vector<std::string> &passes,
                       lite_api::LiteModelType model_type) {
+  printf("Predictor::Build which have 3 params is running the first param is CxxConfig\n");
   if (config.is_model_from_memory()) {
     LOG(INFO) << "Load model from memory.";
     Build(config.model_dir(),
@@ -324,6 +325,7 @@ void Predictor::Build(const std::string &model_path,
                       lite_api::LiteModelType model_type,
                       const lite_api::CxxConfig &config,
                       const lite_api::CxxModelBuffer &model_buffer) {
+  printf("Predictor::Build which have 7 params is running \n");
   switch (model_type) {
     case lite_api::LiteModelType::kProtobuf: {
       bool combined_param = false;
@@ -354,6 +356,7 @@ void Predictor::Build(const std::shared_ptr<cpp::ProgramDesc> &program_desc,
                       const std::vector<Place> &valid_places,
                       const std::vector<std::string> &passes,
                       const lite_api::CxxConfig &config) {
+  printf("Predictor::Build which have 3 params and the first param is ProgramDesc is running \n");
   program_desc_ = program_desc;
   // `inner_places` is used to optimize passes
   std::vector<Place> inner_places = valid_places;
@@ -364,6 +367,7 @@ void Predictor::Build(const std::shared_ptr<cpp::ProgramDesc> &program_desc,
   }
 
   if (IsQuantizedMode(program_desc_)) {
+    printf("in Predictor::Build(program_desc) function IsQuantizedMode(program_desc_) is true\n")
     for (auto &valid_place : valid_places) {
       if (valid_place.target == TARGET(kARM)) {
         inner_places.insert(inner_places.begin(),

@@ -46,12 +46,14 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
   mode_ = config.power_mode();
   threads_ = config.threads();
 #ifdef LITE_USE_THREAD_POOL
+  printf("CXXPaddleApiImpl class Init function LITE_USE_THREAD_POOL macro \n");
   int thread_num = ThreadPool::Init(threads_);
   if (thread_num > 1) {
     ThreadPool::AcquireThreadPool();
   }
 #endif
   if (!status_is_cloned_) {
+    printf("CXXPaddleApiImpl class Init function status_is_cloned_ is false \n");
     auto places = config.valid_places();
     std::vector<std::string> passes = config.get_passes_internal();
 #ifdef LITE_WITH_CUDA
@@ -144,9 +146,10 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
       // internally.
       sparse_detect_pass->SetSparseThreshold(1.5);
     }
-
+    printf("CXXPaddleApiImpl class Init function raw_predictor_->Build will be running \n");
     raw_predictor_->Build(config, places, passes);
   } else {
+    printf("CXXPaddleApiImpl class Init function status_is_cloned_ is true \n");
     raw_predictor_->PrepareFeedFetch();
     CHECK(raw_predictor_) << "The Predictor can not be nullptr in Clone mode.";
   }
