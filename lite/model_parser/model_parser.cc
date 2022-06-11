@@ -186,6 +186,7 @@ void LoadNonCombinedParamsPb(const std::string &model_dir,
   for (auto &var : main_block->GetVars()) {
     if (IsParamVarDesc(*var)) {
       if (IsFileExists(model_dir + "/" + var->Name())) {
+        printf("model_parser.cc file %s \n", var->Name().c_str());
         VLOG(4) << "reading weight " << var->Name();
         model_parser::BinaryFileReader reader(model_dir + "/" + var->Name());
         model_parser::pb::LoDTensorDeserializer loader;
