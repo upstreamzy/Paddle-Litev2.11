@@ -392,7 +392,7 @@ void Predictor::Build(const std::shared_ptr<cpp::ProgramDesc> &program_desc,
   factor.ConsiderDataLayout();
 
   exec_scope_ = program.exec_scope();
-
+  printf("RunDefaultOptimizer() will be running \n");
   program_ = RunDefaultOptimizer(
       std::move(program), inner_places, factor, passes, config);
 

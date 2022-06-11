@@ -170,6 +170,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
 
 #if (defined LITE_WITH_X86) && (defined PADDLE_WITH_MKLML) && \
     !(defined LITE_ON_MODEL_OPTIMIZE_TOOL)
+    printf("LITE_WITH_X86 PADDLE_WITH_MKLML LITE_ON_MODEL_OPTIMIZE_TOOL is openning \n");
   int num_threads = config.x86_math_num_threads();
   int real_num_threads = num_threads > 1 ? num_threads : 1;
 #ifdef LITE_WITH_STATIC_MKL
