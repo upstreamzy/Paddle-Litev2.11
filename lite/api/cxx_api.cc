@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "lite/api/cxx_api.h"
-
+#include <cstdio>
 #include <algorithm>
 #include <memory>
 #include <set>

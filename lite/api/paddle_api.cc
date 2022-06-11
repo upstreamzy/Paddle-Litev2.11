@@ -20,7 +20,7 @@
 #include "lite/core/device_info.h"
 #include "lite/core/target_wrapper.h"
 #include "lite/core/tensor.h"
-
+#include <cstdio>
 #ifdef LITE_WITH_CUDA
 #include "lite/backends/cuda/target_wrapper.h"
 #endif
@@ -474,7 +474,9 @@ CxxModelBuffer::CxxModelBuffer(const char *program_buffer,
                                const char *params_buffer,
                                size_t params_buffer_size) {
   program_ = std::string(program_buffer, program_buffer + program_buffer_size);
+  printf("CxxModelBuffer::CxxModelBuffer function program_buffer is : %s \n", program_.c_str());
   params_ = std::string(params_buffer, params_buffer + params_buffer_size);
+  printf("CxxModelBuffer::CxxModelBuffer function params_ is : %s \n", params_.c_str());
 }
 
 CxxModelBuffer::CxxModelBuffer(std::string &&program_buffer,
