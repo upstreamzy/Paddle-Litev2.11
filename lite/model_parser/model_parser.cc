@@ -248,6 +248,7 @@ void LoadModelPb(const std::string &model_dir,
   // Transform to cpp::ProgramDesc
   TransformProgramDescAnyToCpp(pb_prog, cpp_prog);
 #ifdef WITH_CONVERT_TO_SSA
+  printf("macro WITH_CONVERT_TO_SSA is ON \n");
   printf("general::ssa::ConvertToSSA(cpp_prog) will be running \n");
   general::ssa::ConvertToSSA(cpp_prog);
 #endif
