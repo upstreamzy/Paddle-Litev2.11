@@ -116,7 +116,7 @@ void BindLiteApi(py::module *m) {
 #ifndef LITE_ON_TINY_PUBLISH
   m->def("create_paddle_predictor",
          [](const CxxConfig &config) -> std::unique_ptr<CxxPaddleApiImpl> {
-           printf("In pybind.cc create_paddle_predictor \n");
+           printf("In pybind.cc create_paddle_predictor of CxxConfig \n");
            auto x = std::unique_ptr<CxxPaddleApiImpl>(new CxxPaddleApiImpl());
            x->Init(config);
            return std::move(x);
@@ -124,6 +124,7 @@ void BindLiteApi(py::module *m) {
 #endif
   m->def("create_paddle_predictor",
          [](const MobileConfig &config) -> std::unique_ptr<LightPredictorImpl> {
+           printf("In pybind.cc create_paddle_predictor of CxxConfig \n");
            auto x =
                std::unique_ptr<LightPredictorImpl>(new LightPredictorImpl());
            x->Init(config);

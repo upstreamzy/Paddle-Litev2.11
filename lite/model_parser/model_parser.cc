@@ -256,6 +256,7 @@ void LoadModelPb(const std::string &model_dir,
       << " you should load the combined model using cfg.set_model_buffer "
          "interface.";
   if (!combined) {
+    printf("combined is false \n");
     LoadNonCombinedParamsPb(model_dir, cpp_prog, model_buffer, scope);
   } else {
     if (model_buffer.is_empty()) {

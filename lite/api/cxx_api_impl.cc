@@ -118,6 +118,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
         raw_predictor_->scope(), config.nnadapter_dynamic_shape_info());
 #endif
 
+    LOG(INFO) << "attention LOG command";
     auto use_layout_preprocess_pass =
         config.model_dir().find("OPENCL_PRE_PRECESS");
     VLOG(1) << "use_layout_preprocess_pass:" << use_layout_preprocess_pass;
@@ -128,6 +129,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
     }
 
     if (config.quant_model()) {
+      printf("CxxPaddleApiImpl class Init function config.quant_model() is true\n");
       passes.push_back("post_quant_dynamic_pass");
       auto *pass = mir::PassManager::Global().LookUp<mir::PostQuantDynamicPass>(
           "post_quant_dynamic_pass");
@@ -140,6 +142,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
             "sparse_conv_detect_pass");
     CHECK(sparse_detect_pass);
     if (config.sparse_model()) {
+      printf("CxxPaddleApiImpl class Init function config.sparse_model() is true\n");
       sparse_detect_pass->SetSparseThreshold(config.sparse_threshold());
     } else {
       // Pass in a value greater than 1.0 to turn off the sparse pass

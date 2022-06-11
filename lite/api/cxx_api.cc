@@ -297,6 +297,7 @@ void Predictor::Build(const lite_api::CxxConfig &config,
                       lite_api::LiteModelType model_type) {
   printf("Predictor::Build which have 3 params is running the first param is CxxConfig\n");
   if (config.is_model_from_memory()) {
+    printf("Load model from memory.\n");
     LOG(INFO) << "Load model from memory.";
     Build(config.model_dir(),
           config.model_file(),
@@ -307,6 +308,7 @@ void Predictor::Build(const lite_api::CxxConfig &config,
           config,
           config.get_model_buffer());
   } else {
+    printf("Load model from file.\n");
     LOG(INFO) << "Load model from file.";
     Build(config.model_dir(),
           config.model_file(),
@@ -328,6 +330,7 @@ void Predictor::Build(const std::string &model_path,
   printf("Predictor::Build which have 7 params is running \n");
   switch (model_type) {
     case lite_api::LiteModelType::kProtobuf: {
+      printf("model_type is lite_api::LiteModelType::kProtobuf \n");
       bool combined_param = false;
       if (!model_buffer.is_empty() ||
           (!model_file.empty() && !param_file.empty())) {
@@ -367,7 +370,7 @@ void Predictor::Build(const std::shared_ptr<cpp::ProgramDesc> &program_desc,
   }
 
   if (IsQuantizedMode(program_desc_)) {
-    printf("in Predictor::Build(program_desc) function IsQuantizedMode(program_desc_) is true\n")
+    printf("in Predictor::Build(program_desc) function IsQuantizedMode(program_desc_) is true\n");
     for (auto &valid_place : valid_places) {
       if (valid_place.target == TARGET(kARM)) {
         inner_places.insert(inner_places.begin(),
