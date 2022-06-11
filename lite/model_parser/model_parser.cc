@@ -84,6 +84,7 @@ void LoadCombinedParamsPb(const std::string &path,
                           lite::Scope *scope,
                           const cpp::ProgramDesc &cpp_prog,
                           const lite_api::CxxModelBuffer &model_buffer) {
+  printf("The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr. \n");
   CHECK(scope) << "The input argument scope is nullptr.";
   auto &prog = cpp_prog;
   auto &main_block_desc = *prog.GetBlock<cpp::BlockDesc>(0);
