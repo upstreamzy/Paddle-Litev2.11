@@ -636,6 +636,7 @@ void Program::PrepareWorkspace(
   }
 
   for (auto var_name : vars_to_clone) {
+    printf("vars_to_clone is not NULL \n");
     exec_scope_->LocalVar(var_name);
     auto* tensor = scope_->Var(var_name)->GetMutable<Tensor>();
     auto* sub_tensor = exec_scope_->Var(var_name)->GetMutable<Tensor>();
