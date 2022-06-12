@@ -109,6 +109,14 @@ class AutoScanTest(AutoScanBaseTest):
         with open(self.cache_dir + "/opt_model/model", "rb") as f:
             model = f.read()
 
+
+        for inputtensor in predictor.get_input_names():
+            logging.info("The AutoScanTest class run_lite_config function predictor.get_input_names() elem is {}".format(inputtensor))
+
+        for outtensor in predictor.get_output_names():
+            logging.info("The AutoScanTest class run_lite_config function predictor.get_output_names() elem is {}".format(outtensor))
+
+
         logging.info("The AutoScanTest class run_lite_config function inputs is {}".format(inputs))
         for name in inputs:
             logging.info("The AutoScanTest class run_lite_config function inputs elem name is {}".format(name))
