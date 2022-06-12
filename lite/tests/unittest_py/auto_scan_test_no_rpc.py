@@ -109,9 +109,9 @@ class AutoScanTest(AutoScanBaseTest):
         with open(self.cache_dir + "/opt_model/model", "rb") as f:
             model = f.read()
 
-        logging.info("The AutoScanTest class run_lite_config function is {}".format(inputs))
+        logging.info("The AutoScanTest class run_lite_config function inputs is {}".format(inputs))
         for name in inputs:
-            logging.info("The AutoScanTest class run_lite_config function is {}".format(name))
+            logging.info("The AutoScanTest class run_lite_config function inputs elem name is {}".format(name))
             input_tensor = predictor.get_input_by_name(name)
             input_tensor.from_numpy(inputs[name]['data'])
             if inputs[name]['lod'] is not None:
