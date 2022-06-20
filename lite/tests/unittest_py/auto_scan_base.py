@@ -916,9 +916,9 @@ class AutoScanBaseTest(unittest.TestCase):
                 for thread_ in self.thread_num:
                     config_ = CxxConfig()
                     # logging.info("config_  is   {}".format(config_))
-                    logging.info("CxxConfig class 's set_valid_places will be running")
+                    logging.info("py CxxConfig class 's set_valid_places will be running")
                     config_.set_valid_places(elem_)
-                    logging.info("CxxConfig class 's set_threads will be running")
+                    logging.info("py CxxConfig class 's set_threads will be running")
                     config_.set_threads(thread_)
                     if target.upper() == "NNADAPTER":
                         self.nnadapter_config_set(self, config_)

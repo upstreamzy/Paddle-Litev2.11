@@ -17,6 +17,8 @@
 #include <set>
 #include <utility>
 #include <vector>
+#include <iostream>
+#include <cstdio>
 #include "lite/core/op_registry.h"
 #include "lite/utils/string.h"
 
@@ -72,6 +74,8 @@ std::vector<std::unique_ptr<KernelBase>> OpLite::CreateKernels(
   auto pick_kernel = [&](const Place &place) {
     auto ks = KernelRegistry::Global().Create(
         op_type_, place.target, place.precision, place.layout);
+
+    std::cout << "pick kernel for " << op_info() -> Type() << " "  << place.DebugString() << " get " << ks.size() << " kernels" << std::endl;
     VLOG(5) << "pick kernel for " << op_info()->Type() << " "
             << place.DebugString() << " get " << ks.size() << " kernels";
     for (auto &&it : ks) {

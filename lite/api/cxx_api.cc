@@ -361,6 +361,7 @@ void Predictor::Build(const std::shared_ptr<cpp::ProgramDesc> &program_desc,
                       const lite_api::CxxConfig &config) {
   printf("Predictor::Build which have 3 params and the first param is ProgramDesc is running \n");
   program_desc_ = program_desc;
+  printf("Predictor::Build `inner_places` is used to optimize passes \n");
   // `inner_places` is used to optimize passes
   std::vector<Place> inner_places = valid_places;
   for (auto &valid_place : valid_places) {

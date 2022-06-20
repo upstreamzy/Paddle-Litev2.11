@@ -27,8 +27,11 @@
 #include "lite/core/version.h"
 #include "lite/model_parser/flatbuffers/io.h"
 #include "lite/model_parser/pb/tensor_io.h"
-#ifndef LITE_ON_TINY_PUBLISH
 #include <cstdio>
+#include <iostream>
+#ifndef LITE_ON_TINY_PUBLISH
+
+
 #include "lite/model_parser/naive_buffer/combined_params_desc.h"
 #include "lite/model_parser/naive_buffer/param_desc.h"
 #include "lite/model_parser/naive_buffer/program_desc.h"
@@ -187,7 +190,8 @@ void LoadNonCombinedParamsPb(const std::string &model_dir,
   for (auto &var : main_block->GetVars()) {
     if (IsParamVarDesc(*var)) {
       if (IsFileExists(model_dir + "/" + var->Name())) {
-        printf("model_parser.cc file %s \n", var->Name().c_str());
+        printf("model_parser.cc file main_block->GetVars() %s \n", var->Name().c_str());
+        std::cout << "reading weight " << var->Name() << std::endl;
         VLOG(4) << "reading weight " << var->Name();
         model_parser::BinaryFileReader reader(model_dir + "/" + var->Name());
         model_parser::pb::LoDTensorDeserializer loader;
@@ -240,15 +244,18 @@ void LoadModelPb(const std::string &model_dir,
           ? FindModelFileName(model_dir, model_file, combined)
           : "";
   if (model_buffer.is_empty()) {
+    printf("In LoadModelPb function model_buffer.is_empty() is true");
+    std::cout << "Loading topology data from " << prog_path << std::endl;
     OPT_LOG << "Loading topology data from " << prog_path;
   }
   framework::proto::ProgramDesc pb_proto_prog =
       *LoadProgram(prog_path, model_buffer);
   pb::ProgramDesc pb_prog(&pb_proto_prog);
   // Transform to cpp::ProgramDesc
+  printf("In LoadModelPb function TransformProgramDescAnyToCpp(pb_prog, cpp_prog) will be running \n");
   TransformProgramDescAnyToCpp(pb_prog, cpp_prog);
 #ifdef WITH_CONVERT_TO_SSA
-  printf("macro WITH_CONVERT_TO_SSA is ON \n");
+  printf("IN LoadModelPb function macro WITH_CONVERT_TO_SSA is ON \n");
   printf("general::ssa::ConvertToSSA(cpp_prog) will be running \n");
   general::ssa::ConvertToSSA(cpp_prog);
 #endif
@@ -260,7 +267,7 @@ void LoadModelPb(const std::string &model_dir,
       << " you should load the combined model using cfg.set_model_buffer "
          "interface.";
   if (!combined) {
-    printf("combined is false \n");
+    printf("The Model is non-combined  combined is false \n");
     LoadNonCombinedParamsPb(model_dir, cpp_prog, model_buffer, scope);
   } else {
     if (model_buffer.is_empty()) {

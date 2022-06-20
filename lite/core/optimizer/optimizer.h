@@ -19,6 +19,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <cstdio>
 #include "lite/core/optimizer/mir/control_flow_op_shared_inputs_and_outputs_place_sync_pass.h"
 #include "lite/core/optimizer/mir/elimination/control_flow_op_unused_inputs_and_outputs_eliminate_pass.h"
 #include "lite/core/optimizer/mir/fp16_attribute_pass.h"
@@ -67,6 +68,7 @@ class Optimizer {
             core::KernelPickFactor kernel_pick_factor)
       : valid_places_(valid_places), kernel_pick_factor_(kernel_pick_factor) {
     CHECK(!valid_places.empty()) << "At least one valid_place should be set";
+    printf("class Optimizer construction is running \n");
   }
 
   // Append a pass to the optimizer.

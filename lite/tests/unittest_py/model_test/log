@@ -1,0 +1,4869 @@
+2022-06-17 23:13:17,842-WARNING: type object 'QuantizationTransformPass' has no attribute '_supported_quantizable_op_type'
+2022-06-17 23:13:17,842-WARNING: If you want to use training-aware and post-training quantization, please use Paddle >= 1.8.4 or develop version
+--2022-06-17 23:13:18--  https://paddle-inference-dist.bj.bcebos.com/AI-Rank/mobile/MobileNetV1.tar.gz
+Resolving paddle-inference-dist.bj.bcebos.com (paddle-inference-dist.bj.bcebos.com)... 111.206.210.93, 111.206.210.81, 2409:8c04:1001:1002:0:ff:b001:368a
+Connecting to paddle-inference-dist.bj.bcebos.com (paddle-inference-dist.bj.bcebos.com)|111.206.210.93|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15860773 (15M) [application/x-gzip]
+Saving to: ‘/tmp/tmp17sjphwt/MobileNetV1.tar.gz’
+
+     0K .......... .......... .......... .......... ..........  0% 3.36M 4s
+    50K .......... .......... .......... .......... ..........  0% 2.03M 6s
+   100K .......... .......... .......... .......... ..........  0% 2.57M 6s
+   150K .......... .......... .......... .......... ..........  1% 3.36M 6s
+   200K .......... .......... .......... .......... ..........  1% 3.37M 5s
+   250K .......... .......... .......... .......... ..........  1% 3.30M 5s
+   300K .......... .......... .......... .......... ..........  2% 4.89M 5s
+   350K .......... .......... .......... .......... ..........  2% 3.40M 5s
+   400K .......... .......... .......... .......... ..........  2% 5.01M 5s
+   450K .......... .......... .......... .......... ..........  3% 3.33M 5s
+   500K .......... .......... .......... .......... ..........  3% 4.97M 4s
+   550K .......... .......... .......... .......... ..........  3% 9.70M 4s
+   600K .......... .......... .......... .......... ..........  4% 3.35M 4s
+   650K .......... .......... .......... .......... ..........  4% 9.64M 4s
+   700K .......... .......... .......... .......... ..........  4% 5.03M 4s
+   750K .......... .......... .......... .......... ..........  5% 5.01M 4s
+   800K .......... .......... .......... .......... ..........  5% 9.58M 4s
+   850K .......... .......... .......... .......... ..........  5% 4.96M 4s
+   900K .......... .......... .......... .......... ..........  6% 5.10M 3s
+   950K .......... .......... .......... .......... ..........  6% 9.54M 3s
+  1000K .......... .......... .......... .......... ..........  6% 5.07M 3s
+  1050K .......... .......... .......... .......... ..........  7% 9.81M 3s
+  1100K .......... .......... .......... .......... ..........  7% 9.49M 3s
+  1150K .......... .......... .......... .......... ..........  7% 5.14M 3s
+  1200K .......... .......... .......... .......... ..........  8% 9.53M 3s
+  1250K .......... .......... .......... .......... ..........  8% 5.16M 3s
+  1300K .......... .......... .......... .......... ..........  8% 9.41M 3s
+  1350K .......... .......... .......... .......... ..........  9% 9.68M 3s
+  1400K .......... .......... .......... .......... ..........  9% 5.31M 3s
+  1450K .......... .......... .......... .......... ..........  9% 5.04M 3s
+  1500K .......... .......... .......... .......... .......... 10% 9.49M 3s
+  1550K .......... .......... .......... .......... .......... 10% 9.85M 3s
+  1600K .......... .......... .......... .......... .......... 10% 10.1M 3s
+  1650K .......... .......... .......... .......... .......... 10% 9.80M 3s
+  1700K .......... .......... .......... .......... .......... 11% 9.85M 3s
+  1750K .......... .......... .......... .......... .......... 11% 5.38M 3s
+  1800K .......... .......... .......... .......... .......... 11% 10.1M 3s
+  1850K .......... .......... .......... .......... .......... 12% 9.81M 3s
+  1900K .......... .......... .......... .......... .......... 12% 9.96M 2s
+  1950K .......... .......... .......... .......... .......... 12% 9.06M 2s
+  2000K .......... .......... .......... .......... .......... 13% 10.1M 2s
+  2050K .......... .......... .......... .......... .......... 13% 9.46M 2s
+  2100K .......... .......... .......... .......... .......... 13% 9.77M 2s
+  2150K .......... .......... .......... .......... .......... 14% 9.79M 2s
+  2200K .......... .......... .......... .......... .......... 14% 9.76M 2s
+  2250K .......... .......... .......... .......... .......... 14% 15.1M 2s
+  2300K .......... .......... .......... .......... .......... 15% 9.90M 2s
+  2350K .......... .......... .......... .......... .......... 15% 10.1M 2s
+  2400K .......... .......... .......... .......... .......... 15% 24.9M 2s
+  2450K .......... .......... .......... .......... .......... 16% 10.1M 2s
+  2500K .......... .......... .......... .......... .......... 16% 10.5M 2s
+  2550K .......... .......... .......... .......... .......... 16% 15.4M 2s
+  2600K .......... .......... .......... .......... .......... 17% 10.5M 2s
+  2650K .......... .......... .......... .......... .......... 17% 24.1M 2s
+  2700K .......... .......... .......... .......... .......... 17% 10.4M 2s
+  2750K .......... .......... .......... .......... .......... 18% 15.3M 2s
+  2800K .......... .......... .......... .......... .......... 18% 10.3M 2s
+  2850K .......... .......... .......... .......... .......... 18% 10.2M 2s
+  2900K .......... .......... .......... .......... .......... 19% 25.9M 2s
+  2950K .......... .......... .......... .......... .......... 19% 10.3M 2s
+  3000K .......... .......... .......... .......... .......... 19% 15.1M 2s
+  3050K .......... .......... .......... .......... .......... 20% 10.0M 2s
+  3100K .......... .......... .......... .......... .......... 20% 26.6M 2s
+  3150K .......... .......... .......... .......... .......... 20% 10.4M 2s
+  3200K .......... .......... .......... .......... .......... 20% 15.0M 2s
+  3250K .......... .......... .......... .......... .......... 21% 10.3M 2s
+  3300K .......... .......... .......... .......... .......... 21% 10.5M 2s
+  3350K .......... .......... .......... .......... .......... 21% 25.1M 2s
+  3400K .......... .......... .......... .......... .......... 22% 10.2M 2s
+  3450K .......... .......... .......... .......... .......... 22% 15.6M 2s
+  3500K .......... .......... .......... .......... .......... 22% 10.3M 2s
+  3550K .......... .......... .......... .......... .......... 23% 23.4M 2s
+  3600K .......... .......... .......... .......... .......... 23% 10.2M 2s
+  3650K .......... .......... .......... .......... .......... 23% 16.3M 2s
+  3700K .......... .......... .......... .......... .......... 24% 25.1M 2s
+  3750K .......... .......... .......... .......... .......... 24% 10.2M 2s
+  3800K .......... .......... .......... .......... .......... 24% 18.1M 2s
+  3850K .......... .......... .......... .......... .......... 25% 20.8M 2s
+  3900K .......... .......... .......... .......... .......... 25% 17.4M 1s
+  3950K .......... .......... .......... .......... .......... 25% 23.3M 1s
+  4000K .......... .......... .......... .......... .......... 26% 16.4M 1s
+  4050K .......... .......... .......... .......... .......... 26% 25.5M 1s
+  4100K .......... .......... .......... .......... .......... 26% 16.2M 1s
+  4150K .......... .......... .......... .......... .......... 27% 26.8M 1s
+  4200K .......... .......... .......... .......... .......... 27% 16.3M 1s
+  4250K .......... .......... .......... .......... .......... 27% 26.3M 1s
+  4300K .......... .......... .......... .......... .......... 28% 16.0M 1s
+  4350K .......... .......... .......... .......... .......... 28% 27.4M 1s
+  4400K .......... .......... .......... .......... .......... 28% 15.9M 1s
+  4450K .......... .......... .......... .......... .......... 29% 11.1M 1s
+  4500K .......... .......... .......... .......... .......... 29% 89.0M 1s
+  4550K .......... .......... .......... .......... .......... 29% 11.7M 1s
+  4600K .......... .......... .......... .......... .......... 30% 72.4M 1s
+  4650K .......... .......... .......... .......... .......... 30% 11.5M 1s
+  4700K .......... .......... .......... .......... .......... 30% 83.0M 1s
+  4750K .......... .......... .......... .......... .......... 30% 11.7M 1s
+  4800K .......... .......... .......... .......... .......... 31% 69.6M 1s
+  4850K .......... .......... .......... .......... .......... 31% 11.3M 1s
+  4900K .......... .......... .......... .......... .......... 31% 25.0M 1s
+  4950K .......... .......... .......... .......... .......... 32% 17.7M 1s
+  5000K .......... .......... .......... .......... .......... 32% 64.1M 1s
+  5050K .......... .......... .......... .......... .......... 32% 11.8M 1s
+  5100K .......... .......... .......... .......... .......... 33% 73.6M 1s
+  5150K .......... .......... .......... .......... .......... 33% 11.4M 1s
+  5200K .......... .......... .......... .......... .......... 33% 75.3M 1s
+  5250K .......... .......... .......... .......... .......... 34% 11.5M 1s
+  5300K .......... .......... .......... .......... .......... 34% 77.0M 1s
+  5350K .......... .......... .......... .......... .......... 34% 11.5M 1s
+  5400K .......... .......... .......... .......... .......... 35% 84.3M 1s
+  5450K .......... .......... .......... .......... .......... 35% 11.9M 1s
+  5500K .......... .......... .......... .......... .......... 35%  101M 1s
+  5550K .......... .......... .......... .......... .......... 36% 97.8M 1s
+  5600K .......... .......... .......... .......... .......... 36% 11.6M 1s
+  5650K .......... .......... .......... .......... .......... 36% 82.9M 1s
+  5700K .......... .......... .......... .......... .......... 37% 11.7M 1s
+  5750K .......... .......... .......... .......... .......... 37% 90.7M 1s
+  5800K .......... .......... .......... .......... .......... 37%  101M 1s
+  5850K .......... .......... .......... .......... .......... 38% 11.9M 1s
+  5900K .......... .......... .......... .......... .......... 38% 86.5M 1s
+  5950K .......... .......... .......... .......... .......... 38%  114M 1s
+  6000K .......... .......... .......... .......... .......... 39% 11.5M 1s
+  6050K .......... .......... .......... .......... .......... 39% 83.8M 1s
+  6100K .......... .......... .......... .......... .......... 39% 13.6M 1s
+  6150K .......... .......... .......... .......... .......... 40% 65.5M 1s
+  6200K .......... .......... .......... .......... .......... 40% 96.6M 1s
+  6250K .......... .......... .......... .......... .......... 40% 12.9M 1s
+  6300K .......... .......... .......... .......... .......... 40% 60.3M 1s
+  6350K .......... .......... .......... .......... .......... 41% 91.0M 1s
+  6400K .......... .......... .......... .......... .......... 41% 13.1M 1s
+  6450K .......... .......... .......... .......... .......... 41% 58.5M 1s
+  6500K .......... .......... .......... .......... .......... 42% 12.7M 1s
+  6550K .......... .......... .......... .......... .......... 42% 59.4M 1s
+  6600K .......... .......... .......... .......... .......... 42% 95.6M 1s
+  6650K .......... .......... .......... .......... .......... 43% 13.6M 1s
+  6700K .......... .......... .......... .......... .......... 43% 50.2M 1s
+  6750K .......... .......... .......... .......... .......... 43% 13.1M 1s
+  6800K .......... .......... .......... .......... .......... 44%  110M 1s
+  6850K .......... .......... .......... .......... .......... 44% 50.7M 1s
+  6900K .......... .......... .......... .......... .......... 44% 12.6M 1s
+  6950K .......... .......... .......... .......... .......... 45% 67.0M 1s
+  7000K .......... .......... .......... .......... .......... 45% 12.6M 1s
+  7050K .......... .......... .......... .......... .......... 45% 96.3M 1s
+  7100K .......... .......... .......... .......... .......... 46% 82.1M 1s
+  7150K .......... .......... .......... .......... .......... 46% 12.4M 1s
+  7200K .......... .......... .......... .......... .......... 46% 77.8M 1s
+  7250K .......... .......... .......... .......... .......... 47% 12.3M 1s
+  7300K .......... .......... .......... .......... .......... 47%  112M 1s
+  7350K .......... .......... .......... .......... .......... 47% 71.7M 1s
+  7400K .......... .......... .......... .......... .......... 48% 12.4M 1s
+  7450K .......... .......... .......... .......... .......... 48% 64.8M 1s
+  7500K .......... .......... .......... .......... .......... 48%  113M 1s
+  7550K .......... .......... .......... .......... .......... 49% 12.3M 1s
+  7600K .......... .......... .......... .......... .......... 49% 69.4M 1s
+  7650K .......... .......... .......... .......... .......... 49% 12.2M 1s
+  7700K .......... .......... .......... .......... .......... 50% 76.9M 1s
+  7750K .......... .......... .......... .......... .......... 50%  108M 1s
+  7800K .......... .......... .......... .......... .......... 50% 12.3M 1s
+  7850K .......... .......... .......... .......... .......... 51% 92.6M 1s
+  7900K .......... .......... .......... .......... .......... 51% 12.2M 1s
+  7950K .......... .......... .......... .......... .......... 51%  103M 1s
+  8000K .......... .......... .......... .......... .......... 51%  107M 1s
+  8050K .......... .......... .......... .......... .......... 52% 12.0M 1s
+  8100K .......... .......... .......... .......... .......... 52% 76.4M 1s
+  8150K .......... .......... .......... .......... .......... 52% 12.3M 1s
+  8200K .......... .......... .......... .......... .......... 53% 99.9M 1s
+  8250K .......... .......... .......... .......... .......... 53% 94.8M 1s
+  8300K .......... .......... .......... .......... .......... 53% 11.8M 1s
+  8350K .......... .......... .......... .......... .......... 54% 92.7M 1s
+  8400K .......... .......... .......... .......... .......... 54% 97.4M 1s
+  8450K .......... .......... .......... .......... .......... 54% 11.9M 1s
+  8500K .......... .......... .......... .......... .......... 55% 83.0M 1s
+  8550K .......... .......... .......... .......... .......... 55% 12.1M 1s
+  8600K .......... .......... .......... .......... .......... 55% 84.9M 1s
+  8650K .......... .......... .......... .......... .......... 56% 87.8M 1s
+  8700K .......... .......... .......... .......... .......... 56% 12.9M 1s
+  8750K .......... .......... .......... .......... .......... 56% 66.0M 1s
+  8800K .......... .......... .......... .......... .......... 57% 12.9M 1s
+  8850K .......... .......... .......... .......... .......... 57% 55.5M 1s
+  8900K .......... .......... .......... .......... .......... 57% 95.6M 1s
+  8950K .......... .......... .......... .......... .......... 58% 13.4M 1s
+  9000K .......... .......... .......... .......... .......... 58% 52.1M 1s
+  9050K .......... .......... .......... .......... .......... 58% 12.8M 1s
+  9100K .......... .......... .......... .......... .......... 59% 58.2M 1s
+  9150K .......... .......... .......... .......... .......... 59% 88.1M 0s
+  9200K .......... .......... .......... .......... .......... 59% 13.3M 0s
+  9250K .......... .......... .......... .......... .......... 60% 57.2M 0s
+  9300K .......... .......... .......... .......... .......... 60% 12.7M 0s
+  9350K .......... .......... .......... .......... .......... 60% 88.2M 0s
+  9400K .......... .......... .......... .......... .......... 61%  100M 0s
+  9450K .......... .......... .......... .......... .......... 61% 90.3M 0s
+  9500K .......... .......... .......... .......... .......... 61% 14.4M 0s
+  9550K .......... .......... .......... .......... .......... 61% 63.0M 0s
+  9600K .......... .......... .......... .......... .......... 62%  107M 0s
+  9650K .......... .......... .......... .......... .......... 62% 86.9M 0s
+  9700K .......... .......... .......... .......... .......... 62% 15.6M 0s
+  9750K .......... .......... .......... .......... .......... 63% 68.7M 0s
+  9800K .......... .......... .......... .......... .......... 63% 96.0M 0s
+  9850K .......... .......... .......... .......... .......... 63% 92.4M 0s
+  9900K .......... .......... .......... .......... .......... 64% 15.7M 0s
+  9950K .......... .......... .......... .......... .......... 64% 59.2M 0s
+ 10000K .......... .......... .......... .......... .......... 64% 99.0M 0s
+ 10050K .......... .......... .......... .......... .......... 65% 15.6M 0s
+ 10100K .......... .......... .......... .......... .......... 65% 99.6M 0s
+ 10150K .......... .......... .......... .......... .......... 65% 53.4M 0s
+ 10200K .......... .......... .......... .......... .......... 66%  108M 0s
+ 10250K .......... .......... .......... .......... .......... 66% 16.1M 0s
+ 10300K .......... .......... .......... .......... .......... 66%  101M 0s
+ 10350K .......... .......... .......... .......... .......... 67% 46.3M 0s
+ 10400K .......... .......... .......... .......... .......... 67%  102M 0s
+ 10450K .......... .......... .......... .......... .......... 67% 16.3M 0s
+ 10500K .......... .......... .......... .......... .......... 68% 46.7M 0s
+ 10550K .......... .......... .......... .......... .......... 68%  102M 0s
+ 10600K .......... .......... .......... .......... .......... 68%  103M 0s
+ 10650K .......... .......... .......... .......... .......... 69% 17.9M 0s
+ 10700K .......... .......... .......... .......... .......... 69% 35.1M 0s
+ 10750K .......... .......... .......... .......... .......... 69% 92.1M 0s
+ 10800K .......... .......... .......... .......... .......... 70%  103M 0s
+ 10850K .......... .......... .......... .......... .......... 70% 18.2M 0s
+ 10900K .......... .......... .......... .......... .......... 70% 40.3M 0s
+ 10950K .......... .......... .......... .......... .......... 71% 75.3M 0s
+ 11000K .......... .......... .......... .......... .......... 71%  101M 0s
+ 11050K .......... .......... .......... .......... .......... 71% 18.7M 0s
+ 11100K .......... .......... .......... .......... .......... 71% 42.3M 0s
+ 11150K .......... .......... .......... .......... .......... 72% 58.8M 0s
+ 11200K .......... .......... .......... .......... .......... 72% 97.1M 0s
+ 11250K .......... .......... .......... .......... .......... 72% 19.3M 0s
+ 11300K .......... .......... .......... .......... .......... 73% 40.1M 0s
+ 11350K .......... .......... .......... .......... .......... 73% 62.5M 0s
+ 11400K .......... .......... .......... .......... .......... 73% 21.3M 0s
+ 11450K .......... .......... .......... .......... .......... 74% 92.7M 0s
+ 11500K .......... .......... .......... .......... .......... 74% 36.2M 0s
+ 11550K .......... .......... .......... .......... .......... 74% 68.3M 0s
+ 11600K .......... .......... .......... .......... .......... 75% 21.1M 0s
+ 11650K .......... .......... .......... .......... .......... 75% 33.1M 0s
+ 11700K .......... .......... .......... .......... .......... 75% 97.3M 0s
+ 11750K .......... .......... .......... .......... .......... 76% 72.1M 0s
+ 11800K .......... .......... .......... .......... .......... 76% 21.4M 0s
+ 11850K .......... .......... .......... .......... .......... 76% 33.5M 0s
+ 11900K .......... .......... .......... .......... .......... 77%  100M 0s
+ 11950K .......... .......... .......... .......... .......... 77% 72.7M 0s
+ 12000K .......... .......... .......... .......... .......... 77% 21.6M 0s
+ 12050K .......... .......... .......... .......... .......... 78% 34.4M 0s
+ 12100K .......... .......... .......... .......... .......... 78% 74.7M 0s
+ 12150K .......... .......... .......... .......... .......... 78%  106M 0s
+ 12200K .......... .......... .......... .......... .......... 79% 19.7M 0s
+ 12250K .......... .......... .......... .......... .......... 79% 37.7M 0s
+ 12300K .......... .......... .......... .......... .......... 79% 74.5M 0s
+ 12350K .......... .......... .......... .......... .......... 80%  102M 0s
+ 12400K .......... .......... .......... .......... .......... 80% 20.0M 0s
+ 12450K .......... .......... .......... .......... .......... 80% 33.2M 0s
+ 12500K .......... .......... .......... .......... .......... 81% 76.0M 0s
+ 12550K .......... .......... .......... .......... .......... 81% 19.3M 0s
+ 12600K .......... .......... .......... .......... .......... 81% 43.5M 0s
+ 12650K .......... .......... .......... .......... .......... 81% 86.2M 0s
+ 12700K .......... .......... .......... .......... .......... 82% 86.4M 0s
+ 12750K .......... .......... .......... .......... .......... 82% 18.8M 0s
+ 12800K .......... .......... .......... .......... .......... 82% 39.9M 0s
+ 12850K .......... .......... .......... .......... .......... 83% 81.5M 0s
+ 12900K .......... .......... .......... .......... .......... 83%  105M 0s
+ 12950K .......... .......... .......... .......... .......... 83% 18.6M 0s
+ 13000K .......... .......... .......... .......... .......... 84% 39.0M 0s
+ 13050K .......... .......... .......... .......... .......... 84% 82.4M 0s
+ 13100K .......... .......... .......... .......... .......... 84% 94.6M 0s
+ 13150K .......... .......... .......... .......... .......... 85% 19.2M 0s
+ 13200K .......... .......... .......... .......... .......... 85% 39.5M 0s
+ 13250K .......... .......... .......... .......... .......... 85% 89.6M 0s
+ 13300K .......... .......... .......... .......... .......... 86%  108M 0s
+ 13350K .......... .......... .......... .......... .......... 86% 94.1M 0s
+ 13400K .......... .......... .......... .......... .......... 86% 22.1M 0s
+ 13450K .......... .......... .......... .......... .......... 87% 39.9M 0s
+ 13500K .......... .......... .......... .......... .......... 87% 89.6M 0s
+ 13550K .......... .......... .......... .......... .......... 87%  102M 0s
+ 13600K .......... .......... .......... .......... .......... 88% 92.0M 0s
+ 13650K .......... .......... .......... .......... .......... 88% 24.5M 0s
+ 13700K .......... .......... .......... .......... .......... 88% 35.2M 0s
+ 13750K .......... .......... .......... .......... .......... 89% 90.3M 0s
+ 13800K .......... .......... .......... .......... .......... 89% 99.5M 0s
+ 13850K .......... .......... .......... .......... .......... 89% 92.4M 0s
+ 13900K .......... .......... .......... .......... .......... 90% 27.0M 0s
+ 13950K .......... .......... .......... .......... .......... 90% 29.3M 0s
+ 14000K .......... .......... .......... .......... .......... 90% 97.0M 0s
+ 14050K .......... .......... .......... .......... .......... 91% 90.5M 0s
+ 14100K .......... .......... .......... .......... .......... 91%  109M 0s
+ 14150K .......... .......... .......... .......... .......... 91% 29.9M 0s
+ 14200K .......... .......... .......... .......... .......... 92% 26.8M 0s
+ 14250K .......... .......... .......... .......... .......... 92% 90.1M 0s
+ 14300K .......... .......... .......... .......... .......... 92%  112M 0s
+ 14350K .......... .......... .......... .......... .......... 92%  105M 0s
+ 14400K .......... .......... .......... .......... .......... 93% 33.7M 0s
+ 14450K .......... .......... .......... .......... .......... 93% 24.2M 0s
+ 14500K .......... .......... .......... .......... .......... 93%  106M 0s
+ 14550K .......... .......... .......... .......... .......... 94% 90.4M 0s
+ 14600K .......... .......... .......... .......... .......... 94%  112M 0s
+ 14650K .......... .......... .......... .......... .......... 94% 33.1M 0s
+ 14700K .......... .......... .......... .......... .......... 95% 91.8M 0s
+ 14750K .......... .......... .......... .......... .......... 95% 26.4M 0s
+ 14800K .......... .......... .......... .......... .......... 95% 83.4M 0s
+ 14850K .......... .......... .......... .......... .......... 96% 87.6M 0s
+ 14900K .......... .......... .......... .......... .......... 96% 40.2M 0s
+ 14950K .......... .......... .......... .......... .......... 96%  105M 0s
+ 15000K .......... .......... .......... .......... .......... 97% 25.4M 0s
+ 15050K .......... .......... .......... .......... .......... 97% 69.0M 0s
+ 15100K .......... .......... .......... .......... .......... 97%  106M 0s
+ 15150K .......... .......... .......... .......... .......... 98%  105M 0s
+ 15200K .......... .......... .......... .......... .......... 98% 42.6M 0s
+ 15250K .......... .......... .......... .......... .......... 98% 24.0M 0s
+ 15300K .......... .......... .......... .......... .......... 99% 69.8M 0s
+ 15350K .......... .......... .......... .......... .......... 99%  102M 0s
+ 15400K .......... .......... .......... .......... .......... 99% 86.2M 0s
+ 15450K .......... .......... .......... .........            100% 40.2M=0.9s
+
+2022-06-17 23:13:19 (17.3 MB/s) - ‘/tmp/tmp17sjphwt/MobileNetV1.tar.gz’ saved [15860773/15860773]
+
+./._MobileNetV1
+MobileNetV1/
+MobileNetV1/._inference.pdiparams.info
+MobileNetV1/inference.pdiparams.info
+MobileNetV1/._inference.pdmodel
+MobileNetV1/inference.pdmodel
+MobileNetV1/._inference.pdiparams
+MobileNetV1/inference.pdiparams
+py CxxConfig class 's set_valid_places will be running
+program_config.py CxxConfig set_valid_places is running
+py CxxConfig class 's set_threads will be running
+program_config.py CxxConfig set_threads is running
+Start to running test of <class '__main__.TestMobileNetV1'>
+The AutoScanBaseTest inputs_generator is running
+The TestMobileNetV1 class 's function prepare_input_data return value is {'inputs': {'shape': [1, 3, 32, 32], 'lod': None, 'dtype': dtype('float32')}}
+py CxxConfig class 's set_valid_places will be running
+program_config.py CxxConfig set_valid_places is running
+py CxxConfig class 's set_threads will be running
+program_config.py CxxConfig set_threads is running
+The AutoScanBaseTest class's run_model_test local paddlelite_configs param is : [<program_config.CxxConfig object at 0x7fc132c15550>]
+The AutoScanBaseTest class's run_model_test inputs_config param is : {'inputs': {'shape': [1, 3, 32, 32], 'lod': None, 'dtype': dtype('float32')}}
+The AutoScanBaseTest class's run_model_test base_config local-value is : <paddle.fluid.core_avx.AnalysisConfig object at 0x7fc1365c30f0>
+In AutoScanBaseTest class 's run_test_config function pred_config is <paddle.fluid.core_avx.AnalysisConfig object at 0x7fc1365c30f0>
+In AutoScanBaseTest class 's run_test_config function will be invoking paddle_infer.create_predictor <built-in method create_predictor of PyCapsule object at 0x7fc14d23ad20>
+In AutoScanBaseTest class 's run_test_config function predictor is <paddle.fluid.core_avx.PaddleInferPredictor object at 0x7fc132c15bf0>
+In AutoScanBaseTest class 's run_test_config function self.available_passes_in_framework is {'seqconv_eltadd_relu_fuse_pass', 'gpu_cpu_flatten2_matmul_fuse_pass', 'layer_norm_fuse_pass', 'gpu_cpu_squeeze2_matmul_fuse_pass', 'conv_transpose_bn_fuse_pass', 'gpu_cpu_map_matmul_v2_to_matmul_pass', 'gpu_cpu_map_matmul_to_mul_pass', 'graph_viz_pass', 'squared_mat_sub_fuse_pass', 'matmul_v2_scale_fuse_pass', 'seqpool_cvm_concat_fuse_pass', 'gpu_cpu_map_matmul_v2_to_mul_pass', 'mul_lstm_fuse_pass', 'gpu_cpu_reshape2_matmul_fuse_pass', 'mul_gru_fuse_pass', 'repeated_fc_relu_fuse_pass', 'fc_gru_fuse_pass', 'attention_lstm_fuse_pass', 'is_test_pass', 'matmul_scale_fuse_pass', 'simplify_with_basic_ops_pass', 'conv_transpose_eltwiseadd_bn_fuse_pass', 'conv_bn_fuse_pass', 'conv_eltwiseadd_bn_fuse_pass', 'seq_concat_fc_fuse_pass', 'runtime_context_cache_pass', 'fc_fuse_pass'}
+The AutoScanBaseTest class's run_model_test paddlelite_config.value() pred_config local-vlaue is : {'discarded_passes': [], 'valid_targets': ['X86,FP32,NCHW'], 'thread': 1}
+py The AutoScanTest ParsePaddleLiteConfig function new CxxConfig the default constructor is running
+ParsePaddleLiteConfig function place_str is X86,FP32,NCHW
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+CxxConfig class base class 's set_valid_places is running and then print valid_places_
+ConfigBase class base class 's set_threads is running and threads is 1 
+CxxModelBuffer::CxxModelBuffer function program_buffer is : 
+�� 
+CxxModelBuffer::CxxModelBuffer function params_ is :  
+In pybind.cc create_paddle_predictor of CxxConfig 
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+CxxPaddleApiImpl class Init function is running 
+CXXPaddleApiImpl class Init function status_is_cloned_ is false 
+attention LOG command
+use_layout_preprocess_pass:18446744073709551615
+Pass in a value greater than 1.0 to turn off the sparse pass internally
+CXXPaddleApiImpl class Init function raw_predictor_->Build will be running 
+Predictor::Build which have 3 params is running the first param is CxxConfig
+Load model from memory.
+Predictor::Build which have 7 params is running 
+model_type is lite_api::LiteModelType::kProtobuf 
+IN LoadModelPb function macro WITH_CONVERT_TO_SSA is ON 
+general::ssa::ConvertToSSA(cpp_prog) will be running 
+The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr. 
+Predictor::Build which have 3 params and the first param is ProgramDesc is running 
+Predictor::Build `inner_places` is used to optimize passes 
+prepare work
+Program::PrepareWorkspace(program_desc, vars_to_clone) is running 
+Var batch_norm_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_0.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_0.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv1_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv1_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv2d_27.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_28.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_29.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_30.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_31.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_32.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_33.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_34.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_35.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_36.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_37.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_38.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_39.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_40.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv3_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_weights in block 0
+ - type 10
+ - data type 1
+Var depthwise_conv2d_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_10.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_11.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_12.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_2.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_3.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_4.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_5.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_6.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_7.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_8.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_9.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var fc7_offset in block 0
+ - type 10
+ - data type 1
+Var fc7_weights in block 0
+ - type 10
+ - data type 1
+Var feed in block 0
+ - type 12
+Var fetch in block 0
+ - type 13
+Var flatten_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var flatten_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var inputs in block 0
+ - type 10
+ - data type 1
+data type 1
+Var linear_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var linear_1.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var pool2d_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var save_infer_model/scale_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var softmax_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+build desc
+Program::Build(program_desc) is running 
+create Op [feed]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [pool2d]
+create Op [flatten_contiguous_range]
+create Op [matmul]
+create Op [elementwise_add]
+create Op [softmax]
+create Op [scale]
+create Op [fetch]
+build desc finished
+RunDefaultOptimizer() will be running 
+RunDefaultOptimizer is running 
+class Optimizer construction is running 
+Optimizer::Run() is running 
+final program 
+* feed0
+ - col:int:0
+ - op_device:string: ""
+* conv2d1
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d2
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:32
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d3
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d4
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:64
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d5
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d6
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:128
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d7
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d8
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:128
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d9
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d10
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:256
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d11
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d12
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:256
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d13
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d14
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d15
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d16
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d17
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d18
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d19
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d20
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d21
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d22
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d23
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d24
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d25
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d26
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1024
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d27
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* pool2d28
+ - adaptive:int:1
+ - ceil_mode:int:0
+ - data_format:string: "NCHW"
+ - exclusive:int:1
+ - global_pooling:int:0
+ - is_test:int:1
+ - ksize:ints: {1,1}
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - pooling_type:string: "avg"
+ - strides:ints: {1,1}
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+* fc29
+ - Scale_out:float:1
+ - Scale_x:float:1
+ - Scale_y:float:1
+ - alpha:float:1
+ - force_fp32_output:int:0
+ - fused_reshape_Out:ints: {}
+ - fused_reshape_X:ints: {}
+ - fused_reshape_Y:ints: {}
+ - fused_transpose_Out:ints: {}
+ - fused_transpose_X:ints: {}
+ - fused_transpose_Y:ints: {}
+ - in_num_col_dims:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - op_type:string: "mul"
+ - transpose_X:int:0
+ - transpose_Y:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+* softmax30
+ - axis:int:-1
+ - data_format:string: "AnyLayout"
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+* fetch31
+ - col:int:0
+ - data_type:int:1
+ - op_device:string: ""
+digraph G {
+   node_369[label="batch_norm_0.tmp_3"]
+   node_373[label="batch_norm_1.tmp_3"]
+   node_409[label="batch_norm_10.tmp_3"]
+   node_413[label="batch_norm_11.tmp_3"]
+   node_417[label="batch_norm_12.tmp_3"]
+   node_421[label="batch_norm_13.tmp_3"]
+   node_425[label="batch_norm_14.tmp_3"]
+   node_429[label="batch_norm_15.tmp_3"]
+   node_433[label="batch_norm_16.tmp_3"]
+   node_437[label="batch_norm_17.tmp_3"]
+   node_441[label="batch_norm_18.tmp_3"]
+   node_445[label="batch_norm_19.tmp_3"]
+   node_377[label="batch_norm_2.tmp_3"]
+   node_449[label="batch_norm_20.tmp_3"]
+   node_453[label="batch_norm_21.tmp_3"]
+   node_457[label="batch_norm_22.tmp_3"]
+   node_461[label="batch_norm_23.tmp_3"]
+   node_465[label="batch_norm_24.tmp_3"]
+   node_469[label="batch_norm_25.tmp_3"]
+   node_473[label="batch_norm_26.tmp_3"]
+   node_381[label="batch_norm_3.tmp_3"]
+   node_385[label="batch_norm_4.tmp_3"]
+   node_389[label="batch_norm_5.tmp_3"]
+   node_393[label="batch_norm_6.tmp_3"]
+   node_397[label="batch_norm_7.tmp_3"]
+   node_401[label="batch_norm_8.tmp_3"]
+   node_405[label="batch_norm_9.tmp_3"]
+   node_368[label="conv1_bn_offset"]
+   node_367[label="conv1_weights"]
+   node_372[label="conv2_1_dw_bn_offset"]
+   node_371[label="conv2_1_dw_weights"]
+   node_376[label="conv2_1_sep_bn_offset"]
+   node_375[label="conv2_1_sep_weights"]
+   node_380[label="conv2_2_dw_bn_offset"]
+   node_379[label="conv2_2_dw_weights"]
+   node_384[label="conv2_2_sep_bn_offset"]
+   node_383[label="conv2_2_sep_weights"]
+   node_366[label="conv2d1" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_406[label="conv2d11" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_414[label="conv2d13" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_422[label="conv2d15" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_430[label="conv2d17" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_438[label="conv2d19" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_446[label="conv2d21" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_454[label="conv2d23" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_462[label="conv2d25" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_470[label="conv2d27" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_374[label="conv2d3" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_382[label="conv2d5" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_390[label="conv2d7" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_398[label="conv2d9" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_388[label="conv3_1_dw_bn_offset"]
+   node_387[label="conv3_1_dw_weights"]
+   node_392[label="conv3_1_sep_bn_offset"]
+   node_391[label="conv3_1_sep_weights"]
+   node_396[label="conv3_2_dw_bn_offset"]
+   node_395[label="conv3_2_dw_weights"]
+   node_400[label="conv3_2_sep_bn_offset"]
+   node_399[label="conv3_2_sep_weights"]
+   node_404[label="conv4_1_dw_bn_offset"]
+   node_403[label="conv4_1_dw_weights"]
+   node_408[label="conv4_1_sep_bn_offset"]
+   node_407[label="conv4_1_sep_weights"]
+   node_412[label="conv4_2_dw_bn_offset"]
+   node_411[label="conv4_2_dw_weights"]
+   node_416[label="conv4_2_sep_bn_offset"]
+   node_415[label="conv4_2_sep_weights"]
+   node_420[label="conv5_1_dw_bn_offset"]
+   node_419[label="conv5_1_dw_weights"]
+   node_424[label="conv5_1_sep_bn_offset"]
+   node_423[label="conv5_1_sep_weights"]
+   node_428[label="conv5_2_dw_bn_offset"]
+   node_427[label="conv5_2_dw_weights"]
+   node_432[label="conv5_2_sep_bn_offset"]
+   node_431[label="conv5_2_sep_weights"]
+   node_436[label="conv5_3_dw_bn_offset"]
+   node_435[label="conv5_3_dw_weights"]
+   node_440[label="conv5_3_sep_bn_offset"]
+   node_439[label="conv5_3_sep_weights"]
+   node_444[label="conv5_4_dw_bn_offset"]
+   node_443[label="conv5_4_dw_weights"]
+   node_448[label="conv5_4_sep_bn_offset"]
+   node_447[label="conv5_4_sep_weights"]
+   node_452[label="conv5_5_dw_bn_offset"]
+   node_451[label="conv5_5_dw_weights"]
+   node_456[label="conv5_5_sep_bn_offset"]
+   node_455[label="conv5_5_sep_weights"]
+   node_460[label="conv5_6_dw_bn_offset"]
+   node_459[label="conv5_6_dw_weights"]
+   node_464[label="conv5_6_sep_bn_offset"]
+   node_463[label="conv5_6_sep_weights"]
+   node_468[label="conv6_dw_bn_offset"]
+   node_467[label="conv6_dw_weights"]
+   node_472[label="conv6_sep_bn_offset"]
+   node_471[label="conv6_sep_weights"]
+   node_402[label="depthwise_conv2d10" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_410[label="depthwise_conv2d12" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_418[label="depthwise_conv2d14" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_426[label="depthwise_conv2d16" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_434[label="depthwise_conv2d18" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_370[label="depthwise_conv2d2" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_442[label="depthwise_conv2d20" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_450[label="depthwise_conv2d22" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_458[label="depthwise_conv2d24" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_466[label="depthwise_conv2d26" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_378[label="depthwise_conv2d4" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_386[label="depthwise_conv2d6" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_394[label="depthwise_conv2d8" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_476[label="fc29" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_478[label="fc7_offset"]
+   node_477[label="fc7_weights"]
+   node_364[label="feed"]
+   node_363[label="feed0" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_483[label="fetch"]
+   node_482[label="fetch31" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_365[label="inputs"]
+   node_479[label="linear_1.tmp_1"]
+   node_474[label="pool2d28" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_475[label="pool2d_0.tmp_0"]
+   node_481[label="save_infer_model/scale_0.tmp_1"]
+   node_480[label="softmax30" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_364->node_363[label="X"]
+   node_363->node_365[label="Out"]
+   node_365->node_366[label="Input"]
+   node_367->node_366[label="Filter"]
+   node_368->node_366[label="Bias"]
+   node_366->node_369[label="Output"]
+   node_369->node_370[label="Input"]
+   node_371->node_370[label="Filter"]
+   node_372->node_370[label="Bias"]
+   node_370->node_373[label="Output"]
+   node_373->node_374[label="Input"]
+   node_375->node_374[label="Filter"]
+   node_376->node_374[label="Bias"]
+   node_374->node_377[label="Output"]
+   node_377->node_378[label="Input"]
+   node_379->node_378[label="Filter"]
+   node_380->node_378[label="Bias"]
+   node_378->node_381[label="Output"]
+   node_381->node_382[label="Input"]
+   node_383->node_382[label="Filter"]
+   node_384->node_382[label="Bias"]
+   node_382->node_385[label="Output"]
+   node_385->node_386[label="Input"]
+   node_387->node_386[label="Filter"]
+   node_388->node_386[label="Bias"]
+   node_386->node_389[label="Output"]
+   node_389->node_390[label="Input"]
+   node_391->node_390[label="Filter"]
+   node_392->node_390[label="Bias"]
+   node_390->node_393[label="Output"]
+   node_393->node_394[label="Input"]
+   node_395->node_394[label="Filter"]
+   node_396->node_394[label="Bias"]
+   node_394->node_397[label="Output"]
+   node_397->node_398[label="Input"]
+   node_399->node_398[label="Filter"]
+   node_400->node_398[label="Bias"]
+   node_398->node_401[label="Output"]
+   node_401->node_402[label="Input"]
+   node_403->node_402[label="Filter"]
+   node_404->node_402[label="Bias"]
+   node_402->node_405[label="Output"]
+   node_405->node_406[label="Input"]
+   node_407->node_406[label="Filter"]
+   node_408->node_406[label="Bias"]
+   node_406->node_409[label="Output"]
+   node_409->node_410[label="Input"]
+   node_411->node_410[label="Filter"]
+   node_412->node_410[label="Bias"]
+   node_410->node_413[label="Output"]
+   node_413->node_414[label="Input"]
+   node_415->node_414[label="Filter"]
+   node_416->node_414[label="Bias"]
+   node_414->node_417[label="Output"]
+   node_417->node_418[label="Input"]
+   node_419->node_418[label="Filter"]
+   node_420->node_418[label="Bias"]
+   node_418->node_421[label="Output"]
+   node_421->node_422[label="Input"]
+   node_423->node_422[label="Filter"]
+   node_424->node_422[label="Bias"]
+   node_422->node_425[label="Output"]
+   node_425->node_426[label="Input"]
+   node_427->node_426[label="Filter"]
+   node_428->node_426[label="Bias"]
+   node_426->node_429[label="Output"]
+   node_429->node_430[label="Input"]
+   node_431->node_430[label="Filter"]
+   node_432->node_430[label="Bias"]
+   node_430->node_433[label="Output"]
+   node_433->node_434[label="Input"]
+   node_435->node_434[label="Filter"]
+   node_436->node_434[label="Bias"]
+   node_434->node_437[label="Output"]
+   node_437->node_438[label="Input"]
+   node_439->node_438[label="Filter"]
+   node_440->node_438[label="Bias"]
+   node_438->node_441[label="Output"]
+   node_441->node_442[label="Input"]
+   node_443->node_442[label="Filter"]
+   node_444->node_442[label="Bias"]
+   node_442->node_445[label="Output"]
+   node_445->node_446[label="Input"]
+   node_447->node_446[label="Filter"]
+   node_448->node_446[label="Bias"]
+   node_446->node_449[label="Output"]
+   node_449->node_450[label="Input"]
+   node_451->node_450[label="Filter"]
+   node_452->node_450[label="Bias"]
+   node_450->node_453[label="Output"]
+   node_453->node_454[label="Input"]
+   node_455->node_454[label="Filter"]
+   node_456->node_454[label="Bias"]
+   node_454->node_457[label="Output"]
+   node_457->node_458[label="Input"]
+   node_459->node_458[label="Filter"]
+   node_460->node_458[label="Bias"]
+   node_458->node_461[label="Output"]
+   node_461->node_462[label="Input"]
+   node_463->node_462[label="Filter"]
+   node_464->node_462[label="Bias"]
+   node_462->node_465[label="Output"]
+   node_465->node_466[label="Input"]
+   node_467->node_466[label="Filter"]
+   node_468->node_466[label="Bias"]
+   node_466->node_469[label="Output"]
+   node_469->node_470[label="Input"]
+   node_471->node_470[label="Filter"]
+   node_472->node_470[label="Bias"]
+   node_470->node_473[label="Output"]
+   node_473->node_474[label="X"]
+   node_474->node_475[label="Out"]
+   node_475->node_476[label="Input"]
+   node_477->node_476[label="W"]
+   node_478->node_476[label="Bias"]
+   node_476->node_479[label="Out"]
+   node_479->node_480[label="X"]
+   node_480->node_481[label="Out"]
+   node_481->node_482[label="X"]
+   node_482->node_483[label="Out"]
+} // end G
+LITE_WITH_X86 PADDLE_WITH_MKLML not LITE_ON_MODEL_OPTIMIZE_TOOL is openning 
+In pybind.cc create_paddle_predictor of CxxConfig 
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+CxxPaddleApiImpl class Init function is running 
+CXXPaddleApiImpl class Init function status_is_cloned_ is false 
+attention LOG command
+use_layout_preprocess_pass:18446744073709551615
+Pass in a value greater than 1.0 to turn off the sparse pass internally
+CXXPaddleApiImpl class Init function raw_predictor_->Build will be running 
+Predictor::Build which have 3 params is running the first param is CxxConfig
+Load model from memory.
+Predictor::Build which have 7 params is running 
+model_type is lite_api::LiteModelType::kProtobuf 
+IN LoadModelPb function macro WITH_CONVERT_TO_SSA is ON 
+general::ssa::ConvertToSSA(cpp_prog) will be running 
+The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr. 
+Predictor::Build which have 3 params and the first param is ProgramDesc is running 
+Predictor::Build `inner_places` is used to optimize passes 
+prepare work
+Program::PrepareWorkspace(program_desc, vars_to_clone) is running 
+Var batch_norm_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_0.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_0.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_1.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_10.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_11.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_12.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_13.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_14.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_15.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_16.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_17.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_18.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_19.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_2.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_20.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_21.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_22.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_23.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_24.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_25.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_26.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_3.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_4.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_5.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_6.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_7.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_8.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var batch_norm_9.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv1_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv1_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv2d_27.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_28.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_29.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_30.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_31.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_32.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_33.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_34.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_35.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_36.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_37.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_38.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_39.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv2d_40.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var conv3_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_weights in block 0
+ - type 10
+ - data type 1
+Var depthwise_conv2d_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_10.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_11.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_12.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_2.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_3.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_4.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_5.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_6.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_7.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_8.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var depthwise_conv2d_9.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var fc7_offset in block 0
+ - type 10
+ - data type 1
+Var fc7_weights in block 0
+ - type 10
+ - data type 1
+Var feed in block 0
+ - type 12
+Var fetch in block 0
+ - type 13
+Var flatten_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var flatten_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var inputs in block 0
+ - type 10
+ - data type 1
+data type 1
+Var linear_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var linear_1.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var pool2d_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var save_infer_model/scale_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+Var softmax_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+build desc
+Program::Build(program_desc) is running 
+create Op [feed]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [pool2d]
+create Op [flatten_contiguous_range]
+create Op [matmul]
+create Op [elementwise_add]
+create Op [softmax]
+create Op [scale]
+create Op [fetch]
+build desc finished
+RunDefaultOptimizer() will be running 
+RunDefaultOptimizer is running 
+class Optimizer construction is running 
+Optimizer::Run() is running 
+final program 
+* feed0
+ - col:int:0
+ - op_device:string: ""
+* conv2d1
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d2
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:32
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d3
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d4
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:64
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d5
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d6
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:128
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d7
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d8
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:128
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d9
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d10
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:256
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d11
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d12
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:256
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d13
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d14
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d15
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d16
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d17
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d18
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d19
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d20
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d21
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d22
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d23
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d24
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:512
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {2,2}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d25
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* depthwise_conv2d26
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1024
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {1,1}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* conv2d27
+ - Scale_in:float:1
+ - Scale_in_eltwise:float:1
+ - Scale_out:float:1
+ - Scale_weights:floats: {1}
+ - act_type:string: "relu"
+ - data_format:string: "NCHW"
+ - dilations:ints: {1,1}
+ - exhaustive_search:int:0
+ - force_fp32_output:int:0
+ - fuse_activation:string: ""
+ - fuse_alpha:float:0
+ - fuse_beta:float:0
+ - fuse_brelu:int:0
+ - fuse_brelu_threshold:float:6
+ - fuse_relu:int:1
+ - fuse_relu_before_depthwise_conv:int:0
+ - fuse_residual_connection:int:0
+ - groups:int:1
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - strides:ints: {1,1}
+ - use_addto:int:0
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+ - with_act:int:1
+* pool2d28
+ - adaptive:int:1
+ - ceil_mode:int:0
+ - data_format:string: "NCHW"
+ - exclusive:int:1
+ - global_pooling:int:0
+ - is_test:int:1
+ - ksize:ints: {1,1}
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - padding_algorithm:string: "EXPLICIT"
+ - paddings:ints: {0,0}
+ - pooling_type:string: "avg"
+ - strides:ints: {1,1}
+ - use_cudnn:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+* fc29
+ - Scale_out:float:1
+ - Scale_x:float:1
+ - Scale_y:float:1
+ - alpha:float:1
+ - force_fp32_output:int:0
+ - fused_reshape_Out:ints: {}
+ - fused_reshape_X:ints: {}
+ - fused_reshape_Y:ints: {}
+ - fused_transpose_Out:ints: {}
+ - fused_transpose_X:ints: {}
+ - fused_transpose_Y:ints: {}
+ - in_num_col_dims:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - op_type:string: "mul"
+ - transpose_X:int:0
+ - transpose_Y:int:0
+ - use_mkldnn:int:0
+ - use_quantizer:int:0
+* softmax30
+ - axis:int:-1
+ - data_format:string: "AnyLayout"
+ - is_test:int:1
+ - mkldnn_data_type:string: "float32"
+ - op_device:string: ""
+ - use_cudnn:int:1
+ - use_mkldnn:int:0
+* fetch31
+ - col:int:0
+ - data_type:int:1
+ - op_device:string: ""
+digraph G {
+   node_974[label="batch_norm_0.tmp_3"]
+   node_978[label="batch_norm_1.tmp_3"]
+   node_1014[label="batch_norm_10.tmp_3"]
+   node_1018[label="batch_norm_11.tmp_3"]
+   node_1022[label="batch_norm_12.tmp_3"]
+   node_1026[label="batch_norm_13.tmp_3"]
+   node_1030[label="batch_norm_14.tmp_3"]
+   node_1034[label="batch_norm_15.tmp_3"]
+   node_1038[label="batch_norm_16.tmp_3"]
+   node_1042[label="batch_norm_17.tmp_3"]
+   node_1046[label="batch_norm_18.tmp_3"]
+   node_1050[label="batch_norm_19.tmp_3"]
+   node_982[label="batch_norm_2.tmp_3"]
+   node_1054[label="batch_norm_20.tmp_3"]
+   node_1058[label="batch_norm_21.tmp_3"]
+   node_1062[label="batch_norm_22.tmp_3"]
+   node_1066[label="batch_norm_23.tmp_3"]
+   node_1070[label="batch_norm_24.tmp_3"]
+   node_1074[label="batch_norm_25.tmp_3"]
+   node_1078[label="batch_norm_26.tmp_3"]
+   node_986[label="batch_norm_3.tmp_3"]
+   node_990[label="batch_norm_4.tmp_3"]
+   node_994[label="batch_norm_5.tmp_3"]
+   node_998[label="batch_norm_6.tmp_3"]
+   node_1002[label="batch_norm_7.tmp_3"]
+   node_1006[label="batch_norm_8.tmp_3"]
+   node_1010[label="batch_norm_9.tmp_3"]
+   node_973[label="conv1_bn_offset"]
+   node_972[label="conv1_weights"]
+   node_977[label="conv2_1_dw_bn_offset"]
+   node_976[label="conv2_1_dw_weights"]
+   node_981[label="conv2_1_sep_bn_offset"]
+   node_980[label="conv2_1_sep_weights"]
+   node_985[label="conv2_2_dw_bn_offset"]
+   node_984[label="conv2_2_dw_weights"]
+   node_989[label="conv2_2_sep_bn_offset"]
+   node_988[label="conv2_2_sep_weights"]
+   node_971[label="conv2d1" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1011[label="conv2d11" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1019[label="conv2d13" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1027[label="conv2d15" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1035[label="conv2d17" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1043[label="conv2d19" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1051[label="conv2d21" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1059[label="conv2d23" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1067[label="conv2d25" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1075[label="conv2d27" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_979[label="conv2d3" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_987[label="conv2d5" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_995[label="conv2d7" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1003[label="conv2d9" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_993[label="conv3_1_dw_bn_offset"]
+   node_992[label="conv3_1_dw_weights"]
+   node_997[label="conv3_1_sep_bn_offset"]
+   node_996[label="conv3_1_sep_weights"]
+   node_1001[label="conv3_2_dw_bn_offset"]
+   node_1000[label="conv3_2_dw_weights"]
+   node_1005[label="conv3_2_sep_bn_offset"]
+   node_1004[label="conv3_2_sep_weights"]
+   node_1009[label="conv4_1_dw_bn_offset"]
+   node_1008[label="conv4_1_dw_weights"]
+   node_1013[label="conv4_1_sep_bn_offset"]
+   node_1012[label="conv4_1_sep_weights"]
+   node_1017[label="conv4_2_dw_bn_offset"]
+   node_1016[label="conv4_2_dw_weights"]
+   node_1021[label="conv4_2_sep_bn_offset"]
+   node_1020[label="conv4_2_sep_weights"]
+   node_1025[label="conv5_1_dw_bn_offset"]
+   node_1024[label="conv5_1_dw_weights"]
+   node_1029[label="conv5_1_sep_bn_offset"]
+   node_1028[label="conv5_1_sep_weights"]
+   node_1033[label="conv5_2_dw_bn_offset"]
+   node_1032[label="conv5_2_dw_weights"]
+   node_1037[label="conv5_2_sep_bn_offset"]
+   node_1036[label="conv5_2_sep_weights"]
+   node_1041[label="conv5_3_dw_bn_offset"]
+   node_1040[label="conv5_3_dw_weights"]
+   node_1045[label="conv5_3_sep_bn_offset"]
+   node_1044[label="conv5_3_sep_weights"]
+   node_1049[label="conv5_4_dw_bn_offset"]
+   node_1048[label="conv5_4_dw_weights"]
+   node_1053[label="conv5_4_sep_bn_offset"]
+   node_1052[label="conv5_4_sep_weights"]
+   node_1057[label="conv5_5_dw_bn_offset"]
+   node_1056[label="conv5_5_dw_weights"]
+   node_1061[label="conv5_5_sep_bn_offset"]
+   node_1060[label="conv5_5_sep_weights"]
+   node_1065[label="conv5_6_dw_bn_offset"]
+   node_1064[label="conv5_6_dw_weights"]
+   node_1069[label="conv5_6_sep_bn_offset"]
+   node_1068[label="conv5_6_sep_weights"]
+   node_1073[label="conv6_dw_bn_offset"]
+   node_1072[label="conv6_dw_weights"]
+   node_1077[label="conv6_sep_bn_offset"]
+   node_1076[label="conv6_sep_weights"]
+   node_1007[label="depthwise_conv2d10" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1015[label="depthwise_conv2d12" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1023[label="depthwise_conv2d14" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1031[label="depthwise_conv2d16" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1039[label="depthwise_conv2d18" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_975[label="depthwise_conv2d2" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1047[label="depthwise_conv2d20" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1055[label="depthwise_conv2d22" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1063[label="depthwise_conv2d24" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1071[label="depthwise_conv2d26" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_983[label="depthwise_conv2d4" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_991[label="depthwise_conv2d6" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_999[label="depthwise_conv2d8" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1081[label="fc29" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1083[label="fc7_offset"]
+   node_1082[label="fc7_weights"]
+   node_969[label="feed"]
+   node_968[label="feed0" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1088[label="fetch"]
+   node_1087[label="fetch31" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_970[label="inputs"]
+   node_1084[label="linear_1.tmp_1"]
+   node_1079[label="pool2d28" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_1080[label="pool2d_0.tmp_0"]
+   node_1086[label="save_infer_model/scale_0.tmp_1"]
+   node_1085[label="softmax30" shape="box" style="filled" color="black" fillcolor="yellow"]
+   node_969->node_968[label="X"]
+   node_968->node_970[label="Out"]
+   node_970->node_971[label="Input"]
+   node_972->node_971[label="Filter"]
+   node_973->node_971[label="Bias"]
+   node_971->node_974[label="Output"]
+   node_974->node_975[label="Input"]
+   node_976->node_975[label="Filter"]
+   node_977->node_975[label="Bias"]
+   node_975->node_978[label="Output"]
+   node_978->node_979[label="Input"]
+   node_980->node_979[label="Filter"]
+   node_981->node_979[label="Bias"]
+   node_979->node_982[label="Output"]
+   node_982->node_983[label="Input"]
+   node_984->node_983[label="Filter"]
+   node_985->node_983[label="Bias"]
+   node_983->node_986[label="Output"]
+   node_986->node_987[label="Input"]
+   node_988->node_987[label="Filter"]
+   node_989->node_987[label="Bias"]
+   node_987->node_990[label="Output"]
+   node_990->node_991[label="Input"]
+   node_992->node_991[label="Filter"]
+   node_993->node_991[label="Bias"]
+   node_991->node_994[label="Output"]
+   node_994->node_995[label="Input"]
+   node_996->node_995[label="Filter"]
+   node_997->node_995[label="Bias"]
+   node_995->node_998[label="Output"]
+   node_998->node_999[label="Input"]
+   node_1000->node_999[label="Filter"]
+   node_1001->node_999[label="Bias"]
+   node_999->node_1002[label="Output"]
+   node_1002->node_1003[label="Input"]
+   node_1004->node_1003[label="Filter"]
+   node_1005->node_1003[label="Bias"]
+   node_1003->node_1006[label="Output"]
+   node_1006->node_1007[label="Input"]
+   node_1008->node_1007[label="Filter"]
+   node_1009->node_1007[label="Bias"]
+   node_1007->node_1010[label="Output"]
+   node_1010->node_1011[label="Input"]
+   node_1012->node_1011[label="Filter"]
+   node_1013->node_1011[label="Bias"]
+   node_1011->node_1014[label="Output"]
+   node_1014->node_1015[label="Input"]
+   node_1016->node_1015[label="Filter"]
+   node_1017->node_1015[label="Bias"]
+   node_1015->node_1018[label="Output"]
+   node_1018->node_1019[label="Input"]
+   node_1020->node_1019[label="Filter"]
+   node_1021->node_1019[label="Bias"]
+   node_1019->node_1022[label="Output"]
+   node_1022->node_1023[label="Input"]
+   node_1024->node_1023[label="Filter"]
+   node_1025->node_1023[label="Bias"]
+   node_1023->node_1026[label="Output"]
+   node_1026->node_1027[label="Input"]
+   node_1028->node_1027[label="Filter"]
+   node_1029->node_1027[label="Bias"]
+   node_1027->node_1030[label="Output"]
+   node_1030->node_1031[label="Input"]
+   node_1032->node_1031[label="Filter"]
+   node_1033->node_1031[label="Bias"]
+   node_1031->node_1034[label="Output"]
+   node_1034->node_1035[label="Input"]
+   node_1036->node_1035[label="Filter"]
+   node_1037->node_1035[label="Bias"]
+   node_1035->node_1038[label="Output"]
+   node_1038->node_1039[label="Input"]
+   node_1040->node_1039[label="Filter"]
+   node_1041->node_1039[label="Bias"]
+   node_1039->node_1042[label="Output"]
+   node_1042->node_1043[label="Input"]
+   node_1044->node_1043[label="Filter"]
+   node_1045->node_1043[label="Bias"]
+   node_1043->node_1046[label="Output"]
+   node_1046->node_1047[label="Input"]
+   node_1048->node_1047[label="Filter"]
+   node_1049->node_1047[label="Bias"]
+   node_1047->node_1050[label="Output"]
+   node_1050->node_1051[label="Input"]
+   node_1052->node_1051[label="Filter"]
+   node_1053->node_1051[label="Bias"]
+   node_1051->node_1054[label="Output"]
+   node_1054->node_1055[label="Input"]
+   node_1056->node_1055[label="Filter"]
+   node_1057->node_1055[label="Bias"]
+   node_1055->node_1058[label="Output"]
+   node_1058->node_1059[label="Input"]
+   node_1060->node_1059[label="Filter"]
+   node_1061->node_1059[label="Bias"]
+   node_1059->node_1062[label="Output"]
+   node_1062->node_1063[label="Input"]
+   node_1064->node_1063[label="Filter"]
+   node_1065->node_1063[label="Bias"]
+   node_1063->node_1066[label="Output"]
+   node_1066->node_1067[label="Input"]
+   node_1068->node_1067[label="Filter"]
+   node_1069->node_1067[label="Bias"]
+   node_1067->node_1070[label="Output"]
+   node_1070->node_1071[label="Input"]
+   node_1072->node_1071[label="Filter"]
+   node_1073->node_1071[label="Bias"]
+   node_1071->node_1074[label="Output"]
+   node_1074->node_1075[label="Input"]
+   node_1076->node_1075[label="Filter"]
+   node_1077->node_1075[label="Bias"]
+   node_1075->node_1078[label="Output"]
+   node_1078->node_1079[label="X"]
+   node_1079->node_1080[label="Out"]
+   node_1080->node_1081[label="Input"]
+   node_1082->node_1081[label="W"]
+   node_1083->node_1081[label="Bias"]
+   node_1081->node_1084[label="Out"]
+   node_1084->node_1085[label="X"]
+   node_1085->node_1086[label="Out"]
+   node_1086->node_1087[label="X"]
+   node_1087->node_1088[label="Out"]
+} // end G
+The AutoScanTest class run_lite_config function create_paddle_predictor is <paddlelite.lite.CxxPredictor object at 0x7fc132c156b0>
+The AutoScanTest class run_lite_config function create_paddle_predictor is <built-in method create_paddle_predictor of PyCapsule object at 0x7fc133c638a0>
+The AutoScanTest class run_lite_config function predictor.get_input_names() elem is inputs
+The AutoScanTest class run_lite_config function predictor.get_output_names() elem is save_infer_model/scale_0.tmp_1
+The AutoScanTest class run_lite_config function inputs is {'inputs': {'data': array([[[[ 1.76405239e+00,  4.00157213e-01,  9.78738010e-01, ...,
+           1.46935880e+00,  1.54947430e-01,  3.78162533e-01],
+         [-8.87785733e-01, -1.98079646e+00, -3.47912163e-01, ...,
+          -3.59553158e-01, -8.13146293e-01, -1.72628260e+00],
+         [ 1.77426144e-01, -4.01780933e-01, -1.63019836e+00, ...,
+           9.76639032e-01,  3.56366396e-01,  7.06573188e-01],
+         ...,
+         [ 3.64481241e-01,  1.47132194e+00,  1.59277070e+00, ...,
+          -8.04753721e-01,  2.34664702e+00, -1.27916110e+00],
+         [-3.65551084e-01,  9.38092530e-01,  2.96733171e-01, ...,
+          -3.03098261e-01,  4.41032916e-01,  1.78792864e-01],
+         [-7.99422383e-01,  2.40787506e-01,  2.89120495e-01, ...,
+           7.01041341e-01, -4.17477340e-01, -1.09749663e+00]],
+
+        [[ 1.71230519e+00, -7.92115033e-01, -1.04552460e+00, ...,
+           1.04909325e+00,  3.17097473e+00,  1.89499632e-01],
+         [-1.34841311e+00,  1.26498330e+00, -3.00783873e-01, ...,
+          -8.00082505e-01, -1.04312944e+00, -8.57078195e-01],
+         [ 6.77462161e-01,  5.18203899e-02, -8.79160643e-01, ...,
+           3.77910107e-01,  1.32435870e+00, -1.72200799e-01],
+         ...,
+         [-2.17893147e+00, -6.29650414e-01, -6.53284729e-01, ...,
+           1.24845584e-03, -1.59939781e-01, -8.31957519e-01],
+         [-5.98150432e-01, -1.52003932e+00,  4.17853713e-01, ...,
+           6.88896656e-01,  2.74647206e-01, -6.03620410e-01],
+         [ 7.08859563e-01,  4.22818571e-01, -3.11685658e+00, ...,
+           1.00159407e-01, -4.75175112e-01,  1.27295375e+00]],
+
+        [[-1.69613123e+00,  7.30183542e-01, -1.85748327e+00, ...,
+           5.04969954e-01,  1.72369623e+00,  7.13016212e-01],
+         [ 3.25799614e-01,  1.24769524e-01, -1.01267314e+00, ...,
+          -6.26490235e-01,  1.71083653e+00,  1.41441500e+00],
+         [-6.36614859e-02, -1.57993054e+00, -2.83201194e+00, ...,
+           5.29833794e-01, -7.39395320e-01, -3.75959963e-01],
+         ...,
+         [ 5.70949852e-01,  1.07230067e+00, -5.03709435e-01, ...,
+          -3.93733710e-01,  8.52525756e-02,  9.94219854e-02],
+         [-1.53061628e+00,  3.27623188e-01,  2.79196501e-01, ...,
+          -1.17647314e+00, -1.28080666e+00,  1.66165185e+00],
+         [-6.79451227e-02,  2.36022854e+00,  5.55545628e-01, ...,
+          -1.22011721e+00, -9.41545665e-01,  2.54715532e-01]]]],
+      dtype=float32), 'lod': None}}
+The AutoScanTest class run_lite_config function inputs elem name is inputs
+LITE_WITH_X86 PADDLE_WITH_MKLML not LITE_ON_MODEL_OPTIMIZE_TOOL is openning 
+In RuntimeProgram::Run() is running the LITE_WITH_PROFILE is open 
+
+===== Detailed Dispatch Profiler Summary: N/A, Exclude 1 warm-ups =====
+OperatorType         KerneAttr(Place)               KernelFuncName           Remark                     InDim           FilterDim       OutDim          Avg(ms) Min(ms) Max(ms) Last(ms) Avg(%)  GOPs    GOPS   
+conv2d               x86/float/NCHW                 N/A                      3x3p1s2g1d1BiasRelu        1x3x32x32       32x3x3x3        1x32x16x16      0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g32d1BiasRelu       1x32x16x16      32x1x3x3        1x32x16x16      0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x32x16x16      64x32x1x1       1x64x16x16      0.000   0.000   0.000   0.000   0.00%    0.001   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s2g64d1BiasRelu       1x64x16x16      64x1x3x3        1x64x8x8        0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x64x8x8        128x64x1x1      1x128x8x8       0.000   0.000   0.000   0.000   0.00%    0.001   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g128d1BiasRelu      1x128x8x8       128x1x3x3       1x128x8x8       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x128x8x8       128x128x1x1     1x128x8x8       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s2g128d1BiasRelu      1x128x8x8       128x1x3x3       1x128x4x4       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x128x4x4       256x128x1x1     1x256x4x4       0.000   0.000   0.000   0.000   0.00%    0.001   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g256d1BiasRelu      1x256x4x4       256x1x3x3       1x256x4x4       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x256x4x4       256x256x1x1     1x256x4x4       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s2g256d1BiasRelu      1x256x4x4       256x1x3x3       1x256x2x2       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x256x2x2       512x256x1x1     1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.001   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g512d1BiasRelu      1x512x2x2       512x1x3x3       1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x512x2x2       512x512x1x1     1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g512d1BiasRelu      1x512x2x2       512x1x3x3       1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x512x2x2       512x512x1x1     1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g512d1BiasRelu      1x512x2x2       512x1x3x3       1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x512x2x2       512x512x1x1     1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g512d1BiasRelu      1x512x2x2       512x1x3x3       1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x512x2x2       512x512x1x1     1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g512d1BiasRelu      1x512x2x2       512x1x3x3       1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x512x2x2       512x512x1x1     1x512x2x2       0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s2g512d1BiasRelu      1x512x2x2       512x1x3x3       1x512x1x1       0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x512x1x1       1024x512x1x1    1x1024x1x1      0.000   0.000   0.000   0.000   0.00%    0.001   inf    
+depthwise_conv2d     x86/float/NCHW                 N/A                      3x3p1s1g1024d1BiasRelu     1x1024x1x1      1024x1x3x3      1x1024x1x1      0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+conv2d               x86/float/NCHW                 N/A                      1x1p0s1g1d1BiasRelu        1x1024x1x1      1024x1024x1x1   1x1024x1x1      0.000   0.000   0.000   0.000   0.00%    0.002   inf    
+pool2d               x86/float/NCHW                 N/A                      avg1x1s1p0EXPLICIT         1x1024x1x1      N/A             1x1024x1x1      0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+fc                   x86/float/NCHW                 N/A                      Bias                       1x1024x1x1      1024x1000       1x1000          0.000   0.000   0.000   0.000   0.00%    0.003   inf    
+softmax              x86/float/NCHW                 N/A                      axis-1                     1x1000          N/A             1x1000          0.000   0.000   0.000   0.000   0.00%    0.000   inf    
+
+SUCCESS: PredictorConfig: {'discarded_passes': [], 'valid_targets': ['X86,FP32,NCHW'], 'thread': 1}
+===================Statistical Information===================
+Number of Input Configs: 1
+Number of Predictor Kinds: 1
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.145s
+
+OK
+Trying example: run_model_test(
+    inputs_configs={'inputs': {'shape': [1, 3, 32, 32], 'lod': None, 'dtype': dtype('float32')}},
+)

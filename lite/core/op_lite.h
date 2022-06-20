@@ -64,11 +64,14 @@ class OpLite : public Registry {
   }
   const std::vector<Place> &valid_places() const { return valid_places_; }
   // Check the shape.
+  //runing in runing period++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   virtual bool CheckShape() const { return true; }
   // Inference the outputs' shape.
   virtual bool InferShapeImpl() const { return true; }
+  //runing in runing period++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   virtual bool InferShape();
   // Infer the outputs's data type during opt period
+  // runing in analize time------------------------------------------------------------------------------------------------------------------------------
   virtual bool InferType() {
     LOG(FATAL) << "Error! " << op_type_
                << "::InferType() function must be registered for op "
@@ -133,6 +136,7 @@ class OpLite : public Registry {
 
  protected:
   // Attach it with the runtime environment.
+  // runing in analize time------------------------------------------------------------------------------------------------------------------------------
   virtual bool AttachImpl(const cpp::OpDesc &opdesc, lite::Scope *scope) = 0;
 
   virtual bool InferShapeWithCache() const { return false; }

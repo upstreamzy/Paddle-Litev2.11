@@ -23,6 +23,8 @@
 #include "lite/core/op_lite.h"
 #include "lite/core/op_registry.h"
 #include "lite/model_parser/cpp_desc.h"
+#include <cstdio>
+#include <iostream>
 #ifdef LITE_WITH_PROFILE
 #include "lite/core/profile/profiler.h"
 #endif
@@ -53,10 +55,13 @@ struct Program {
           const std::vector<std::string>& var_names = {})
       : scope_(root_scope), valid_places_(valid_places) {
     CHECK(scope_) << "scope should be init first";
+    std::cout << "prepare work" << std::endl;
     VLOG(4) << "prepare work";
     PrepareWorkspace(program_desc, var_names);
+    std::cout << "build desc" << std::endl;
     VLOG(4) << "build desc";
     Build(program_desc);
+    std::cout << "build desc finished" << std::endl;
     VLOG(4) << "build desc finished";
   }
 

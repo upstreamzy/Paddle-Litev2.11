@@ -18,6 +18,7 @@
 #include "lite/core/optimizer/mir/type_target_cast_pass.h"
 #include "lite/model_parser/model_parser.h"
 #include "lite/utils/all.h"
+#include <cstdio>
 
 namespace paddle {
 namespace lite {
@@ -41,6 +42,7 @@ std::unique_ptr<RuntimeProgram> Optimizer::GenRuntimeProgram(
 }
 
 std::unique_ptr<RuntimeProgram> Optimizer::Run(Program&& program) {
+  printf("Optimizer::Run() is running \n");
   auto block_size = program.block_size();
   for (size_t block_idx = 0; block_idx < block_size; ++block_idx) {
     std::unique_ptr<mir::SSAGraph> graph;
@@ -109,6 +111,7 @@ void Optimizer::ApplyPasses(
     bool matched =
         PassMatchesTarget(*pass, targets) && PassMatchesKernels(*pass);
     if (!matched) {
+      std::cout << "   - Skip " << pass->name() << " because the target or kernel does not match." << std::endl;
       LOG(INFO) << "   - Skip " << pass->name()
                 << " because the target or kernel does not match.";
     } else {
@@ -132,6 +135,7 @@ std::unique_ptr<RuntimeProgram> RunDefaultOptimizer(
     core::KernelPickFactor kernel_pick_factor,
     const std::vector<std::string>& passes,
     const lite_api::CxxConfig& config) {
+  printf("RunDefaultOptimizer is running \n");
   Optimizer optim(valid_places, kernel_pick_factor);
 
   std::vector<std::string> passes_local{
@@ -276,9 +280,11 @@ std::unique_ptr<RuntimeProgram> RunDefaultOptimizer(
   for (auto& pass : discarded_passes) {
     auto iterator = std::find(passes_local.begin(), passes_local.end(), pass);
     if (iterator != passes_local.end()) {
+      std::cout << "discarded pass : " << pass;
       LOG(INFO) << "discarded pass : " << pass;
       passes_local.erase(iterator);
     } else {
+      std::cout << "the pass : " << pass << " dont't exit or has already discarded" << std::endl;
       LOG(INFO) << "the pass : " << pass
                 << " dont't exit or has already discarded";
     }
@@ -296,6 +302,7 @@ std::unique_ptr<RuntimeProgram> RunDefaultOptimizer(
                                    passes_local.end(),
                                    "__xpu__graph_dedup_pass"),
                        passes_local.end());
+    std::cout << "skip __xpu__graph_dedup_pass because of multiple subgraphs[" << program.block_size() << "]" << std::endl;
     LOG(INFO) << "skip __xpu__graph_dedup_pass because of multiple subgraphs["
               << program.block_size() << "]";
   }

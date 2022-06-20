@@ -17,7 +17,8 @@
 #include <algorithm>
 #include <map>
 #include <set>
-
+#include <iostream>
+#include <cstdio>
 #include "lite/model_parser/cpp_desc.h"
 #include "lite/operators/conditional_block_op.h"
 #include "lite/operators/subgraph_op.h"
@@ -486,9 +487,13 @@ void RuntimeProgram::Run() {
 #endif
 
 #ifdef LITE_WITH_PROFILE
+  printf("In RuntimeProgram::Run() is running the LITE_WITH_PROFILE is open \n");
+  std::cout << "\n" << profiler_.Summary(profile::Type::kDispatch, false, 1) << std::endl;
   LOG(INFO) << "\n" << profiler_.Summary(profile::Type::kDispatch, false, 1);
 #endif
 #ifdef LITE_WITH_PRECISION_PROFILE
+  printf("In RuntimeProgram::Run() is running the LITE_WITH_PRECISION_PROFILE is open \n");
+  std::cout << "\n" << precision_profiler_summary << inst_precision_profiler.GetSummaryTail() << std::endl;
   LOG(INFO) << "\n"
             << precision_profiler_summary
             << inst_precision_profiler.GetSummaryTail();
@@ -497,7 +502,7 @@ void RuntimeProgram::Run() {
 
 void Program::Build(const std::shared_ptr<cpp::ProgramDesc>& program_desc) {
   CHECK(ops_.empty()) << "Executor duplicate Build found";
-
+  printf("Program::Build(program_desc) is running \n");
   // Create operators.
   auto block_size = program_desc->BlocksSize();
   CHECK(block_size);
@@ -509,6 +514,7 @@ void Program::Build(const std::shared_ptr<cpp::ProgramDesc>& program_desc) {
       auto* op_desc = block_desc->GetOp<cpp::OpDesc>(op_idx);
       auto op_type = op_desc->Type();
       VLOG(4) << "create Op [" << op_type << "]";
+      std::cout << "create Op [" << op_type << "]" << std::endl;
       auto op = LiteOpRegistry::Global().Create(op_type);
       CHECK(op) << "no Op found for " << op_type;
       if (op_type == "while") {
@@ -563,7 +569,7 @@ void Program::PrepareWorkspace(
         return PRECISION(kUnk);
     }
   };
-
+  printf("Program::PrepareWorkspace(program_desc, vars_to_clone) is running \n");
   auto block_size = program_desc->BlocksSize();
   CHECK(block_size);
   for (size_t block_idx = 0; block_idx < block_size; ++block_idx) {
@@ -575,9 +581,11 @@ void Program::PrepareWorkspace(
       const auto& var_type = var_desc->GetType();
       VLOG(4) << "Var " << var_name << " in block " << block_idx;
       VLOG(4) << " - type " << static_cast<int>(var_type);
-
+      std::cout << "Var " << var_name << " in block " << block_idx << std::endl;
+      std::cout << " - type " << static_cast<int>(var_type) << std::endl;
 #if defined(LITE_WITH_XPU) || defined(LITE_WITH_CUDA)
       if (!var_desc->Persistable()) {
+        printf("LITE_WITH_XPU and LITE_WITH_CUDA is openning \n");
 #endif
         // Collect precision info into var_type_map_
         if (var_type == lite::VarDescAPI::Type::LOD_TENSOR) {
@@ -587,6 +595,7 @@ void Program::PrepareWorkspace(
             var_type_map_[var_name] = LiteType::GetTensorTy(
                 TARGET(kUnk), var_data_type, DATALAYOUT(kUnk));
           }
+          std::cout << " - data type " << static_cast<int>(var_data_type) << std::endl;
           VLOG(4) << " - data type " << static_cast<int>(var_data_type);
         } else if (var_type == lite::VarDescAPI::Type::LOD_TENSOR_ARRAY) {
           var_type_map_[var_name] = LiteType::GetTensorListTy(
@@ -607,6 +616,7 @@ void Program::PrepareWorkspace(
             var_type_map_[var_name] = LiteType::GetTensorTy(
                 TARGET(kUnk), var_data_type, DATALAYOUT(kUnk));
           }
+          std::cout << "data type " << static_cast<int>(var_data_type) << std::endl;
           VLOG(4) << " - data type " << static_cast<int>(var_data_type);
           // Create the tensor with the shape from var desc, it's convenient to
           // the graph analysis in the passes, but you should resize the tensor
@@ -616,6 +626,7 @@ void Program::PrepareWorkspace(
           auto* tensor = var->GetMutable<lite::Tensor>();
           if (tensor->dims().empty() && !var_shape.empty()) {
             tensor->Resize(var_shape);
+            std::cout << " - dims " << tensor -> dims().repr() << std::endl;
             VLOG(4) << " - dims " << tensor->dims().repr();
           }
           tensor->set_precision(var_data_type);

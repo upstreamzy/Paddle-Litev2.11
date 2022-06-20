@@ -55,6 +55,7 @@ def ParsePlaceInfo(place_str):
 
 
 def ParsePaddleLiteConfig(self, config):
+    logging.info("py The AutoScanTest ParsePaddleLiteConfig function new CxxConfig the default constructor is running")
     lite_config = CxxConfig()
     if "valid_targets" in config:
         valid_places = []

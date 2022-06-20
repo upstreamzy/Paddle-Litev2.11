@@ -81,7 +81,7 @@ WITH_TINY_PUBLISH=ON
 # controls whether to include FP16 kernels, default is OFF
 BUILD_ARM82_FP16=OFF
 # options of profiling
-WITH_PROFILE=OFF
+WITH_PROFILE=ON
 WITH_PRECISION_PROFILE=OFF
 # option of benchmark, default is OFF
 WITH_BENCHMARK=OFF

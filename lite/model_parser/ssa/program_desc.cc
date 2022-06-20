@@ -16,7 +16,7 @@
 #include <set>
 #include <string>
 #include <utility>
-
+#include <stdio.h>
 #include "lite/model_parser/ssa/program_desc.h"
 
 namespace paddle {
@@ -277,6 +277,7 @@ void ProgramDescConverter::InitBlockOps(const BlockDesc& src_block) {
 }
 
 void ConvertToSSA(general::ProgramDesc* prog) {
+  printf("ConvertToSSA(general::ProgramDesc* prog) which will be return general::ProgramDesc* type is running \n");
   general::ssa::PlainProgramDesc plain_prog(*prog);
   general::ssa::ProgramDescConverter prog_converter(plain_prog);
   *prog = prog_converter.general_program();

@@ -16,6 +16,7 @@
 #include <memory>
 #include <mutex>  //NOLINT
 #include <string>
+#include <iostream>
 #include "lite/api/paddle_api.h"
 #include "lite/core/device_info.h"
 #include "lite/core/optimizer/mir/pass_manager.h"
@@ -118,13 +119,16 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
         raw_predictor_->scope(), config.nnadapter_dynamic_shape_info());
 #endif
 
+    std::cout << "attention LOG command" << std::endl;
     LOG(INFO) << "attention LOG command";
     auto use_layout_preprocess_pass =
         config.model_dir().find("OPENCL_PRE_PRECESS");
+    std::cout << "use_layout_preprocess_pass:" << use_layout_preprocess_pass << std::endl;
     VLOG(1) << "use_layout_preprocess_pass:" << use_layout_preprocess_pass;
     if (places[0].target == TARGET(kOpenCL) &&
         use_layout_preprocess_pass != std::string::npos) {
       passes.push_back("type_layout_cast_preprocess_pass");
+      std::cout << "add pass:" << passes[0] << std::endl;
       VLOG(1) << "add pass:" << passes[0];
     }
 
@@ -147,6 +151,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
     } else {
       // Pass in a value greater than 1.0 to turn off the sparse pass
       // internally.
+      printf("Pass in a value greater than 1.0 to turn off the sparse pass internally\n");
       sparse_detect_pass->SetSparseThreshold(1.5);
     }
     printf("CXXPaddleApiImpl class Init function raw_predictor_->Build will be running \n");
@@ -170,7 +175,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
 
 #if (defined LITE_WITH_X86) && (defined PADDLE_WITH_MKLML) && \
     !(defined LITE_ON_MODEL_OPTIMIZE_TOOL)
-    printf("LITE_WITH_X86 PADDLE_WITH_MKLML LITE_ON_MODEL_OPTIMIZE_TOOL is openning \n");
+    printf("LITE_WITH_X86 PADDLE_WITH_MKLML not LITE_ON_MODEL_OPTIMIZE_TOOL is openning \n");
   int num_threads = config.x86_math_num_threads();
   int real_num_threads = num_threads > 1 ? num_threads : 1;
 #ifdef LITE_WITH_STATIC_MKL
