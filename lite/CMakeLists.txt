@@ -184,6 +184,7 @@ endif()
 # The final target for publish lite lib
 add_custom_target(publish_inference)
 if (LITE_WITH_ARM)
+    message(STATUS "LITE_WITH_ARM is ON xxx ${LITE_WITH_ARM}")
     # for publish
     set(INFER_LITE_PUBLISH_ROOT "${CMAKE_BINARY_DIR}/inference_lite_lib.${ARM_TARGET_OS}.${ARM_TARGET_ARCH_ABI}")
     if (LITE_WITH_OPENCL)

@@ -5,13 +5,14 @@ set -e
 # 1. global variables, you can change them according to your requirements
 #####################################################################################################
 # armv8 or armv7hf or armv7 or x86, default armv8.
-ARCH=x86
-#ARCH=x86
+ARCH=riscv64linux
+# ARCH=x86
 # gcc or clang, default gcc.
 TOOLCHAIN=gcc
 # ON or OFF, default OFF.
 WITH_EXTRA=ON
 # controls whether to compile python lib, default is OFF.
+# WITH_PYTHON=OFF
 WITH_PYTHON=ON
 PY_VERSION="3.7"
 # ON or OFF, default is OFF
@@ -77,7 +78,7 @@ INTEL_FPGA_SDK_ROOT="$(pwd)/intel_fpga_sdk"
 # options of adding training ops
 WITH_TRAIN=OFF
 # options of building tiny publish so
-WITH_TINY_PUBLISH=ON
+WITH_TINY_PUBLISH=OFF
 # controls whether to include FP16 kernels, default is OFF
 BUILD_ARM82_FP16=OFF
 # options of profiling
@@ -133,6 +134,7 @@ function set_benchmark_options {
 
 # mutable options for linux compiling.
 function init_cmake_mutable_options {
+    WITH_LOG=ON
     if [ "$WITH_PYTHON" = "ON" -a "$WITH_TINY_PUBLISH" = "ON" ]; then
         echo "Warning: build full_publish to use python."
         WITH_TINY_PUBLISH=OFF
@@ -159,6 +161,15 @@ function init_cmake_mutable_options {
         WITH_LIGHT_WEIGHT_FRAMEWORK=ON
         WITH_AVX=OFF
     fi
+    if [ "${ARCH}" == "riscv64linux" ]; then
+        with_x86=OFF
+        with_arm=OFF
+        arm_target_os=""
+        riscv_target_os="riscv64linux"
+        WITH_LIGHT_WEIGHT_FRAMEWORK=ON
+        WITH_AVX=OFF
+    fi
+
 
     if [ "${WITH_STRIP}" == "ON" ]; then
         WITH_EXTRA=ON
@@ -179,14 +190,18 @@ function init_cmake_mutable_options {
     fi
 
     cmake_mutable_options="-DLITE_WITH_ARM=$with_arm \
+                        -DPYTHON_INCLUDE_DIR=/usr/include/python3.7 \
+                        -DPYTHON_LIBRARY=/usr/lib/python3.7/config/libpython3.7.so \
                         -DLITE_WITH_X86=$with_x86 \
                         -DARM_TARGET_ARCH_ABI=$arm_arch \
                         -DARM_TARGET_OS=$arm_target_os \
+                        -DRISCV64_TARGET_OS=$riscv_target_os
                         -DARM_TARGET_LANG=$TOOLCHAIN \
                         -DLITE_WITH_LIGHT_WEIGHT_FRAMEWORK=$WITH_LIGHT_WEIGHT_FRAMEWORK \
                         -DLITE_BUILD_EXTRA=$WITH_EXTRA \
                         -DLITE_WITH_PYTHON=$WITH_PYTHON \
                         -DPY_VERSION=$PY_VERSION \
+                        -DWITH_MKL=OFF \
                         -DLITE_WITH_STATIC_LIB=$WITH_STATIC_LIB \
                         -DLITE_WITH_CV=$WITH_CV \
                         -DLITE_WITH_LOG=$WITH_LOG \

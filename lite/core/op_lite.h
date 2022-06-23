@@ -137,6 +137,7 @@ class OpLite : public Registry {
  protected:
   // Attach it with the runtime environment.
   // runing in analize time------------------------------------------------------------------------------------------------------------------------------
+  // bind input and output varible from scope
   virtual bool AttachImpl(const cpp::OpDesc &opdesc, lite::Scope *scope) = 0;
 
   virtual bool InferShapeWithCache() const { return false; }

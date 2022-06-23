@@ -278,6 +278,7 @@ function(cc_library TARGET_NAME)
 
       # Only deps libmklml.so, not link
       if(WITH_MKL)
+        message(STATUS "WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ${WITH_MKL}")
         if(WITH_STATIC_MKL)
           add_dependencies(${TARGET_NAME} ${MKLML_LIBRARIES})
           if(WIN32)
