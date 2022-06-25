@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if(NOT LITE_WITH_ARM)
+if(NOT LITE_WITH_ARM AND NOT LITE_WITH_RISCV)
     return()
 endif()
 include(CheckCXXCompilerFlag)
@@ -85,6 +85,12 @@ if(ARMLINUX)
         set(CMAKE_C_FLAGS "-march=armv7-a -mfloat-abi=hard -mfpu=neon ${CMAKE_C_FLAGS}" )
         message(STATUS "NEON is enabled on arm-v7a with hard float")
     endif()
+endif()
+
+if(RISCVLINUX)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+    
 endif()
 
 function(check_linker_flag)

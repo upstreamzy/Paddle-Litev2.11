@@ -153,6 +153,10 @@ if (LITE_WITH_ARM)
     add_definitions("-DLITE_WITH_ARM")
 endif()
 
+if (LITE_WITH_RISCV)
+    add_definitions("-DLITE_WITH_RISCV")
+endif()
+
 if(LITE_WITH_ARM82_FP16)
     add_definitions(-DENABLE_ARM_FP16)
 endif()

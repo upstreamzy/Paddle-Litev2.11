@@ -127,7 +127,7 @@ function(lite_cc_test TARGET)
 
   set(multiValueArgs SRCS DEPS X86_DEPS CUDA_DEPS CL_DEPS METAL_DEPS ARM_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS
         IMAGINATION_NNA_DEPS RKNPU_DEPS NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS APU_DEPS NNADAPTER_DEPS PROFILE_DEPS
-        LIGHT_DEPS HVY_DEPS EXCLUDE_COMPILE_DEPS CV_DEPS
+        LIGHT_DEPS HVY_DEPS EXCLUDE_COMPILE_DEPS CV_DEPS RISCV_LINUX_DEPS
         ARGS
         COMPILE_LEVEL # (basic|extra)
   )
@@ -155,8 +155,11 @@ function(lite_cc_test TARGET)
             CV_DEPS ${args_CV_DEPS}
             MLU_DEPS ${args_MLU_DEPS}
             HUAWEI_ASCEND_NPU_DEPS ${args_HUAWEI_ASCEND_NPU_DEPS}
+            RISCV_LINUX_DEPS ${args_RISCV_LINUX_DEPS}
             )
   if(LITE_WITH_ARM)
+    cc_binary(${TARGET} SRCS ${args_SRCS} DEPS ${deps} core_tester gflags gtest)
+  elseif(LITE_WITH_RISCV)
     cc_binary(${TARGET} SRCS ${args_SRCS} DEPS ${deps} core_tester gflags gtest)
   else()
     cc_binary(${TARGET} SRCS ${args_SRCS} DEPS ${deps} core_tester gflags gtest glog)

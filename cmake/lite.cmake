@@ -37,7 +37,7 @@ endfunction()
 function (lite_deps TARGET)
   set(options "")
   set(oneValueArgs "")
-  set(multiValueArgs DEPS X86_DEPS CUDA_DEPS ARM_DEPS PROFILE_DEPS LIGHT_DEPS HVY_DEPS CL_DEPS METAL_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS RKNPU_DEPS NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS IMAGINATION_NNA_DEPS APU_DEPS NNADAPTER_DEPS CV_DEPS ARGS)
+  set(multiValueArgs DEPS X86_DEPS CUDA_DEPS ARM_DEPS PROFILE_DEPS LIGHT_DEPS HVY_DEPS CL_DEPS METAL_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS RKNPU_DEPS NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS IMAGINATION_NNA_DEPS APU_DEPS NNADAPTER_DEPS CV_DEPS RISCV_LINUX_DEPS ARGS)
   cmake_parse_arguments(lite_deps "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
   set(deps ${lite_deps_DEPS})
@@ -77,7 +77,13 @@ function (lite_deps TARGET)
     endforeach(var)
   endif()
 
-  if (NOT LITE_WITH_ARM)
+  if(LITE_WITH_RISCV)
+    foreach(var ${lite_deps_RISCV_LINUX_DEPS})
+      set(deps ${deps} ${var})
+    endforeach(var)
+  endif()
+
+  if (NOT LITE_WITH_ARM AND NOT LITE_WITH_RISCV)
     foreach(var ${lite_deps_HVY_DEPS})
       set(deps ${deps} ${var})
     endforeach(var)
@@ -161,7 +167,7 @@ function(lite_cc_library TARGET)
     set(options SHARED shared STATIC static MODULE module)
     set(oneValueArgs "")
     set(multiValueArgs SRCS DEPS X86_DEPS CUDA_DEPS CL_DEPS METAL_DEPS ARM_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS IMAGINATION_NNA_DEPS RKNPU_DEPS NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS APU_DEPS NNADAPTER_DEPS CV_DEPS PROFILE_DEPS LIGHT_DEPS
-      HVY_DEPS EXCLUDE_COMPILE_DEPS ARGS)
+      HVY_DEPS EXCLUDE_COMPILE_DEPS RISCV_LINUX_DEPS ARGS)
     cmake_parse_arguments(args "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
     set(deps "")
@@ -187,6 +193,7 @@ function(lite_cc_library TARGET)
             HVY_DEPS ${args_HVY_DEPS}
             MLU_DEPS ${args_MLU_DEPS}
             HUAWEI_ASCEND_NPU_DEPS ${args_HUAWEI_ASCEND_NPU_DEPS}
+            RISCV_LINUX_DEPS ${args_RISCV_LINUX_DEPS}
             )
 
     if (args_SHARED OR ARGS_shared)
@@ -216,7 +223,7 @@ function(lite_cc_binary TARGET)
     endif()
     set(oneValueArgs "")
     set(multiValueArgs SRCS DEPS X86_DEPS CUDA_DEPS CL_DEPS METAL_DEPS ARM_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS IMAGINATION_NNA_DEPS RKNPU NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS APU_DEPS NNADAPTER_DEPS PROFILE_DEPS
-      LIGHT_DEPS HVY_DEPS EXCLUDE_COMPILE_DEPS CV_DEPS ARGS)
+      LIGHT_DEPS HVY_DEPS EXCLUDE_COMPILE_DEPS CV_DEPS RISCV_LINUX_DEPS ARGS)
     cmake_parse_arguments(args "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
     set(deps "")
@@ -242,6 +249,7 @@ function(lite_cc_binary TARGET)
             CV_DEPS ${CV_DEPS}
             MLU_DEPS ${args_MLU_DEPS}
             HUAWEI_ASCEND_NPU_DEPS ${args_HUAWEI_ASCEND_NPU_DEPS}
+            RISCV_LINUX_DEPS ${args_RISCV_LINUX_DEPS}
             )
     cc_binary(${TARGET} SRCS ${args_SRCS} DEPS ${deps})
 

@@ -52,11 +52,11 @@
 CMake Warning (dev) in cmake/configure.cmake:
   A logical block opening on the line
 
-    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:306 (if)
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:310 (if)
 
   closes on the line
 
-    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:308 (endif)
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:312 (endif)
 
   with mis-matching arguments.
 Call Stack (most recent call first):
@@ -65,6 +65,18 @@ Call Stack (most recent call first):
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Building the riscv64linux framework
+-- ANDROID_NDK_MAJOR: 
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Found OpenMP  4.5
+-- OpenMP C flags:  -fopenmp
+-- OpenMP CXX flags:  -fopenmp
+-- OpenMP EXE LINKER flags:  
+-- OpenMP OpenMP_CXX_LIB_NAMES:  omp
+-- OpenMP OpenMP_CXX_LIBRARIES:  omp
+-- CMAKE_CXX_FLAGS:   -fPIC -std=c++11 -fexceptions -fasynchronous-unwind-tables -funwind-tables -fexceptions -fasynchronous-unwind-tables -funwind-tables -fopenmp
+-- CMAKE_C_FLAGS:   -fPIC -fopenmp
 -- Protobuf protoc executable: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/bin/protoc
 -- Protobuf-lite library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotobuf-lite.a
 -- Protobuf library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotobuf.a
@@ -90,13 +102,13 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- compile with lite ARM kernels
 -- compile with lite CUDA kernels
 -- compile with lite Metal kernels
-fatal: no tag exactly matches '814ed3869545d6cd7323d838cb81a5081020202b'
+fatal: no tag exactly matches '4dbaa5e14f36e48ba6a5542a74a7cd860b938283'
 -- tag: 
 -- branch: release/v2.11
--- commit: 814ed3869
+-- commit: 4dbaa5e14
 -- bundled_tgt_full_name:  /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/libpaddle_api_full_bundled.a
 -- bundled_tgt_full_name:  /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/libpaddle_api_light_bundled.a
-fatal: no tag exactly matches '814ed3869545d6cd7323d838cb81a5081020202b'
+fatal: no tag exactly matches '4dbaa5e14f36e48ba6a5542a74a7cd860b938283'
 -- Download inference test stuff: lite_naive_model.tar.gz
 -- Download inference test stuff: mobilenet_v1.tar.gz
 -- Download inference test stuff: mobilenet_v2_relu.tar.gz
@@ -132,825 +144,6 @@ fatal: no tag exactly matches '814ed3869545d6cd7323d838cb81a5081020202b'
 -- Download inference test stuff: roadsign_data_128.tar.gz
 -- publish inference lib to /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/inference_lite_lib
 -- Configuring done
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_timer" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/utils/CMakeLists.txt:68 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_logging" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/utils/CMakeLists.txt:43 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "float16_test" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/utils/CMakeLists.txt:64 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_varient" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/utils/CMakeLists.txt:56 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_utils_string" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/utils/CMakeLists.txt:57 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_fast_type_id" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/utils/CMakeLists.txt:58 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_transpose_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:258 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_one_hot_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:249 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_concat_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:256 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_batch_norm_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:255 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_fc_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:251 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_scale_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:253 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target
-  "test_fusion_elementwise_activation_ops" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:259 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pool_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:252 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_calib_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:257 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_softmax_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/operators/CMakeLists.txt:254 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_layer_norm_compute_arm" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:110 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_split_lod_tensor_compute_arm"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:106 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_dropout_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:104 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_decode_bboxes_compute_arm"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:108 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_transpose_compute_arm" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:103 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_softmax_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:98 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_lrn_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:107 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_scale_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:97 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_batch_norm_compute_arm" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:99 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_concat_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:102 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_axpy_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:109 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pool_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:100 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_mul_compute_arm" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/arm/CMakeLists.txt:101 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "calib_compute_cuda_test" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/cuda/CMakeLists.txt:66 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_sequence_concat_compute_x86"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:94 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_var_conv_2d_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:95 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target
-  "test_search_group_padding_compute_x86" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:93 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target
-  "test_sequence_arithmetic_compute_x86" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:97 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_gru_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:81 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_dropout_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:86 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_match_matrix_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:91 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_softmax_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:79 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_layer_norm_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:85 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_batch_norm_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:78 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target
-  "test_sequence_expand_as_compute_x86" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:80 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_conv2d_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:75 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_sequence_pool_compute_x86"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:77 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_mul_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:76 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_lookup_table_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:92 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_matmul_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:82 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pool2d_compute_x86" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:84 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_transpose_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:87 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_search_grnn_compute_x86" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:90 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target
-  "test_search_seq_depadding_compute_x86" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/x86/CMakeLists.txt:89 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_io_copy_buffer_opencl" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:216 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_fc_buffer_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:207 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_argmax_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:152 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_softmax_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:149 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_trigonometric_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:143 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_box_coder_image_opencl" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:140 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pad2d_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:137 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_instance_norm_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:131 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_max_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:155 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_fc_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:146 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target
-  "test_depthwise_conv2d_transpose_image_opencl" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:82 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_nearest_interp_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:85 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_conv_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:73 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pool_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:88 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_reshape_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:91 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_grid_sampler_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:120 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_dropout_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:134 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_layout_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:103 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_lrn_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:123 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_depthwise_conv2d_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:76 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_transpose_image_opencl" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:94 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_concat_image_opencl" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:97 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_bilinear_interp_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:126 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_activation_image_opencl" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:70 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pixel_shuffle_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:106 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_conv_transpose_image_opencl"
-  does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:79 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_elementwise_image_opencl" does
-  not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/opencl/CMakeLists.txt:117 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_elementwise_fpga" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/fpga/CMakeLists.txt:56 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_fc_compute_fpga" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/fpga/CMakeLists.txt:57 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_conv_fpga" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/fpga/CMakeLists.txt:55 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pooling_compute_fpga" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/kernels/fpga/CMakeLists.txt:58 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_context" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:127 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_memory" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:126 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_types" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:125 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_type_system" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:124 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_tensor" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:123 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_scope" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:120 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_kernel" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:121 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_op" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/CMakeLists.txt:122 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_pattern_matcher" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/optimizer/mir/CMakeLists.txt:4 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_mir_pass_manager" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/optimizer/mir/CMakeLists.txt:9 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_subgraph_detector" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/optimizer/mir/subgraph/CMakeLists.txt:2 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_subgraph_pass" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/optimizer/mir/subgraph/CMakeLists.txt:12 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_basic_profiler" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/profile/CMakeLists.txt:4 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_lite_timer" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/core/profile/CMakeLists.txt:5 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_model_parser" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/CMakeLists.txt:52 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_compatible_pb" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/CMakeLists.txt:47 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_naive_buffer" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/naive_buffer/CMakeLists.txt:6 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_naive_buffer_wrapper" does not
-  exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/naive_buffer/CMakeLists.txt:8 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_program_desc" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/flatbuffers/CMakeLists.txt:3 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_vector_view" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/flatbuffers/CMakeLists.txt:1 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_fbs_io" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/flatbuffers/CMakeLists.txt:2 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_ssa_program" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/model_parser/ssa/CMakeLists.txt:2 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_cxx_api" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/api/test/CMakeLists.txt:7 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_apis" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/api/test/CMakeLists.txt:104 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_paddle_api" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/api/test/CMakeLists.txt:116 (lite_cc_test)
-
-
-CMake Error at cmake/generic.cmake:334 (add_dependencies):
-  The dependency target "glog" of target "test_light_api" does not exist.
-Call Stack (most recent call first):
-  cmake/functions.cmake:162 (cc_binary)
-  lite/api/test/CMakeLists.txt:101 (lite_cc_test)
-
-
 -- Generating done
 CMake Warning:
   Manually-specified variables were not used by the project:
@@ -993,3 +186,956 @@ CMake Warning:
 
 
 -- Build files have been written to: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc
+Scanning dependencies of target extern_protobuf
+Scanning dependencies of target extern_gtest
+Scanning dependencies of target fbs_headers
+Scanning dependencies of target protobuf_host
+[  0%] Creating directories for 'extern_protobuf'
+[  0%] Creating directories for 'protobuf_host'
+[  0%] Creating directories for 'extern_gtest'
+[  0%] Built target fbs_headers
+Scanning dependencies of target extern_gflags
+[  0%] Creating directories for 'extern_gflags'
+[  1%] No download step for 'protobuf_host'
+[  1%] No download step for 'extern_gtest'
+[  1%] No download step for 'extern_protobuf'
+[  1%] No patch step for 'extern_gtest'
+[  1%] No patch step for 'extern_protobuf'
+[  1%] No patch step for 'protobuf_host'
+[  1%] No update step for 'extern_protobuf'
+[  1%] No update step for 'extern_gtest'
+[  1%] No update step for 'protobuf_host'
+[  1%] No download step for 'extern_gflags'
+[  1%] Performing configure step for 'extern_protobuf'
+[  1%] Performing configure step for 'extern_gtest'
+[  1%] Performing configure step for 'protobuf_host'
+[  2%] No patch step for 'extern_gflags'
+[  2%] No update step for 'extern_gflags'
+[  2%] Performing configure step for 'extern_gflags'
+-- extern_gtest configure command succeeded.  See also /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/src/extern_gtest-stamp/extern_gtest-configure-*.log
+[  2%] Performing build step for 'extern_gtest'
+Scanning dependencies of target gmock_main
+[  9%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+-- extern_protobuf configure command succeeded.  See also /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/protobuf/src/extern_protobuf-stamp/extern_protobuf-configure-*.log
+-- protobuf_host configure command succeeded.  See also /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/protobuf_host/src/protobuf_host-stamp/protobuf_host-configure-*.log
+[  2%] Performing build step for 'extern_protobuf'
+[  2%] Performing build step for 'protobuf_host'
+Scanning dependencies of target libprotobuf
+Scanning dependencies of target libprotobuf
+[  0%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/arena.cc.o
+[  0%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/arena.cc.o
+-- extern_gflags configure command succeeded.  See also /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/include/src/extern_gflags-stamp/extern_gflags-configure-*.log
+[  1%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/arenastring.cc.o
+[  2%] Performing build step for 'extern_gflags'
+[  1%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/arenastring.cc.o
+Scanning dependencies of target gflags_static
+[ 12%] Building CXX object CMakeFiles/gflags_static.dir/src/gflags.cc.o
+[  1%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/extension_set.cc.o
+[  1%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/extension_set.cc.o
+[ 25%] Building CXX object CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.o
+[ 37%] Building CXX object CMakeFiles/gflags_static.dir/src/gflags_completions.cc.o
+[  2%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/generated_message_util.cc.o
+[  2%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/generated_message_util.cc.o
+[ 18%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+[  2%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/coded_stream.cc.o
+[  2%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/coded_stream.cc.o
+[ 50%] Linking CXX static library lib/libgflags.a
+[ 50%] Built target gflags_static
+Scanning dependencies of target gflags_nothreads_static
+[ 62%] Building CXX object CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
+[  3%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/zero_copy_stream.cc.o
+[  3%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/zero_copy_stream.cc.o
+[  3%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[  3%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[  4%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/message_lite.cc.o
+[  4%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/message_lite.cc.o
+[ 75%] Building CXX object CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
+[  4%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/repeated_field.cc.o
+[  4%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/repeated_field.cc.o
+[ 27%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 87%] Building CXX object CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
+[  5%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc.o
+[  5%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc.o
+[  5%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc.o
+[  5%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc.o
+[100%] Linking CXX static library lib/libgflags_nothreads.a
+[  6%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/bytestream.cc.o
+[  6%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/bytestream.cc.o
+[100%] Built target gflags_nothreads_static
+[  2%] Performing install step for 'extern_gflags'
+[ 36%] Linking CXX static library libgmock_main.a
+[ 50%] Built target gflags_static
+[100%] Built target gflags_nothreads_static
+Install the project...
+[  6%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/common.cc.o
+[ 36%] Built target gmock_main
+-- Install configuration: ""
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/libgflags.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/libgflags_nothreads.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/include/gflags/gflags.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/include/gflags/gflags_declare.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/include/gflags/gflags_completions.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/include/gflags/gflags_gflags.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/cmake/gflags/gflags-config.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/cmake/gflags/gflags-config-version.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/cmake/gflags/gflags-targets.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/cmake/gflags/gflags-targets-noconfig.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/bin/gflags_completions.sh
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gflags/lib/pkgconfig/gflags.pc
+-- Installing: /home/ubuntu/.cmake/packages/gflags/b3b7df1b7e610a9442387caa73f81868
+Scanning dependencies of target gmock
+[ 45%] Building CXX object googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o
+[  2%] Completed 'extern_gflags'
+[  6%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/common.cc.o
+[  2%] Built target extern_gflags
+[ 54%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[  7%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/int128.cc.o
+[  7%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/int128.cc.o
+[  7%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/once.cc.o
+[  7%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/once.cc.o
+[  8%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/status.cc.o
+[  8%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/status.cc.o
+[  8%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/statusor.cc.o
+[  8%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/statusor.cc.o
+[  9%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/stringpiece.cc.o
+[  9%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/stringpiece.cc.o
+Scanning dependencies of target libprotobuf-lite
+[  9%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/arena.cc.o
+[  9%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/stringprintf.cc.o
+[  9%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/stringprintf.cc.o
+[ 10%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/arenastring.cc.o
+[ 11%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/structurally_valid.cc.o
+[ 10%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/structurally_valid.cc.o
+[ 11%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/extension_set.cc.o
+[ 11%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/strutil.cc.o
+[ 63%] Linking CXX static library libgmock.a
+[ 10%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/strutil.cc.o
+[ 63%] Built target gmock
+Scanning dependencies of target gtest
+[ 72%] Building CXX object googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 12%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/time.cc.o
+[ 11%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/time.cc.o
+[ 12%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/wire_format_lite.cc.o
+[ 11%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/wire_format_lite.cc.o
+[ 13%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/generated_message_util.cc.o
+[ 13%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/coded_stream.cc.o
+[ 14%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/any.cc.o
+[ 12%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/any.cc.o
+[ 15%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/zero_copy_stream.cc.o
+[ 15%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/any.pb.cc.o
+[ 15%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[ 12%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/any.pb.cc.o
+[ 16%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/message_lite.cc.o
+[ 17%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/api.pb.cc.o
+[ 17%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/repeated_field.cc.o
+[ 13%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/api.pb.cc.o
+[ 81%] Linking CXX static library libgtest.a
+[ 81%] Built target gtest
+Scanning dependencies of target gtest_main
+[ 90%] Building CXX object googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 18%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc.o
+[ 18%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc.o
+[ 19%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/bytestream.cc.o
+[ 19%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/importer.cc.o
+[100%] Linking CXX static library libgtest_main.a
+[100%] Built target gtest_main
+[  2%] Performing install step for 'extern_gtest'
+[ 13%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/importer.cc.o
+[ 19%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/common.cc.o
+[ 36%] Built target gmock_main
+[ 63%] Built target gmock
+[ 81%] Built target gtest
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/lib/libgmock.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/lib/libgmock_main.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/custom
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/custom/gmock-port.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/gmock-generated-internal-utils.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/gmock-port.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-cardinalities.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-function-mockers.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-more-matchers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-nice-strict.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-matchers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-actions.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-more-actions.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-spec-builders.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-matchers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-actions.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-nice-strict.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gmock/gmock-generated-function-mockers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/lib/libgtest.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/lib/libgtest_main.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-typed-test.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-internal.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-filepath.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/custom
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/custom/gtest.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/custom/gtest-port.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-tuple.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-port-arch.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-param-util-generated.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-string.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-tuple.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-linked_ptr.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-type-util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-param-util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-port.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/internal/gtest-type-util.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-test-part.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest_prod.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-message.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest_pred_impl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-spi.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-param-test.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-printers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-param-test.h.pump
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/gtest/include/gtest/gtest-death-test.h
+[  2%] Completed 'extern_gtest'
+[  2%] Built target extern_gtest
+[ 20%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/int128.cc.o
+[ 21%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/parser.cc.o
+Scanning dependencies of target libprotobuf-lite
+[ 13%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/arena.cc.o
+[ 21%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/once.cc.o
+[ 14%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/arenastring.cc.o
+[ 15%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/parser.cc.o
+[ 22%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/status.cc.o
+[ 15%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/extension_set.cc.o
+[ 22%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/statusor.cc.o
+[ 23%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/stringpiece.cc.o
+[ 23%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/descriptor.cc.o
+[ 23%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/stringprintf.cc.o
+[ 24%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/structurally_valid.cc.o
+[ 15%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/descriptor.cc.o
+[ 25%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/strutil.cc.o
+[ 16%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/generated_message_util.cc.o
+[ 16%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/coded_stream.cc.o
+[ 25%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/time.cc.o
+[ 17%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/zero_copy_stream.cc.o
+[ 17%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[ 26%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/wire_format_lite.cc.o
+[ 18%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/message_lite.cc.o
+[ 26%] Linking CXX static library libprotobuf-lite.a
+[ 26%] Built target libprotobuf-lite
+[ 18%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/repeated_field.cc.o
+Scanning dependencies of target target_wrapper_host
+[  2%] Building CXX object lite/backends/host/CMakeFiles/target_wrapper_host.dir/target_wrapper.cc.o
+[ 19%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc.o
+[ 19%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc.o
+[ 20%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/bytestream.cc.o
+[  2%] Linking CXX static library libtarget_wrapper_host.a
+[  2%] Built target target_wrapper_host
+Scanning dependencies of target utils
+[  2%] Building CXX object lite/utils/CMakeFiles/utils.dir/log/logging.cc.o
+[ 20%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/common.cc.o
+[  3%] Linking CXX static library libutils.a
+[  3%] Built target utils
+[ 21%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/int128.cc.o
+[ 21%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/once.cc.o
+[ 22%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/status.cc.o
+[ 27%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/descriptor.pb.cc.o
+[ 22%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/statusor.cc.o
+[ 23%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/stringpiece.cc.o
+Scanning dependencies of target extern_pybind
+[  3%] Creating directories for 'extern_pybind'
+[  3%] No download step for 'extern_pybind'
+[  3%] No patch step for 'extern_pybind'
+[ 24%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/descriptor.pb.cc.o
+[  3%] No update step for 'extern_pybind'
+[  5%] No configure step for 'extern_pybind'
+[  5%] No build step for 'extern_pybind'
+[  5%] No install step for 'extern_pybind'
+[ 24%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/stringprintf.cc.o
+[  5%] No test step for 'extern_pybind'
+[  5%] Completed 'extern_pybind'
+[  5%] Built target extern_pybind
+Scanning dependencies of target publish_inference_python_light_demo
+[ 25%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/structurally_valid.cc.o
+[  5%] Built target publish_inference_python_light_demo
+Scanning dependencies of target publish_inference_python_full_demo
+[  5%] Built target publish_inference_python_full_demo
+[ 26%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/strutil.cc.o
+Scanning dependencies of target ops
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/conv_op.cc.o
+[ 26%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/time.cc.o
+[ 27%] Building CXX object CMakeFiles/libprotobuf-lite.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/wire_format_lite.cc.o
+[ 27%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/descriptor_database.cc.o
+[ 27%] Linking CXX static library libprotobuf-lite.a
+[ 27%] Built target libprotobuf-lite
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/pool_op.cc.o
+[ 27%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/descriptor_database.cc.o
+[ 28%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/duration.pb.cc.o
+[ 28%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/duration.pb.cc.o
+[ 28%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/dynamic_message.cc.o
+[ 29%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/empty.pb.cc.o
+[ 28%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/dynamic_message.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/fc_op.cc.o
+[ 29%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/extension_set_heavy.cc.o
+[ 30%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/field_mask.pb.cc.o
+[ 29%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/empty.pb.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/mul_op.cc.o
+[ 30%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/generated_message_reflection.cc.o
+[ 29%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/extension_set_heavy.cc.o
+[ 30%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/field_mask.pb.cc.o
+[ 31%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/gzip_stream.cc.o
+[ 31%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/printer.cc.o
+[ 30%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/generated_message_reflection.cc.o
+[ 32%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/strtod.cc.o
+[ 32%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/tokenizer.cc.o
+[ 33%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/io/zero_copy_stream_impl.cc.o
+[ 33%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/map_field.cc.o
+[ 34%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/message.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/matmul_op.cc.o
+[ 31%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/gzip_stream.cc.o
+[ 31%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/printer.cc.o
+[ 34%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/reflection_ops.cc.o
+[ 32%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/strtod.cc.o
+[ 32%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/tokenizer.cc.o
+[ 33%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/io/zero_copy_stream_impl.cc.o
+[ 35%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/service.cc.o
+[ 35%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/source_context.pb.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/scale_op.cc.o
+[ 33%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/map_field.cc.o
+[ 36%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/struct.pb.cc.o
+[ 34%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/message.cc.o
+[ 37%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/mathlimits.cc.o
+[ 34%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/reflection_ops.cc.o
+[ 37%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/stubs/substitute.cc.o
+[ 35%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/service.cc.o
+[ 38%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/text_format.cc.o
+[ 35%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/source_context.pb.cc.o
+[ 38%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/timestamp.pb.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/softmax_op.cc.o
+[ 36%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/struct.pb.cc.o
+[ 39%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/type.pb.cc.o
+[ 37%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/mathlimits.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/reshape_op.cc.o
+[ 39%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/unknown_field_set.cc.o
+[ 37%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/stubs/substitute.cc.o
+[ 40%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/field_comparator.cc.o
+[ 38%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/text_format.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/batch_norm_op.cc.o
+[ 40%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/field_mask_util.cc.o
+[ 41%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/datapiece.cc.o
+[ 38%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/timestamp.pb.cc.o
+[ 39%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/type.pb.cc.o
+[ 41%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/default_value_objectwriter.cc.o
+[ 39%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/unknown_field_set.cc.o
+[ 40%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/field_comparator.cc.o
+[ 40%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/field_mask_util.cc.o
+[ 42%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/error_listener.cc.o
+[  5%] Building CXX object lite/operators/CMakeFiles/ops.dir/feed_op.cc.o
+[ 42%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/field_mask_utility.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/fetch_op.cc.o
+[ 41%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/datapiece.cc.o
+[ 43%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/json_escaping.cc.o
+[ 43%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/json_objectwriter.cc.o
+[ 44%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/json_stream_parser.cc.o
+[ 41%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/default_value_objectwriter.cc.o
+[ 44%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/object_writer.cc.o
+[ 45%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/proto_writer.cc.o
+[ 42%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/error_listener.cc.o
+[ 45%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/protostream_objectsource.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/activation_ops.cc.o
+[ 42%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/field_mask_utility.cc.o
+[ 43%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/json_escaping.cc.o
+[ 46%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/protostream_objectwriter.cc.o
+[ 43%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/json_objectwriter.cc.o
+[ 46%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/type_info.cc.o
+[ 44%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/json_stream_parser.cc.o
+[ 47%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/type_info_test_helper.cc.o
+[ 47%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/internal/utility.cc.o
+[ 44%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/object_writer.cc.o
+[ 45%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/proto_writer.cc.o
+[ 48%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/json_util.cc.o
+[ 48%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/message_differencer.cc.o
+[ 49%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/time_util.cc.o
+[ 45%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/protostream_objectsource.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/elementwise_ops.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/box_coder_op.cc.o
+[ 49%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/util/type_resolver_util.cc.o
+[ 46%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/protostream_objectwriter.cc.o
+[ 50%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/wire_format.cc.o
+[ 46%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/type_info.cc.o
+[ 50%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/wrappers.pb.cc.o
+[ 47%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/type_info_test_helper.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/multiclass_nms_op.cc.o
+[ 51%] Linking CXX static library libprotobuf.a
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/fill_constant_op.cc.o
+[ 51%] Built target libprotobuf
+Scanning dependencies of target libprotoc
+[ 47%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/internal/utility.cc.o
+[ 52%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/code_generator.cc.o
+[ 52%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/command_line_interface.cc.o
+[ 48%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/json_util.cc.o
+[ 48%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/message_differencer.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/fill_constant_batch_size_like_op.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/shuffle_channel_op.cc.o
+[ 53%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_enum.cc.o
+[ 49%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/time_util.cc.o
+[ 53%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_enum_field.cc.o
+[ 49%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/util/type_resolver_util.cc.o
+[ 54%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_extension.cc.o
+[ 50%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/wire_format.cc.o
+[ 50%] Building CXX object CMakeFiles/libprotobuf.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/wrappers.pb.cc.o
+[ 54%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_field.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/yolo_box_op.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/interpolate_op.cc.o
+[ 55%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_file.cc.o
+[ 51%] Linking CXX static library libprotobuf.a
+[ 51%] Built target libprotobuf
+Scanning dependencies of target libprotoc
+[ 52%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/code_generator.cc.o
+[ 55%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_generator.cc.o
+[ 52%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/command_line_interface.cc.o
+[ 56%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_helpers.cc.o
+[ 53%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_enum.cc.o
+[ 56%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_map_field.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/interpolate_v2_op.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/argmax_op.cc.o
+[ 53%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_enum_field.cc.o
+[ 57%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_message.cc.o
+[ 54%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_extension.cc.o
+[ 54%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_field.cc.o
+[ 55%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_file.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/prior_box_op.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/concat_op.cc.o
+[ 57%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_message_field.cc.o
+[ 55%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_generator.cc.o
+[ 58%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_primitive_field.cc.o
+[ 56%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_helpers.cc.o
+[ 58%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_service.cc.o
+[ 56%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_map_field.cc.o
+[ 59%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/cpp/cpp_string_field.cc.o
+[ 57%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_message.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/pad2d_op.cc.o
+[ 57%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_message_field.cc.o
+[ 59%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_doc_comment.cc.o
+[ 60%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_enum.cc.o
+[ 58%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_primitive_field.cc.o
+[ 60%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_enum_field.cc.o
+[ 58%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_service.cc.o
+[ 61%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_field_base.cc.o
+[ 59%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/cpp/cpp_string_field.cc.o
+[ 59%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_doc_comment.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/calib_op.cc.o
+[ 61%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_generator.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/split_op.cc.o
+[ 60%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_enum.cc.o
+[ 62%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_helpers.cc.o
+[ 60%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_enum_field.cc.o
+[ 62%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_map_field.cc.o
+[ 61%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_field_base.cc.o
+[ 63%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_message.cc.o
+[ 61%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_generator.cc.o
+[ 62%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_helpers.cc.o
+[ 62%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_map_field.cc.o
+[ 63%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_message_field.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/transpose_op.cc.o
+[ 63%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_message.cc.o
+[ 63%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_message_field.cc.o
+[ 64%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_primitive_field.cc.o
+[ 64%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_primitive_field.cc.o
+[ 64%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_reflection_class.cc.o
+[ 64%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_reflection_class.cc.o
+[ 65%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc.o
+[ 65%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc.o
+[ 65%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc.o
+[ 66%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc.o
+[ 66%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc.o
+[ 65%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/fake_quantize_moving_avg_max_abs.cc.o
+[ 67%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc.o
+[ 67%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_context.cc.o
+[ 66%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc.o
+[ 68%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_doc_comment.cc.o
+[ 66%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc.o
+[ 67%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc.o
+[ 68%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_enum.cc.o
+[ 69%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_enum_field.cc.o
+[ 67%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_context.cc.o
+[ 69%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_enum_field_lite.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/fake_dequantize_max_abs.cc.o
+[ 70%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_enum_lite.cc.o
+[ 68%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_doc_comment.cc.o
+[ 70%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_extension.cc.o
+[ 68%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_enum.cc.o
+[ 71%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_extension_lite.cc.o
+[ 71%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_field.cc.o
+[ 72%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_file.cc.o
+[ 69%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_enum_field.cc.o
+[ 72%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_generator.cc.o
+[  6%] Building CXX object lite/operators/CMakeFiles/ops.dir/conv_transpose_op.cc.o
+[ 69%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_enum_field_lite.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/expand_op.cc.o
+[ 73%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_generator_factory.cc.o
+[ 70%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_enum_lite.cc.o
+[ 73%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_helpers.cc.o
+[ 70%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_extension.cc.o
+[ 74%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_lazy_message_field.cc.o
+[ 71%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_extension_lite.cc.o
+[ 75%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_lazy_message_field_lite.cc.o
+[ 71%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_field.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/expand_as_op.cc.o
+[ 72%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_file.cc.o
+[ 75%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_map_field.cc.o
+[ 72%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_generator.cc.o
+[ 76%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_map_field_lite.cc.o
+[ 76%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_message.cc.o
+[ 73%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_generator_factory.cc.o
+[ 77%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_message_builder.cc.o
+[ 73%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_helpers.cc.o
+[ 77%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_message_builder_lite.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/squeeze_op.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/unsqueeze_op.cc.o
+[ 74%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_lazy_message_field.cc.o
+[ 78%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_message_field.cc.o
+[ 75%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_lazy_message_field_lite.cc.o
+[ 78%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_message_field_lite.cc.o
+[ 75%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_map_field.cc.o
+[ 79%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_message_lite.cc.o
+[ 76%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_map_field_lite.cc.o
+[ 79%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_name_resolver.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/stack_op.cc.o
+[ 76%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_message.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/cast_op.cc.o
+[ 80%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_primitive_field.cc.o
+[ 77%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_message_builder.cc.o
+[ 80%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_primitive_field_lite.cc.o
+[ 77%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_message_builder_lite.cc.o
+[ 81%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_service.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/affine_channel_op.cc.o
+[ 78%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_message_field.cc.o
+[ 78%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_message_field_lite.cc.o
+[ 81%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_shared_code_generator.cc.o
+[ 79%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_message_lite.cc.o
+[ 79%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_name_resolver.cc.o
+[ 82%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_string_field.cc.o
+[ 80%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_primitive_field.cc.o
+[ 80%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_primitive_field_lite.cc.o
+[ 82%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/java/java_string_field_lite.cc.o
+[ 81%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_service.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/affine_grid_op.cc.o
+[ 81%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_shared_code_generator.cc.o
+[ 83%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_enum.cc.o
+[ 82%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_string_field.cc.o
+[ 82%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/java/java_string_field_lite.cc.o
+[ 83%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_enum_field.cc.o
+[ 84%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_extension.cc.o
+[ 83%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_enum.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/range_op.cc.o
+[ 83%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_enum_field.cc.o
+[ 84%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_field.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/reduce_ops.cc.o
+[ 85%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_file.cc.o
+[ 84%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_extension.cc.o
+[ 85%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_generator.cc.o
+[ 84%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_field.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/relu_op.cc.o
+[ 86%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_helpers.cc.o
+[ 85%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_file.cc.o
+[ 85%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_generator.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/io_copy_op.cc.o
+[ 86%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_map_field.cc.o
+[ 86%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_helpers.cc.o
+[ 86%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_map_field.cc.o
+[ 87%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_message.cc.o
+[ 87%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_message.cc.o
+[ 87%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_message_field.cc.o
+[ 87%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_message_field.cc.o
+[ 88%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/javanano/javanano_primitive_field.cc.o
+[ 88%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/js/js_generator.cc.o
+[ 88%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/javanano/javanano_primitive_field.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/fusion_elementwise_activation_ops.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/io_copy_once_op.cc.o
+[ 88%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/js/js_generator.cc.o
+[ 89%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_enum.cc.o
+[ 89%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc.o
+[ 89%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_enum.cc.o
+[ 90%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_extension.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/dropout_op.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/layout_op.cc.o
+[ 89%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc.o
+[ 90%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_field.cc.o
+[ 90%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_extension.cc.o
+[ 91%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_file.cc.o
+[ 90%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_field.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/layout_once_op.cc.o
+[ 91%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_generator.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/instance_norm_op.cc.o
+[ 91%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_file.cc.o
+[ 92%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_helpers.cc.o
+[ 91%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_generator.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/subgraph_op.cc.o
+[ 92%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_map_field.cc.o
+[ 92%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_helpers.cc.o
+[ 93%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_message.cc.o
+[ 93%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_message_field.cc.o
+[ 92%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_map_field.cc.o
+[  7%] Building CXX object lite/operators/CMakeFiles/ops.dir/grid_sampler_op.cc.o
+[ 94%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_oneof.cc.o
+[ 93%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_message.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/flatten_op.cc.o
+[ 94%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc.o
+[ 95%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/php/php_generator.cc.o
+[ 93%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_message_field.cc.o
+[ 95%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/plugin.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/write_back_op.cc.o
+[ 94%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_oneof.cc.o
+[ 96%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/plugin.pb.cc.o
+[ 94%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc.o
+[ 95%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/php/php_generator.cc.o
+[ 96%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/python/python_generator.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/lod_array_length_op.cc.o
+[ 95%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/plugin.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/unbind_op.cc.o
+[ 97%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/ruby/ruby_generator.cc.o
+[ 96%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/plugin.pb.cc.o
+[ 97%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/subprocess.cc.o
+[ 96%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/python/python_generator.cc.o
+[ 98%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/zip_writer.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/pow_op.cc.o
+[ 98%] Linking CXX static library libprotoc.a
+[ 98%] Built target libprotoc
+Scanning dependencies of target protoc
+[ 99%] Building CXX object CMakeFiles/protoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-mobile/src/google/protobuf/compiler/main.cc.o
+[100%] Linking CXX executable protoc
+[ 97%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/ruby/ruby_generator.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/sign_op.cc.o
+[ 97%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/subprocess.cc.o
+[ 98%] Building CXX object CMakeFiles/libprotoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/zip_writer.cc.o
+[ 98%] Linking CXX static library libprotoc.a
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/rnn_op.cc.o
+[ 98%] Built target libprotoc
+Scanning dependencies of target protoc
+[ 99%] Building CXX object CMakeFiles/protoc.dir/home/ubuntu/code/Paddle-Litev2.11/third-party/protobuf-host/src/google/protobuf/compiler/main.cc.o
+[100%] Built target protoc
+[  9%] Performing install step for 'extern_protobuf'
+[ 39%] Built target libprotobuf
+[ 51%] Built target libprotobuf-lite
+[100%] Linking CXX executable protoc
+[ 98%] Built target libprotoc
+[100%] Built target protoc
+Install the project...
+-- Install configuration: ""
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotobuf-lite.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotobuf.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotoc.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/bin/protoc
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/any.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/any.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/api.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/arena.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/arenastring.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/code_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/command_line_interface.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/cpp/cpp_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/csharp/csharp_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/csharp/csharp_names.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/importer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/java/java_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/java/java_names.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/javanano/javanano_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/js/js_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/objectivec/objectivec_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/objectivec/objectivec_helpers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/parser.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/php/php_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/plugin.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/plugin.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/python/python_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/ruby/ruby_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/descriptor.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/descriptor.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/descriptor_database.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/duration.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/dynamic_message.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/empty.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/extension_set.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/field_mask.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/generated_enum_reflection.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/generated_enum_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/generated_message_reflection.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/generated_message_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/has_bits.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/coded_stream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/gzip_stream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/printer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/strtod.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/tokenizer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/zero_copy_stream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/zero_copy_stream_impl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/io/zero_copy_stream_impl_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map_entry.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map_entry_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map_field.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map_field_inl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map_field_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/map_type_handler.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/message.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/message_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/metadata.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/reflection.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/reflection_ops.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/repeated_field.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/service.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/source_context.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/struct.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomic_sequence_num.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_arm64_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_arm_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_arm_qnx.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_atomicword_compat.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_generic_c11_atomic.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_generic_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_macosx.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_mips_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_power.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_ppc_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_solaris.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_tsan.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_x86_msvc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/bytestream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/callback.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/casts.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/common.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/fastmem.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/hash.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/logging.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/macros.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/mutex.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/once.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/platform_macros.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/port.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/scoped_ptr.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/shared_ptr.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/singleton.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/status.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/stl_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/stringpiece.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/template_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/stubs/type_traits.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/text_format.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/timestamp.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/type.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/unknown_field_set.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/field_comparator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/field_mask_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/json_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/message_differencer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/time_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/type_resolver.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/util/type_resolver_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/wire_format.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/wire_format_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/wire_format_lite_inl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/wrappers.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/descriptor.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/any.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/api.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/duration.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/empty.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/field_mask.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/source_context.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/struct.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/timestamp.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/type.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/wrappers.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/include/google/protobuf/compiler/plugin.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf/protobuf-targets.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf/protobuf-targets-noconfig.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf/protobuf-options.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf/protobuf-config.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf/protobuf-module.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/cmake/protobuf/protobuf-config-version.cmake
+[  9%] Completed 'extern_protobuf'
+[  9%] Built target extern_protobuf
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/negative_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/crop_op.cc.o
+[100%] Built target protoc
+[  9%] Performing install step for 'protobuf_host'
+[ 39%] Built target libprotobuf
+[ 51%] Built target libprotobuf-lite
+[ 98%] Built target libprotoc
+[100%] Built target protoc
+Install the project...
+-- Install configuration: ""
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/libprotobuf-lite.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/libprotobuf.a
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/libprotoc.a
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/crop_tensor_op.cc.o
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/bin/protoc
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/any.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/any.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/api.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/arena.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/arenastring.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/code_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/command_line_interface.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/cpp/cpp_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/csharp/csharp_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/csharp/csharp_names.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/importer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/java/java_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/java/java_names.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/javanano/javanano_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/js/js_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/objectivec/objectivec_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/objectivec/objectivec_helpers.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/parser.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/php/php_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/plugin.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/plugin.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/python/python_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/ruby/ruby_generator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/descriptor.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/descriptor.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/descriptor_database.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/duration.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/dynamic_message.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/empty.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/extension_set.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/field_mask.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/generated_enum_reflection.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/generated_enum_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/generated_message_reflection.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/generated_message_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/has_bits.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/coded_stream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/gzip_stream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/printer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/strtod.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/tokenizer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/zero_copy_stream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/zero_copy_stream_impl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/io/zero_copy_stream_impl_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map_entry.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map_entry_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map_field.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map_field_inl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map_field_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/map_type_handler.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/message.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/message_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/metadata.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/reflection.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/reflection_ops.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/repeated_field.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/service.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/source_context.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/struct.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomic_sequence_num.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_arm64_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_arm_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_arm_qnx.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_atomicword_compat.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_generic_c11_atomic.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_generic_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_macosx.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_mips_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_power.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_ppc_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_solaris.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_tsan.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/atomicops_internals_x86_msvc.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/bytestream.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/callback.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/casts.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/common.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/fastmem.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/hash.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/logging.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/macros.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/mutex.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/once.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/platform_macros.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/port.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/scoped_ptr.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/shared_ptr.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/singleton.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/status.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/stl_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/stringpiece.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/template_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/stubs/type_traits.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/text_format.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/timestamp.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/type.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/unknown_field_set.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/field_comparator.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/field_mask_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/json_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/message_differencer.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/time_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/type_resolver.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/util/type_resolver_util.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/wire_format.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/wire_format_lite.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/wire_format_lite_inl.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/wrappers.pb.h
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/descriptor.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/any.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/api.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/duration.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/empty.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/field_mask.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/source_context.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/struct.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/timestamp.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/type.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/wrappers.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/include/google/protobuf/compiler/plugin.proto
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf/protobuf-targets.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf/protobuf-targets-noconfig.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf/protobuf-options.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf/protobuf-config.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf/protobuf-module.cmake
+-- Installing: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/lib/cmake/protobuf/protobuf-config-version.cmake
+[  9%] Completed 'protobuf_host'
+[  9%] Built target protobuf_host
+[  9%] Running C++ protocol buffer compiler on framework.proto
+/bin/sh: 1: ../../third_party/install/protobuf_host/bin/protoc: Exec format error
+lite/core/CMakeFiles/framework_proto.dir/build.make:62: recipe for target 'lite/core/framework.pb.cc' failed
+make[3]: *** [lite/core/framework.pb.cc] Error 2
+CMakeFiles/Makefile2:6728: recipe for target 'lite/core/CMakeFiles/framework_proto.dir/all' failed
+make[2]: *** [lite/core/CMakeFiles/framework_proto.dir/all] Error 2
+make[2]: *** Waiting for unfinished jobs....
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/assign_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/group_norm_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/norm_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/reverse_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/inverse_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/sparse_conv_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/search_group_padding_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/lrn_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/decode_bboxes_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/uniform_random_op.cc.o
+[  9%] Building CXX object lite/operators/CMakeFiles/ops.dir/axpy_op.cc.o
+[ 10%] Building CXX object lite/operators/CMakeFiles/ops.dir/correlation_op.cc.o

@@ -1,6 +1,6 @@
 
 set(CMAKE_SYSTEM_NAME Linux)
-
+set(RISCVLINUX TRUE)
 
 
 # Toolchain

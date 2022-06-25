@@ -86,7 +86,7 @@ if(LITE_WITH_ARM)
   # Detect origin host toolchain
   set(HOST_C_COMPILER $ENV{CC})
   set(HOST_CXX_COMPILER $ENV{CXX})
-  
+
   if(IOS OR ARMMACOS)
     set(default_cc clang)
     set(default_cxx clang++)
@@ -123,9 +123,11 @@ if(LITE_WITH_ARM)
   message(STATUS "Lite ARM Compile ${ARM_TARGET_OS} with ${ARM_TARGET_ARCH_ABI} ${ARM_TARGET_LANG}")
 endif()
 
-if(RISCV64_TARGET_OS STREQUAL "riscv64linux")
-    message(STATUS "RISCV64_TARGET_OS------------------------------------------------------------: ${RISCV64_TARGET_OS}")
-    include(os/riscv64linux)
+if(LITE_WITH_RISCV) 
+  if(RISCV64_TARGET_OS STREQUAL "riscv64linux")
+      message(STATUS "RISCV64_TARGET_OS------------------------------------------------------------: ${RISCV64_TARGET_OS}")
+      include(os/riscv64linux)
+  endif()
 endif()
 
 if(NOT APPLE)

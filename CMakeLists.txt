@@ -95,7 +95,7 @@ lite_option(WITH_CONVERT_TO_SSA           "whether convert input model which is 
 set(THIRD_PARTY_PATH "${CMAKE_BINARY_DIR}/third_party" CACHE STRING
   "A path setting third party libraries download & build directories.")
 
-if(NOT LITE_WITH_ARM)
+if(NOT LITE_WITH_ARM AND NOT LITE_WITH_RISCV)
   find_package(CUDA QUIET)
 endif()
 find_package(Git REQUIRED)
