@@ -30,6 +30,7 @@ OPTMODEL_DIR=""
 WITH_STATIC_MKL=OFF
 WITH_AVX=ON
 # options of compiling OPENCL lib.
+WITH_MKL=ON
 WITH_OPENCL=OFF
 # options of compiling Metal lib for Mac OS.
 WITH_METAL=OFF
@@ -154,6 +155,7 @@ function init_cmake_mutable_options {
         arm_target_os=""
         WITH_LIGHT_WEIGHT_FRAMEWORK=OFF
         WITH_TINY_PUBLISH=OFF
+        WITH_MKL=ON
     else
         with_arm=ON
         arm_arch=$ARCH
@@ -164,10 +166,13 @@ function init_cmake_mutable_options {
     if [ "${ARCH}" == "riscv64linux" ]; then
         with_x86=OFF
         with_arm=OFF
+        with_riscv=ON
         arm_target_os=""
         riscv_target_os="riscv64linux"
-        WITH_LIGHT_WEIGHT_FRAMEWORK=ON
+        WITH_LIGHT_WEIGHT_FRAMEWORK=OFF
+        WITH_TINY_PUBLISH=OFF
         WITH_AVX=OFF
+        WITH_MKL=OFF
     fi
 
 
@@ -193,15 +198,16 @@ function init_cmake_mutable_options {
                         -DPYTHON_INCLUDE_DIR=/usr/include/python3.7 \
                         -DPYTHON_LIBRARY=/usr/lib/python3.7/config/libpython3.7.so \
                         -DLITE_WITH_X86=$with_x86 \
+                        -DLITE_WITH_RISCV=$with_riscv \
                         -DARM_TARGET_ARCH_ABI=$arm_arch \
                         -DARM_TARGET_OS=$arm_target_os \
-                        -DRISCV64_TARGET_OS=$riscv_target_os
+                        -DRISCV64_TARGET_OS=$riscv_target_os \
                         -DARM_TARGET_LANG=$TOOLCHAIN \
                         -DLITE_WITH_LIGHT_WEIGHT_FRAMEWORK=$WITH_LIGHT_WEIGHT_FRAMEWORK \
                         -DLITE_BUILD_EXTRA=$WITH_EXTRA \
                         -DLITE_WITH_PYTHON=$WITH_PYTHON \
                         -DPY_VERSION=$PY_VERSION \
-                        -DWITH_MKL=OFF \
+                        -DWITH_MKL=$WITH_MKL \
                         -DLITE_WITH_STATIC_LIB=$WITH_STATIC_LIB \
                         -DLITE_WITH_CV=$WITH_CV \
                         -DLITE_WITH_LOG=$WITH_LOG \

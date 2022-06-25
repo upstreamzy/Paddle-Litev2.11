@@ -39,6 +39,8 @@ if(WIN32)
   add_definitions(-D_XKEYCHECK_H)
   add_definitions(/openmp)
 
+  message(FATAL "WIN32 is openning.-----------------------------------------------------------------")
+
   if (NOT MSVC)
     message(FATAL "Windows build only support msvc. Which was binded by the nvcc compiler of NVIDIA.")
   endif(NOT MSVC)

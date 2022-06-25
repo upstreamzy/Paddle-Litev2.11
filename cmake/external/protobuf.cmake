@@ -246,6 +246,32 @@ FUNCTION(build_protobuf TARGET_NAME BUILD_FOR_HOST)
                 -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
                 ${OPTIONAL_CACHE_ARGS}
         )
+    elseif(LITE_WITH_RISCV)
+        ExternalProject_Add(
+            ${TARGET_NAME}
+            ${EXTERNAL_PROJECT_LOG_ARGS}
+            PREFIX          ${PROTOBUF_SOURCES_DIR}
+            SOURCE_SUBDIR   cmake
+            UPDATE_COMMAND  ""
+            GIT_REPOSITORY  ""
+            GIT_TAG         ${PROTOBUF_TAG}
+            SOURCE_DIR      ${SOURCE_DIR}
+            CMAKE_ARGS
+                ${OPTIONAL_ARGS}
+                -Dprotobuf_BUILD_TESTS=OFF
+                -DCMAKE_SKIP_RPATH=ON
+                -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+                -DCMAKE_BUILD_TYPE=${THIRD_PARTY_BUILD_TYPE}
+                -DCMAKE_INSTALL_PREFIX=${PROTOBUF_INSTALL_DIR}
+                -DCMAKE_INSTALL_LIBDIR=lib
+                -DBUILD_SHARED_LIBS=OFF
+            CMAKE_CACHE_ARGS
+                -DCMAKE_INSTALL_PREFIX:PATH=${PROTOBUF_INSTALL_DIR}
+                -DCMAKE_BUILD_TYPE:STRING=${THIRD_PARTY_BUILD_TYPE}
+                -DCMAKE_VERBOSE_MAKEFILE:BOOL=OFF
+                -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+                ${OPTIONAL_CACHE_ARGS}
+        )
     else()
         ExternalProject_Add(
             ${TARGET_NAME}
@@ -284,8 +310,17 @@ IF(LITE_WITH_ARM)
         CACHE FILEPATH "protobuf executable." FORCE)
 ENDIF()
 
+IF(LITE_WITH_RISCV)
+    build_protobuf(protobuf_host TRUE)
+    LIST(APPEND external_project_dependencies protobuf_host)
+    SET(PROTOBUF_PROTOC_EXECUTABLE ${protobuf_host_PROTOC_EXECUTABLE}
+        CACHE FILEPATH "protobuf executable." FORCE)
+ENDIF()
+
 IF(NOT PROTOBUF_FOUND)
     if (LITE_WITH_ARM)
+      build_protobuf(extern_protobuf FALSE)
+    elseif(LITE_WITH_RISCV)
       build_protobuf(extern_protobuf FALSE)
     else()
       build_protobuf(extern_protobuf TRUE)
@@ -301,6 +336,8 @@ IF(NOT PROTOBUF_FOUND)
         CACHE FILEPATH "protoc library." FORCE)
 
     IF(LITE_WITH_ARM)
+        PROMPT_PROTOBUF_LIB(protobuf_host extern_protobuf)
+    ELSEIF(LITE_WITH_RISCV)
         PROMPT_PROTOBUF_LIB(protobuf_host extern_protobuf)
     ELSE()
         SET(PROTOBUF_PROTOC_EXECUTABLE ${extern_protobuf_PROTOC_EXECUTABLE}

@@ -20,6 +20,7 @@ if (NOT WIN32 AND NOT APPLE)
 FILE(GLOB X86_JIT_GEN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/jit/gen/*.cc)
 endif()
 set(X86_JIT_MORE_SRC "" CACHE INTERNAL "")
+message(STATUS "add_subdirectory(jit) will be running" )
 add_subdirectory(jit)
 # Fluid source file
 FILE(GLOB X86_FLUID_SRC ${CMAKE_CURRENT_SOURCE_DIR}/fluid/*.cc)

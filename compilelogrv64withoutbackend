@@ -1,0 +1,995 @@
+-- Found Paddle host system: ubuntu, version: 18.04.4
+-- Found Paddle host system's CPU: 2 cores
+-- RISCV64_TARGET_OS------------------------------------------------------------: riscv64linux
+-- riscv64linux CMAKE_C_COMPILER: riscv64-linux-gnu-gcc
+-- riscv64linux CMAKE_CXX_COMPILER: riscv64-linux-gnu-g++
+-- The CXX compiler identification is GNU 7.5.0
+-- The C compiler identification is GNU 7.5.0
+-- Check for working CXX compiler: /usr/bin/riscv64-linux-gnu-g++
+-- Check for working CXX compiler: /usr/bin/riscv64-linux-gnu-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working C compiler: /usr/bin/riscv64-linux-gnu-gcc
+-- Check for working C compiler: /usr/bin/riscv64-linux-gnu-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CXX compiler: /usr/bin/riscv64-linux-gnu-g++, version: GNU 7.5.0
+-- C compiler: /usr/bin/riscv64-linux-gnu-gcc, version: GNU 7.5.0
+-- AR tools: /usr/bin/riscv64-linux-gnu-ar
+-- CMAKE GENERATOR: Unix Makefiles
+-- Found Git: /usr/bin/git (found version "2.17.1") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Performing Test FMA_FOUND
+-- Performing Test FMA_FOUND - Failed
+-- Performing Test MMX_FOUND
+-- Performing Test MMX_FOUND - Failed
+-- Performing Test SSE2_FOUND
+-- Performing Test SSE2_FOUND - Failed
+-- Performing Test SSE3_FOUND
+-- Performing Test SSE3_FOUND - Failed
+-- Performing Test AVX_FOUND
+-- Performing Test AVX_FOUND - Failed
+-- Performing Test AVX2_FOUND
+-- Performing Test AVX2_FOUND - Failed
+-- Performing Test AVX512F_FOUND
+-- Performing Test AVX512F_FOUND - Failed
+-- CMAKE_BUILD_TYPE: Release
+-- Found PythonInterp: /usr/bin/python3.7 (found suitable version "3.7.5", minimum required is "3.7") 
+-- Found PythonLibs: /usr/lib/python3.7/config/libpython3.7.so (found suitable version "3.7.5", minimum required is "3.7") 
+-- Found PY_pip: /home/ubuntu/.local/lib/python3.7/site-packages/pip  
+CMake Warning (dev) in cmake/configure.cmake:
+  A logical block opening on the line
+
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:306 (if)
+
+  closes on the line
+
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:308 (endif)
+
+  with mis-matching arguments.
+Call Stack (most recent call first):
+  cmake/backends/common.cmake:47 (include)
+  CMakeLists.txt:168 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Building the riscv64linux framework
+-- Protobuf protoc executable: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf_host/bin/protoc
+-- Protobuf-lite library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotobuf-lite.a
+-- Protobuf library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotobuf.a
+-- Protoc library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/third_party/install/protobuf/lib/libprotoc.a
+-- Protobuf version: 3.3.0
+-- LITE_WITH_CUDA:	OFF
+-- LITE_WITH_X86:	OFF
+-- LITE_WITH_ARM:	OFF
+-- LITE_WITH_SW:	OFF
+-- LITE_WITH_OPENCL:	OFF
+-- LITE_WITH_METAL:	OFF
+-- LITE_WITH_NPU:	OFF
+-- LITE_WITH_XPU:	OFF
+-- LITE_WITH_FPGA:	OFF
+-- LITE_WITH_INTEL_FPGA:	OFF
+-- LITE_WITH_MLU:	OFF
+-- LITE_WITH_BM:	OFF
+-- LITE_WITH_NNADAPTER:	OFF
+-- LITE_WITH_PROFILE:	ON
+-- LITE_WITH_CV:	OFF
+-- add lite kernels
+-- compile with lite host kernels
+-- compile with lite ARM kernels
+-- compile with lite CUDA kernels
+-- compile with lite Metal kernels
+fatal: no tag exactly matches '814ed3869545d6cd7323d838cb81a5081020202b'
+-- tag: 
+-- branch: release/v2.11
+-- commit: 814ed3869
+-- bundled_tgt_full_name:  /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/libpaddle_api_full_bundled.a
+-- bundled_tgt_full_name:  /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/libpaddle_api_light_bundled.a
+fatal: no tag exactly matches '814ed3869545d6cd7323d838cb81a5081020202b'
+-- Download inference test stuff: lite_naive_model.tar.gz
+-- Download inference test stuff: mobilenet_v1.tar.gz
+-- Download inference test stuff: mobilenet_v2_relu.tar.gz
+-- Download inference test stuff: inception_v4_simple.tar.gz
+-- Download inference test stuff: GoogleNet_inference.tar.gz
+-- Download inference test stuff: inception_v4.tar.gz
+-- Download inference test stuff: squeezenet.tar.gz
+-- Download inference test stuff: mobilenet_v3_small_x1_0.tar.gz
+-- Download inference test stuff: mobilenet_v3_large_x1_0.tar.gz
+-- Download inference test stuff: mobilenet_v1_int8_per_layer.tar.gz
+-- Download inference test stuff: mobilenet_v1_int8_per_channel.tar.gz
+-- Download inference test stuff: resnet50_int8_per_layer.tar.gz
+-- Download inference test stuff: ssd_mobilenet_v1_relu_voc_fp32_300.tar.gz
+-- Download inference test stuff: ssd_mobilenet_v1_relu_voc_int8_300_per_layer.tar.gz
+-- Download inference test stuff: step_rnn.tar.gz
+-- Download inference test stuff: resnet50.tar.gz
+-- Download inference test stuff: resnet50_vd.tar.gz
+-- Download inference test stuff: bert.tar.gz
+-- Download inference test stuff: bert_base_chinese.tar.gz
+-- Download inference test stuff: ernie.tar.gz
+-- Download inference test stuff: GoogLeNet.tar.gz
+-- Download inference test stuff: VGG19.tar.gz
+-- Download inference test stuff: yolov3_darknet53.tar.gz
+-- Download inference test stuff: vgg16.tar.gz
+-- Download inference test stuff: ILSVRC2012_500.tar.gz
+-- Download inference test stuff: flowers102_val.tar.gz
+-- Download inference test stuff: bert_data.tar.gz
+-- Download inference test stuff: bert_base_chinese_data.tar.gz
+-- Download inference test stuff: ocr_rec_img_txt.tar.gz
+-- Download inference test stuff: nlp_quant_lstm_int8_data_txt.tar.gz
+-- Download inference test stuff: lac_data_txt.tar.gz
+-- Download inference test stuff: transformer_nlp2_data_txt.tar.gz
+-- Download inference test stuff: roadsign_data_128.tar.gz
+-- publish inference lib to /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc/inference_lite_lib
+-- Configuring done
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_timer" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/utils/CMakeLists.txt:68 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_logging" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/utils/CMakeLists.txt:43 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "float16_test" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/utils/CMakeLists.txt:64 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_varient" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/utils/CMakeLists.txt:56 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_utils_string" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/utils/CMakeLists.txt:57 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_fast_type_id" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/utils/CMakeLists.txt:58 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_transpose_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:258 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_one_hot_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:249 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_concat_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:256 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_batch_norm_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:255 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_fc_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:251 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_scale_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:253 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target
+  "test_fusion_elementwise_activation_ops" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:259 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pool_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:252 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_calib_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:257 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_softmax_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/operators/CMakeLists.txt:254 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_layer_norm_compute_arm" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:110 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_split_lod_tensor_compute_arm"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:106 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_dropout_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:104 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_decode_bboxes_compute_arm"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:108 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_transpose_compute_arm" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:103 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_softmax_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:98 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_lrn_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:107 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_scale_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:97 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_batch_norm_compute_arm" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:99 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_concat_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:102 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_axpy_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:109 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pool_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:100 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_mul_compute_arm" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/arm/CMakeLists.txt:101 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "calib_compute_cuda_test" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/cuda/CMakeLists.txt:66 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_sequence_concat_compute_x86"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:94 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_var_conv_2d_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:95 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target
+  "test_search_group_padding_compute_x86" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:93 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target
+  "test_sequence_arithmetic_compute_x86" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:97 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_gru_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:81 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_dropout_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:86 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_match_matrix_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:91 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_softmax_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:79 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_layer_norm_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:85 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_batch_norm_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:78 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target
+  "test_sequence_expand_as_compute_x86" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:80 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_conv2d_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:75 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_sequence_pool_compute_x86"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:77 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_mul_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:76 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_lookup_table_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:92 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_matmul_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:82 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pool2d_compute_x86" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:84 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_transpose_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:87 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_search_grnn_compute_x86" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:90 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target
+  "test_search_seq_depadding_compute_x86" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/x86/CMakeLists.txt:89 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_io_copy_buffer_opencl" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:216 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_fc_buffer_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:207 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_argmax_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:152 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_softmax_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:149 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_trigonometric_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:143 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_box_coder_image_opencl" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:140 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pad2d_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:137 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_instance_norm_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:131 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_max_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:155 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_fc_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:146 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target
+  "test_depthwise_conv2d_transpose_image_opencl" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:82 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_nearest_interp_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:85 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_conv_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:73 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pool_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:88 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_reshape_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:91 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_grid_sampler_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:120 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_dropout_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:134 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_layout_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:103 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_lrn_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:123 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_depthwise_conv2d_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:76 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_transpose_image_opencl" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:94 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_concat_image_opencl" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:97 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_bilinear_interp_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:126 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_activation_image_opencl" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:70 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pixel_shuffle_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:106 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_conv_transpose_image_opencl"
+  does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:79 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_elementwise_image_opencl" does
+  not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/opencl/CMakeLists.txt:117 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_elementwise_fpga" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/fpga/CMakeLists.txt:56 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_fc_compute_fpga" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/fpga/CMakeLists.txt:57 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_conv_fpga" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/fpga/CMakeLists.txt:55 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pooling_compute_fpga" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/kernels/fpga/CMakeLists.txt:58 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_context" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:127 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_memory" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:126 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_types" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:125 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_type_system" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:124 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_tensor" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:123 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_scope" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:120 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_kernel" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:121 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_op" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/CMakeLists.txt:122 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_pattern_matcher" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/optimizer/mir/CMakeLists.txt:4 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_mir_pass_manager" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/optimizer/mir/CMakeLists.txt:9 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_subgraph_detector" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/optimizer/mir/subgraph/CMakeLists.txt:2 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_subgraph_pass" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/optimizer/mir/subgraph/CMakeLists.txt:12 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_basic_profiler" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/profile/CMakeLists.txt:4 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_lite_timer" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/core/profile/CMakeLists.txt:5 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_model_parser" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/CMakeLists.txt:52 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_compatible_pb" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/CMakeLists.txt:47 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_naive_buffer" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/naive_buffer/CMakeLists.txt:6 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_naive_buffer_wrapper" does not
+  exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/naive_buffer/CMakeLists.txt:8 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_program_desc" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/flatbuffers/CMakeLists.txt:3 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_vector_view" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/flatbuffers/CMakeLists.txt:1 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_fbs_io" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/flatbuffers/CMakeLists.txt:2 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_ssa_program" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/model_parser/ssa/CMakeLists.txt:2 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_cxx_api" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/api/test/CMakeLists.txt:7 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_apis" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/api/test/CMakeLists.txt:104 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_paddle_api" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/api/test/CMakeLists.txt:116 (lite_cc_test)
+
+
+CMake Error at cmake/generic.cmake:334 (add_dependencies):
+  The dependency target "glog" of target "test_light_api" does not exist.
+Call Stack (most recent call first):
+  cmake/functions.cmake:162 (cc_binary)
+  lite/api/test/CMakeLists.txt:101 (lite_cc_test)
+
+
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    INTEL_FPGA_SDK_ROOT
+    LITE_WITH_LIGHT_WEIGHT_FRAMEWORK
+    LITE_WITH_RKNPU
+    NNADAPTER_AMLOGIC_NPU_SDK_ROOT
+    NNADAPTER_CAMBRICON_MLU_SDK_ROOT
+    NNADAPTER_FAKE_DEVICE_SDK_ROOT
+    NNADAPTER_GOOGLE_XNNPACK_SRC_GIT_TAG
+    NNADAPTER_HUAWEI_ASCEND_NPU_SDK_ROOT
+    NNADAPTER_HUAWEI_ASCEND_NPU_SDK_VERSION
+    NNADAPTER_IMAGINATION_NNA_SDK_ROOT
+    NNADAPTER_INTEL_OPENVINO_SDK_ROOT
+    NNADAPTER_KUNLUNXIN_XTCL_SDK_ENV
+    NNADAPTER_KUNLUNXIN_XTCL_SDK_ROOT
+    NNADAPTER_KUNLUNXIN_XTCL_SDK_URL
+    NNADAPTER_NVIDIA_CUDA_ROOT
+    NNADAPTER_NVIDIA_TENSORRT_ROOT
+    NNADAPTER_ROCKCHIP_NPU_SDK_ROOT
+    NNADAPTER_VERISILICON_TIMVX_SRC_GIT_TAG
+    NNADAPTER_VERISILICON_TIMVX_VIV_SDK_ROOT
+    NNADAPTER_VERISILICON_TIMVX_VIV_SDK_URL
+    NNADAPTER_WITH_AMLOGIC_NPU
+    NNADAPTER_WITH_CAMBRICON_MLU
+    NNADAPTER_WITH_FAKE_DEVICE
+    NNADAPTER_WITH_GOOGLE_XNNPACK
+    NNADAPTER_WITH_HUAWEI_ASCEND_NPU
+    NNADAPTER_WITH_IMAGINATION_NNA
+    NNADAPTER_WITH_INTEL_OPENVINO
+    NNADAPTER_WITH_KUNLUNXIN_XTCL
+    NNADAPTER_WITH_NVIDIA_TENSORRT
+    NNADAPTER_WITH_ROCKCHIP_NPU
+    NNADAPTER_WITH_VERISILICON_TIMVX
+    RKNPU_DDK_ROOT
+    WITH_LITE
+    XPU_SDK_ENV
+    XPU_SDK_URL
+
+
+-- Build files have been written to: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.riscv64linux.gcc

@@ -8,6 +8,7 @@ set(X86_MATH_DEPS  ${X86_MATH_DEPS} cblas gflags xxhash CACHE INTERNAL "")
 
 # refer must go first
 add_subdirectory(refer)
+message(STATUS "add_subdirectory(more) will be running" )
 add_subdirectory(more)
 if(WITH_XBYAK AND NOT APPLE AND NOT WIN32)
     add_subdirectory(gen)

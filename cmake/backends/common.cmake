@@ -45,8 +45,20 @@ include(backends/x86)
 # Add dependencies
 include(generic)                # simplify cmake module
 include(configure)              # add paddle env configuration
+
+
+
 if(LITE_WITH_ARM)
   message(STATUS "Building the mobile framework")
+  include(postproject)
+  if(NOT LITE_ON_TINY_PUBLISH)
+    include(external/gflags)    # download, build, install gflags
+    include(external/gtest)     # download, build, install gtest
+    include(ccache)
+    include(external/protobuf)  # download, build, install protobuf
+  endif()
+elseif(LITE_WITH_RISCV)
+  message(STATUS "Building the riscv64linux framework")
   include(postproject)
   if(NOT LITE_ON_TINY_PUBLISH)
     include(external/gflags)    # download, build, install gflags

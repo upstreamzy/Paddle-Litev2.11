@@ -4,7 +4,9 @@ endfunction()
 
 # enable it latter
  if(WITH_MKLML)
-     add_subdirectory(mkl)
+    message(STATUS "add_subdirectory(mkl) will be running--------------------------------------------" )
+    message(STATUS "WITH_MKLML is on --------------------------------------------" )
+    add_subdirectory(mkl)
  endif()
 
 if(WITH_AVX)
