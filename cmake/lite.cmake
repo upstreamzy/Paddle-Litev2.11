@@ -1,5 +1,5 @@
 set(LITE_URL "http://paddle-inference-dist.bj.bcebos.com" CACHE STRING "inference download url")
-
+message(STATUS "In lite.cmake file is running ")
 function(lite_download_and_uncompress INSTALL_DIR URL FILENAME)
   set(options "")
   set(oneValueArgs MODEL_PATH)

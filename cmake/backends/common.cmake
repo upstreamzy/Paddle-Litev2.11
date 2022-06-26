@@ -63,6 +63,7 @@ elseif(LITE_WITH_RISCV)
   if(NOT LITE_ON_TINY_PUBLISH)
     include(external/gflags)    # download, build, install gflags
     include(external/gtest)     # download, build, install gtest
+    include(external/glog)      # download, build, install glog
     include(ccache)
     include(external/protobuf)  # download, build, install protobuf
   endif()

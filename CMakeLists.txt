@@ -136,9 +136,11 @@ endif()
 
 # flatbuffer module for loading model
 if(LITE_UPDATE_FBS_HEAD)
+  message(STATUS "In  ${CMAKE_SOURCE_DIR}/makelists LITE_UPDATE_FBS_HEAD is ON")
   include(external/flatbuffers)
 else()
   include_directories("${PADDLE_SOURCE_DIR}/third-party/flatbuffers/pre-build")
+  message(STATUS "In  ${CMAKE_SOURCE_DIR}/makelists ${CMAKE_COMMAND}")
   add_custom_target(fbs_headers ${TARGET}
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/third-party/flatbuffers/pre-build/framework_generated.h" "${CMAKE_SOURCE_DIR}/lite/model_parser/flatbuffers/"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/third-party/flatbuffers/pre-build/param_generated.h" "${CMAKE_SOURCE_DIR}/lite/model_parser/flatbuffers/"

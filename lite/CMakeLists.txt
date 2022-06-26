@@ -1,3 +1,4 @@
+message(STATUS "In lite/cmakelists a lite will be included or running")
 include(lite)
 
 message(STATUS "LITE_WITH_CUDA:\t${LITE_WITH_CUDA}")
@@ -211,6 +212,8 @@ if (LITE_WITH_ARM)
     if (LITE_WITH_NNADAPTER)
         set(INFER_LITE_PUBLISH_ROOT "${INFER_LITE_PUBLISH_ROOT}.nnadapter")
     endif(LITE_WITH_NNADAPTER)
+elseif(LITE_WITH_RISCV)
+    set(INFER_LITE_PUBLISH_ROOT "${CMAKE_BINARY_DIR}/inference_lite_lib")
 else()
     set(INFER_LITE_PUBLISH_ROOT "${CMAKE_BINARY_DIR}/inference_lite_lib")
 endif()
@@ -427,6 +430,25 @@ if (LITE_WITH_X86)
     add_dependencies(publish_inference publish_inference_x86_cxx_demos)
   endif()
 endif()
+
+# if(LITE_WITH_RISCV)
+#    add_custom_target(publish_inference_riscv64linux_cxx_lib ${TARGET}
+#            COMMAND mkdir -p "${INFER_LITE_PUBLISH_ROOT}/bin"
+#            COMMAND cp "${CMAKE_BINARY_DIR}/lite/api/test_model_bin" "${INFER_LITE_PUBLISH_ROOT}/bin"
+#            )
+#    add_dependencies(publish_inference_riscv64linux_cxx_lib_cxx_lib test_model_bin)
+#    configure_file(${CMAKE_SOURCE_DIR}/lite/demo/cxx/ssd_detection/CMakeLists.txt.in ${CMAKE_SOURCE_DIR}/lite/demo/cxx/ssd_detection/CMakeLists.txt @ONLY)
+#    add_custom_target(publish_inference_riscv64linux_cxx_lib_cxx_demos ${TARGET}
+#           COMMAND mkdir -p "${INFER_LITE_PUBLISH_ROOT}/demo/cxx"           
+#           COMMAND mkdir -p "${INFER_LITE_PUBLISH_ROOT}/third_party"
+#           COMMAND rm -rf "${INFER_LITE_PUBLISH_ROOT}/demo/cxx/mobilenetv1_light/*.in"
+#           COMMAND rm -rf "${INFER_LITE_PUBLISH_ROOT}/demo/cxx/mobilenetv1_full/*.in"          
+#       )
+#    add_dependencies(publish_inference_riscv64linux_cxx_lib_cxx_lib publish_inference_x86_cxx_demos)
+#    add_dependencies(publish_inference_riscv64linux_cxx_lib_cxx_demos paddle_full_api_shared eigen3)
+#    add_dependencies(publish_inference publish_inference_riscv64linux_cxx_lib_cxx_lib)
+#    add_dependencies(publish_inference publish_inference_riscv64linux_cxx_lib_cxx_demos)
+# endif()
 
 if(LITE_WITH_CUDA)
     add_custom_target(publish_inference_cuda_cxx_demos ${TARGET}

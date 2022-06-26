@@ -185,7 +185,7 @@ FUNCTION(build_protobuf TARGET_NAME BUILD_FOR_HOST)
 
     IF(BUILD_FOR_HOST)
         # set for server compile.
-        if(NOT LITE_WITH_ARM)
+        if(NOT LITE_WITH_ARM AND NOT LITE_WITH_RISCV)
           set(HOST_C_COMPILER "${CMAKE_C_COMPILER}")
           set(HOST_CXX_COMPILER "${CMAKE_CXX_COMPILER}")
         endif()
