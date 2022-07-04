@@ -63,6 +63,7 @@ class Context;
 using HostContext = Context<TargetType::kHost>;
 using X86Context = Context<TargetType::kX86>;
 using ARMContext = Context<TargetType::kARM>;
+using RISCVContext = Context<TargetType::kRISCV>;
 using NPUContext = Context<TargetType::kNPU>;
 using XPUContext = Context<TargetType::kXPU>;
 using OpenCLContext = Context<TargetType::kOpenCL>;

@@ -12,9 +12,9 @@ TOOLCHAIN=gcc
 # ON or OFF, default OFF.
 WITH_EXTRA=ON
 # controls whether to compile python lib, default is OFF.
-# WITH_PYTHON=OFF
-WITH_PYTHON=ON
-PY_VERSION="3.7"
+WITH_PYTHON=OFF
+# WITH_PYTHON=ON
+# PY_VERSION="3.7"
 # ON or OFF, default is OFF
 WITH_STATIC_LIB=OFF
 # controls whether to compile cv functions into lib, default is OFF.
@@ -367,7 +367,7 @@ function make_publish_so {
     cmake $workspace \
         ${CMAKE_COMMON_OPTIONS} \
         ${cmake_mutable_options}
-
+    #  echo "|     --kunlunxin_xpu_sdk_root: (path to kunlunxin_xpu DDK file) optional, default is None"
     if [ "${WITH_BENCHMARK}" == "ON" ]; then
         make benchmark_bin -j$NUM_PROC
     else

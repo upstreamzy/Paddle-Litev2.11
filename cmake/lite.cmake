@@ -143,6 +143,8 @@ function (lite_deps TARGET)
     endforeach(var)
   endif()
 
+  
+
   set(${TARGET} ${deps} PARENT_SCOPE)
 endfunction()
 
@@ -165,6 +167,7 @@ file(WRITE ${offline_lib_registry_file} "") # clean
 #  CV_DEPS:       LITE_WITH_CV
 function(lite_cc_library TARGET)
     set(options SHARED shared STATIC static MODULE module)
+    #message(STATUS "In lite_cc_library function options is ${options}")
     set(oneValueArgs "")
     set(multiValueArgs SRCS DEPS X86_DEPS CUDA_DEPS CL_DEPS METAL_DEPS ARM_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS IMAGINATION_NNA_DEPS RKNPU_DEPS NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS APU_DEPS NNADAPTER_DEPS CV_DEPS PROFILE_DEPS LIGHT_DEPS
       HVY_DEPS EXCLUDE_COMPILE_DEPS RISCV_LINUX_DEPS ARGS)
@@ -205,7 +208,9 @@ function(lite_cc_library TARGET)
         cc_library(${TARGET} SRCS ${args_SRCS} DEPS ${deps})
     endif()
 
+    
     if(NOT WIN32)
+      message(STATUS "In lite.cmkae lite_cc_library function TARGET is ${TARGET}}")
       target_compile_options(${TARGET} BEFORE PRIVATE -Wno-ignored-qualifiers)
     endif()
     # collect targets need to compile for lite

@@ -63,6 +63,7 @@ enum class TargetType : int {
   kMetal = 17,
   kNNAdapter = 18,
   NUM = 19,  // number of fields.
+  kRISCV = 20,
 };
 enum class PrecisionType : int {
   kUnk = 0,
