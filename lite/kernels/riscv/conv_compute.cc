@@ -1,15 +1,12 @@
-// #include "lite/kernels/arm/conv_compute.h"
+
 #include "lite/kernels/riscv/conv_compute.h"
 #include <utility>
 #include "lite/core/op_registry.h"
 #include "lite/core/type_system.h"
-#include "lite/kernels/arm/conv_depthwise.h"
-// #include "lite/kernels/arm/conv_direct.h"
-// #include "lite/kernels/arm/conv_gemmlike.h"
-// #include "lite/kernels/arm/conv_winograd.h"
-#ifdef ENABLE_ARM_FP16
-#include "lite/backends/arm/math/fp16/funcs_fp16.h"
-#endif
+#include "lite/backends/riscv/math/fill_bias_activate.h"
+#include "lite/kernels/riscv/conv_depthwise.h"
+#include "lite/kernels/riscv/conv_direct.h"
+
 
 namespace paddle {
 namespace lite {
@@ -106,11 +103,10 @@ void Conv2dCompute<PRECISION(kFloat), PRECISION(kFloat)>::PrepareForRun() {
       (kernel_h == 3 || kernel_h == 5 || kernel_h == 7) &&
       (stride_h == 2 || stride_h == 1) && nodilations && kps_equal &&
       pad_all_equal && flag_p) {
-#if defined(_WIN64) || defined(__MINGW64__) || \
-    (defined(__CYGWIN__) && defined(__x86_64__)) || defined(__x86_64__)
+
     impl_ = new DirectConv<PRECISION(kFloat), PRECISION(kFloat)>();
     VLOG(3) << "invoking directConv";
-#endif
+
   }
 
   if (impl_) {

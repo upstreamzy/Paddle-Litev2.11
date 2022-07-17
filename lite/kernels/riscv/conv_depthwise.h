@@ -1,9 +1,7 @@
 #pragma once
 
-#include <cmath>
 #include <string>
 #include <vector>
-// #include "lite/backends/arm/math/conv_impl.h"
 #include "lite/core/context.h"
 #include "lite/core/kernel.h"
 #include "lite/core/target_wrapper.h"
@@ -13,27 +11,12 @@ namespace lite {
 namespace kernels {
 namespace riscv {
 
-template <PrecisionType Ptype, PrecisionType Otype>
-class DepthwiseConv : public KernelLite<TARGET(kARM), Ptype> {
+template <PrecisionType Ptype, PrecisionType OutType>
+class DepthwiseConv : public KernelLite<TARGET(kRISCV), Ptype> {
  public:
-  typedef void (*conv_dw_impl)(const void* din,
-                               void* dout,
-                               int num,
-                               int ch_out,
-                               int h_out,
-                               int w_out,
-                               int ch_in,
-                               int h_in,
-                               int w_in,
-                               const void* weights,
-                               const float* bias,
-                               const operators::ConvParam& param,
-                               ARMContext* ctx,
-                               const float* scale);
   DepthwiseConv() = default;
   ~DepthwiseConv() {}
-  virtual void PrepareForRun();
-  virtual void ReInitWhenNeeded();
+  void PrepareForRun() override;
   virtual void Run();
 
 #ifdef LITE_WITH_PROFILE
@@ -42,7 +25,7 @@ class DepthwiseConv : public KernelLite<TARGET(kARM), Ptype> {
     ch->kernel_func_name = kernel_func_name_;
   }
 
-  std::string kernel_func_name_{"NotImplForConvDW"};
+  std::string kernel_func_name_{"NotImplForConvDepthwise"};
 #define PROFILE_INFO(dtype1, dtype2)                                        \
   template <>                                                               \
   void DepthwiseConv<PRECISION(dtype1), PRECISION(dtype2)>::                \
@@ -59,16 +42,16 @@ class DepthwiseConv : public KernelLite<TARGET(kARM), Ptype> {
 
  private:
   using param_t = operators::ConvParam;
-  Tensor weights_;
-  Tensor bias_;
-  DDim last_shape_;
-  bool flag_trans_weights_{false};
-  bool flag_trans_bias_{false};
-  conv_dw_impl impl_{nullptr};
+  Tensor input_pack_;
+  Tensor input_padding_;
+  Tensor filter_pack_;
+  Tensor output_pack_;
+  bool flag_trans_bias_{true};
   std::vector<float> w_scale_;
+  Tensor bias_;
 };
 
-}  // namespace arm
+}  // namespace riscv
 }  // namespace kernels
 }  // namespace lite
 }  // namespace paddle
