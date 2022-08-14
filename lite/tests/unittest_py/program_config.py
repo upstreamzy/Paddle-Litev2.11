@@ -149,6 +149,7 @@ def create_fake_model(program_config):
         op_desc.set_input('X', ["feed"])
         op_desc.set_output('Out', [name])
         op_desc._set_attr("col", index)
+        # logging.info("create_fake_model the op_desc is {}".format(op_desc))
         index = index + 1
 
     save_var_map = {}

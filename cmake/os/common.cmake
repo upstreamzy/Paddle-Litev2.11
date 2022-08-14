@@ -14,8 +14,11 @@
 
 cmake_minimum_required(VERSION 3.10)
 
+
+message(STATUS "the LITE_WITH_ARM is :${LITE_WITH_ARM}")
 # Arm config
 if(LITE_WITH_ARM)
+  
   set(ARM_TARGET_OS_LIST "android" "armlinux" "ios" "ios64" "armmacos")
   set(ARM_TARGET_ARCH_ABI_LIST "armv8" "armv7" "armv7hf" "arm64-v8a" "armeabi-v7a")
   set(ARM_TARGET_LANG_LIST "gcc" "clang")
@@ -174,3 +177,6 @@ if(APPLE)
   set(CMAKE_C_FLAGS "${FOBJC_ARC} ${CMAKE_C_FLAGS}")
   set(CMAKE_CXX_FLAGS "${FOBJC_ARC} ${CMAKE_CXX_FLAGS}")
 endif()
+
+#set(CMAKE_C_COMPILER "gcc")
+#set(CMAKE_CXX_COMPILER "g++")

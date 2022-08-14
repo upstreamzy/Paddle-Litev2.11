@@ -1,4 +1,7 @@
+#message(STATUS "the kernel_fpga is ${kernel_fpga}")
+#kernels
 if(LITE_WITH_FPGA)
+  message(STATUS "the kernel fpga is on")
   set(IS_FAKED_KERNEL false CACHE INTERNAL "")
   set(lite_kernel_deps ${lite_kernel_deps} ${fpga_deps} CACHE INTERNAL "")
   set(fpga_deps fpga_target_wrapper kernel_fpga)

@@ -14,7 +14,7 @@
 
 #include "lite/kernels/fpga/elementwise_compute.h"
 #include <string>
-#include "lite/backends/arm/math/funcs.h"
+// #include "lite/backends/arm/math/funcs.h"
 #include "lite/backends/fpga/KD/debugger.hpp"
 #include "lite/kernels/fpga/activation_compute.h"
 
@@ -196,19 +196,19 @@ REGISTER_LITE_KERNEL(elementwise_mul,
                                        DATALAYOUT(kNHWC))})
     .Finalize();
 
-REGISTER_LITE_KERNEL(elementwise_mul,
-                     kFPGA,
-                     kFP16,
-                     kNHWC,
-                     paddle::lite::kernels::fpga::ElementwiseMulCompute,
-                     ew_mul_y_arm)
-    .BindInput("X",
-               {LiteType::GetTensorTy(TARGET(kFPGA),
-                                      PRECISION(kFP16),
-                                      DATALAYOUT(kNHWC))})
-    .BindInput("Y", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kFPGA),
-                                       PRECISION(kFP16),
-                                       DATALAYOUT(kNHWC))})
-    .Finalize();
+// REGISTER_LITE_KERNEL(elementwise_mul,
+//                      kFPGA,
+//                      kFP16,
+//                      kNHWC,
+//                      paddle::lite::kernels::fpga::ElementwiseMulCompute,
+//                      ew_mul_y_arm)
+//     .BindInput("X",
+//                {LiteType::GetTensorTy(TARGET(kFPGA),
+//                                       PRECISION(kFP16),
+//                                       DATALAYOUT(kNHWC))})
+//     .BindInput("Y", {LiteType::GetTensorTy(TARGET(kFPGA))})
+//     .BindOutput("Out",
+//                 {LiteType::GetTensorTy(TARGET(kFPGA),
+//                                        PRECISION(kFP16),
+//                                        DATALAYOUT(kNHWC))})
+//     .Finalize();

@@ -64,16 +64,16 @@ REGISTER_LITE_KERNEL(batch_norm,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Scale", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Mean", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Variance", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Scale", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Mean", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Variance", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Y",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
                                        DATALAYOUT(kNHWC))})
-    .BindOutput("MeanOut", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("VarianceOut", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("SavedMean", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("SavedVariance", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindOutput("MeanOut", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("VarianceOut", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("SavedMean", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("SavedVariance", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

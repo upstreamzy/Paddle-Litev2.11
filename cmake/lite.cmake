@@ -71,11 +71,7 @@ function (lite_deps TARGET)
     endforeach(var)
   endif()
 
-  if(LITE_WITH_ARM)
-    foreach(var ${lite_deps_LIGHT_DEPS})
-      set(deps ${deps} ${var})
-    endforeach(var)
-  endif()
+  
 
   if(LITE_WITH_RISCV)
     foreach(var ${lite_deps_RISCV_LINUX_DEPS})
@@ -83,11 +79,11 @@ function (lite_deps TARGET)
     endforeach(var)
   endif()
 
-  if (NOT LITE_WITH_ARM AND NOT LITE_WITH_RISCV)
-    foreach(var ${lite_deps_HVY_DEPS})
-      set(deps ${deps} ${var})
-    endforeach(var)
-  endif()
+  #if (NOT LITE_WITH_ARM AND NOT LITE_WITH_RISCV)
+  #  foreach(var ${lite_deps_HVY_DEPS})
+  #    set(deps ${deps} ${var})
+  #  endforeach(var)
+  #endif()
 
   if (LITE_WITH_OPENCL)
     foreach(var ${lite_deps_CL_DEPS})
@@ -168,6 +164,9 @@ file(WRITE ${offline_lib_registry_file} "") # clean
 function(lite_cc_library TARGET)
     set(options SHARED shared STATIC static MODULE module)
     #message(STATUS "In lite_cc_library function options is ${options}")
+
+    #message(STATUS "In lite.cmkae lite_cc_library function TARGET is ${TARGET}")
+
     set(oneValueArgs "")
     set(multiValueArgs SRCS DEPS X86_DEPS CUDA_DEPS CL_DEPS METAL_DEPS ARM_DEPS FPGA_DEPS INTEL_FPGA_DEPS BM_DEPS IMAGINATION_NNA_DEPS RKNPU_DEPS NPU_DEPS XPU_DEPS MLU_DEPS HUAWEI_ASCEND_NPU_DEPS APU_DEPS NNADAPTER_DEPS CV_DEPS PROFILE_DEPS LIGHT_DEPS
       HVY_DEPS EXCLUDE_COMPILE_DEPS RISCV_LINUX_DEPS ARGS)
@@ -199,6 +198,13 @@ function(lite_cc_library TARGET)
             RISCV_LINUX_DEPS ${args_RISCV_LINUX_DEPS}
             )
 
+    message(STATUS "In lite.cmkae lite_cc_library function TARGE ${TARGET}")
+    message(STATUS)
+    message(STATUS "In lite.cmkae lite_cc_library function deps ${deps}")
+    message(STATUS)
+    message(STATUS "In lite.cmkae lite_cc_library function args_SRCS ${args_SRCS}")
+    message(STATUS)
+
     if (args_SHARED OR ARGS_shared)
         cc_library(${TARGET} SRCS ${args_SRCS} DEPS ${deps} SHARED)
     elseif (args_MODULE OR ARGS_module)
@@ -210,7 +216,7 @@ function(lite_cc_library TARGET)
 
     
     if(NOT WIN32)
-      message(STATUS "In lite.cmkae lite_cc_library function TARGET is ${TARGET}}")
+      
       target_compile_options(${TARGET} BEFORE PRIVATE -Wno-ignored-qualifiers)
     endif()
     # collect targets need to compile for lite
@@ -256,6 +262,12 @@ function(lite_cc_binary TARGET)
             HUAWEI_ASCEND_NPU_DEPS ${args_HUAWEI_ASCEND_NPU_DEPS}
             RISCV_LINUX_DEPS ${args_RISCV_LINUX_DEPS}
             )
+    message(STATUS "In lite_cc_binary function TARGET is ${TARGET}")
+    message(STATUS)
+    message(STATUS "In lite_cc_binary function args_SRCS is ${args_SRCS}")
+    message(STATUS)
+    message(STATUS "In lite_cc_binary function deps is ${deps}")
+    message(STATUS)
     cc_binary(${TARGET} SRCS ${args_SRCS} DEPS ${deps})
 
     # link to paddle-lite static lib automatically

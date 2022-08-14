@@ -25,15 +25,38 @@ else()
   set(CMAKE_CXX_STANDARD 11)
 endif()
 
+
+message(STATUS "1 the global varible KERNELS_SRC is ${KERNELS_SRC}")
+
 # Host system configurations
 include(system)
+
+
 # Paddlelite functions and macros
 include(functions)
+
+
 # Target os configurations
 include(os/common)
+
+message(STATUS "CXX compiler1: ${CMAKE_CXX_COMPILER}, version: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "C compiler: ${CMAKE_C_COMPILER}, version: ${CMAKE_C_COMPILER_ID} ${CMAKE_C_COMPILER_VERSION}")
+message(STATUS "AR tools: ${CMAKE_AR}")
+
 # Paddlelite project
 project(paddle CXX C)
-message(STATUS "CXX compiler: ${CMAKE_CXX_COMPILER}, version: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+
+message(STATUS "CXX compiler2: ${CMAKE_CXX_COMPILER}, version: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "C compiler: ${CMAKE_C_COMPILER}, version: ${CMAKE_C_COMPILER_ID} ${CMAKE_C_COMPILER_VERSION}")
+message(STATUS "AR tools: ${CMAKE_AR}")
+
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_AR "ar")
+
+
+
+message(STATUS "CXX compiler3: ${CMAKE_CXX_COMPILER}, version: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS "C compiler: ${CMAKE_C_COMPILER}, version: ${CMAKE_C_COMPILER_ID} ${CMAKE_C_COMPILER_VERSION}")
 message(STATUS "AR tools: ${CMAKE_AR}")
 message(STATUS "CMAKE GENERATOR: ${CMAKE_GENERATOR}")
@@ -91,6 +114,12 @@ lite_option(LITE_WITH_CODE_META_INFO           "include git version in the heade
 # whether convert input model which is not a DAG to SSA graph
 lite_option(WITH_CONVERT_TO_SSA           "whether convert input model which is not a DAG to SSA graph"               ON)
 
+message(STATUS "CXX compiler4: ${CMAKE_CXX_COMPILER}, version: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "C compiler: ${CMAKE_C_COMPILER}, version: ${CMAKE_C_COMPILER_ID} ${CMAKE_C_COMPILER_VERSION}")
+message(STATUS "AR tools: ${CMAKE_AR}")
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_AR "ar")
 # Thirdparty
 set(THIRD_PARTY_PATH "${CMAKE_BINARY_DIR}/third_party" CACHE STRING
   "A path setting third party libraries download & build directories.")

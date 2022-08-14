@@ -27,11 +27,11 @@ bool FpgaConvOpLite::InferShapeImpl() const {
   if (fuse_idx == 0) {
     ConvOpLite::InferShapeImpl();
     // additional config for fpga conv
-    auto origin_shape = static_cast<ConvParam*>(op_param_)->output->dims();
+    auto origin_shape = static_cast<ConvParam*>(&param_)->output->dims();
     auto new_shape = origin_shape;
     new_shape[1] = stride_info_.wd_offset_;
     auto new_dim = DDimLite(new_shape);
-    static_cast<ConvParam*>(op_param_)->output->Resize(new_dim);
+    static_cast<ConvParam*>(&param_)->output->Resize(new_dim);
   }
 
 // TODO how to guarantee the same input lod

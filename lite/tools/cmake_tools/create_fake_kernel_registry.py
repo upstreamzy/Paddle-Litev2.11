@@ -240,8 +240,8 @@ def parse_sppported_kernels_from_path(list_path):
                         kernel_src_map_lines.append(map_element)
 
 
-parse_fake_kernels_from_path(faked_kernels_list_path)
-parse_sppported_kernels_from_path(faked_kernels_list_path)
+# parse_fake_kernels_from_path(faked_kernels_list_path)
+# parse_sppported_kernels_from_path(faked_kernels_list_path)
 parse_sppported_kernels_from_path(kernels_list_path)
 
 with open(hdr_dest_path, 'w') as f1:

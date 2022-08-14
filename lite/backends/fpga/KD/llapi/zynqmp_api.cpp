@@ -225,10 +225,12 @@ int perform_bypass(const struct BypassArgs &args) {
   int count = static_cast<int>(times);
 
   void *input_address = args.image.address;
+  // unsigned char *input_address = (unsigned char *)args.image.address;
   int type_size =
       args.input_data_type == DATA_TYPE_FP32 ? sizeof(float) : sizeof(int16_t);
 
   void *output_address = args.output.address;
+  // unsigned char *output_address = (unsigned char *)args.output.address;
   int out_type_size =
       args.output_data_type == DATA_TYPE_FP32 ? sizeof(float) : sizeof(int16_t);
 

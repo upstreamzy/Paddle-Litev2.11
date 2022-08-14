@@ -84,5 +84,5 @@ REGISTER_LITE_KERNEL(dropout,
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
                                        DATALAYOUT(kNHWC))})
-    .BindOutput("Mask", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindOutput("Mask", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

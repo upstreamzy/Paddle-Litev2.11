@@ -5,16 +5,16 @@ set -e
 # 1. global variables, you can change them according to your requirements
 #####################################################################################################
 # armv8 or armv7hf or armv7 or x86, default armv8.
-ARCH=riscv64linux
-# ARCH=x86
+# ARCH=riscv64linux
+ARCH=x86
 # gcc or clang, default gcc.
 TOOLCHAIN=gcc
 # ON or OFF, default OFF.
 WITH_EXTRA=ON
 # controls whether to compile python lib, default is OFF.
-WITH_PYTHON=OFF
-# WITH_PYTHON=ON
-# PY_VERSION="3.7"
+# WITH_PYTHON=OFF
+WITH_PYTHON=ON
+PY_VERSION="3.7"
 # ON or OFF, default is OFF
 WITH_STATIC_LIB=OFF
 # controls whether to compile cv functions into lib, default is OFF.

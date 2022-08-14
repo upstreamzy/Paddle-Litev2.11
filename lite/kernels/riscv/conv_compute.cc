@@ -6,7 +6,7 @@
 #include "lite/backends/riscv/math/fill_bias_activate.h"
 #include "lite/kernels/riscv/conv_depthwise.h"
 #include "lite/kernels/riscv/conv_direct.h"
-
+#include <iostream>
 
 namespace paddle {
 namespace lite {
@@ -95,6 +95,7 @@ void Conv2dCompute<PRECISION(kFloat), PRECISION(kFloat)>::PrepareForRun() {
       ((flag_dw_5x5 && no_dilation) || (flag_dw_3x3 && (groups & 3) == 0))) {
     impl_ = new DepthwiseConv<PRECISION(kFloat), PRECISION(kFloat)>;
     VLOG(3) << "invoking conv_depthwise_3x3p0p1 or conv_depthwise_5x5";
+    std::cout << "invoking conv_depthwise_3x3p0p1 or conv_depthwise_5x5" << std::endl;
   }
 
   // support 3x3s1p01,5x5s1p01,7x7s1p01
@@ -106,7 +107,7 @@ void Conv2dCompute<PRECISION(kFloat), PRECISION(kFloat)>::PrepareForRun() {
 
     impl_ = new DirectConv<PRECISION(kFloat), PRECISION(kFloat)>();
     VLOG(3) << "invoking directConv";
-
+    std::cout << "invoking directConv" << std::endl;
   }
 
   if (impl_) {

@@ -105,6 +105,7 @@ class Any {
   template <typename T>
   struct data_on_stack {
     static const bool value = ((alignof(T) <= kAlign) && (sizeof(T) <= kStack));
+    // static const bool value = ((sizeof(T) <= kAlign) && (sizeof(T) <= kStack));
   };
 
   inline void construct(Any&& other);

@@ -14,7 +14,7 @@
 
 #include "lite/kernels/fpga/yolo_box_compute.h"
 #include <vector>
-#include "lite/backends/arm/math/funcs.h"
+// #include "lite/backends/arm/math/funcs.h"
 #include "lite/core/tensor.h"
 
 namespace paddle {
@@ -64,9 +64,9 @@ REGISTER_LITE_KERNEL(yolo_box,
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
     .BindInput("ImgSize",
-               {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kInt32))})
-    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Scores", {LiteType::GetTensorTy(TARGET(kARM))})
+               {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
+    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("Scores", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();
 
 REGISTER_LITE_KERNEL(yolo_box,
@@ -80,7 +80,7 @@ REGISTER_LITE_KERNEL(yolo_box,
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
     .BindInput("ImgSize",
-               {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kFloat))})
-    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Scores", {LiteType::GetTensorTy(TARGET(kARM))})
+               {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kFloat))})
+    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("Scores", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

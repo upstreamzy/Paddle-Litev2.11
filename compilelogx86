@@ -1,0 +1,1726 @@
+-- 1 the global varible KERNELS_SRC is 
+-- Found Paddle host system: ubuntu, version: 18.04.4
+-- Found Paddle host system's CPU: 2 cores
+-- the LITE_WITH_ARM is :
+-- CXX compiler1: , version:  
+-- C compiler: , version:  
+-- AR tools: 
+-- The CXX compiler identification is GNU 7.5.0
+-- The C compiler identification is GNU 7.5.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CXX compiler2: /usr/bin/c++, version: GNU 7.5.0
+-- C compiler: /usr/bin/cc, version: GNU 7.5.0
+-- AR tools: /usr/bin/ar
+-- CXX compiler3: g++, version: GNU 7.5.0
+-- C compiler: gcc, version: GNU 7.5.0
+-- AR tools: ar
+-- CMAKE GENERATOR: Unix Makefiles
+-- CXX compiler4: g++, version: GNU 7.5.0
+-- C compiler: gcc, version: GNU 7.5.0
+-- AR tools: ar
+-- Found Git: /usr/bin/git (found version "2.17.1") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Performing Test FMA_FOUND
+-- Performing Test FMA_FOUND - Success
+-- Performing Test MMX_FOUND
+-- Performing Test MMX_FOUND - Success
+-- Performing Test SSE2_FOUND
+-- Performing Test SSE2_FOUND - Success
+-- Performing Test SSE3_FOUND
+-- Performing Test SSE3_FOUND - Success
+-- Performing Test AVX_FOUND
+-- Performing Test AVX_FOUND - Success
+-- Performing Test AVX2_FOUND
+-- Performing Test AVX2_FOUND - Success
+-- Performing Test AVX512F_FOUND
+-- Performing Test AVX512F_FOUND - Success
+-- CMAKE_BUILD_TYPE: Release
+-- Found PythonInterp: /usr/bin/python3.7 (found suitable version "3.7.5", minimum required is "3.7") 
+-- Found PythonLibs: /usr/lib/python3.7/config/libpython3.7.so (found suitable version "3.7.5", minimum required is "3.7") 
+-- Found PY_pip: /home/ubuntu/.local/lib/python3.7/site-packages/pip  
+-- In  /home/ubuntu/code/Paddle-Litev2.11/makelists /usr/bin/cmake
+-- MKLML_VER: Glibc225_vsErf_mklml_lnx_2019.0.1.20181227, MKLML_URL: http://paddlepaddledeps.bj.bcebos.com/Glibc225_vsErf_mklml_lnx_2019.0.1.20181227.tgz
+-- Enable Intel OpenMP with /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/mklml/lib/libiomp5.so
+-- the LITE_ON_MODEL_OPTIMIZE_TOOL is OFF
+CMake Warning (dev) in cmake/configure.cmake:
+  A logical block opening on the line
+
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:311 (if)
+
+  closes on the line
+
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:313 (endif)
+
+  with mis-matching arguments.
+Call Stack (most recent call first):
+  cmake/backends/common.cmake:47 (include)
+  CMakeLists.txt:199 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Protobuf protoc executable: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/protobuf/bin/protoc
+-- Protobuf-lite library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/protobuf/lib/libprotobuf-lite.a
+-- Protobuf library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/protobuf/lib/libprotobuf.a
+-- Protoc library: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/protobuf/lib/libprotoc.a
+-- Protobuf version: 3.3.0
+-- Found cblas and lapack in MKLML (include: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/mklml/include, library: mklml)
+-- BLAS library: mklml
+-- BLAS Include: /home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/third_party/install/mklml/include
+-- Paddle version is 0.0.0
+-- Looking for UINT64_MAX
+-- Looking for UINT64_MAX - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of pthread_spinlock_t
+-- Check size of pthread_spinlock_t - done
+-- Check size of pthread_barrier_t
+-- Check size of pthread_barrier_t - done
+-- the COMMON_FLAGS var is -fPIC;-fno-omit-frame-pointer;-Werror;-Wall;-Wextra;-Wnon-virtual-dtor;-Wdelete-non-virtual-dtor;-Wno-unused-but-set-variable;-Wno-unknown-pragmas;-Wno-strict-aliasing;-Wno-unused-parameter;-Wno-unused-function;-Wno-error=literal-suffix;-Wno-error=sign-compare;-Wno-error=unused-local-typedefs;-Wno-error=parentheses-equality;-Wno-error=ignored-attributes;-Wno-error=terminate;-Wno-error=int-in-bool-context;-Wimplicit-fallthrough=0;-Wno-error=maybe-uninitialized;-Wno-error=unused-variable;-Wno-error=non-virtual-dtor;-Wno-error=missing-field-initializers;-Wno-error=return-type;-Wno-error=pointer-arith;-Wno-error=narrowing
+-- Performing Test C_COMPILER_SUPPORT_FLAG__fPIC
+-- Performing Test C_COMPILER_SUPPORT_FLAG__fPIC - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__fPIC
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__fPIC - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__fno_omit_frame_pointer
+-- Performing Test C_COMPILER_SUPPORT_FLAG__fno_omit_frame_pointer - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__fno_omit_frame_pointer
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__fno_omit_frame_pointer - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Werror
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Werror - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Werror
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Werror - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wall
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wall - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wall
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wall - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wextra
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wextra - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wextra
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wextra - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wnon_virtual_dtor
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wnon_virtual_dtor - Failed
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wnon_virtual_dtor
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wnon_virtual_dtor - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wdelete_non_virtual_dtor
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wdelete_non_virtual_dtor - Failed
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wdelete_non_virtual_dtor
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wdelete_non_virtual_dtor - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unused_but_set_variable
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unused_but_set_variable - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unused_but_set_variable
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unused_but_set_variable - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unknown_pragmas
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unknown_pragmas - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unknown_pragmas
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unknown_pragmas - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_strict_aliasing
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_strict_aliasing - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_strict_aliasing
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_strict_aliasing - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unused_parameter
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unused_parameter - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unused_parameter
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unused_parameter - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unused_function
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_unused_function - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unused_function
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_unused_function - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_literal_suffix
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_literal_suffix - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_literal_suffix
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_literal_suffix - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_sign_compare
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_sign_compare - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_sign_compare
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_sign_compare - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_unused_local_typedefs
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_unused_local_typedefs - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_unused_local_typedefs
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_unused_local_typedefs - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_parentheses_equality
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_parentheses_equality - Failed
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_parentheses_equality
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_parentheses_equality - Failed
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_ignored_attributes
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_ignored_attributes - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_ignored_attributes
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_ignored_attributes - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_terminate
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_terminate - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_terminate
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_terminate - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_int_in_bool_context
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_int_in_bool_context - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_int_in_bool_context
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_int_in_bool_context - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wimplicit_fallthrough_0
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wimplicit_fallthrough_0 - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wimplicit_fallthrough_0
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wimplicit_fallthrough_0 - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_maybe_uninitialized
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_maybe_uninitialized - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_maybe_uninitialized
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_maybe_uninitialized - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_unused_variable
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_unused_variable - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_unused_variable
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_unused_variable - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_non_virtual_dtor
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_non_virtual_dtor - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_non_virtual_dtor
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_non_virtual_dtor - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_missing_field_initializers
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_missing_field_initializers - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_missing_field_initializers
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_missing_field_initializers - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_return_type
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_return_type - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_return_type
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_return_type - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_pointer_arith
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_pointer_arith - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_pointer_arith
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_pointer_arith - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_narrowing
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_narrowing - Success
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_narrowing
+-- Performing Test CXX_COMPILER_SUPPORT_FLAG__Wno_error_narrowing - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_unused_function
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_unused_function - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_array_bounds
+-- Performing Test C_COMPILER_SUPPORT_FLAG__Wno_error_array_bounds - Success
+-- Performing Test C_COMPILER_SUPPORT_FLAG__gencode
+-- Performing Test C_COMPILER_SUPPORT_FLAG__gencode - Failed
+-- Performing Test C_COMPILER_SUPPORT_FLAG_arch_compute_62,code_sm_62
+-- Performing Test C_COMPILER_SUPPORT_FLAG_arch_compute_62,code_sm_62 - Failed
+-- In lite/cmakelists a lite will be included or running
+-- In lite.cmake file is running 
+-- LITE_WITH_CUDA:	OFF
+-- LITE_WITH_X86:	ON
+-- LITE_WITH_ARM:	
+-- LITE_WITH_SW:	OFF
+-- LITE_WITH_OPENCL:	OFF
+-- LITE_WITH_METAL:	OFF
+-- LITE_WITH_NPU:	OFF
+-- LITE_WITH_XPU:	OFF
+-- LITE_WITH_FPGA:	OFF
+-- LITE_WITH_INTEL_FPGA:	OFF
+-- LITE_WITH_MLU:	OFF
+-- LITE_WITH_BM:	OFF
+-- LITE_WITH_NNADAPTER:	OFF
+-- LITE_WITH_PROFILE:	ON
+-- LITE_WITH_CV:	OFF
+-- add_subdirectory(jit) will be running
+-- add_subdirectory(more) will be running
+-- add_subdirectory(mkl) will be running--------------------------------------------
+-- WITH_MKLML is on --------------------------------------------
+-- In lite.cmkae lite_cc_library function TARGE x86_math
+-- 
+-- In lite.cmkae lite_cc_library function deps framework_proto;eigen3;cblas;gflags;xxhash;xbyak
+-- 
+-- In lite.cmkae lite_cc_library function args_SRCS /home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sse/conv_utils.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/cpu_info.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/dynamic_loader.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/mklml.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/target_wrapper.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/fluid/data_type.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/fluid/selected_rows.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen_base.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/helper.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/kernel_key.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/kernel_pool.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/refer/refer.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/more/mkl/mkl.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/more/intrinsic/crf_decoding.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/more/intrinsic/layer_norm.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/more/mix/mix.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/activation.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/activation_functions.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/blas.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/box_coder.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/calib.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/clip.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/concat_and_split.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/context_project.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv2d_transpose.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv3x3s1_depthwise_int8.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv3x3s2_dephtwise_int8.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv_bias.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv_depthwise_3x3.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv_depthwise_5x5.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/conv_direct_fp32.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/cos_sim_functor.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/cross_entropy.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/fill_bias_activate.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/gemm_s8u8_compute.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/gemm_s8u8_kernel.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/gemm_s8u8_pack.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/gru_compute.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/im2col.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/interpolate.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/lstm_compute.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/math_function.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/maxouting.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/pooling.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/power.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/prior_box.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sample_prob.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sampler.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/search_fc.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/selected_rows_functor.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence2batch.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence_pooling.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence_scale.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence_topk_avg_pooling.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/softmax.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/tree2col.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/unpooling.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/vol2col.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/avx/avx_mathfuns.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/avx/conv_depthwise_pack4.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/avx/conv_depthwise_pack8.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/avx/conv_utils.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/avx/group_norm.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/avx/instance_norm.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/act.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/blas.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/embseqpool.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/gru.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/hopv.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/lstm.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/matmul.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/seqpool.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/sgd.cc;/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/jit/gen/vbroadcast.cc
+-- 
+-- the cc_library is x86_math
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGE target_wrapper_host
+-- 
+-- In lite.cmkae lite_cc_library function deps 
+-- 
+-- In lite.cmkae lite_cc_library function args_SRCS target_wrapper.cc
+-- 
+-- the cc_library is target_wrapper_host
+-- In lite.cmkae lite_cc_library function TARGE math_host
+-- 
+-- In lite.cmkae lite_cc_library function deps core
+-- 
+-- In lite.cmkae lite_cc_library function args_SRCS beam_search.cc;sequence_padding.cc;slice.cc;split.cc;gpc.cc;norm.cc;pad3d.cc;prior_box.cc;concat.cc;stack.cc;reduce.cc;argmax.cc;inverse.cc;reverse.cc;topk.cc
+-- 
+-- the cc_library is math_host
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGE utils
+-- 
+-- In lite.cmkae lite_cc_library function deps 
+-- 
+-- In lite.cmkae lite_cc_library function args_SRCS /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/logging.cc
+-- 
+-- the cc_library is utils
+-- add lite kernels
+-- the global varible KERNELS_SRC is 
+-- compile with lite host kernels
+-- the add_kernel is TARGET device level feed_compute_host Host basic
+-- the add_kernel feed_compute.cc
+-- 
+-- the add_kernel is TARGET device level fetch_compute_host Host basic
+-- the add_kernel fetch_compute.cc
+-- 
+-- the add_kernel is TARGET device level range_compute_host Host basic
+-- the add_kernel range_compute.cc
+-- 
+-- the add_kernel is TARGET device level split_compute_host Host basic
+-- the add_kernel split_compute.cc
+-- 
+-- the add_kernel is TARGET device level reshape_compute_host Host basic
+-- the add_kernel reshape_compute.cc
+-- 
+-- the add_kernel is TARGET device level squeeze_compute_host Host basic
+-- the add_kernel squeeze_compute.cc
+-- 
+-- the add_kernel is TARGET device level unsqueeze_compute_host Host basic
+-- the add_kernel unsqueeze_compute.cc
+-- 
+-- the add_kernel is TARGET device level multiclass_nms_compute_host Host basic
+-- the add_kernel multiclass_nms_compute.cc
+-- 
+-- the add_kernel is TARGET device level prior_box_compute_host Host basic
+-- the add_kernel prior_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level expand_compute_host Host basic
+-- the add_kernel expand_compute.cc
+-- 
+-- the add_kernel is TARGET device level expand_as_compute_host Host basic
+-- the add_kernel expand_as_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_constant_compute_host Host basic
+-- the add_kernel fill_constant_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_constant_batch_size_like_compute_host Host basic
+-- the add_kernel fill_constant_batch_size_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level stack_compute_host Host basic
+-- the add_kernel stack_compute.cc
+-- 
+-- the add_kernel is TARGET device level lod_array_length_compute_host Host basic
+-- the add_kernel lod_array_length_compute.cc
+-- 
+-- the add_kernel is TARGET device level unbind_compute_host Host basic
+-- the add_kernel unbind_compute.cc
+-- 
+-- the add_kernel is TARGET device level argmax_compute_host Host basic
+-- the add_kernel argmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level assign_value_compute_host Host basic
+-- the add_kernel assign_value_compute.cc
+-- 
+-- the add_kernel is TARGET device level yolo_box_compute_host Host basic
+-- the add_kernel yolo_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level write_back_compute_host Host basic
+-- the add_kernel write_back_compute.cc
+-- 
+-- the add_kernel is TARGET device level cast_compute_host Host basic
+-- the add_kernel cast_compute.cc
+-- 
+-- the add_kernel is TARGET device level reverse_compute_host Host extra
+-- the add_kernel reverse_compute.cc
+-- 
+-- the add_kernel is TARGET device level index_select_compute_host Host extra
+-- the add_kernel index_select_compute.cc
+-- 
+-- the add_kernel is TARGET device level inverse_compute_host Host extra
+-- the add_kernel inverse_compute.cc
+-- 
+-- the add_kernel is TARGET device level deformable_conv_compute_host Host extra
+-- the add_kernel deformable_conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_compute_host Host extra
+-- the add_kernel reduce_compute.cc
+-- 
+-- the add_kernel is TARGET device level generate_proposals_compute_host Host extra
+-- the add_kernel generate_proposals_compute.cc
+-- 
+-- the add_kernel is TARGET device level generate_proposals_v2_compute_host host extra
+-- the add_kernel generate_proposals_v2_compute.cc
+-- 
+-- the add_kernel is TARGET device level unstack_compute_host Host extra
+-- the add_kernel unstack_compute.cc
+-- 
+-- the add_kernel is TARGET device level norm_compute_host Host extra
+-- the add_kernel norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level anchor_generator_compute_host Host extra
+-- the add_kernel anchor_generator_compute.cc
+-- 
+-- the add_kernel is TARGET device level shape_compute_host Host extra
+-- the add_kernel shape_compute.cc
+-- 
+-- the add_kernel is TARGET device level is_empty_compute_host Host extra
+-- the add_kernel is_empty_compute.cc
+-- 
+-- the add_kernel is TARGET device level crf_decoding_compute_host Host extra
+-- the add_kernel crf_decoding_compute.cc
+-- 
+-- the add_kernel is TARGET device level compare_compute_host Host extra
+-- the add_kernel compare_compute.cc
+-- 
+-- the add_kernel is TARGET device level logical_compute_host Host extra
+-- the add_kernel logical_compute.cc
+-- 
+-- the add_kernel is TARGET device level ctc_align_compute_host Host extra
+-- the add_kernel ctc_align_compute.cc
+-- 
+-- the add_kernel is TARGET device level cumsum_compute_host Host extra
+-- the add_kernel cumsum_compute.cc
+-- 
+-- the add_kernel is TARGET device level sampling_id_compute_host Host extra
+-- the add_kernel sampling_id_compute.cc
+-- 
+-- the add_kernel is TARGET device level polygon_box_transform_compute_host Host extra
+-- the add_kernel polygon_box_transform_compute.cc
+-- 
+-- the add_kernel is TARGET device level write_to_array_compute_host Host extra
+-- the add_kernel write_to_array_compute.cc
+-- 
+-- the add_kernel is TARGET device level read_from_array_compute_host Host extra
+-- the add_kernel read_from_array_compute.cc
+-- 
+-- the add_kernel is TARGET device level assign_compute_host Host extra
+-- the add_kernel assign_compute.cc
+-- 
+-- the add_kernel is TARGET device level retinanet_detection_output_compute_host Host extra
+-- the add_kernel retinanet_detection_output_compute.cc
+-- 
+-- the add_kernel is TARGET device level where_index_compute_host Host extra
+-- the add_kernel where_index_compute.cc
+-- 
+-- the add_kernel is TARGET device level where_compute_host Host extra
+-- the add_kernel where_compute.cc
+-- 
+-- the add_kernel is TARGET device level print_compute_host Host extra
+-- the add_kernel print_compute.cc
+-- 
+-- the add_kernel is TARGET device level while_compute_host Host extra
+-- the add_kernel while_compute.cc
+-- 
+-- the add_kernel is TARGET device level conditional_block_compute_host Host extra
+-- the add_kernel conditional_block_compute.cc
+-- 
+-- the add_kernel is TARGET device level correlation_compute_host Host extra
+-- the add_kernel correlation_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_grad_compute_host Host train
+-- the add_kernel activation_grad_compute.cc
+-- 
+-- the add_kernel is TARGET device level pixel_shuffle_compute_host Host extra
+-- the add_kernel pixel_shuffle_compute.cc
+-- 
+-- the add_kernel is TARGET device level one_hot_compute_host Host extra
+-- the add_kernel one_hot_compute.cc
+-- 
+-- the add_kernel is TARGET device level uniform_random_compute_host Host extra
+-- the add_kernel uniform_random_compute.cc
+-- 
+-- the add_kernel is TARGET device level matrix_nms_compute_host Host extra
+-- the add_kernel matrix_nms_compute.cc
+-- 
+-- the add_kernel is TARGET device level sin_compute_host Host extra
+-- the add_kernel sin_compute.cc
+-- 
+-- the add_kernel is TARGET device level cos_compute_host Host extra
+-- the add_kernel cos_compute.cc
+-- 
+-- the add_kernel is TARGET device level cos_sim_compute_host Host extra
+-- the add_kernel cos_sim_compute.cc
+-- 
+-- the add_kernel is TARGET device level crop_compute_host Host extra
+-- the add_kernel crop_compute.cc
+-- 
+-- the add_kernel is TARGET device level crop_tensor_compute_host Host extra
+-- the add_kernel crop_tensor_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_pad_compute_host Host extra
+-- the add_kernel sequence_pad_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_unpad_compute_host Host extra
+-- the add_kernel sequence_unpad_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_expand_compute_host Host extra
+-- the add_kernel sequence_expand_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_softmax_compute_host Host extra
+-- the add_kernel sequence_softmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_mask_compute_host Host extra
+-- the add_kernel sequence_mask_compute.cc
+-- 
+-- the add_kernel is TARGET device level flatten_contiguous_range_compute_host Host extra
+-- the add_kernel flatten_compute.cc
+-- 
+-- the add_kernel is TARGET device level shuffle_channel_compute_host Host extra
+-- the add_kernel shuffle_channel_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_compute_host Host extra
+-- the add_kernel activation_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_coder_compute_host Host basic
+-- the add_kernel box_coder_compute.cc
+-- 
+-- the add_kernel is TARGET device level gather_compute_host Host extra
+-- the add_kernel gather_compute.cc
+-- 
+-- the add_kernel is TARGET device level gather_nd_compute_host Host extra
+-- the add_kernel gather_nd_compute.cc
+-- 
+-- the add_kernel is TARGET device level gather_tree_compute_host Host extra
+-- the add_kernel gather_tree_compute.cc
+-- 
+-- the add_kernel is TARGET device level increment_compute_host Host extra
+-- the add_kernel increment_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad2d_compute_host Host extra
+-- the add_kernel pad2d_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad3d_compute_host Host extra
+-- the add_kernel pad3d_compute.cc
+-- 
+-- the add_kernel is TARGET device level select_input_compute_host Host extra
+-- the add_kernel select_input_compute.cc
+-- 
+-- the add_kernel is TARGET device level tensor_array_to_tensor_compute_host Host extra
+-- the add_kernel tensor_array_to_tensor_compute.cc
+-- 
+-- the add_kernel is TARGET device level expand_v2_compute_host Host extra
+-- the add_kernel expand_v2_compute.cc
+-- 
+-- the add_kernel is TARGET device level strided_slice_compute_host Host extra
+-- the add_kernel strided_slice_compute.cc
+-- 
+-- the add_kernel is TARGET device level tile_compute_host Host extra
+-- the add_kernel tile_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_any_like_compute_host Host extra
+-- the add_kernel fill_any_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_zeros_like_compute_host Host extra
+-- the add_kernel fill_zeros_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level scatter_nd_add_compute_host Host extra
+-- the add_kernel scatter_nd_add_compute.cc
+-- 
+-- the add_kernel is TARGET device level tril_triu_compute_host Host extra
+-- the add_kernel tril_triu_compute.cc
+-- 
+-- the add_kernel is TARGET device level topk_compute_host Host extra
+-- the add_kernel topk_compute.cc
+-- 
+-- the add_kernel is TARGET device level topk_v2_compute_host Host extra
+-- the add_kernel topk_v2_compute.cc
+-- 
+-- the add_kernel is TARGET device level density_prior_box_compute_host Host extra
+-- the add_kernel density_prior_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level meshgrid_compute_host Host extra
+-- the add_kernel meshgrid_compute.cc
+-- 
+-- the add_kernel is TARGET device level linspace_compute_host Host extra
+-- the add_kernel linspace_compute.cc
+-- 
+-- the add_kernel is TARGET device level beam_search_compute_host Host extra
+-- the add_kernel beam_search_compute.cc
+-- 
+-- the add_kernel is TARGET device level beam_search_decode_compute_host Host extra
+-- the add_kernel beam_search_decode_compute.cc
+-- 
+-- the add_kernel is TARGET device level roi_perspective_transform_compute_host Host extra
+-- the add_kernel roi_perspective_transform_compute.cc
+-- 
+-- the add_kernel is TARGET device level lod_reset_compute_host Host extra
+-- the add_kernel lod_reset_compute.cc
+-- 
+-- the add_kernel is TARGET device level argsort_compute_host Host extra
+-- the add_kernel argsort_compute.cc
+-- 
+-- the add_kernel is TARGET device level distribute_fpn_proposals_compute_host Host extra
+-- the add_kernel distribute_fpn_proposals_compute.cc
+-- 
+-- the add_kernel is TARGET device level collect_fpn_proposals_compute_host Host extra
+-- the add_kernel collect_fpn_proposals_compute.cc
+-- 
+-- the add_kernel is TARGET device level flip_compute_host Host extra
+-- the add_kernel flip_compute.cc
+-- 
+-- the add_kernel is TARGET device level unique_with_counts_compute Host extra
+-- the add_kernel unique_with_counts_compute.cc
+-- 
+-- the add_kernel is TARGET device level roi_align_compute Host extra
+-- the add_kernel roi_align_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_clip_compute Host extra
+-- the add_kernel box_clip_compute.cc
+-- 
+-- the add_kernel is TARGET device level gaussian_random_compute Host extra
+-- the add_kernel gaussian_random_compute.cc
+-- 
+-- the add_kernel is TARGET device level unfold_compute Host extra
+-- the add_kernel unfold_compute.cc
+-- 
+-- the add_kernel is TARGET device level max_pool_with_index_compute Host extra
+-- the add_kernel max_pool_with_index_compute.cc
+-- 
+-- the add_kernel is TARGET device level merge_lod_tensor_compute Host extra
+-- the add_kernel merge_lod_tensor_compute.cc
+-- 
+-- the add_kernel is TARGET device level im2sequence_compute Host extra
+-- the add_kernel im2sequence_compute.cc
+-- 
+-- the add_kernel is TARGET device level log_softmax_compute Host extra
+-- the add_kernel log_softmax_compute.cc
+-- 
+-- compile with lite ARM kernels
+-- the add_kernel is TARGET device level conv_depthwise ARM basic
+-- the add_kernel conv_depthwise.cc
+-- 
+-- the add_kernel is TARGET device level conv_direct ARM basic
+-- the add_kernel conv_direct.cc
+-- 
+-- the add_kernel is TARGET device level conv_gemmlike ARM basic
+-- the add_kernel conv_gemmlike.cc
+-- 
+-- the add_kernel is TARGET device level conv_winograd ARM basic
+-- the add_kernel conv_winograd.cc
+-- 
+-- the add_kernel is TARGET device level conv_compute_arm ARM basic
+-- the add_kernel conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level fc_compute_arm ARM basic
+-- the add_kernel fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_compute_arm ARM basic
+-- the add_kernel activation_compute.cc
+-- 
+-- the add_kernel is TARGET device level mul_compute_arm ARM basic
+-- the add_kernel mul_compute.cc
+-- 
+-- the add_kernel is TARGET device level matmul_compute_arm ARM basic
+-- the add_kernel matmul_compute.cc
+-- 
+-- the add_kernel is TARGET device level scale_compute_arm ARM basic
+-- the add_kernel scale_compute.cc
+-- 
+-- the add_kernel is TARGET device level softmax_compute_arm ARM basic
+-- the add_kernel softmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level batch_norm_compute_arm ARM basic
+-- the add_kernel batch_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level elementwise_compute_arm ARM basic
+-- the add_kernel elementwise_compute.cc
+-- 
+-- the add_kernel is TARGET device level pool_compute_arm ARM basic
+-- the add_kernel pool_compute.cc
+-- 
+-- the add_kernel is TARGET device level concat_compute_arm ARM basic
+-- the add_kernel concat_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad2d_compute_arm ARM basic
+-- the add_kernel pad2d_compute.cc
+-- 
+-- the add_kernel is TARGET device level calib_compute_arm ARM basic
+-- the add_kernel calib_compute.cc
+-- 
+-- the add_kernel is TARGET device level transpose_compute_arm ARM basic
+-- the add_kernel transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level argmax_compute_arm ARM basic
+-- the add_kernel argmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_transpose_compute_arm ARM basic
+-- the add_kernel conv_transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level depthwise_conv_transpose_compute_arm ARM extra
+-- the add_kernel depthwise_conv_transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level interpolate_compute_arm ARM basic
+-- the add_kernel interpolate_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_coder_compute_arm ARM basic
+-- the add_kernel box_coder_compute.cc
+-- 
+-- the add_kernel is TARGET device level slice_compute_arm ARM basic
+-- the add_kernel slice_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_mean_compute_arm ARM basic
+-- the add_kernel reduce_mean_compute.cc
+-- 
+-- the add_kernel is TARGET device level affine_channel_compute_arm ARM basic
+-- the add_kernel affine_channel_compute.cc
+-- 
+-- the add_kernel is TARGET device level affine_grid_compute_arm ARM basic
+-- the add_kernel affine_grid_compute.cc
+-- 
+-- the add_kernel is TARGET device level dropout_compute_arm ARM basic
+-- the add_kernel dropout_compute.cc
+-- 
+-- the add_kernel is TARGET device level layout_compute_arm ARM basic
+-- the add_kernel layout_compute.cc
+-- 
+-- the add_kernel is TARGET device level instance_norm_compute_arm ARM basic
+-- the add_kernel instance_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level grid_sampler_compute_arm ARM basic
+-- the add_kernel grid_sampler_compute.cc
+-- 
+-- the add_kernel is TARGET device level rnn_compute_arm ARM extra
+-- the add_kernel rnn_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_extra_compute_arm ARM extra
+-- the add_kernel activation_extra_compute.cc
+-- 
+-- the add_kernel is TARGET device level negative_compute_arm ARM extra
+-- the add_kernel negative_compute.cc
+-- 
+-- the add_kernel is TARGET device level pow_compute_arm ARM extra
+-- the add_kernel pow_compute.cc
+-- 
+-- the add_kernel is TARGET device level group_norm_compute ARM extra
+-- the add_kernel group_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level sparse_conv_compute_arm ARM extra
+-- the add_kernel sparse_conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level lrn_compute_arm ARM extra
+-- the add_kernel lrn_compute.cc
+-- 
+-- the add_kernel is TARGET device level decode_bboxes_compute_arm ARM extra
+-- the add_kernel decode_bboxes_compute.cc
+-- 
+-- the add_kernel is TARGET device level axpy_compute_arm ARM extra
+-- the add_kernel axpy_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_max_compute_arm ARM extra
+-- the add_kernel reduce_max_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_min_compute_arm ARM extra
+-- the add_kernel reduce_min_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_pool_compute_arm ARM extra
+-- the add_kernel sequence_pool_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_conv_compute_arm ARM extra
+-- the add_kernel sequence_conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level layer_norm_compute_arm ARM extra
+-- the add_kernel layer_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_prod_compute_arm ARM extra
+-- the add_kernel reduce_prod_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_sum_compute_arm ARM extra
+-- the add_kernel reduce_sum_compute.cc
+-- 
+-- the add_kernel is TARGET device level split_lod_tensor_compute_arm ARM extra
+-- the add_kernel split_lod_tensor_compute.cc
+-- 
+-- the add_kernel is TARGET device level clip_compute_arm ARM extra
+-- the add_kernel clip_compute.cc
+-- 
+-- the add_kernel is TARGET device level pixel_shuffle_compute_arm ARM extra
+-- the add_kernel pixel_shuffle_compute.cc
+-- 
+-- the add_kernel is TARGET device level scatter_compute_arm ARM extra
+-- the add_kernel scatter_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_expand_as_compute_arm ARM extra
+-- the add_kernel sequence_expand_as_compute.cc
+-- 
+-- the add_kernel is TARGET device level matmul_v2_compute ARM extra
+-- the add_kernel matmul_v2_compute.cc
+-- 
+-- the add_kernel is TARGET device level sum_compute ARM extra
+-- the add_kernel sum_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_unit_compute_arm ARM extra
+-- the add_kernel gru_unit_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_compute_arm ARM extra
+-- the add_kernel gru_compute.cc
+-- 
+-- the add_kernel is TARGET device level lookup_table_compute_arm ARM extra
+-- the add_kernel lookup_table_compute.cc
+-- 
+-- the add_kernel is TARGET device level lookup_table_dequant_compute_arm ARM extra
+-- the add_kernel lookup_table_dequant_compute.cc
+-- 
+-- the add_kernel is TARGET device level lstm_arm ARM extra
+-- the add_kernel lstm_compute.cc
+-- 
+-- the add_kernel is TARGET device level deformable_conv_compute_arm ARM extra
+-- the add_kernel deformable_conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level mean_compute_arm ARM extra
+-- the add_kernel mean_compute.cc
+-- 
+-- the add_kernel is TARGET device level mean_grad_compute_arm ARM train
+-- the add_kernel mean_grad_compute.cc
+-- 
+-- the add_kernel is TARGET device level elementwise_grad_compute_arm ARM train
+-- the add_kernel elementwise_grad_compute.cc
+-- 
+-- the add_kernel is TARGET device level mul_grad_compute_arm ARM train
+-- the add_kernel mul_grad_compute.cc
+-- 
+-- the add_kernel is TARGET device level sgd_compute_arm ARM train
+-- the add_kernel sgd_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_pool_grad_compute_arm ARM train
+-- the add_kernel sequence_pool_grad_compute.cc
+-- 
+-- compile with lite CUDA kernels
+-- the add_kernel is TARGET device level mul_compute_cuda CUDA basic
+-- the add_kernel mul_compute.cc
+-- 
+-- the add_kernel is TARGET device level fc_compute_cuda CUDA basic
+-- the add_kernel fc_compute.cu
+-- 
+-- the add_kernel is TARGET device level gru_compute_cuda CUDA basic
+-- the add_kernel gru_compute.cu
+-- 
+-- the add_kernel is TARGET device level matmul_compute_cuda CUDA basic
+-- the add_kernel matmul_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_group_padding_compute_cuda CUDA basic
+-- the add_kernel search_group_padding_compute.cu
+-- 
+-- the add_kernel is TARGET device level io_copy_compute_cuda CUDA basic
+-- the add_kernel io_copy_compute.cc
+-- 
+-- the add_kernel is TARGET device level leaky_relu_compute_cuda CUDA basic
+-- the add_kernel leaky_relu_compute.cu
+-- 
+-- the add_kernel is TARGET device level abs_compute_cuda CUDA basic
+-- the add_kernel abs_compute.cu
+-- 
+-- the add_kernel is TARGET device level tanh_compute_cuda CUDA basic
+-- the add_kernel tanh_compute.cu
+-- 
+-- the add_kernel is TARGET device level relu_compute_cuda CUDA basic
+-- the add_kernel relu_compute.cu
+-- 
+-- the add_kernel is TARGET device level sigmoid_compute_cuda CUDA basic
+-- the add_kernel sigmoid_compute.cu
+-- 
+-- the add_kernel is TARGET device level yolo_box_compute_cuda CUDA basic
+-- the add_kernel yolo_box_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_pool_compute_cuda CUDA extra
+-- the add_kernel sequence_pool_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_pool_concat_compute_cuda CUDA extra
+-- the add_kernel sequence_pool_concat_compute.cu
+-- 
+-- the add_kernel is TARGET device level transpose_compute_cuda CUDA basic
+-- the add_kernel transpose_compute.cu
+-- 
+-- the add_kernel is TARGET device level nearest_interp_compute_cuda CUDA basic
+-- the add_kernel nearest_interp_compute.cu
+-- 
+-- the add_kernel is TARGET device level conv2d_cuda CUDA basic
+-- the add_kernel conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level concat_compute_cuda CUDA basic
+-- the add_kernel concat_compute.cu
+-- 
+-- the add_kernel is TARGET device level elementwise_compute_cuda CUDA basic
+-- the add_kernel elementwise_compute.cu
+-- 
+-- the add_kernel is TARGET device level calib_compute_cuda CUDA basic
+-- the add_kernel calib_compute.cu
+-- 
+-- the add_kernel is TARGET device level layout_compute_cuda CUDA basic
+-- the add_kernel layout_compute.cc
+-- 
+-- the add_kernel is TARGET device level feed_compute_cuda CUDA basic
+-- the add_kernel feed_compute.cc
+-- 
+-- the add_kernel is TARGET device level fetch_compute_cuda CUDA basic
+-- the add_kernel fetch_compute.cc
+-- 
+-- the add_kernel is TARGET device level scale_compute_cuda CUDA basic
+-- the add_kernel scale_compute.cc
+-- 
+-- the add_kernel is TARGET device level dropout_compute_cuda CUDA basic
+-- the add_kernel dropout_compute.cc
+-- 
+-- the add_kernel is TARGET device level softmax_compute_cuda CUDA basic
+-- the add_kernel softmax_compute.cu
+-- 
+-- the add_kernel is TARGET device level pool_compute_cuda CUDA basic
+-- the add_kernel pool_compute.cu
+-- 
+-- the add_kernel is TARGET device level bilinear_interp_compute_cuda CUDA basic
+-- the add_kernel bilinear_interp_compute.cu
+-- 
+-- the add_kernel is TARGET device level search_seq_depadding_compute_cuda CUDA extra
+-- the add_kernel search_seq_depadding_compute.cu
+-- 
+-- the add_kernel is TARGET device level search_grnn_compute_cuda CUDA extra
+-- the add_kernel search_grnn_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_reverse_compute_cuda CUDA extra
+-- the add_kernel sequence_reverse_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_reverse_embedding_compute_cuda CUDA extra
+-- the add_kernel sequence_reverse_embedding_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_pad_compute_cuda CUDA extra
+-- the add_kernel sequence_pad_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_unpad_compute_cuda CUDA extra
+-- the add_kernel sequence_unpad_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_concat_compute_cuda CUDA extra
+-- the add_kernel sequence_concat_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_mask_compute_cuda CUDA extra
+-- the add_kernel sequence_mask_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_arithmetic_compute_cuda CUDA extra
+-- the add_kernel sequence_arithmetic_compute.cu
+-- 
+-- the add_kernel is TARGET device level lookup_table_compute_cuda CUDA extra
+-- the add_kernel lookup_table_compute.cu
+-- 
+-- the add_kernel is TARGET device level attention_padding_mask_compute_cuda CUDA extra
+-- the add_kernel attention_padding_mask_compute.cu
+-- 
+-- the add_kernel is TARGET device level search_fc_compute_cuda CUDA extra
+-- the add_kernel search_fc_compute.cu
+-- 
+-- the add_kernel is TARGET device level sequence_topk_avg_pooling_compute_cuda CUDA extra
+-- the add_kernel sequence_topk_avg_pooling_compute.cu
+-- 
+-- the add_kernel is TARGET device level match_matrix_tensor_compute_cuda CUDA extra
+-- the add_kernel match_matrix_tensor_compute.cu
+-- 
+-- the add_kernel is TARGET device level search_aligned_mat_mul_compute_cuda CUDA extra
+-- the add_kernel search_aligned_mat_mul_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_seq_fc_compute_cuda CUDA extra
+-- the add_kernel search_seq_fc_compute.cu
+-- 
+-- the add_kernel is TARGET device level var_conv_2d_compute_cuda CUDA extra
+-- the add_kernel var_conv_2d_compute.cu
+-- 
+-- the add_kernel is TARGET device level topk_pooling_compute_cuda CUDA extra
+-- the add_kernel topk_pooling_compute.cu
+-- 
+-- the add_kernel is TARGET device level assign_value_compute_cuda CUDA extra
+-- the add_kernel assign_value_compute.cu
+-- 
+-- the add_kernel is TARGET device level activation_compute_x86 X86 basic
+-- the add_kernel activation_compute.cc
+-- 
+-- the add_kernel is TARGET device level scale_compute_x86 X86 basic
+-- the add_kernel scale_compute.cc
+-- 
+-- the add_kernel is TARGET device level slice_compute_x86 X86 basic
+-- the add_kernel slice_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_depthwise_x86 X86 basic
+-- the add_kernel conv_depthwise.cc
+-- 
+-- the add_kernel is TARGET device level conv_compute_x86 X86 basic
+-- the add_kernel conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_direct_x86 X86 basic
+-- the add_kernel conv_direct.cc
+-- 
+-- the add_kernel is TARGET device level instance_norm_compute_x86 X86 basic
+-- the add_kernel instance_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level group_norm_compute_x86 X86 basic
+-- the add_kernel group_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level calib_compute_x86 X86 basic
+-- the add_kernel calib_compute.cc
+-- 
+-- the add_kernel is TARGET device level pool_compute_x86 X86 basic
+-- the add_kernel pool_compute.cc
+-- 
+-- the add_kernel is TARGET device level stack_compute_x86 X86 basic
+-- the add_kernel stack_compute.cc
+-- 
+-- the add_kernel is TARGET device level dropout_compute_x86 X86 basic
+-- the add_kernel dropout_compute.cc
+-- 
+-- the add_kernel is TARGET device level transpose_compute_x86 X86 basic
+-- the add_kernel transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level layer_norm_compute_x86 X86 basic
+-- the add_kernel layer_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level fc_compute_x86 X86 basic
+-- the add_kernel fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_compute_x86 X86 basic
+-- the add_kernel gru_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_unit_compute_x86 X86 basic
+-- the add_kernel gru_unit_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_expand_as_compute_x86 X86 basic
+-- the add_kernel sequence_expand_as_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_conv_compute_x86 X86 basic
+-- the add_kernel sequence_conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level gather_compute_x86 X86 extra
+-- the add_kernel gather_compute.cc
+-- 
+-- the add_kernel is TARGET device level grid_sampler_compute_x86 X86 extra
+-- the add_kernel grid_sampler_compute.cc
+-- 
+-- the add_kernel is TARGET device level clip_compute_x86 X86 extra
+-- the add_kernel clip_compute.cc
+-- 
+-- the add_kernel is TARGET device level mul_compute_x86 X86 basic
+-- the add_kernel mul_compute.cc
+-- 
+-- the add_kernel is TARGET device level concat_compute_x86 X86 basic
+-- the add_kernel concat_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_pool_compute_x86 X86 basic
+-- the add_kernel sequence_pool_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_group_padding_compute_x86 X86 basic
+-- the add_kernel search_group_padding_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_reverse_compute_x86 X86 basic
+-- the add_kernel sequence_reverse_compute.cc
+-- 
+-- the add_kernel is TARGET device level softmax_compute_x86 X86 basic
+-- the add_kernel softmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level elementwise_compute_x86 X86 basic
+-- the add_kernel elementwise_compute.cc
+-- 
+-- the add_kernel is TARGET device level batch_norm_compute_x86 X86 basic
+-- the add_kernel batch_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_compute_x86 X86 basic
+-- the add_kernel reduce_compute.cc
+-- 
+-- the add_kernel is TARGET device level lookup_table_compute_x86 X86 basic
+-- the add_kernel lookup_table_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_reshape_compute_x86 X86 basic
+-- the add_kernel sequence_reshape_compute.cc
+-- 
+-- the add_kernel is TARGET device level match_matrix_tensor_compute_x86 X86 basic
+-- the add_kernel match_matrix_tensor_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_seq_depadding_compute_x86 X86 basic
+-- the add_kernel search_seq_depadding_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_grnn_compute_x86 X86 basic
+-- the add_kernel search_grnn_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_concat_compute_x86 X86 basic
+-- the add_kernel sequence_concat_compute.cc
+-- 
+-- the add_kernel is TARGET device level var_conv_2d_compute_x86 X86 basic
+-- the add_kernel var_conv_2d_compute.cc
+-- 
+-- the add_kernel is TARGET device level attention_padding_mask_compute_x86 X86 basic
+-- the add_kernel attention_padding_mask_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_arithmetic_compute_x86 X86 basic
+-- the add_kernel sequence_arithmetic_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_aligned_mat_mul_compute_x86 X86 extra
+-- the add_kernel search_aligned_mat_mul_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_seq_fc_compute_x86 X86 extra
+-- the add_kernel search_seq_fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_topk_avg_pooling_compute_x86 X86 basic
+-- the add_kernel sequence_topk_avg_pooling_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_fc_compute_x86 X86 basic
+-- the add_kernel search_fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level matmul_compute_x86 X86 basic
+-- the add_kernel matmul_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_coder_compute_x86 X86 basic
+-- the add_kernel box_coder_compute.cc
+-- 
+-- the add_kernel is TARGET device level density_prior_box_compute_x86 X86 basic
+-- the add_kernel density_prior_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level interpolate_compute_x86 X86 basic
+-- the add_kernel interpolate_compute.cc
+-- 
+-- the add_kernel is TARGET device level pow_compute_x86 X86 extra
+-- the add_kernel pow_compute.cc
+-- 
+-- the add_kernel is TARGET device level rnn_compute_x86 X86 basic
+-- the add_kernel rnn_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_transpose_x86 X86 basic
+-- the add_kernel conv_transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level gather_opencl_image OPENCL basic
+-- the add_kernel gather_image_compute.cpp
+-- 
+-- the add_kernel is TARGET device level elementwise_opencl_image OPENCL basic
+-- the add_kernel elementwise_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level pool_opencl_image OPENCL basic
+-- the add_kernel pool_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_opencl_image OPENCL basic
+-- the add_kernel activation_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level reshape_opencl_image OPENCL basic
+-- the add_kernel reshape_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level transpose_opencl_image OPENCL basic
+-- the add_kernel transpose_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_opencl_image OPENCL basic
+-- the add_kernel conv_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_transpose_opencl_image OPENCL basic
+-- the add_kernel conv_transpose_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level layout_opencl_image OPENCL basic
+-- the add_kernel layout_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level concat_opencl_image OPENCL basic
+-- the add_kernel concat_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level split_opencl_image OPENCL basic
+-- the add_kernel split_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level nearest_interp_opencl_image OPENCL basic
+-- the add_kernel nearest_interp_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level scale_opencl_image OPENCL basic
+-- the add_kernel scale_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level grid_sampler_opencl_image OPENCL basic
+-- the add_kernel grid_sampler_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level lrn_opencl_image OPENCL basic
+-- the add_kernel lrn_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level bilinear_interp_opencl_image OPENCL basic
+-- the add_kernel bilinear_interp_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level instance_norm_opencl_image OPENCL basic
+-- the add_kernel instance_norm_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level dropout_opencl_image OPENCL basic
+-- the add_kernel dropout_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad2d_opencl_image OPENCL basic
+-- the add_kernel pad2d_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_coder_opencl_image OPENCL basic
+-- the add_kernel box_coder_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level pixel_shuffle_opencl_image OPENCL basic
+-- the add_kernel pixel_shuffle_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level expand_opencl_image OPENCL basic
+-- the add_kernel expand_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level shuffle_channel_opencl_image OPENCL basic
+-- the add_kernel shuffle_channel_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level trigonometric_opencl_image OPENCL basic
+-- the add_kernel trigonometric_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level batch_norm_opencl_image OPENCL basic
+-- the add_kernel batch_norm_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_mean_opencl_image OPENCL basic
+-- the add_kernel reduce_mean_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level clip_opencl_image OPENCL basic
+-- the add_kernel clip_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level softmax_opencl_image OPENCL basic
+-- the add_kernel softmax_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level greater_than_opencl_image OPENCL basic
+-- the add_kernel greater_than_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level fc_opencl_image OPENCL basic
+-- the add_kernel fc_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level argmax_opencl_image OPENCL basic
+-- the add_kernel argmax_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level max_opencl_image OPENCL basic
+-- the add_kernel max_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level matmul_opencl_image OPENCL basic
+-- the add_kernel matmul_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level layer_norm_opencl_image OPENCL basic
+-- the add_kernel layer_norm_image_compute.cc
+-- 
+-- the add_kernel is TARGET device level fc_opencl_buffer OPENCL basic
+-- the add_kernel fc_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level io_copy_opencl_buffer OPENCL basic
+-- the add_kernel io_copy_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level shape_opencl_buffer OPENCL basic
+-- the add_kernel shape_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level slice_opencl_buffer OPENCL basic
+-- the add_kernel slice_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level yolo_box_opencl_buffer OPENCL basic
+-- the add_kernel yolo_box_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level squeeze_unsqueeze_opencl_buffer OPENCL basic
+-- the add_kernel squeeze_unsqueeze_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level matmul_opencl_buffer OPENCL basic
+-- the add_kernel matmul_buffer_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_compute_fpga FPGA basic
+-- the add_kernel activation_compute.cc
+-- 
+-- the add_kernel is TARGET device level cast_compute_fpga FPGA basic
+-- the add_kernel cast_compute.cc
+-- 
+-- the add_kernel is TARGET device level concat_compute_fpga FPGA basic
+-- the add_kernel concat_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_compute_fpga FPGA basic
+-- the add_kernel conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_transpose_compute_fpga FPGA basic
+-- the add_kernel conv_transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level dropout_compute_fpga FPGA basic
+-- the add_kernel dropout_compute.cc
+-- 
+-- the add_kernel is TARGET device level elementwise_compute_fpga FPGA basic
+-- the add_kernel elementwise_compute.cc
+-- 
+-- the add_kernel is TARGET device level interpolate_compute_fpga FPGA basic
+-- the add_kernel interpolate_compute.cc
+-- 
+-- the add_kernel is TARGET device level fc_compute_fpga FPGA basic
+-- the add_kernel fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_compute_fpga FPGA extra
+-- the add_kernel gru_compute.cc
+-- 
+-- the add_kernel is TARGET device level multiclass_nms_compute_fpga FPGA basic
+-- the add_kernel multiclass_nms_compute.cc
+-- 
+-- the add_kernel is TARGET device level norm_compute_fpga FPGA basic
+-- the add_kernel norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level pooling_compute_fpga FPGA basic
+-- the add_kernel pooling_compute.cc
+-- 
+-- the add_kernel is TARGET device level subgraph_compute_fpga FPGA basic
+-- the add_kernel subgraph_compute.cc
+-- 
+-- the add_kernel is TARGET device level prior_box_compute_fpga FPGA basic
+-- the add_kernel prior_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_mean_compute_fpga FPGA basic
+-- the add_kernel reduce_mean_compute.cc
+-- 
+-- the add_kernel is TARGET device level reshape_compute_fpga FPGA basic
+-- the add_kernel reshape_compute.cc
+-- 
+-- the add_kernel is TARGET device level scale_compute_fpga FPGA basic
+-- the add_kernel scale_compute.cc
+-- 
+-- the add_kernel is TARGET device level split_compute_fpga FPGA basic
+-- the add_kernel split_compute.cc
+-- 
+-- the add_kernel is TARGET device level transpose_compute_fpga FPGA basic
+-- the add_kernel transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level io_copy_compute_fpga FPGA basic
+-- the add_kernel io_copy_compute.cc
+-- 
+-- the add_kernel is TARGET device level calib_compute_fpga FPGA basic
+-- the add_kernel calib_compute.cc
+-- 
+-- the add_kernel is TARGET device level layout_compute_fpga FPGA basic
+-- the add_kernel layout_compute.cc
+-- 
+-- the add_kernel is TARGET device level feed_compute_fpga FPGA basic
+-- the add_kernel feed_compute.cc
+-- 
+-- the add_kernel is TARGET device level fetch_compute_fpga FPGA basic
+-- the add_kernel fetch_compute.cc
+-- 
+-- the add_kernel is TARGET device level yolo_box_compute_fpga FPGA basic
+-- the add_kernel yolo_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level batch_norm_compute_fpga FPGA basic
+-- the add_kernel batch_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level shape_compute_fpga FPGA basic
+-- the add_kernel shape_compute.cc
+-- 
+-- the add_kernel is TARGET device level slice_compute_fpga FPGA basic
+-- the add_kernel slice_compute.cc
+-- 
+-- the add_kernel is TARGET device level unsqueeze_compute_fpga FPGA basic
+-- the add_kernel unsqueeze_compute.cc
+-- 
+-- the add_kernel is TARGET device level subgraph_compute_npu NPU basic
+-- the add_kernel subgraph_compute.cc
+-- 
+-- the add_kernel is TARGET device level rnn_compute_xpu XPU basic
+-- the add_kernel rnn_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv_compute_xpu XPU basic
+-- the add_kernel conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv3d_compute_xpu XPU basic
+-- the add_kernel conv3d_compute.cc
+-- 
+-- the add_kernel is TARGET device level conv2d_transpose_compute_xpu XPU basic
+-- the add_kernel conv2d_transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level calib_compute_xpu XPU basic
+-- the add_kernel calib_compute.cc
+-- 
+-- the add_kernel is TARGET device level io_copy_compute_xpu XPU basic
+-- the add_kernel io_copy_compute.cc
+-- 
+-- the add_kernel is TARGET device level batch_norm_compute_xpu XPU basic
+-- the add_kernel batch_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level activation_compute_xpu XPU basic
+-- the add_kernel activation_compute.cc
+-- 
+-- the add_kernel is TARGET device level pool_compute_xpu XPU basic
+-- the add_kernel pool_compute.cc
+-- 
+-- the add_kernel is TARGET device level elementwise_compute_xpu XPU basic
+-- the add_kernel elementwise_compute.cc
+-- 
+-- the add_kernel is TARGET device level mul_compute_xpu XPU basic
+-- the add_kernel mul_compute.cc
+-- 
+-- the add_kernel is TARGET device level argmax_compute_xpu XPU basic
+-- the add_kernel argmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level softmax_compute_xpu XPU basic
+-- the add_kernel softmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level scale_compute_xpu XPU basic
+-- the add_kernel scale_compute.cc
+-- 
+-- the add_kernel is TARGET device level dropout_compute_xpu XPU basic
+-- the add_kernel dropout_compute.cc
+-- 
+-- the add_kernel is TARGET device level matmul_compute_xpu XPU basic
+-- the add_kernel matmul_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_pad_compute_xpu XPU basic
+-- the add_kernel sequence_pad_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_mask_compute_xpu XPU basic
+-- the add_kernel sequence_mask_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_compute_xpu XPU basic
+-- the add_kernel gru_compute.cc
+-- 
+-- the add_kernel is TARGET device level gru_unit_compute_xpu XPU basic
+-- the add_kernel gru_unit_compute.cc
+-- 
+-- the add_kernel is TARGET device level stack_compute_xpu XPU basic
+-- the add_kernel stack_compute.cc
+-- 
+-- the add_kernel is TARGET device level slice_compute_xpu XPU basic
+-- the add_kernel slice_compute.cc
+-- 
+-- the add_kernel is TARGET device level cast_compute_xpu XPU basic
+-- the add_kernel cast_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_topk_avg_pooling_compute_xpu XPU basic
+-- the add_kernel sequence_topk_avg_pooling_compute.cc
+-- 
+-- the add_kernel is TARGET device level concat_compute_xpu XPU basic
+-- the add_kernel concat_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_fc_compute_xpu XPU basic
+-- the add_kernel search_fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level reshape_compute_xpu XPU basic
+-- the add_kernel reshape_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_constant_compute_xpu XPU basic
+-- the add_kernel fill_constant_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_constant_batch_size_like_compute_xpu XPU basic
+-- the add_kernel fill_constant_batch_size_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level transpose_compute_xpu XPU basic
+-- the add_kernel transpose_compute.cc
+-- 
+-- the add_kernel is TARGET device level density_prior_box_compute_xpu XPU basic
+-- the add_kernel density_prior_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level yolo_box_compute_xpu XPU basic
+-- the add_kernel yolo_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level prior_box_compute_xpu XPU basic
+-- the add_kernel prior_box_compute.cc
+-- 
+-- the add_kernel is TARGET device level interpolate_compute_xpu XPU basic
+-- the add_kernel interpolate_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_coder_compute_xpu XPU basic
+-- the add_kernel box_coder_compute.cc
+-- 
+-- the add_kernel is TARGET device level assign_value_compute_xpu XPU basic
+-- the add_kernel assign_value_compute.cc
+-- 
+-- the add_kernel is TARGET device level split_compute_xpu XPU basic
+-- the add_kernel split_compute.cc
+-- 
+-- the add_kernel is TARGET device level roi_align_compute_xpu XPU basic
+-- the add_kernel roi_align_compute.cc
+-- 
+-- the add_kernel is TARGET device level clip_compute_xpu XPU basic
+-- the add_kernel clip_compute.cc
+-- 
+-- the add_kernel is TARGET device level instance_norm_compute_xpu XPU basic
+-- the add_kernel instance_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level sum_compute_xpu XPU basic
+-- the add_kernel sum_compute.cc
+-- 
+-- the add_kernel is TARGET device level grid_sampler_compute_xpu XPU basic
+-- the add_kernel grid_sampler_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_zeros_like_compute_xpu XPU basic
+-- the add_kernel fill_zeros_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level reduce_compute_xpu XPU basic
+-- the add_kernel reduce_compute.cc
+-- 
+-- the add_kernel is TARGET device level expand_v2_compute_xpu XPU basic
+-- the add_kernel expand_v2_compute.cc
+-- 
+-- the add_kernel is TARGET device level lookup_table_compute_xpu XPU extra
+-- the add_kernel lookup_table_compute.cc
+-- 
+-- the add_kernel is TARGET device level layer_norm_compute_xpu XPU extra
+-- the add_kernel layer_norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_reverse_compute_xpu XPU extra
+-- the add_kernel sequence_reverse_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_concat_compute_xpu XPU extra
+-- the add_kernel sequence_concat_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_arithmetic_compute_xpu XPU extra
+-- the add_kernel sequence_arithmetic_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_pool_compute_xpu XPU extra
+-- the add_kernel sequence_pool_compute.cc
+-- 
+-- the add_kernel is TARGET device level match_matrix_tensor_compute_xpu XPU extra
+-- the add_kernel match_matrix_tensor_compute.cc
+-- 
+-- the add_kernel is TARGET device level var_conv_2d_compute_xpu XPU extra
+-- the add_kernel var_conv_2d_compute.cc
+-- 
+-- the add_kernel is TARGET device level search_grnn_compute_xpu XPU extra
+-- the add_kernel search_grnn_compute.cc
+-- 
+-- the add_kernel is TARGET device level sequence_unpad_compute_xpu XPU extra
+-- the add_kernel sequence_unpad_compute.cc
+-- 
+-- the add_kernel is TARGET device level lrn_compute_xpu XPU extra
+-- the add_kernel lrn_compute.cc
+-- 
+-- the add_kernel is TARGET device level topk_compute_xpu XPU extra
+-- the add_kernel topk_compute.cc
+-- 
+-- the add_kernel is TARGET device level im2sequence_compute_xpu XPU extra
+-- the add_kernel im2sequence_compute.cc
+-- 
+-- the add_kernel is TARGET device level unstack_compute_xpu XPU extra
+-- the add_kernel unstack_compute.cc
+-- 
+-- the add_kernel is TARGET device level norm_compute_xpu XPU extra
+-- the add_kernel norm_compute.cc
+-- 
+-- the add_kernel is TARGET device level fill_any_like_compute_xpu XPU extra
+-- the add_kernel fill_any_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad_constant_like_compute_xpu XPU extra
+-- the add_kernel pad_constant_like_compute.cc
+-- 
+-- the add_kernel is TARGET device level gather_compute_xpu XPU extra
+-- the add_kernel gather_compute.cc
+-- 
+-- the add_kernel is TARGET device level squeeze_compute_xpu XPU extra
+-- the add_kernel squeeze_compute.cc
+-- 
+-- the add_kernel is TARGET device level unsqueeze_compute_xpu XPU extra
+-- the add_kernel unsqueeze_compute.cc
+-- 
+-- the add_kernel is TARGET device level flatten_compute_xpu XPU extra
+-- the add_kernel flatten_compute.cc
+-- 
+-- the add_kernel is TARGET device level increment_compute_xpu XPU extra
+-- the add_kernel increment_compute.cc
+-- 
+-- the add_kernel is TARGET device level assign_compute_xpu XPU extra
+-- the add_kernel assign_compute.cc
+-- 
+-- the add_kernel is TARGET device level read_from_array_compute_xpu XPU extra
+-- the add_kernel read_from_array_compute.cc
+-- 
+-- the add_kernel is TARGET device level write_to_array_compute_xpu XPU extra
+-- the add_kernel write_to_array_compute.cc
+-- 
+-- the add_kernel is TARGET device level generate_proposals_compute_xpu XPU extra
+-- the add_kernel generate_proposals_compute.cc
+-- 
+-- the add_kernel is TARGET device level anchor_generator_compute_xpu XPU extra
+-- the add_kernel anchor_generator_compute.cc
+-- 
+-- the add_kernel is TARGET device level box_clip_compute_xpu XPU extra
+-- the add_kernel box_clip_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad2d_compute_xpu XPU extra
+-- the add_kernel pad2d_compute.cc
+-- 
+-- the add_kernel is TARGET device level pad3d_compute_xpu XPU extra
+-- the add_kernel pad3d_compute.cc
+-- 
+-- the add_kernel is TARGET device level pixel_shuffle_compute_xpu XPU extra
+-- the add_kernel pixel_shuffle_compute.cc
+-- 
+-- the add_kernel is TARGET device level correlation_compute_xpu XPU extra
+-- the add_kernel correlation_compute.cc
+-- 
+-- the add_kernel is TARGET device level logical_compute_xpu XPU extra
+-- the add_kernel logical_compute.cc
+-- 
+-- the add_kernel is TARGET device level compare_compute_xpu XPU extra
+-- the add_kernel compare_compute.cc
+-- 
+-- the add_kernel is TARGET device level is_empty_compute_xpu XPU extra
+-- the add_kernel is_empty_compute.cc
+-- 
+-- the add_kernel is TARGET device level shape_compute_xpu XPU extra
+-- the add_kernel shape_compute.cc
+-- 
+-- the add_kernel is TARGET device level lod_array_length_compute_xpu XPU extra
+-- the add_kernel lod_array_length_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__resnet50_compute_xpu XPU extra
+-- the add_kernel __xpu__resnet50_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__resnet_cbam_compute_xpu XPU extra
+-- the add_kernel __xpu__resnet_cbam_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__multi_encoder_compute_xpu XPU extra
+-- the add_kernel __xpu__multi_encoder_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__embedding_with_eltwise_add_compute_xpu XPU extra
+-- the add_kernel __xpu__embedding_with_eltwise_add_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__fc_compute_xpu XPU extra
+-- the add_kernel __xpu__fc_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__search_attention_compute_xpu XPU extra
+-- the add_kernel __xpu__search_attention_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__search_attention_2_compute_xpu XPU extra
+-- the add_kernel __xpu__search_attention_2_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__mmdnn_compute_xpu XPU extra
+-- the add_kernel __xpu__mmdnn_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__conv2d_compute_xpu XPU extra
+-- the add_kernel __xpu__conv2d_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__sfa_head_compute_xpu XPU extra
+-- the add_kernel __xpu__sfa_head_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__softmax_topk_compute_xpu XPU extra
+-- the add_kernel __xpu__softmax_topk_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__generate_sequence_compute_xpu XPU extra
+-- the add_kernel __xpu__generate_sequence_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__logit_compute_xpu XPU extra
+-- the add_kernel __xpu__logit_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__squeeze_excitation_compute_xpu XPU extra
+-- the add_kernel __xpu__squeeze_excitation_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__bigru_compute_xpu XPU extra
+-- the add_kernel __xpu__bigru_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__dynamic_lstm_compute_xpu XPU extra
+-- the add_kernel __xpu__dynamic_lstm_compute.cc
+-- 
+-- the add_kernel is TARGET device level __xpu__multi_softmax_compute_xpu XPU extra
+-- the add_kernel __xpu__multi_softmax_compute.cc
+-- 
+-- the add_kernel is TARGET device level subgraph_compute_mlu MLU basic
+-- the add_kernel subgraph_compute.cc
+-- 
+-- the add_kernel is TARGET device level io_copy_compute_mlu MLU basic
+-- the add_kernel io_copy_compute.cc
+-- 
+-- the add_kernel is TARGET device level calib_compute_mlu MLU basic
+-- the add_kernel calib_compute.cc
+-- 
+-- the add_kernel is TARGET device level layout_compute_mlu MLU basic
+-- the add_kernel layout_compute.cc
+-- 
+-- compile with lite Metal kernels
+-- the add_kernel is TARGET device level activation_metal_image METAL basic
+-- the add_kernel image_op/activation_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level argmax_metal_image METAL basic
+-- the add_kernel image_op/argmax_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level batch_norm_metal_image METAL basic
+-- the add_kernel image_op/batch_norm_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level box_coder_metal_image METAL basic
+-- the add_kernel image_op/box_coder_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level cast_metal_image METAL basic
+-- the add_kernel image_op/cast_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level compare_metal_image METAL basic
+-- the add_kernel image_op/compare_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level concat_metal_image METAL basic
+-- the add_kernel image_op/concat_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level conv2d_metal_image METAL basic
+-- the add_kernel image_op/conv2d_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level conv2d_transpose_metal_image METAL basic
+-- the add_kernel image_op/conv2d_transpose_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level depthwise_conv2d_metal_image METAL basic
+-- the add_kernel image_op/depthwise_conv2d_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level dropout_metal_image METAL basic
+-- the add_kernel image_op/dropout_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level elementwise_metal_image METAL basic
+-- the add_kernel image_op/elementwise_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level exp_metal_image METAL basic
+-- the add_kernel image_op/exp_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level fc_metal_image METAL basic
+-- the add_kernel image_op/fc_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level feed_metal_image METAL basic
+-- the add_kernel image_op/feed_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level fetch_metal_image METAL basic
+-- the add_kernel image_op/fetch_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level interp_metal_image METAL basic
+-- the add_kernel image_op/interp_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level io_copy_metal_image METAL basic
+-- the add_kernel image_op/io_copy_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level matmul_metal_compute METAL basic
+-- the add_kernel image_op/matmul_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level pad2d_metal_compute METAL basic
+-- the add_kernel image_op/pad2d_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level pool_metal_image METAL basic
+-- the add_kernel image_op/pool_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level reduce_metal_image METAL basic
+-- the add_kernel image_op/reduce_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level reshape_metal_image METAL basic
+-- the add_kernel image_op/reshape_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level scale_metal_image METAL basic
+-- the add_kernel image_op/scale_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level slice_metal_compute METAL basic
+-- the add_kernel image_op/slice_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level softmax_metal_image METAL basic
+-- the add_kernel image_op/softmax_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level split_metal_image METAL basic
+-- the add_kernel image_op/split_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level shuffle_channel_metal_compute METAL basic
+-- the add_kernel image_op/shuffle_channel_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level transpose_metal_image METAL basic
+-- the add_kernel image_op/transpose_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level yolo_box_metal_image METAL basic
+-- the add_kernel image_op/yolo_box_image_compute.mm
+-- 
+-- the add_kernel is TARGET device level conv_depthwise_intel_fpga INTEL_FPGA basic
+-- the add_kernel conv_depthwise.cc
+-- 
+-- the add_kernel is TARGET device level conv_gemmlike_intel_fpga INTEL_FPGA basic
+-- the add_kernel conv_gemmlike.cc
+-- 
+-- the add_kernel is TARGET device level conv_compute_intel_fpga INTEL_FPGA basic
+-- the add_kernel conv_compute.cc
+-- 
+-- the add_kernel is TARGET device level subgraph_compute_nnadapter NNADAPTER basic
+-- the add_kernel utility.cc;engine.cc;subgraph_compute.cc
+-- 
+CMake Error at lite/kernels/CMakeLists.txt:119 (message):
+  Traceback (most recent call last):
+
+    File "/home/ubuntu/code/Paddle-Litev2.11/lite/tools/cmake_tools/create_fake_kernel_registry.py", line 243, in <module>
+      parse_fake_kernels_from_path(faked_kernels_list_path)
+    File "/home/ubuntu/code/Paddle-Litev2.11/lite/tools/cmake_tools/create_fake_kernel_registry.py", line 157, in parse_fake_kernels_from_path
+      with open(path.strip()) as g:
+
+  IOError: [Errno 2] No such file or directory:
+  '/home/ubuntu/code/Paddle-Litev2.11/lite/kernels/arm/sum_compute.cc'
+
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/CMakeFiles/CMakeOutput.log".
+See also "/home/ubuntu/code/Paddle-Litev2.11/build.lite.linux.x86.gcc/CMakeFiles/CMakeError.log".

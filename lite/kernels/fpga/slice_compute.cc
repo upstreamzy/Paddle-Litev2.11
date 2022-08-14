@@ -60,10 +60,10 @@ REGISTER_LITE_KERNEL(
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kAny),
                                       DATALAYOUT(kAny))})
-    .BindInput("StartsTensor", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("EndsTensor", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("StartsTensorList", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("EndsTensorList", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("StartsTensor", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("EndsTensor", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("StartsTensorList", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("EndsTensorList", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Out",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kAny),

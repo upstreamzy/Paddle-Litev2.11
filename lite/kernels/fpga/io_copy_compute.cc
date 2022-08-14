@@ -258,7 +258,7 @@ REGISTER_LITE_KERNEL(io_copy,
                                       PRECISION(kAny),
                                       DATALAYOUT(kNHWC))})
     .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
+                {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFloat),
                                        DATALAYOUT(kNCHW))})
     .Finalize();
@@ -274,7 +274,7 @@ REGISTER_LITE_KERNEL(io_copy_once,
                                       PRECISION(kAny),
                                       DATALAYOUT(kNHWC))})
     .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
+                {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFloat),
                                        DATALAYOUT(kNCHW))})
     .Finalize();
@@ -290,7 +290,7 @@ REGISTER_LITE_KERNEL(io_copy,
                                       PRECISION(kFloat),
                                       DATALAYOUT(kNHWC))})
     .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
+                {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFloat),
                                        DATALAYOUT(kNCHW))})
     .Finalize();
@@ -306,7 +306,7 @@ REGISTER_LITE_KERNEL(io_copy_once,
                                       PRECISION(kFloat),
                                       DATALAYOUT(kNHWC))})
     .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
+                {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFloat),
                                        DATALAYOUT(kNCHW))})
     .Finalize();

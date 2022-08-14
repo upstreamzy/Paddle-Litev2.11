@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 // #include "lite/backends/x86/math/avx/conv_utils.h"
-#include "lite/backends/riscv/math/conv_direct_fp32.h"
+// #include "lite/backends/riscv/math/conv_direct_fp32.h"
 #include "lite/core/context.h"
 #include "lite/core/kernel.h"
 #include "lite/core/target_wrapper.h"
@@ -26,41 +26,37 @@ class DirectConv : public KernelLite<TARGET(kX86), Ptype> {
   virtual void Run();
 
   virtual void PrepareForRun() {
-    auto& param = this->template Param<param_t>();
-#ifdef __AVX__
-    constexpr int block = 8;
-#else
-    constexpr int block = 4;
-#endif
+    // auto& param = this->template Param<param_t>();
 
-    int oc = param.filter->dims()[0];
-    int ic = param.filter->dims()[1];
-    int wh = param.filter->dims()[2];
-    int ww = param.filter->dims()[3];
-    int cround = ROUNDUP(oc, block);
-    oc_expand_ = cround;
+
+    // int oc = param.filter->dims()[0];
+    // int ic = param.filter->dims()[1];
+    // int wh = param.filter->dims()[2];
+    // int ww = param.filter->dims()[3];
+    // int cround = ROUNDUP(oc, block);
+    // oc_expand_ = cround;
     // [chout, chin, wh, ww] -> [chout / block, chin, wh, ww, block]
-    weights_.Resize({cround / block, ic, wh, ww, block});
-    auto filter_data = param.filter->template data<float>();
-    auto weights_w_data = weights_.mutable_data<float>();
-    lite::riscv::math::conv_trans_weights_numc(
-        filter_data, weights_w_data, oc, ic, wh, ww, block);
+    // weights_.Resize({cround / block, ic, wh, ww, block});
+    // auto filter_data = param.filter->template data<float>();
+    // auto weights_w_data = weights_.mutable_data<float>();
+    // lite::riscv::math::conv_trans_weights_numc(
+    //     filter_data, weights_w_data, oc, ic, wh, ww, block);
 
-    auto x_dims = param.x->dims();
-    auto w_dims = param.filter->dims();
-    auto o_dims = param.output->dims();
+    // auto x_dims = param.x->dims();
+    // auto w_dims = param.filter->dims();
+    // auto o_dims = param.output->dims();
 
-    const int ph = (*(param.paddings))[0];
-    const int pw = (*(param.paddings))[2];
+    // const int ph = (*(param.paddings))[0];
+    // const int pw = (*(param.paddings))[2];
 
-    int iw = x_dims[3];
-    int ih = x_dims[2];
-    int oh = o_dims[2];
-    int ow = o_dims[3];
-    code_ = new lite::x86::math::conv_direct();
-    code_->generate_code(
-        ic, ih, iw, oc, oc_expand_, oh, ow, ph, pw, wh, ww, param.strides[1]);
-    code_->ready();
+    // int iw = x_dims[3];
+    // int ih = x_dims[2];
+    // int oh = o_dims[2];
+    // int ow = o_dims[3];
+    // code_ = new lite::x86::math::conv_direct();
+    // code_->generate_code(
+    //     ic, ih, iw, oc, oc_expand_, oh, ow, ph, pw, wh, ww, param.strides[1]);
+    // code_->ready();
   }
 
 #ifdef LITE_WITH_PROFILE
@@ -81,7 +77,7 @@ class DirectConv : public KernelLite<TARGET(kX86), Ptype> {
   bool flag_trans_bias_{false};
   std::vector<float> w_scale_;
   int oc_expand_;
-  lite::x86::math::conv_direct* code_;
+  lite::riscv::math::conv_direct* code_;
 };
 
 }  // namespace riscv

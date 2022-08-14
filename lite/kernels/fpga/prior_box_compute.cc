@@ -129,6 +129,6 @@ REGISTER_LITE_KERNEL(prior_box,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Variances", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("Variances", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

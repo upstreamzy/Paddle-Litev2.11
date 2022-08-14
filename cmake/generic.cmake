@@ -235,6 +235,8 @@ function(merge_static_libs TARGET_NAME)
 endfunction(merge_static_libs)
 
 function(cc_library TARGET_NAME)
+
+  message(STATUS "the cc_library is ${TARGET_NAME}")
   set(options STATIC static SHARED shared)
   set(oneValueArgs "")
   set(multiValueArgs SRCS DEPS)

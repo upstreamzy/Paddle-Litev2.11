@@ -114,11 +114,11 @@ REGISTER_LITE_KERNEL(calib,
                      paddle::lite::kernels::fpga::CalibComputeFloat2Int,
                      float_2_int_fpga)
     .BindInput("Input",
-               {LiteType::GetTensorTy(TARGET(kARM),
+               {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFloat),
                                       DATALAYOUT(kNCHW))})
     .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
+                {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kInt32),
                                        DATALAYOUT(kNCHW))})
     .Finalize();
@@ -130,11 +130,11 @@ REGISTER_LITE_KERNEL(calib_once,
                      paddle::lite::kernels::fpga::CalibComputeFloat2Int,
                      float_2_int_fpga)
     .BindInput("Input",
-               {LiteType::GetTensorTy(TARGET(kARM),
+               {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFloat),
                                       DATALAYOUT(kNCHW))})
     .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
+                {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kInt32),
                                        DATALAYOUT(kNCHW))})
     .Finalize();

@@ -204,21 +204,21 @@ REGISTER_LITE_KERNEL(layout,
                                        DATALAYOUT(kNCHW))})
     .Finalize();
 
-REGISTER_LITE_KERNEL(layout,
-                     kFPGA,
-                     kAny,
-                     kNHWC,
-                     paddle::lite::kernels::fpga::TransHwcToChwCompute,
-                     hwc_to_chw_arm_float)
-    .BindInput("Input",
-               {LiteType::GetTensorTy(TARGET(kARM),
-                                      PRECISION(kFloat),
-                                      DATALAYOUT(kNHWC))})
-    .BindOutput("Out",
-                {LiteType::GetTensorTy(TARGET(kARM),
-                                       PRECISION(kFloat),
-                                       DATALAYOUT(kNCHW))})
-    .Finalize();
+// REGISTER_LITE_KERNEL(layout,
+//                      kFPGA,
+//                      kAny,
+//                      kNHWC,
+//                      paddle::lite::kernels::fpga::TransHwcToChwCompute,
+//                      hwc_to_chw_arm_float)
+//     .BindInput("Input",
+//                {LiteType::GetTensorTy(TARGET(kARM),
+//                                       PRECISION(kFloat),
+//                                       DATALAYOUT(kNHWC))})
+//     .BindOutput("Out",
+//                 {LiteType::GetTensorTy(TARGET(kARM),
+//                                        PRECISION(kFloat),
+//                                        DATALAYOUT(kNCHW))})
+//     .Finalize();
 
 REGISTER_LITE_KERNEL(layout,
                      kFPGA,

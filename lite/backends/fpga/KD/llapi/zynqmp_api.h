@@ -12,7 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-#pragma once
+// #pragma once
 
 #ifndef PADDLE_LITE_SRC_FPGA_KD_ZYNQMP_API_H
 #define PADDLE_LITE_SRC_FPGA_KD_ZYNQMP_API_H

@@ -111,8 +111,8 @@ REGISTER_LITE_KERNEL(conv2d_transpose,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Output",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),

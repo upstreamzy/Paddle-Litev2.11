@@ -1,0 +1,21 @@
+the FLAGS_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1
+the FLAGS_use_optimize_nb is 0
+input shapes: 1,3,224,224
+input shape: 1,3,224,224
+the load_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
+the load_param_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdiparams
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+CxxModelBuffer::CxxModelBuffer function program_buffer is : 
+όπ 
+CxxModelBuffer::CxxModelBuffer function params_ is :  
+CxxConfig class base class 's set_valid_places is running and then print valid_places_
+CxxConfig class base class 's set_valid_places is running and then print valid_places_
+the predictor is beganing 
+
+In cxx_api_impl.cc CreatePaddlePredictor  function which invoke Init function
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+CxxPaddleApiImpl class Init function is running 
+CXXPaddleApiImpl class Init function status_is_cloned_ is false 
+attention LOG command
+use_layout_preprocess_pass:18446744073709551615
+sparse_conv_detect_pass:0x55f695981300

@@ -1,7 +1,7 @@
 if(LITE_WITH_XPU)
   set(IS_FAKED_KERNEL false CACHE INTERNAL "")
   set(lite_kernel_deps ${lite_kernel_deps} target_wrapper_xpu math_host CACHE INTERNAL "")
-elseif(LITE_ON_MODEL_OPTIMIZE_TOOL OR LITE_WITH_PYTHON)
+elseif(LITE_ON_MODEL_OPTIMIZE_TOOL)
   set(IS_FAKED_KERNEL true CACHE INTERNAL "")
 else()
   return()

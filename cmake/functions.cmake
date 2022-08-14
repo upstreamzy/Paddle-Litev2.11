@@ -54,6 +54,13 @@ function(add_kernel TARGET device level)
     set(multiValueArgs SRCS)
     cmake_parse_arguments(args "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
+    message(STATUS "the add_kernel is TARGET device level ${TARGET} ${device} ${level}")
+    message(STATUS "the add_kernel ${args_SRCS}")
+    message(STATUS)
+    
+    if ("${device}" STREQUAL "CUDA")
+      return()
+    endif()
 
     if (("${level}" STREQUAL "extra" AND (NOT LITE_BUILD_EXTRA)) OR ("${level}" STREQUAL "train" AND (NOT LITE_WITH_TRAIN)))
         return()

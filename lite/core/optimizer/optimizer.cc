@@ -188,29 +188,29 @@ std::unique_ptr<RuntimeProgram> RunDefaultOptimizer(
        "identity_dropout_eliminate_pass",
        "sparse_conv_detect_pass",
        "keepdims_convert_pass",
-       "__xpu__max_pooling_pad_zero_detect_fuse_pass",
-       "__xpu__graph_dedup_pass",
-       "__xpu__resnet_fuse_pass",
-       "__xpu__resnet_cbam_fuse_pass",
-       "__xpu__conv2d_affine_channel_fuse_pass",
-       "__xpu__conv2d_fuse_pass",
-       "__xpu__squeeze_excitation_fuse_pass",
-       "__xpu__sfa_head_meanstd_fuse_pass",
-       "__xpu__sfa_head_moment_fuse_pass",
-       "__xpu__mmdnn_fuse_pass",
-       "__xpu__bigru_fuse_pass",
-       "__xpu__multi_encoder_fuse_pass",
-       "__xpu__embedding_with_eltwise_add_fuse_pass",
-       "__xpu__fc_fuse_pass",
-       "__xpu__softmax_topk_fuse_pass",
-       "__xpu__multi_encoder_adaptive_seqlen_fuse_pass",
-       "__xpu__multi_encoder_slice_link_fuse_pass",
-       "__xpu__generate_sequence_fuse_pass",
-       "__xpu__logit_fuse_pass",
-       "__xpu__link_previous_out_max_pass",
+      //  "__xpu__max_pooling_pad_zero_detect_fuse_pass",
+      //  "__xpu__graph_dedup_pass",
+      //  "__xpu__resnet_fuse_pass",
+      //  "__xpu__resnet_cbam_fuse_pass",
+      //  "__xpu__conv2d_affine_channel_fuse_pass",
+       //"__xpu__conv2d_fuse_pass",
+      //  "__xpu__squeeze_excitation_fuse_pass",
+      //  "__xpu__sfa_head_meanstd_fuse_pass",
+      //  "__xpu__sfa_head_moment_fuse_pass",
+      //  "__xpu__mmdnn_fuse_pass",
+      //  "__xpu__bigru_fuse_pass",
+      //  "__xpu__multi_encoder_fuse_pass",
+      //  "__xpu__embedding_with_eltwise_add_fuse_pass",
+      //  "__xpu__fc_fuse_pass",
+      //  "__xpu__softmax_topk_fuse_pass",
+      //  "__xpu__multi_encoder_adaptive_seqlen_fuse_pass",
+      //  "__xpu__multi_encoder_slice_link_fuse_pass",
+      //  "__xpu__generate_sequence_fuse_pass",
+      //  "__xpu__logit_fuse_pass",
+      //  "__xpu__link_previous_out_max_pass",
        "fix_mismatched_precision_pass",
-       "__xpu__dynamic_lstm_fuse_pass",
-       "__xpu__multi_softmax_fuse_pass",
+      //  "__xpu__dynamic_lstm_fuse_pass",
+      //  "__xpu__multi_softmax_fuse_pass",
        // Only for fully quantized model, infer the output scale and fix the
        // attribute 'enable_int8' for all of the quantized ops.
        "quantization_parameters_propagation_pass",
@@ -268,10 +268,10 @@ std::unique_ptr<RuntimeProgram> RunDefaultOptimizer(
        "runtime_context_assign_pass",
        "argument_type_display_pass",
        "lite_inplace_fuse_pass",
-#if !(defined(LITE_WITH_FPGA) || defined(LITE_WITH_PRECISION_PROFILE))
-       "memory_optimize_pass",
-       "xpu_memory_optimize_pass"
-#endif
+// #if !(defined(LITE_WITH_FPGA) || defined(LITE_WITH_PRECISION_PROFILE))
+//        "memory_optimize_pass",
+//        "xpu_memory_optimize_pass"
+// #endif
       }};
 
   // skip the discarded pass

@@ -15,6 +15,7 @@
 #include "lite/kernels/fpga/cast_compute.h"
 #include <algorithm>
 // #include "lite/backends/arm/math/funcs.h"
+#include "lite/core/context.h"
 
 namespace paddle {
 namespace lite {
@@ -29,7 +30,7 @@ out_type TransOp(in_type in) {
 void CastCompute::PrepareForRun() {}
 
 void CastCompute::Run() {
-  auto& ctx = this->ctx_->template As<ARMContext>();
+  auto& ctx = this->ctx_->template As<FPGAContext>();
   auto& param = this->Param<operators::CastParam>();
 
   auto input_dims = param.X->dims();

@@ -14,7 +14,7 @@
 
 #include "lite/kernels/fpga/split_compute.h"
 #include <vector>
-#include "lite/backends/arm/math/funcs.h"
+// #include "lite/backends/arm/math/funcs.h"
 
 namespace paddle {
 namespace lite {
@@ -60,9 +60,9 @@ REGISTER_LITE_KERNEL(
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
     .BindInput("AxisTensor",
-               {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kInt32))})
+               {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
     .BindInput("SectionsTensorList",
-               {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kInt32))})
+               {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
     .BindOutput("Out",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),

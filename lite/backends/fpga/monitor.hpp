@@ -62,6 +62,15 @@ class Monitor {
     }
   }
 
+  bool should_print(std::string& name, std::vector<std::string> tensor_names)
+  {
+    if (std::find(tensor_names.begin(), tensor_names.end(), name) !=
+          tensor_names.end()) {
+        return true;
+      }
+    return false;
+  }
+
   void postRun(Instruction& inst) {  // NOLINT
     auto op = const_cast<OpLite*>(inst.op());
     auto op_info = op->op_info();
@@ -69,13 +78,13 @@ class Monitor {
 
     static std::vector<std::string> tensor_names = {};
 
-    auto should_print = [tensor_names](std::string& name) -> bool {
-      if (std::find(tensor_names.begin(), tensor_names.end(), name) !=
-          tensor_names.end()) {
-        return true;
-      }
-      return false;
-    };
+    // auto should_print = [tensor_names](std::string& name) -> bool {
+    //   if (std::find(tensor_names.begin(), tensor_names.end(), name) !=
+    //       tensor_names.end()) {
+    //     return true;
+    //   }
+    //   return false;
+    // };
 
     auto out_args = op_info->output_names();
     for (auto name : out_args) {
@@ -92,7 +101,7 @@ class Monitor {
             name.replace(found, substr.length(), "_");
           }
           VLOG(4) << "\n out_tensor:::" << name;
-          if (tensor->ZynqTensor() != nullptr && should_print(name)) {
+          if (tensor->ZynqTensor() != nullptr && should_print(name, tensor_names)) {
             tensor->ZynqTensor()->saveToFile(name, true);
           }
         }

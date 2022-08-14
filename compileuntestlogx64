@@ -1,0 +1,833 @@
+/home/ubuntu/code/Paddle-Litev2.11/build
+-- Found Paddle host system: ubuntu, version: 18.04.4
+-- Found Paddle host system's CPU: 2 cores
+-- CXX compiler: /usr/bin/c++, version: GNU 7.5.0
+-- C compiler: /usr/bin/cc, version: GNU 7.5.0
+-- AR tools: /usr/bin/ar
+-- CMAKE GENERATOR: Unix Makefiles
+-- CMAKE_BUILD_TYPE: RelWithDebInfo
+-- In  /home/ubuntu/code/Paddle-Litev2.11/makelists /usr/bin/cmake
+-- MKLML_VER: Glibc225_vsErf_mklml_lnx_2019.0.1.20181227, MKLML_URL: http://paddlepaddledeps.bj.bcebos.com/Glibc225_vsErf_mklml_lnx_2019.0.1.20181227.tgz
+-- Enable Intel OpenMP with /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/mklml/lib/libiomp5.so
+CMake Warning (dev) in cmake/configure.cmake:
+  A logical block opening on the line
+
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:310 (if)
+
+  closes on the line
+
+    /home/ubuntu/code/Paddle-Litev2.11/cmake/configure.cmake:312 (endif)
+
+  with mis-matching arguments.
+Call Stack (most recent call first):
+  cmake/backends/common.cmake:47 (include)
+  CMakeLists.txt:170 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+COVERALLS UPLOAD: ON
+-- Protobuf protoc executable: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/bin/protoc
+-- Protobuf-lite library: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/libprotobuf-lite.a
+-- Protobuf library: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/libprotobuf.a
+-- Protoc library: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/libprotoc.a
+-- Protobuf version: 3.3.0
+-- Found cblas and lapack in MKLML (include: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/mklml/include, library: mklml)
+-- BLAS library: mklml
+-- BLAS Include: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/mklml/include
+-- Paddle version is 0.0.0
+-- In lite/cmakelists a lite will be included or running
+-- In lite.cmake file is running 
+-- LITE_WITH_CUDA:	OFF
+-- LITE_WITH_X86:	ON
+-- LITE_WITH_ARM:	OFF
+-- LITE_WITH_SW:	OFF
+-- LITE_WITH_OPENCL:	OFF
+-- LITE_WITH_METAL:	OFF
+-- LITE_WITH_NPU:	OFF
+-- LITE_WITH_XPU:	OFF
+-- LITE_WITH_FPGA:	OFF
+-- LITE_WITH_INTEL_FPGA:	OFF
+-- LITE_WITH_MLU:	OFF
+-- LITE_WITH_BM:	OFF
+-- LITE_WITH_NNADAPTER:	OFF
+-- LITE_WITH_PROFILE:	ON
+-- LITE_WITH_CV:	OFF
+-- add_subdirectory(jit) will be running
+-- add_subdirectory(more) will be running
+-- add_subdirectory(mkl) will be running--------------------------------------------
+-- WITH_MKLML is on --------------------------------------------
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is x86_math}
+-- In lite.cmkae lite_cc_library function TARGET is target_wrapper_host}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is math_host}
+-- In lite.cmkae lite_cc_library function TARGET is utils}
+-- add lite kernels
+-- compile with lite host kernels
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is kernels}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is core_tester}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is core}
+fatal: no tag exactly matches '3ba500000b4af24d0ac3957ebbdfbc3faa3e9cc3'
+-- tag: 
+-- branch: release/v2.11
+-- commit: 3ba500000
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is model_parser}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is paddle_api_light}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is paddle_api_full}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is paddle_light_api_shared}
+-- WITH_MKL is ON xxxxxxxxxxxxxxxxxxx ON
+-- In lite.cmkae lite_cc_library function TARGET is paddle_full_api_shared}
+-- bundled_tgt_full_name:  /home/ubuntu/code/Paddle-Litev2.11/build/libpaddle_api_full_bundled.a
+-- bundled_tgt_full_name:  /home/ubuntu/code/Paddle-Litev2.11/build/libpaddle_api_light_bundled.a
+-- Download inference test stuff: lite_naive_model.tar.gz
+-- Download inference test stuff: mobilenet_v1.tar.gz
+-- Download inference test stuff: mobilenet_v2_relu.tar.gz
+-- Download inference test stuff: inception_v4_simple.tar.gz
+-- Download inference test stuff: GoogleNet_inference.tar.gz
+-- Download inference test stuff: inception_v4.tar.gz
+-- Download inference test stuff: squeezenet.tar.gz
+-- Download inference test stuff: mobilenet_v3_small_x1_0.tar.gz
+-- Download inference test stuff: mobilenet_v3_large_x1_0.tar.gz
+-- Download inference test stuff: mobilenet_v1_int8_per_layer.tar.gz
+-- Download inference test stuff: mobilenet_v1_int8_per_channel.tar.gz
+-- Download inference test stuff: resnet50_int8_per_layer.tar.gz
+-- Download inference test stuff: ssd_mobilenet_v1_relu_voc_fp32_300.tar.gz
+-- Download inference test stuff: ssd_mobilenet_v1_relu_voc_int8_300_per_layer.tar.gz
+-- Download inference test stuff: step_rnn.tar.gz
+-- Download inference test stuff: resnet50.tar.gz
+-- Download inference test stuff: resnet50_vd.tar.gz
+-- Download inference test stuff: bert.tar.gz
+-- Download inference test stuff: bert_base_chinese.tar.gz
+-- Download inference test stuff: ernie.tar.gz
+-- Download inference test stuff: GoogLeNet.tar.gz
+-- Download inference test stuff: VGG19.tar.gz
+-- Download inference test stuff: yolov3_darknet53.tar.gz
+-- Download inference test stuff: vgg16.tar.gz
+-- Download inference test stuff: ILSVRC2012_500.tar.gz
+-- Download inference test stuff: flowers102_val.tar.gz
+-- Download inference test stuff: bert_data.tar.gz
+-- Download inference test stuff: bert_base_chinese_data.tar.gz
+-- Download inference test stuff: ocr_rec_img_txt.tar.gz
+-- Download inference test stuff: nlp_quant_lstm_int8_data_txt.tar.gz
+-- Download inference test stuff: lac_data_txt.tar.gz
+-- Download inference test stuff: transformer_nlp2_data_txt.tar.gz
+-- Download inference test stuff: roadsign_data_128.tar.gz
+-- publish inference lib to /home/ubuntu/code/Paddle-Litev2.11/build/inference_lite_lib
+-- In lite/CMakeLists LITE_WITH_X86 option TARGET is 
+-- In lite/CmakeLIsts LITE_WITH_RISCV  is funished 
+-- In lite/CMakeLists LITE_WITH_X86 option TARGET is 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/code/Paddle-Litev2.11/build
+[  1%] Built target extern_eigen3
+[  1%] Built target extern_xbyak
+[  1%] Built target extern_lite_download_mobilenet_v2_relu_tar_gz
+[  2%] Built target extern_xxhash
+[  2%] Built target extern_gflags
+[  2%] Built target extern_mklml
+[  2%] Performing build step for 'extern_protobuf'
+[  3%] Built target extern_lite_download_mobilenet_v1_tar_gz
+[  3%] Built target extern_lite_download_inception_v4_simple_tar_gz
+[  4%] Built target extern_lite_download_GoogleNet_inference_tar_gz
+[  4%] Built target custom_linker_map
+[  4%] Built target extern_lite_download_resnet50_tar_gz
+[  4%] Built target extern_lite_download_lite_naive_model_tar_gz
+[  4%] Built target fbs_headers
+[  4%] Built target extern_gtest
+[  6%] Built target extern_glog
+[  6%] Built target extern_lite_download_step_rnn_tar_gz
+Scanning dependencies of target utils
+[ 12%] Built target libprotobuf-lite
+[  6%] Building C object lite/utils/CMakeFiles/utils.dir/utils_dummy.c.o
+[  6%] Built target target_wrapper_host
+[  7%] Built target core_tester
+[ 51%] Built target libprotobuf
+[ 98%] Built target libprotoc
+[  7%] Linking C static library libutils.a
+[100%] Built target protoc
+[  7%] Performing install step for 'extern_protobuf'
+[ 12%] Built target libprotobuf-lite
+[ 51%] Built target libprotobuf
+[  7%] Built target utils
+[ 98%] Built target libprotoc
+[100%] Built target protoc
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/libprotobuf-lite.a
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/libprotobuf.a
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/libprotoc.a
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/bin/protoc
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/any.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/any.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/api.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/arena.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/arenastring.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/code_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/command_line_interface.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/cpp/cpp_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/csharp/csharp_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/csharp/csharp_names.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/importer.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/java/java_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/java/java_names.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/javanano/javanano_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/js/js_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/objectivec/objectivec_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/objectivec/objectivec_helpers.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/parser.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/php/php_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/plugin.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/plugin.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/python/python_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/ruby/ruby_generator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/descriptor.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/descriptor.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/descriptor_database.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/duration.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/dynamic_message.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/empty.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/extension_set.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/field_mask.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/generated_enum_reflection.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/generated_enum_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/generated_message_reflection.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/generated_message_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/has_bits.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/coded_stream.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/gzip_stream.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/printer.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/strtod.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/tokenizer.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/zero_copy_stream.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/zero_copy_stream_impl.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/io/zero_copy_stream_impl_lite.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map_entry.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map_entry_lite.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map_field.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map_field_inl.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map_field_lite.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/map_type_handler.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/message.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/message_lite.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/metadata.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/reflection.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/reflection_ops.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/repeated_field.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/service.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/source_context.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/struct.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomic_sequence_num.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_arm64_gcc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_arm_gcc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_arm_qnx.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_atomicword_compat.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_generic_c11_atomic.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_generic_gcc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_macosx.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_mips_gcc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_power.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_ppc_gcc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_solaris.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_tsan.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/atomicops_internals_x86_msvc.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/bytestream.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/callback.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/casts.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/common.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/fastmem.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/hash.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/logging.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/macros.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/mutex.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/once.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/platform_macros.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/port.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/scoped_ptr.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/shared_ptr.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/singleton.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/status.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/stl_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/stringpiece.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/template_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/stubs/type_traits.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/text_format.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/timestamp.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/type.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/unknown_field_set.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/field_comparator.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/field_mask_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/json_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/message_differencer.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/time_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/type_resolver.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/util/type_resolver_util.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/wire_format.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/wire_format_lite.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/wire_format_lite_inl.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/wrappers.pb.h
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/descriptor.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/any.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/api.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/duration.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/empty.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/field_mask.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/source_context.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/struct.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/timestamp.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/type.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/wrappers.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/include/google/protobuf/compiler/plugin.proto
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf/protobuf-targets.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf/protobuf-targets-noconfig.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf/protobuf-options.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf/protobuf-config.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf/protobuf-module.cmake
+-- Up-to-date: /home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/protobuf/lib/cmake/protobuf/protobuf-config-version.cmake
+[  7%] Completed 'extern_protobuf'
+[ 25%] Built target ops
+[ 26%] Built target extern_protobuf
+[ 26%] Built target framework_proto
+Scanning dependencies of target cblas
+[ 26%] Building C object CMakeFiles/cblas.dir/cblas_dummy.c.o
+[ 28%] Built target model_parser
+[ 28%] Linking CXX static library libcblas.a
+[ 28%] Built target cblas
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_bn_fuse_pass.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_bn_fuser.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_activation_fuse_pass.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_activation_fuser.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/__xpu__mmdnn_fuse_pass.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_conv_fuser.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_conv_fuse_pass.cc.o
+Scanning dependencies of target x86_math
+[ 28%] Building CXX object lite/backends/x86/CMakeFiles/x86_math.dir/jit/more/mix/mix.cc.o
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_conv_fuser.cc: In member function ‘virtual void paddle::lite::mir::fusion::ConvConvFuser::InsertNewNode(paddle::lite::mir::SSAGraph*, const key2nodes_t&)’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_conv_fuser.cc:188:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < strides1.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_conv_fuser.cc:192:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < paddings1.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_conv_fuser.cc:196:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < dilations1.size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/node.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/pattern_matcher_high_api.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_bn_fuser.h:20,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_bn_fuser.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = long int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_bn_fuser.cc:194:7:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_elementwise_fuse_pass.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_elementwise_fuser.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_elementwise_tree_fuse_pass.cc.o
+[ 28%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_elementwise_tree_fuser.cc.o
+[ 28%] Building CXX object lite/backends/x86/CMakeFiles/x86_math.dir/math/math_function.cc.o
+[ 28%] Building CXX object lite/backends/x86/CMakeFiles/x86_math.dir/math/sequence_pooling.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/node.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/pattern_matcher_high_api.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_elementwise_tree_fuser.h:20,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_elementwise_tree_fuser.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/conv_elementwise_tree_fuser.cc:113:7:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 28%] Building CXX object lite/backends/x86/CMakeFiles/x86_math.dir/math/sequence_scale.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_scale_fuse_pass.cc.o
+[ 30%] Building CXX object lite/backends/x86/CMakeFiles/x86_math.dir/math/sequence_topk_avg_pooling.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/conv_scale_fuser.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/elementwise_add_activation_fuse_pass.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/memory.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/tensor.h:35,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/fluid/eigen.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence_pooling.cc:17:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/fluid/eigen.h:33:5:   required from ‘static paddle::lite::fluid::EigenDim<D>::Type paddle::lite::fluid::EigenDim<D>::From(const DDim&) [with int D = 2; paddle::lite::fluid::EigenDim<D>::Type = Eigen::DSizes<long int, 2>; paddle::lite::DDim = paddle::lite::DDimLite]’
+/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/fluid/eigen.h:64:34:   required from ‘static paddle::lite::fluid::EigenTensor<T, D, MajorType, IndexType>::Type paddle::lite::fluid::EigenTensor<T, D, MajorType, IndexType>::From(paddle::lite::Tensor&, const DDim&) [with T = float; long unsigned int D = 2; int MajorType = 1; IndexType = long int; paddle::lite::fluid::EigenTensor<T, D, MajorType, IndexType>::Type = Eigen::TensorMap<Eigen::Tensor<float, 2, 1, long int>, 0, Eigen::MakePointer>; paddle::lite::Tensor = paddle::lite::TensorLite; paddle::lite::DDim = paddle::lite::DDimLite]’
+/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence_pooling.cc:334:39:   required from ‘void paddle::lite::x86::math::SequencePoolFunctor<(paddle::lite_api::TargetType)2, T>::operator()(const X86Context&, std::__cxx11::string, T, const Tensor&, paddle::lite::Tensor*, bool, paddle::lite::Tensor*) [with T = float; paddle::lite::X86Context = paddle::lite::Context<(paddle::lite_api::TargetType)2>; std::__cxx11::string = std::__cxx11::basic_string<char>; paddle::lite::Tensor = paddle::lite::TensorLite]’
+/home/ubuntu/code/Paddle-Litev2.11/lite/backends/x86/math/sequence_pooling.cc:407:16:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/elementwise_add_activation_fuser.cc.o
+c++: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-7/README.Bugs> for instructions.
+lite/backends/x86/CMakeFiles/x86_math.dir/build.make:1046: recipe for target 'lite/backends/x86/CMakeFiles/x86_math.dir/math/math_function.cc.o' failed
+make[3]: *** [lite/backends/x86/CMakeFiles/x86_math.dir/math/math_function.cc.o] Error 4
+make[3]: *** Waiting for unfinished jobs....
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/elementwise_add_scale_fuse_pass.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/elementwise_add_scale_fuser.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fc_fuse_pass.cc.o
+CMakeFiles/Makefile2:2371: recipe for target 'lite/backends/x86/CMakeFiles/x86_math.dir/all' failed
+make[2]: *** [lite/backends/x86/CMakeFiles/x86_math.dir/all] Error 2
+make[2]: *** Waiting for unfinished jobs....
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fc_fuser.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fc_prelu_fuse_pass.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fc_prelu_fuser.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fill_range_fuse_pass.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fill_range_fuser.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/flatten_fc_fuse_pass.cc.o
+[ 30%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/flatten_fc_fuser.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fpga_concat_fuse_pass.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/fpga_concat_fuser.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/greater_than_cast_fuse_pass.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/greater_than_cast_fuser.cc.o
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/fpga_concat_fuser.cc: In member function ‘std::vector<std::vector<paddle::lite::mir::fusion::NodeInfo> > paddle::lite::mir::fusion::FpgaConcatFuser::select_candidate(std::vector<paddle::lite::mir::fusion::NodeInfo>)’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/fpga_concat_fuser.cc:112:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int j = i + 1; j < subgraph.size(); ++j) {
+                         ~~^~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/flatten_fc_fuser.cc: In member function ‘virtual void paddle::lite::mir::fusion::FlattenFcFuser::BuildPattern()’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/flatten_fc_fuser.cc:56:31: warning: ‘xshape’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     *flatten_contiguous_range >> *xshape;
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/inplace_fuse_pass.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/inplace_fuser.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/instance_norm_activation_fuse_pass.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/instance_norm_activation_fuser.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/interpolate_fuse_pass.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/interpolate_fuser.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/keepdims_convert_fuser.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/keepdims_convert_pass.cc.o
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/match_matrix_activation_fuse_pass.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/node.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/pattern_matcher_high_api.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/keepdims_convert_fuser.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/keepdims_convert_fuser.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = long int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/keepdims_convert_fuser.cc:72:3:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/keepdims_convert_fuser.cc:115:3:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 31%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/match_matrix_activation_fuser.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/matmul_elementwise_add_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/matmul_elementwise_add_fuser.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/matmul_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/matmul_fuser.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/p_norm_fill_constant_max_div_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/p_norm_fill_constant_max_div_fuser.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/quant_dequant_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/quant_dequant_op_fuser.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/reshape2_matmul_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/reshape2_matmul_fuser.cc.o
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc: In member function ‘virtual void paddle::lite::mir::fusion::DynamicQuantOpFuser::InsertNewNode(paddle::lite::mir::SSAGraph*, const key2nodes_t&)’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc:626:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t i = 0; i < weight_num; i++) {
+                      ~~^~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc: In member function ‘virtual void paddle::lite::mir::fusion::DequantLinearOpFuser::InsertNewNode(paddle::lite::mir::SSAGraph*, const key2nodes_t&)’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc:774:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < scale_tensor->data_size(); i++) {
+                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc: In instantiation of ‘void paddle::lite::mir::fusion::QuantizeTensorInPlace(paddle::lite::Tensor*, float) [with T = signed char; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc:559:73:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc:68:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t i = 0; i < input->numel(); i++) {
+                      ~~^~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc: In instantiation of ‘void paddle::lite::mir::fusion::QuantizeTensorInPlace(paddle::lite::Tensor*, const std::vector<float>&, int) [with T = signed char; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc:561:77:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/fusion/quant_dequant_op_fuser.cc:94:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (scales.size() != channel) {
+       ~~~~~~~~~~~~~~^~~~~~~~~~
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/scale_activation_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/scale_activation_fuser.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/scaleacts_fuse_pass.cc.o
+[ 32%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/scaleacts_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/scales_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/scales_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/sequence_pool_concat_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/sequence_pool_concat_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/sequence_reverse_embedding_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/sequence_reverse_embedding_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/shuffle_channel_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/shuffle_channel_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/squeeze2_matmul_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/squeeze2_matmul_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/transpose_softmax_transpose_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/transpose_softmax_transpose_fuser.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/unsqueeze2_pad3d_squeeze2_fuse.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/unsqueeze2_pad3d_squeeze2_fuse_pass.cc.o
+[ 33%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/var_conv_2d_activation_fuse_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/fusion/var_conv_2d_activation_fuser.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/generate_program_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/graph_visualize_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/io_copy_kernel_pick_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/memory_optimize_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/mlu_postprocess_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/multi_stream_analysis_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/node.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/op_transformation_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/opencl_kernel_place_correct_pass.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/pass.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/node.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/pass.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/opencl_kernel_place_correct_pass.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/opencl_kernel_place_correct_pass.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/opencl_kernel_place_correct_pass.h:55:9:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/pass_manager.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/pass_registry.cc.o
+[ 34%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/pass_utils.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/pattern_matcher.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/pattern_matcher_high_api.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/post_quant_dynamic_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/quantization_parameters_propagation_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/quantization_parameters_removal_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/restrict_quantized_op_with_same_input_output_scale_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/runtime_context_assign_pass.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/node.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/pass.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/restrict_quantized_op_with_same_input_output_scale_pass.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/restrict_quantized_op_with_same_input_output_scale_pass.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/restrict_quantized_op_with_same_input_output_scale_pass.cc:46:5:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/sparse_conv_detect_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/ssa_graph.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/ssa_graph_utils.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/static_kernel_pick_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/subgraph/subgraph_detector.cc.o
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSparseWeight(const Tensor*, int, int, int, int, paddle::lite::Tensor*, paddle::lite::Tensor*, paddle::lite::Tensor*) [with T = float; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:389:31:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:71:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < M; ocb++) {
+                        ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:73:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[ocb]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:77:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[ocb] - oc_nonzeros[ocb - 1]); ik++) {
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSparseWeight(const Tensor*, int, int, int, int, paddle::lite::Tensor*, paddle::lite::Tensor*, paddle::lite::Tensor*) [with T = signed char; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:399:31:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:71:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < M; ocb++) {
+                        ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:73:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[ocb]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:77:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[ocb] - oc_nonzeros[ocb - 1]); ik++) {
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSparseWeight(const Tensor*, int, int, int, int, int, paddle::lite::Tensor*, paddle::lite::Tensor*, paddle::lite::Tensor*) [with T = float; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:426:31:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:148:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < M; ocb++) {
+                        ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:150:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < oc_nonzeros[ocb]; i++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:155:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < extra_zeros; j++) {
+                         ~~^~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:170:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < extra_zeros; j++) {
+                         ~~^~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:178:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < M; ocb++) {
+                        ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:180:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[ocb]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:184:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[ocb] - oc_nonzeros[ocb - 1]); ik++) {
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSparseWeight(const Tensor*, int, int, int, int, int, paddle::lite::Tensor*, paddle::lite::Tensor*, paddle::lite::Tensor*) [with T = signed char; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:437:31:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:148:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < M; ocb++) {
+                        ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:150:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < oc_nonzeros[ocb]; i++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:155:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < extra_zeros; j++) {
+                         ~~^~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:170:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < extra_zeros; j++) {
+                         ~~^~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:178:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < M; ocb++) {
+                        ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:180:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[ocb]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:184:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[ocb] - oc_nonzeros[ocb - 1]); ik++) {
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSemiSparseWeight(const Tensor*, int, int, int, int, int, int, paddle::lite::Tensor*, paddle::lite::Tensor*, paddle::lite::Tensor*) [with T = signed char; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:465:31:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:217:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < align2; ocb += output_channels_block_size) {
+                        ~~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:218:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < K; ic++) {
+                         ~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:242:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = align2; ocb < M; ocb++) {
+                             ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:243:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < K; ic++) {
+                         ~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:263:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < align2; ocb += output_channels_block_size) {
+                        ~~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:265:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[block_i]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:269:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[block_i] - oc_nonzeros[block_i - 1]);
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:279:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = align2; ocb < M; ocb++) {
+                             ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:281:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[block_i]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:285:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[block_i] - oc_nonzeros[block_i - 1]);
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSemiSparseWeight(const Tensor*, int, int, int, int, int, int, paddle::lite::Tensor*, paddle::lite::Tensor*, paddle::lite::Tensor*) [with T = float; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:477:31:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:217:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < align2; ocb += output_channels_block_size) {
+                        ~~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:218:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < K; ic++) {
+                         ~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:242:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = align2; ocb < M; ocb++) {
+                             ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:243:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < K; ic++) {
+                         ~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:263:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = 0; ocb < align2; ocb += output_channels_block_size) {
+                        ~~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:265:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[block_i]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:269:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[block_i] - oc_nonzeros[block_i - 1]);
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:279:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t ocb = align2; ocb < M; ocb++) {
+                             ~~~~^~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:281:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < oc_nonzeros[block_i]; ik++) {
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:285:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int ik = 0; ik < (oc_nonzeros[block_i] - oc_nonzeros[block_i - 1]);
+                        ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSemiSparseZeros(const Tensor*, int*, int*, int*, int*, int, int) [with T = signed char; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:541:20:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:316:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t oc = 0; oc < align4; oc += 4) {
+                       ~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:317:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < width; ic++) {
+                         ~~~^~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:334:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t oc = align4; oc < align2; oc += 2) {
+                            ~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:335:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < width; ic++) {
+                         ~~~^~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:345:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t oc = align2; oc < height; oc++) {
+                            ~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:346:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < width; ic++) {
+                         ~~~^~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:355:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (num_block2_nonzeroes * 5 >= num_nonzero_blocks2 * 9) {
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc: In instantiation of ‘int paddle::lite::mir::SparseConvDetectPass::ComputeSemiSparseZeros(const Tensor*, int*, int*, int*, int*, int, int) [with T = float; paddle::lite::Tensor = paddle::lite::TensorLite]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:550:20:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:316:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t oc = 0; oc < align4; oc += 4) {
+                       ~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:317:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < width; ic++) {
+                         ~~~^~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:334:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t oc = align4; oc < align2; oc += 2) {
+                            ~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:335:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < width; ic++) {
+                         ~~~^~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:345:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (size_t oc = align2; oc < height; oc++) {
+                            ~~~^~~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:346:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (size_t ic = 0; ic < width; ic++) {
+                         ~~~^~~~~~~
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/sparse_conv_detect_pass.cc:355:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (num_block2_nonzeroes * 5 >= num_nonzero_blocks2 * 9) {
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/subgraph/subgraph_pass.cc.o
+[ 36%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/type_layout_cast_pass.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/type_precision_cast_pass.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/type_target_cast_pass.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/variable_place_inference_pass.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/weight_quantization_preprocess_pass.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/node.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/pass.h:22,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/variable_place_inference_pass.h:20,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/variable_place_inference_pass.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/variable_place_inference_pass.h:329:7:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/x86_int8_attribute_pass.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/xpu_memory_optimize_pass.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/target_wrapper.h:21,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/backends/arm/math/type_trans.h:19,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/kernel.h:24,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/op_registry.h:25,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/x86_int8_attribute_pass.h:20,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/x86_int8_attribute_pass.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_EQImpl(const T1&, const T2&, const char*) [with T1 = long unsigned int; T2 = int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/optimizer/mir/x86_int8_attribute_pass.cc:62:9:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:717:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+ ^~~~~~~~~~~~~~~~~~~~
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/xpu_pattern_matcher.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/mir/xpu_pattern_matcher_high_api.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/optimizer/optimizer.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/profile/basic_profiler.cc.o
+[ 37%] Building CXX object lite/core/CMakeFiles/core.dir/profile/profiler.cc.o
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/basic_profiler.h:31,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/basic_profiler.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_LTImpl(const T1&, const T2&, const char*) [with T1 = int; T2 = long unsigned int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/basic_profiler.h:145:5:   required from ‘const record_t& paddle::lite::profile::BasicProfiler<TimerT>::record(int) [with TimerT = paddle::lite::profile::BasicTimer; paddle::lite::profile::BasicProfiler<TimerT>::record_t = paddle::lite::profile::BasicTimer]’
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/basic_profiler.cc:156:16:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:720:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_LT, < )
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:720:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_LT, < )
+ ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/log/cp_logging.h:29:0,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/utils/any.h:26,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/context.h:17,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/timer.h:23,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/profiler.h:20,
+                 from /home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/profiler.cc:15:
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h: In instantiation of ‘std::__cxx11::string* google::Check_LTImpl(const T1&, const T2&, const char*) [with T1 = int; T2 = long unsigned int; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/home/ubuntu/code/Paddle-Litev2.11/lite/core/profile/profiler.cc:76:3:   required from here
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:720:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ DEFINE_CHECK_OP_IMPL(Check_LT, < )
+                                ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:148:53: note: in definition of macro ‘GOOGLE_PREDICT_TRUE’
+ #define GOOGLE_PREDICT_TRUE(x) (__builtin_expect(!!(x), 1))
+                                                     ^
+/home/ubuntu/code/Paddle-Litev2.11/build/third_party/install/glog/include/glog/logging.h:720:1: note: in expansion of macro ‘DEFINE_CHECK_OP_IMPL’
+ DEFINE_CHECK_OP_IMPL(Check_LT, < )
+ ^~~~~~~~~~~~~~~~~~~~
+[ 37%] Linking CXX static library libcore.a
+[ 43%] Built target core
+CMakeFiles/Makefile2:1518: recipe for target 'lite/CMakeFiles/lite_compile_deps.dir/rule' failed
+make[1]: *** [lite/CMakeFiles/lite_compile_deps.dir/rule] Error 2
+Makefile:532: recipe for target 'lite_compile_deps' failed
+make: *** [lite_compile_deps] Error 2

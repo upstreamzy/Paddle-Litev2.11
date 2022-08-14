@@ -1,7 +1,7 @@
 if(LITE_WITH_CUDA)
   set(IS_FAKED_KERNEL false CACHE INTERNAL "")
   set(lite_kernel_deps ${lite_kernel_deps} cuda_gemm cuda_scale cuda_elementwise cuda_transpose cudnn_pool cuda_batched_gemm ${math_cuda} ${cuda_kernels} CACHE INTERNAL "")
-elseif(LITE_ON_MODEL_OPTIMIZE_TOOL OR LITE_WITH_PYTHON)
+elseif(LITE_ON_MODEL_OPTIMIZE_TOOL)
   set(IS_FAKED_KERNEL true CACHE INTERNAL "")
 else()
   return()

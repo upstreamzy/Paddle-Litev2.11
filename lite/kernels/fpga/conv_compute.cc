@@ -28,6 +28,7 @@ using float16 = zynqmp::float16;
 using lite_api::ActivationType;
 
 void ConvCompute::PrepareForRun() {
+  printf("Running In FPGA conv_compute.cc PrepareForRun function \n");
   auto& param = this->Param<param_t>();
 
   if (param.enable_int8) {
@@ -69,7 +70,7 @@ void ConvCompute::PrepareForRun() {
       throw("not supported activation");
       break;
   }
-
+  
   // ====================================================
   if (param.x->ZynqTensor()->shape().channel() != 1 &&
       param.groups == param.x->ZynqTensor()->shape().channel()) {
@@ -167,8 +168,8 @@ REGISTER_LITE_KERNEL(fpga_conv2d,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Output",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
@@ -182,8 +183,8 @@ REGISTER_LITE_KERNEL(
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Output",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
@@ -201,8 +202,8 @@ REGISTER_LITE_KERNEL(depthwise_conv2d,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Filter", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Output",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),

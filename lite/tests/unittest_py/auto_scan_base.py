@@ -470,13 +470,14 @@ class AutoScanBaseTest(unittest.TestCase):
                     self.num_invalid_programs_list[predictor_idx] += 1
                     continue
                 self.num_ran_programs_list[predictor_idx] += 1
-
+                # logging.info("the atol_ is".format(atol_))
                 if flag_precision_fp16:
                     if platform.system() == 'Linux':
                         # only run in M1
                         continue
                 # creat model and prepare feed data
                 if flag_precision_fp16:
+                    # logging.info("the flag_precision_fp16 is {}".format(flag_precision_fp16))
                     atol_ = 1e-1
                     rtol_ = 5.3e-2
                 if quant:
@@ -494,7 +495,8 @@ class AutoScanBaseTest(unittest.TestCase):
                         model, params, self.cache_dir, prog_config)
                 else:
                     model, params = create_fake_model(prog_config)
-
+                logging.info("the atol_ is".format(atol_))
+                logging.info("the rtol_ is".format(rtol_))
                 feed_data = {}
                 for name, tensor_config in prog_config.inputs.items():
                     feed_data[name] = {
@@ -772,6 +774,7 @@ class AutoScanBaseTest(unittest.TestCase):
 
         if reproduce is not None:
             loop_func = reproduce(loop_func)
+        logging.info("AutoScanBaseTest run_and_statis reproduce is {}".format(reproduce))
         logging.info("Start to running test of {}".format(type(self)))
         loop_func()
         if self.is_model_test():

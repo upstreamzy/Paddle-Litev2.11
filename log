@@ -1,0 +1,1 @@
+sudo: ./auto_scan.sh: command not found

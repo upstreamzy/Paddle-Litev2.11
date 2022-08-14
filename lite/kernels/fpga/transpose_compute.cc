@@ -144,5 +144,5 @@ REGISTER_LITE_KERNEL(transpose2,
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
                                        DATALAYOUT(kNHWC))})
-    .BindOutput("XShape", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindOutput("XShape", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

@@ -15,7 +15,7 @@
 #include "lite/kernels/fpga/density_prior_box_compute.h"
 #include <string>
 #include <vector>
-#include "lite/backends/arm/math/funcs.h"
+// #include "lite/backends/arm/math/funcs.h"
 
 namespace paddle {
 namespace lite {
@@ -81,27 +81,27 @@ void DensityPriorBoxCompute::Run() {
   }
   std::vector<std::string> order = param.order;
 
-  lite::arm::math::density_prior_box(param.input,
-                                     param.image,
-                                     &param.boxes,
-                                     &param.variances,
-                                     min_size,
-                                     fixed_size,
-                                     fixed_ratio,
-                                     density_size,
-                                     max_size,
-                                     aspect_ratio,
-                                     variance,
-                                     img_w,
-                                     img_h,
-                                     step_w,
-                                     step_h,
-                                     offset,
-                                     prior_num,
-                                     is_flip,
-                                     is_clip,
-                                     order,
-                                     false);
+  // lite::arm::math::density_prior_box(param.input,
+  //                                    param.image,
+  //                                    &param.boxes,
+  //                                    &param.variances,
+  //                                    min_size,
+  //                                    fixed_size,
+  //                                    fixed_ratio,
+  //                                    density_size,
+  //                                    max_size,
+  //                                    aspect_ratio,
+  //                                    variance,
+  //                                    img_w,
+  //                                    img_h,
+  //                                    step_w,
+  //                                    step_h,
+  //                                    offset,
+  //                                    prior_num,
+  //                                    is_flip,
+  //                                    is_clip,
+  //                                    order,
+  //                                    false);
 }
 
 }  // namespace fpga
@@ -123,6 +123,6 @@ REGISTER_LITE_KERNEL(density_prior_box,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Variances", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindOutput("Boxes", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("Variances", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

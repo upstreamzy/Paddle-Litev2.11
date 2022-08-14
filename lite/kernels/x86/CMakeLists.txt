@@ -1,7 +1,7 @@
 if(LITE_WITH_X86 AND NOT LITE_ON_MODEL_OPTIMIZE_TOOL)
   set(IS_FAKED_KERNEL false CACHE INTERNAL "")
   set(lite_kernel_deps ${lite_kernel_deps} x86_math CACHE INTERNAL "")
-elseif(LITE_WITH_PYTHON OR LITE_ON_MODEL_OPTIMIZE_TOOL)
+elseif(LITE_ON_MODEL_OPTIMIZE_TOOL)
   set(IS_FAKED_KERNEL true CACHE INTERNAL "")
 else()
   return()

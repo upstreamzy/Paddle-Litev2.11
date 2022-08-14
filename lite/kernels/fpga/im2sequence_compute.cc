@@ -230,7 +230,7 @@ REGISTER_LITE_KERNEL(im2sequence,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Y", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Y", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Out",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),

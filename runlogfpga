@@ -1,0 +1,7 @@
+the FLAGS_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile
+the FLAGS_use_optimize_nb is 0
+/home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 318
+input shapes: 1,3,224,224
+input shape: 1,3,224,224
+the load_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/inference.pdmodel
+the load_param_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/inference.pdiparams

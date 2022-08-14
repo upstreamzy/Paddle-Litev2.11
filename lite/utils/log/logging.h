@@ -99,13 +99,16 @@ static int gettimeofday(struct timeval* tp, void* tzp) {
   paddle::lite::VLogMessage(__FILE__, __FUNCTION__, __LINE__, level).stream()
 #endif
 
+  // if (!(x)) printf("%s, %s, %d\n", __FILE__, __FUNCTION__, __LINE__);
 // CHECK SYSTEM
 #ifndef LITE_WITH_LOG
 #define CHECK(x) \
-  if (!(x)) paddle::lite::VoidifyFatal()
+  if (!(x)) paddle::lite::VoidifyFatal() \
+    
 #define _CHECK_BINARY(x, cmp, y) CHECK(x cmp y)
 #else
 #define CHECK(x)                                                           \
+  printf("the CHECK macro function is running \n");                        \
   if (!(x))                                                                \
   paddle::lite::LogMessageFatal(__FILE__, __FUNCTION__, __LINE__).stream() \
       << "Check failed: " #x << ": "  // NOLINT(*)

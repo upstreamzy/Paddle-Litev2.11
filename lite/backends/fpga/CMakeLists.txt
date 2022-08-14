@@ -35,3 +35,6 @@ cc_library(kernel_fpga SRCS ${FPGA_ALL_CPP})
 #cc_library(kernel_fpga SRCS ${KD_CPP} ${FPGA_CPP})
 cc_library(lite_tensor_fpga SRCS lite_tensor.cc)
 cc_library(fpga_target_wrapper SRCS target_wrapper.cc DEPS kernel_fpga)
+
+
+message("kernel_fpga is ${kernel_fpga}")

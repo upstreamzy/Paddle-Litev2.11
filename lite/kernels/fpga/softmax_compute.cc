@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include "lite/kernels/fpga/softmax_compute.h"
-#include "lite/backends/arm/math/funcs.h"
+// #include "lite/backends/arm/math/funcs.h"
 #include "lite/backends/fpga/KD/debugger.hpp"
 
 namespace paddle {
@@ -57,5 +57,5 @@ REGISTER_LITE_KERNEL(softmax,
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindOutput("Out", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindOutput("Out", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();

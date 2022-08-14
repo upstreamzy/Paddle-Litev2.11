@@ -446,9 +446,9 @@ REGISTER_LITE_KERNEL(multiclass_nms,
                      kNHWC,
                      paddle::lite::kernels::fpga::MulticlassNmsCompute,
                      def)
-    .BindInput("BBoxes", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Scores", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Out", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("BBoxes", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Scores", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("Out", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .Finalize();
 
 REGISTER_LITE_KERNEL(multiclass_nms2,
@@ -457,9 +457,9 @@ REGISTER_LITE_KERNEL(multiclass_nms2,
                      kNHWC,
                      paddle::lite::kernels::fpga::MulticlassNmsCompute,
                      def2)
-    .BindInput("BBoxes", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("Scores", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindOutput("Out", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("BBoxes", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("Scores", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindOutput("Out", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Index",
-                {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kInt64))})
+                {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt64))})
     .Finalize();

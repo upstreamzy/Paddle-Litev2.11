@@ -73,8 +73,8 @@ REGISTER_LITE_KERNEL(
                {LiteType::GetTensorTy(TARGET(kFPGA),
                                       PRECISION(kFP16),
                                       DATALAYOUT(kNHWC))})
-    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kARM))})
-    .BindInput("W", {LiteType::GetTensorTy(TARGET(kARM))})
+    .BindInput("Bias", {LiteType::GetTensorTy(TARGET(kFPGA))})
+    .BindInput("W", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Out",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),

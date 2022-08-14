@@ -15,12 +15,14 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <iostream>
 #include "lite/api/paddle_api.h"
 #include "lite/api/test/test_helper.h"
 #include "lite/core/device_info.h"
 #include "lite/core/profile/timer.h"
 #include "lite/utils/log/cp_logging.h"
 #include "lite/utils/string.h"
+
 #ifdef LITE_WITH_PROFILE
 #include "lite/core/profile/basic_profiler.h"
 #endif  // LITE_WITH_PROFILE
@@ -48,11 +50,17 @@ DEFINE_string(out_txt, "", "output text");
 namespace paddle {
 namespace lite_api {
 
-void OutputOptModel(const std::string& load_model_dir,
+void OutputOptModel(const std::string& load_model_dir, const std::string& load_param_dir, 
                     const std::string& save_optimized_model_dir,
                     const std::vector<std::vector<int64_t>>& input_shapes) {
+  std::cout << "the load_model_dir is " << load_model_dir << std::endl;
+  std::cout << "the load_param_dir is " << load_param_dir << std::endl;
   lite_api::CxxConfig config;
-  config.set_model_dir(load_model_dir);
+  std::string model_buffer = lite::ReadFile(load_model_dir);
+  std::string params_buffer = lite::ReadFile(load_param_dir);
+  config.set_model_buffer(model_buffer.c_str(), model_buffer.size(),
+                         params_buffer.c_str(), params_buffer.size());
+  // config.set_model_dir(load_model_dir);                
 #ifdef LITE_WITH_X86
   config.set_valid_places({Place{TARGET(kX86), PRECISION(kFloat)},
                            Place{TARGET(kX86), PRECISION(kInt64)},
@@ -79,22 +87,32 @@ void OutputOptModel(const std::string& load_model_dir,
     }
   }
 #endif
-  auto predictor = lite_api::CreatePaddlePredictor(config);
 
+  config.set_valid_places({
+    Place{TARGET(kFPGA), PRECISION(kFP16), DATALAYOUT(kNHWC)},
+    Place{TARGET(kFPGA), PRECISION(kFloat)},
+    Place{TARGET(kFPGA), PRECISION(kFloat)},
+});
+  std::cout << "the predictor is beganing \n" << std::endl;
+  auto predictor = lite_api::CreatePaddlePredictor(config);
+  std::cout << "the predictor is creating \n" << std::endl;
   // delete old optimized model
   int ret = system(
       paddle::lite::string_format("rm -rf %s", save_optimized_model_dir.c_str())
           .c_str());
   if (ret == 0) {
+    std::cout << "delete old optimized model " << save_optimized_model_dir;
     LOG(INFO) << "delete old optimized model " << save_optimized_model_dir;
   }
   predictor->SaveOptimizedModel(save_optimized_model_dir,
                                 LiteModelType::kNaiveBuffer);
+  std::cout << "Load model from " << load_model_dir << std::endl;
   LOG(INFO) << "Load model from " << load_model_dir;
   LOG(INFO) << "Save optimized model to " << save_optimized_model_dir;
+  std::cout << "Save optimized model to " << save_optimized_model_dir << std::endl;
 }
 
-#ifdef LITE_WITH_ARM
+// #ifdef LITE_WITH_ARM
 void Run(const std::vector<std::vector<int64_t>>& input_shapes,
          const std::string& model_dir,
          const PowerMode power_mode,
@@ -152,6 +170,7 @@ void Run(const std::vector<std::vector<int64_t>>& input_shapes,
     predictor->Run();
     float t = ti.Stop();
     LOG(INFO) << "iter: " << j << ", time: " << t << " ms";
+    std::cout << "iter: " << j << ", time: " << t << " ms" << std::endl;
   }
 
   LOG(INFO) << "================== Speed Report ===================";
@@ -211,6 +230,8 @@ void Run(const std::vector<std::vector<int64_t>>& input_shapes,
     for (int i = 0; i < output_tensor_numel; ++i) {
       VLOG(2) << "output_tensor->data<float>()[" << i
               << "]:" << output_tensor->data<float>()[i];
+      std::cout << "output_tensor->data<float>()[" << i
+              << "]:" << output_tensor->data<float>()[i] << std::endl;
     }
   }
 
@@ -234,9 +255,11 @@ void Run(const std::vector<std::vector<int64_t>>& input_shapes,
     }
     LOG(INFO) << FLAGS_arg_name << " shape is " << os.str()
               << ", mean value is " << sum * 1. / arg_num;
+    std::cout << FLAGS_arg_name << " shape is " << os.str()
+              << ", mean value is " << sum * 1. / arg_num << std::endl;
   }
 }
-#endif
+// #endif
 
 }  // namespace lite_api
 }  // namespace paddle
@@ -246,9 +269,12 @@ int main(int argc, char** argv) {
   if (FLAGS_model_dir == "") {
     LOG(INFO) << "usage: "
               << "--model_dir /path/to/your/model";
+    std::cout << "usage: "
+              << "--model_dir /path/to/your/model" << std::endl;
     exit(0);
   }
-
+  std::cout << "the FLAGS_model_dir is " << FLAGS_model_dir << std::endl;
+  std::cout << "the FLAGS_use_optimize_nb is " << FLAGS_use_optimize_nb << std::endl;
   std::string save_optimized_model_dir = "";
   if (FLAGS_use_optimize_nb) {
     save_optimized_model_dir = FLAGS_model_dir;
@@ -271,7 +297,9 @@ int main(int argc, char** argv) {
     }
     return str_out;
   };
-
+  std::string FLAGS_model_path = FLAGS_model_dir + "/inference.pdmodel";
+  std::string FLAGS_params_path = FLAGS_model_dir + "/inference.pdiparams";
+  // std::cout << "split_string is :" << split_string[0] << std::endl;
   auto get_shape = [](const std::string& str_shape) -> std::vector<int64_t> {
     std::vector<int64_t> shape;
     std::string tmp_str = str_shape;
@@ -287,23 +315,25 @@ int main(int argc, char** argv) {
     }
     return shape;
   };
-
+  printf("%s, %s, %d\n", __FILE__, __FUNCTION__, __LINE__);
+  std::cout << "input shapes: " << FLAGS_input_shape << std::endl;
   LOG(INFO) << "input shapes: " << FLAGS_input_shape;
   std::vector<std::string> str_input_shapes = split_string(FLAGS_input_shape);
   std::vector<std::vector<int64_t>> input_shapes;
   for (size_t i = 0; i < str_input_shapes.size(); ++i) {
     LOG(INFO) << "input shape: " << str_input_shapes[i];
+    std::cout << "input shape: " << str_input_shapes[i] << std::endl;
     input_shapes.push_back(get_shape(str_input_shapes[i]));
   }
 
   if (!FLAGS_use_optimize_nb) {
     // Output optimized model
     paddle::lite_api::OutputOptModel(
-        FLAGS_model_dir, save_optimized_model_dir, input_shapes);
+        FLAGS_model_path, FLAGS_params_path,save_optimized_model_dir, input_shapes);
     save_optimized_model_dir += ".nb";
   }
 
-#ifdef LITE_WITH_ARM
+// #ifdef LITE_WITH_ARM
   // Run inference using optimized model
   paddle::lite_api::Run(
       input_shapes,
@@ -312,6 +342,7 @@ int main(int argc, char** argv) {
       FLAGS_threads,
       FLAGS_repeats,
       FLAGS_warmup);
-#endif
+// #endif
   return 0;
 }
+ ///home/ubuntu/code/Paddle-Litev2.11/lite/tests/unittest_py/__main___cache_dir

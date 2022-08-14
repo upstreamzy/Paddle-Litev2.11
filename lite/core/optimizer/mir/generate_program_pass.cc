@@ -17,8 +17,6 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include <iostream>
-#include <cstdio>
 #include "lite/core/optimizer/mir/graph_visualize_pass.h"
 #include "lite/core/optimizer/mir/pass_registry.h"
 
@@ -27,9 +25,7 @@ namespace lite {
 namespace mir {
 
 void GenerateProgramPass::Apply(const std::unique_ptr<SSAGraph>& graph) {
-  std::cout << "final program \n" << Visualize(graph.get()) << std::endl;
   VLOG(4) << "final program \n" << Visualize(graph.get());
-  printf("In GenerateProgramPass::Apply function the SSAGraph Visualize is finishing \n");
   std::vector<Node*> nodes_in_order;
 #ifdef LITE_WITH_CUDA
   const std::string depend_pass = "multi_stream_analysis_pass";
@@ -48,7 +44,6 @@ void GenerateProgramPass::Apply(const std::unique_ptr<SSAGraph>& graph) {
     if (item->IsStmt()) {
       auto& stmt = item->AsStmt();
       VLOG(4) << stmt;
-      std::cout << stmt << std::endl;
 #ifdef LITE_WITH_CUDA
       if (stmt.kernels().front()->target() == TargetType::kCUDA) {
         stmt.kernels()

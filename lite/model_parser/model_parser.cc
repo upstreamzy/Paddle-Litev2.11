@@ -18,6 +18,7 @@
 #include <limits>
 #include <set>
 #include <utility>
+#include <iostream>
 
 #include "lite/api/paddle_api.h"
 #include "lite/core/model/base/apis.h"
@@ -48,8 +49,14 @@ void LoadLoDTensor(model_parser::pb::LoDTensorDeserializer *loader,
                    model_parser::ByteReader *reader,
                    Variable *var) {
   auto *tensor = var->GetMutable<lite::Tensor>();
+  if (!tensor)
+    std::cout << "Can not get allocation of the tensor.\n";
   CHECK(tensor) << "Can not get allocation of the tensor.";
+  if (!loader)
+    std::cout << "Can not get allocation of the tensor. \n";
   CHECK(loader) << "The input argument loader is nullptr.";
+  if (!var)
+    std::cout << "The input argument var is nullptr. \n";
   CHECK(var) << "The input argument var is nullptr.";
   loader->ForwardRead(tensor, reader);
 }
@@ -101,6 +108,8 @@ void LoadCombinedParamsPb(const std::string &path,
   }
   std::stable_sort(paramlist.begin(), paramlist.end());
 
+  printf("The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr1. \n");
+
   std::unique_ptr<model_parser::ByteReader> reader;
   if (!model_buffer.is_empty()) {
     reader.reset(
@@ -108,17 +117,23 @@ void LoadCombinedParamsPb(const std::string &path,
   } else {
     reader.reset(new model_parser::BinaryFileReader(path));
   }
+  printf("The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr2. \n");
   model_parser::pb::LoDTensorDeserializer loader;
   if (!paramlist.empty()) {
     CHECK(reader->length())
         << "The model needs weights but the weight file is not existed.";
   }
+  printf("The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr3. \n");
   for (size_t i = 0; i < paramlist.size(); ++i) {
     auto *var = scope->Var(paramlist[i]);
     LoadLoDTensor(&loader, reader.get(), var);
   }
+  std::cout << reader->ReachEnd() << "You are not allowed to load partial data via"
+                            << " LoadCombinedParamsPb, use LoadParam instead." << std::endl;
+
   CHECK(reader->ReachEnd()) << "You are not allowed to load partial data via"
                             << " LoadCombinedParamsPb, use LoadParam instead.";
+  printf("The model_parser.cc file LoadCombinedParamsPb function run end \n");
 }
 
 void TensorToStream(std::ostream &os, const lite::Tensor &tensor) {

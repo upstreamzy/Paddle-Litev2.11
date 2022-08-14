@@ -138,7 +138,17 @@ set(COMMON_FLAGS
     -Wno-error=int-in-bool-context # Warning in Eigen gcc 7.2
     -Wimplicit-fallthrough=0 # Warning in tinyformat.h
     -Wno-error=maybe-uninitialized # Warning in boost gcc 7.2
+    #add by myself 
+    -Wno-error=unused-variable
+    -Wno-error=non-virtual-dtor
+    -Wno-error=missing-field-initializers
+    -Wno-error=return-type
+    -Wno-error=pointer-arith
+    -Wno-error=narrowing
+    -Wno-error=unused-result
 )
+
+message(STATUS "the COMMON_FLAGS var is ${COMMON_FLAGS}")
 
 set(GPU_COMMON_FLAGS
     -fPIC
@@ -153,6 +163,13 @@ set(GPU_COMMON_FLAGS
     -Wno-error=unused-function  # Warnings in Numpy Header.
     -Wno-error=array-bounds # Warnings in Eigen::array
     -gencode arch=compute_62,code=sm_62
+    #add by myself 
+    -Wno-error=unused-variable
+    -Wno-error=missing-field-initializers
+    -Wno-error=return-type
+    -Wno-error=pointer-arith
+    -Wno-error=narrowing
+    -Wno-error=unused-result
 )
 if(NOT LITE_WITH_CUDA AND NOT LITE_WITH_SW AND NOT LITE_WITH_RISCV)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")

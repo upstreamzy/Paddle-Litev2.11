@@ -301,8 +301,8 @@ REGISTER_LITE_KERNEL(bilinear_interp,
     .BindInput("OutSize",
                {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
     .BindInput("SizeTensor",
-               {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kInt32))})
-    .BindInput("Scale", {LiteType::GetTensorTy(TARGET(kARM))})
+               {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
+    .BindInput("Scale", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Out",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
@@ -322,8 +322,8 @@ REGISTER_LITE_KERNEL(nearest_interp,
     .BindInput("OutSize",
                {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
     .BindInput("SizeTensor",
-               {LiteType::GetTensorTy(TARGET(kARM), PRECISION(kInt32))})
-    .BindInput("Scale", {LiteType::GetTensorTy(TARGET(kARM))})
+               {LiteType::GetTensorTy(TARGET(kFPGA), PRECISION(kInt32))})
+    .BindInput("Scale", {LiteType::GetTensorTy(TARGET(kFPGA))})
     .BindOutput("Out",
                 {LiteType::GetTensorTy(TARGET(kFPGA),
                                        PRECISION(kFP16),
