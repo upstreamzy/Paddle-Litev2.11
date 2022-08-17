@@ -132,6 +132,8 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
       VLOG(1) << "add pass:" << passes[0];
     }
 
+    std::cout << "begain running config.quant_model()" << std::endl;
+    
     if (config.quant_model()) {
       printf("CxxPaddleApiImpl class Init function config.quant_model() is true\n");
       passes.push_back("post_quant_dynamic_pass");
@@ -142,6 +144,7 @@ void CxxPaddleApiImpl::Init(const lite_api::CxxConfig &config) {
         printf("post_quant_dynamic_pass is null \n");
       pass->SetQuantType(config.quant_type());
     }
+
 
     auto *sparse_detect_pass =
         mir::PassManager::Global().LookUp<mir::SparseConvDetectPass>(

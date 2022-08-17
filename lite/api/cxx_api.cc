@@ -296,12 +296,15 @@ void Predictor::Build(const lite_api::CxxConfig &config,
                       const std::vector<std::string> &passes,
                       lite_api::LiteModelType model_type) {
   printf("Predictor::Build which have 3 params is running the first param is CxxConfig\n");
+  auto tmpdir = config.model_dir();
+  auto tmpfile = config.model_file();
+  auto tmpparam = config.param_file();
   if (config.is_model_from_memory()) {
     printf("Load model from memory.\n");
     LOG(INFO) << "Load model from memory.";
-    Build(config.model_dir(),
-          config.model_file(),
-          config.param_file(),
+    Build(tmpdir,
+          tmpfile,
+          tmpparam,
           valid_places,
           passes,
           model_type,
@@ -310,9 +313,9 @@ void Predictor::Build(const lite_api::CxxConfig &config,
   } else {
     printf("Load model from file.\n");
     LOG(INFO) << "Load model from file.";
-    Build(config.model_dir(),
-          config.model_file(),
-          config.param_file(),
+    Build(tmpdir,
+          tmpfile,
+          tmpparam,
           valid_places,
           passes,
           model_type,

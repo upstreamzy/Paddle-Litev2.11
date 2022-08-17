@@ -108,7 +108,6 @@ static int gettimeofday(struct timeval* tp, void* tzp) {
 #define _CHECK_BINARY(x, cmp, y) CHECK(x cmp y)
 #else
 #define CHECK(x)                                                           \
-  printf("the CHECK macro function is running \n");                        \
   if (!(x))                                                                \
   paddle::lite::LogMessageFatal(__FILE__, __FUNCTION__, __LINE__).stream() \
       << "Check failed: " #x << ": "  // NOLINT(*)

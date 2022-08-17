@@ -304,12 +304,12 @@ function(lite_cc_binary TARGET)
 
     if (NOT APPLE AND NOT WIN32)
         # strip binary target to reduce size
-        if(NOT "${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
-            add_custom_command(TARGET ${TARGET} POST_BUILD
-                    COMMAND "${CMAKE_STRIP}" -s
-                    "${TARGET}"
-                    COMMENT "Strip debug symbols done on final executable file.")
-        endif()
+        #if(NOT "${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+        #    add_custom_command(TARGET ${TARGET} POST_BUILD
+        #            COMMAND "${CMAKE_STRIP}" -g
+        #            "${TARGET}"
+        #            COMMENT "Strip debug symbols done on final executable file.")
+        #endif()
     endif()
     # collect targets need to compile for lite
     if (NOT args_EXCLUDE_COMPILE_DEPS)

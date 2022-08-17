@@ -104,17 +104,19 @@ add_subdirectory(nnadapter)
 
 #-------------------------------post_process----------------------------------------------------------------
 # tricks to create headfiles for opt
-#file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/all_kernel_faked_dir)
-#execute_process(
-#    COMMAND python ${CMAKE_SOURCE_DIR}/lite/tools/cmake_tools/create_fake_kernel_registry.py
-#    ${kernels_src_list}
-#    ${fake_kernels_src_list}
-#    ${CMAKE_BINARY_DIR}/all_kernel_faked_dir
-#    ${CMAKE_BINARY_DIR}/all_kernel_faked.h
-#    ${CMAKE_BINARY_DIR}/all_kernel_faked.cc
-#    ${CMAKE_BINARY_DIR}/kernel_src_map.h
-#    RESULT_VARIABLE result
-#    ERROR_VARIABLE error)
+if (NOT LITE_WITH_FPGA)
+    file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/all_kernel_faked_dir)
+    execute_process(
+        COMMAND python ${CMAKE_SOURCE_DIR}/lite/tools/cmake_tools/create_fake_kernel_registry.py
+        ${kernels_src_list}
+        ${fake_kernels_src_list}
+        ${CMAKE_BINARY_DIR}/all_kernel_faked_dir
+        ${CMAKE_BINARY_DIR}/all_kernel_faked.h
+        ${CMAKE_BINARY_DIR}/all_kernel_faked.cc
+        ${CMAKE_BINARY_DIR}/kernel_src_map.h
+        RESULT_VARIABLE result
+        ERROR_VARIABLE error)
+endif()
 if(NOT "${error}" STREQUAL "")
   message(FATAL_ERROR ${error})
 endif()

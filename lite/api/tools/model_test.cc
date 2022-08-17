@@ -53,41 +53,48 @@ namespace lite_api {
 void OutputOptModel(const std::string& load_model_dir, const std::string& load_param_dir, 
                     const std::string& save_optimized_model_dir,
                     const std::vector<std::vector<int64_t>>& input_shapes) {
+                      
   std::cout << "the load_model_dir is " << load_model_dir << std::endl;
   std::cout << "the load_param_dir is " << load_param_dir << std::endl;
   lite_api::CxxConfig config;
-  std::string model_buffer = lite::ReadFile(load_model_dir);
-  std::string params_buffer = lite::ReadFile(load_param_dir);
-  config.set_model_buffer(model_buffer.c_str(), model_buffer.size(),
-                         params_buffer.c_str(), params_buffer.size());
-  // config.set_model_dir(load_model_dir);                
-#ifdef LITE_WITH_X86
-  config.set_valid_places({Place{TARGET(kX86), PRECISION(kFloat)},
-                           Place{TARGET(kX86), PRECISION(kInt64)},
-                           Place{TARGET(kHost), PRECISION(kFloat)}});
-#else
-  if (FLAGS_backend == "opencl") {
-    config.set_valid_places({
-        Place{TARGET(kOpenCL), PRECISION(kFP16), DATALAYOUT(kImageDefault)},
-        Place{TARGET(kOpenCL), PRECISION(kFloat), DATALAYOUT(kNCHW)},
-        Place{TARGET(kOpenCL), PRECISION(kAny), DATALAYOUT(kImageDefault)},
-        Place{TARGET(kOpenCL), PRECISION(kAny), DATALAYOUT(kNCHW)},
-        TARGET(kARM),  // enable kARM CPU kernel when no opencl kernel
-    });
-  } else {  // arm_cpu
-    if (FLAGS_use_fp16) {
-      config.set_valid_places({
-          Place{TARGET(kARM), PRECISION(kFP16)},
-          Place{TARGET(kARM), PRECISION(kFloat)},
-      });
-    } else {
-      config.set_valid_places({
-          Place{TARGET(kARM), PRECISION(kFloat)},
-      });
-    }
-  }
-#endif
-
+  // printf("read model file will be begin %s, %s, %d----------------------------\n", __FILE__, __FUNCTION__, __LINE__);
+  // std::string model_buffer = lite::ReadFile(load_model_dir);
+  // printf("read model file is end %s, %s, %d\n", __FILE__, __FUNCTION__, __LINE__);
+  // std::string params_buffer = lite::ReadFile(load_param_dir);
+  // std::cout << "the model_test.cc read file end\n";
+  // config.set_model_buffer(model_buffer.c_str(), model_buffer.size(),
+  //                        params_buffer.c_str(), params_buffer.size());
+  // config.set_model_dir(load_model_dir);       
+  config.set_model_file(load_model_dir);
+  config.set_param_file(load_param_dir);
+// #ifdef LITE_WITH_X86
+//   config.set_valid_places({Place{TARGET(kX86), PRECISION(kFloat)},
+//                            Place{TARGET(kX86), PRECISION(kInt64)},
+//                            Place{TARGET(kHost), PRECISION(kFloat)}});
+// #else
+//   if (FLAGS_backend == "opencl") {
+//     config.set_valid_places({
+//         Place{TARGET(kOpenCL), PRECISION(kFP16), DATALAYOUT(kImageDefault)},
+//         Place{TARGET(kOpenCL), PRECISION(kFloat), DATALAYOUT(kNCHW)},
+//         Place{TARGET(kOpenCL), PRECISION(kAny), DATALAYOUT(kImageDefault)},
+//         Place{TARGET(kOpenCL), PRECISION(kAny), DATALAYOUT(kNCHW)},
+//         TARGET(kARM),  // enable kARM CPU kernel when no opencl kernel
+//     });
+//   } else {  // arm_cpu
+//     if (FLAGS_use_fp16) {
+//       config.set_valid_places({
+//           Place{TARGET(kARM), PRECISION(kFP16)},
+//           Place{TARGET(kARM), PRECISION(kFloat)},
+//       });
+//     } else {
+//       config.set_valid_places({
+//           Place{TARGET(kARM), PRECISION(kFloat)},
+//       });
+//     }
+//   }
+// #endif
+  //--model_dir /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1
+  std::cout << "the model_test.cc will set valid place" << std::endl;
   config.set_valid_places({
     Place{TARGET(kFPGA), PRECISION(kFP16), DATALAYOUT(kNHWC)},
     Place{TARGET(kFPGA), PRECISION(kFloat)},
@@ -319,20 +326,26 @@ int main(int argc, char** argv) {
   std::cout << "input shapes: " << FLAGS_input_shape << std::endl;
   LOG(INFO) << "input shapes: " << FLAGS_input_shape;
   std::vector<std::string> str_input_shapes = split_string(FLAGS_input_shape);
+  std::cout << "the str_input_shapes.size() is " << str_input_shapes.size() << std::endl;
   std::vector<std::vector<int64_t>> input_shapes;
+  printf("will be set shape %s, %s, %d\n", __FILE__, __FUNCTION__, __LINE__);
   for (size_t i = 0; i < str_input_shapes.size(); ++i) {
     LOG(INFO) << "input shape: " << str_input_shapes[i];
     std::cout << "input shape: " << str_input_shapes[i] << std::endl;
     input_shapes.push_back(get_shape(str_input_shapes[i]));
   }
+  
 
   if (!FLAGS_use_optimize_nb) {
     // Output optimized model
+    printf("will be run OutputOptModel() %s, %s, %d\n", __FILE__, __FUNCTION__, __LINE__);
+    // paddle::lite_api::OutputOptModel(
+    //     FLAGS_model_dir, FLAGS_params_path,save_optimized_model_dir, input_shapes);
     paddle::lite_api::OutputOptModel(
         FLAGS_model_path, FLAGS_params_path,save_optimized_model_dir, input_shapes);
     save_optimized_model_dir += ".nb";
   }
-
+  printf("will be run model %s, %s, %d\n", __FILE__, __FUNCTION__, __LINE__);
 // #ifdef LITE_WITH_ARM
   // Run inference using optimized model
   paddle::lite_api::Run(

@@ -1,0 +1,3468 @@
+the FLAGS_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1
+the FLAGS_use_optimize_nb is 0
+/home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 325
+input shapes: 1,3,224,224
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0816 20:12:10.907116  9496 model_test.cc:327] input shapes: 1,3,224,224
+the str_input_shapes.size() is 1
+I0816 20:12:10.907181  9496 model_test.cc:333] input shape: 1,3,224,224
+will be set shape /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 331
+input shape: 1,3,224,224
+will be run OutputOptModel() /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 341
+the load_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
+the load_param_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdiparams
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+the model_test.cc will set valid place
+CxxConfig class base class 's set_valid_places is running and then print valid_places_
+the predictor is beganing 
+
+In cxx_api_impl.cc CreatePaddlePredictor  function which invoke Init function
+In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
+CxxPaddleApiImpl class Init function is running 
+CXXPaddleApiImpl class Init function status_is_cloned_ is false 
+attention LOG command
+I0816 20:12:10.907207  9496 cxx_api_impl.cc:123] attention LOG command
+use_layout_preprocess_pass:18446744073709551615
+begain running config.quant_model()
+sparse_conv_detect_pass:0x55dccdcc6bb0
+I0816 20:12:10.907220  9496 cxx_api.cc:315] Load model from file.
+Pass in a value greater than 1.0 to turn off the sparse pass internally
+CXXPaddleApiImpl class Init function raw_predictor_->Build will be running 
+Predictor::Build which have 3 params is running the first param is CxxConfig
+Load model from file.
+Predictor::Build which have 7 params is running 
+model_type is lite_api::LiteModelType::kProtobuf 
+In LoadModelPb function model_buffer.is_empty() is trueLoading topology data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
+I0816 20:12:10.907267  9496 model_parser.cc:264] Loading topology data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
+I0816 20:12:10.919274  9496 model_parser.cc:289] Loading params data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdiparams
+In LoadModelPb function TransformProgramDescAnyToCpp(pb_prog, cpp_prog) will be running 
+IN LoadModelPb function macro WITH_CONVERT_TO_SSA is ON 
+general::ssa::ConvertToSSA(cpp_prog) will be running 
+ConvertToSSA(general::ProgramDesc* prog) which will be return general::ProgramDesc* type is running 
+The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr. 
+The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr1. 
+The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr2. 
+The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr3. 
+1You are not allowed to load partial data via LoadCombinedParamsPb, use LoadParam instead.
+I0816 20:12:11.003017  9496 model_parser.cc:299] 1. Model is successfully loaded!
+The model_parser.cc file LoadCombinedParamsPb function run end 
+Predictor::Build which have 3 params and the first param is ProgramDesc is running 
+Predictor::Build `inner_places` is used to optimize passes 
+prepare work
+Program::PrepareWorkspace(program_desc, vars_to_clone) is running 
+Var batch_norm_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {32}
+Var batch_norm_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {32}
+Var batch_norm_0.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,32,112,112}
+Var batch_norm_0.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,32,112,112}
+Var batch_norm_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {32}
+Var batch_norm_1.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {32}
+Var batch_norm_1.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,32,112,112}
+Var batch_norm_1.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,32,112,112}
+Var batch_norm_10.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_10.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_10.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var batch_norm_10.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var batch_norm_11.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_11.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_11.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,14,14}
+Var batch_norm_11.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,14,14}
+Var batch_norm_12.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_12.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_12.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_12.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_13.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_13.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_13.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_13.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_14.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_14.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_14.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_14.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_15.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_15.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_15.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_15.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_16.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_16.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_16.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_16.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_17.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_17.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_17.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_17.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_18.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_18.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_18.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_18.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_19.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_19.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_19.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_19.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_2.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {64}
+Var batch_norm_2.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {64}
+Var batch_norm_2.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,64,112,112}
+Var batch_norm_2.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,64,112,112}
+Var batch_norm_20.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_20.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_20.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_20.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_21.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_21.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_21.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_21.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_22.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_22.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_22.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_22.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var batch_norm_23.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_23.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {512}
+Var batch_norm_23.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,7,7}
+Var batch_norm_23.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,7,7}
+Var batch_norm_24.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {1024}
+Var batch_norm_24.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {1024}
+Var batch_norm_24.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var batch_norm_24.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var batch_norm_25.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {1024}
+Var batch_norm_25.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {1024}
+Var batch_norm_25.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var batch_norm_25.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var batch_norm_26.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {1024}
+Var batch_norm_26.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {1024}
+Var batch_norm_26.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var batch_norm_26.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var batch_norm_3.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {64}
+Var batch_norm_3.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {64}
+Var batch_norm_3.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,64,56,56}
+Var batch_norm_3.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,64,56,56}
+Var batch_norm_4.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_4.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_4.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var batch_norm_4.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var batch_norm_5.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_5.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_5.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var batch_norm_5.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var batch_norm_6.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_6.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_6.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var batch_norm_6.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var batch_norm_7.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_7.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {128}
+Var batch_norm_7.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,28,28}
+Var batch_norm_7.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,28,28}
+Var batch_norm_8.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_8.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_8.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var batch_norm_8.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var batch_norm_9.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_9.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {256}
+Var batch_norm_9.tmp_2 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var batch_norm_9.tmp_3 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var conv1_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv1_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv1_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv2_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv2d_27.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,32,112,112}
+Var conv2d_28.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,64,112,112}
+Var conv2d_29.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var conv2d_30.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var conv2d_31.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var conv2d_32.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var conv2d_33.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var conv2d_34.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var conv2d_35.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var conv2d_36.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var conv2d_37.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var conv2d_38.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var conv2d_39.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var conv2d_40.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var conv3_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv3_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv4_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_1_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_1_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_2_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_2_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_3_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_3_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_4_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_4_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_5_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_5_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_6_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv5_6_sep_weights in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv6_dw_weights in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_mean in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_offset in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_scale in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_bn_variance in block 0
+ - type 10
+ - data type 1
+Var conv6_sep_weights in block 0
+ - type 10
+ - data type 1
+Var depthwise_conv2d_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,32,112,112}
+Var depthwise_conv2d_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,64,56,56}
+Var depthwise_conv2d_10.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var depthwise_conv2d_11.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,7,7}
+Var depthwise_conv2d_12.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,7,7}
+Var depthwise_conv2d_2.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,56,56}
+Var depthwise_conv2d_3.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,128,28,28}
+Var depthwise_conv2d_4.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,28,28}
+Var depthwise_conv2d_5.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,256,14,14}
+Var depthwise_conv2d_6.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var depthwise_conv2d_7.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var depthwise_conv2d_8.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var depthwise_conv2d_9.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,512,14,14}
+Var fc7_offset in block 0
+ - type 10
+ - data type 1
+Var fc7_weights in block 0
+ - type 10
+ - data type 1
+Var feed in block 0
+ - type 12
+Var fetch in block 0
+ - type 13
+Var flatten_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024}
+Var flatten_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {0,-1,1024,1,1}
+Var inputs in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,3,224,224}
+Var linear_1.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1000}
+Var linear_1.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1000}
+Var pool2d_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1024,1,1}
+Var save_infer_model/scale_0.tmp_1 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1000}
+Var softmax_0.tmp_0 in block 0
+ - type 10
+ - data type 1
+data type 1
+ - dims {-1,1000}
+build desc
+Program::Build(program_desc) is running 
+create Op [feed]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [depthwise_conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [conv2d]
+create Op [batch_norm]
+create Op [relu]
+create Op [pool2d]
+create Op [flatten_contiguous_range]
+create Op [matmul]
+create Op [elementwise_add]
+create Op [softmax]
+create Op [scale]
+create Op [fetch]
+build desc finished
+RunDefaultOptimizer() will be running 
+RunDefaultOptimizer is running 
+class Optimizer construction is running 
+Optimizer::Run() is running 
+pick kernel for feed host/float/NCHW get 0 kernels
+pick kernel for feed host/float/any get 0 kernels
+pick kernel for feed host/any/NCHW get 0 kernels
+pick kernel for feed host/any/any get 1 kernels
+pick kernel for feed host/any/NHWC get 0 kernels
+pick kernel for feed host/float16/any get 0 kernels
+pick kernel for feed host/float16/NHWC get 0 kernels
+pick kernel for feed fpga/float/NCHW get 0 kernels
+pick kernel for feed fpga/float/any get 0 kernels
+pick kernel for feed fpga/any/NCHW get 0 kernels
+pick kernel for feed fpga/any/any get 0 kernels
+pick kernel for feed fpga/any/NHWC get 0 kernels
+pick kernel for feed fpga/float16/any get 0 kernels
+pick kernel for feed fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for batch_norm host/float/NCHW get 0 kernels
+pick kernel for batch_norm host/float/any get 0 kernels
+pick kernel for batch_norm host/any/NCHW get 0 kernels
+pick kernel for batch_norm host/any/any get 0 kernels
+pick kernel for batch_norm host/any/NHWC get 0 kernels
+pick kernel for batch_norm host/float16/any get 0 kernels
+pick kernel for batch_norm host/float16/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float/NCHW get 0 kernels
+pick kernel for batch_norm fpga/float/any get 0 kernels
+pick kernel for batch_norm fpga/any/NCHW get 0 kernels
+pick kernel for batch_norm fpga/any/any get 0 kernels
+pick kernel for batch_norm fpga/any/NHWC get 0 kernels
+pick kernel for batch_norm fpga/float16/any get 0 kernels
+pick kernel for batch_norm fpga/float16/NHWC get 0 kernels
+pick kernel for relu host/float/NCHW get 1 kernels
+pick kernel for relu host/float/any get 0 kernels
+pick kernel for relu host/any/NCHW get 0 kernels
+pick kernel for relu host/any/any get 0 kernels
+pick kernel for relu host/any/NHWC get 0 kernels
+pick kernel for relu host/float16/any get 0 kernels
+pick kernel for relu host/float16/NHWC get 0 kernels
+pick kernel for relu fpga/float/NCHW get 0 kernels
+pick kernel for relu fpga/float/any get 0 kernels
+pick kernel for relu fpga/any/NCHW get 0 kernels
+pick kernel for relu fpga/any/any get 0 kernels
+pick kernel for relu fpga/any/NHWC get 0 kernels
+pick kernel for relu fpga/float16/any get 0 kernels
+pick kernel for relu fpga/float16/NHWC get 0 kernels
+pick kernel for pool2d host/float/NCHW get 0 kernels
+pick kernel for pool2d host/float/any get 0 kernels
+pick kernel for pool2d host/any/NCHW get 0 kernels
+pick kernel for pool2d host/any/any get 0 kernels
+pick kernel for pool2d host/any/NHWC get 0 kernels
+pick kernel for pool2d host/float16/any get 0 kernels
+pick kernel for pool2d host/float16/NHWC get 0 kernels
+pick kernel for pool2d fpga/float/NCHW get 0 kernels
+pick kernel for pool2d fpga/float/any get 0 kernels
+pick kernel for pool2d fpga/any/NCHW get 0 kernels
+pick kernel for pool2d fpga/any/any get 0 kernels
+pick kernel for pool2d fpga/any/NHWC get 0 kernels
+pick kernel for pool2d fpga/float16/any get 0 kernels
+pick kernel for pool2d fpga/float16/NHWC get 0 kernels
+pick kernel for flatten_contiguous_range host/float/NCHW get 0 kernels
+pick kernel for flatten_contiguous_range host/float/any get 0 kernels
+pick kernel for flatten_contiguous_range host/any/NCHW get 0 kernels
+pick kernel for flatten_contiguous_range host/any/any get 1 kernels
+pick kernel for flatten_contiguous_range host/any/NHWC get 0 kernels
+pick kernel for flatten_contiguous_range host/float16/any get 0 kernels
+pick kernel for flatten_contiguous_range host/float16/NHWC get 0 kernels
+pick kernel for flatten_contiguous_range fpga/float/NCHW get 0 kernels
+pick kernel for flatten_contiguous_range fpga/float/any get 0 kernels
+pick kernel for flatten_contiguous_range fpga/any/NCHW get 0 kernels
+pick kernel for flatten_contiguous_range fpga/any/any get 0 kernels
+pick kernel for flatten_contiguous_range fpga/any/NHWC get 0 kernels
+pick kernel for flatten_contiguous_range fpga/float16/any get 0 kernels
+pick kernel for flatten_contiguous_range fpga/float16/NHWC get 0 kernels
+pick kernel for matmul host/float/NCHW get 0 kernels
+pick kernel for matmul host/float/any get 0 kernels
+pick kernel for matmul host/any/NCHW get 0 kernels
+pick kernel for matmul host/any/any get 0 kernels
+pick kernel for matmul host/any/NHWC get 0 kernels
+pick kernel for matmul host/float16/any get 0 kernels
+pick kernel for matmul host/float16/NHWC get 0 kernels
+pick kernel for matmul fpga/float/NCHW get 0 kernels
+pick kernel for matmul fpga/float/any get 0 kernels
+pick kernel for matmul fpga/any/NCHW get 0 kernels
+pick kernel for matmul fpga/any/any get 0 kernels
+pick kernel for matmul fpga/any/NHWC get 0 kernels
+pick kernel for matmul fpga/float16/any get 0 kernels
+pick kernel for matmul fpga/float16/NHWC get 0 kernels
+pick kernel for elementwise_add host/float/NCHW get 0 kernels
+pick kernel for elementwise_add host/float/any get 0 kernels
+pick kernel for elementwise_add host/any/NCHW get 0 kernels
+pick kernel for elementwise_add host/any/any get 0 kernels
+pick kernel for elementwise_add host/any/NHWC get 0 kernels
+pick kernel for elementwise_add host/float16/any get 0 kernels
+pick kernel for elementwise_add host/float16/NHWC get 0 kernels
+pick kernel for elementwise_add fpga/float/NCHW get 0 kernels
+pick kernel for elementwise_add fpga/float/any get 0 kernels
+pick kernel for elementwise_add fpga/any/NCHW get 0 kernels
+pick kernel for elementwise_add fpga/any/any get 0 kernels
+pick kernel for elementwise_add fpga/any/NHWC get 0 kernels
+pick kernel for elementwise_add fpga/float16/any get 0 kernels
+pick kernel for elementwise_add fpga/float16/NHWC get 0 kernels
+pick kernel for softmax host/float/NCHW get 0 kernels
+pick kernel for softmax host/float/any get 0 kernels
+pick kernel for softmax host/any/NCHW get 0 kernels
+pick kernel for softmax host/any/any get 0 kernels
+pick kernel for softmax host/any/NHWC get 0 kernels
+pick kernel for softmax host/float16/any get 0 kernels
+pick kernel for softmax host/float16/NHWC get 0 kernels
+pick kernel for softmax fpga/float/NCHW get 0 kernels
+pick kernel for softmax fpga/float/any get 0 kernels
+pick kernel for softmax fpga/any/NCHW get 0 kernels
+pick kernel for softmax fpga/any/any get 0 kernels
+pick kernel for softmax fpga/any/NHWC get 0 kernels
+pick kernel for softmax fpga/float16/any get 0 kernels
+pick kernel for softmax fpga/float16/NHWC get 0 kernels
+pick kernel for scale host/float/NCHW get 0 kernels
+pick kernel for scale host/float/any get 0 kernels
+pick kernel for scale host/any/NCHW get 0 kernels
+pick kernel for scale host/any/any get 0 kernels
+pick kernel for scale host/any/NHWC get 0 kernels
+pick kernel for scale host/float16/any get 0 kernels
+pick kernel for scale host/float16/NHWC get 0 kernels
+pick kernel for scale fpga/float/NCHW get 0 kernels
+pick kernel for scale fpga/float/any get 0 kernels
+pick kernel for scale fpga/any/NCHW get 0 kernels
+pick kernel for scale fpga/any/any get 0 kernels
+pick kernel for scale fpga/any/NHWC get 0 kernels
+pick kernel for scale fpga/float16/any get 0 kernels
+pick kernel for scale fpga/float16/NHWC get 0 kernels
+pick kernel for fetch host/float/NCHW get 0 kernels
+pick kernel for fetch host/float/any get 0 kernels
+pick kernel for fetch host/any/NCHW get 0 kernels
+pick kernel for fetch host/any/any get 1 kernels
+pick kernel for fetch host/any/NHWC get 0 kernels
+pick kernel for fetch host/float16/any get 0 kernels
+pick kernel for fetch host/float16/NHWC get 0 kernels
+pick kernel for fetch fpga/float/NCHW get 0 kernels
+pick kernel for fetch fpga/float/any get 0 kernels
+pick kernel for fetch fpga/any/NCHW get 0 kernels
+pick kernel for fetch fpga/any/any get 0 kernels
+pick kernel for fetch fpga/any/NHWC get 0 kernels
+pick kernel for fetch fpga/float16/any get 0 kernels
+pick kernel for fetch fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.014623  9496 optimizer.cc:106] == Running pass: lite_quant_dequant_fuse_pass
+I0816 20:12:11.018791  9496 optimizer.cc:127] == Finished running: lite_quant_dequant_fuse_pass
+I0816 20:12:11.018810  9496 optimizer.cc:106] == Running pass: weight_quantization_preprocess_pass
+I0816 20:12:11.018944  9496 optimizer.cc:127] == Finished running: weight_quantization_preprocess_pass
+I0816 20:12:11.018950  9496 optimizer.cc:106] == Running pass: op_transformation_pass
+   - Skip op_transformation_pass because the target or kernel does not match.
+I0816 20:12:11.018957  9496 optimizer.cc:115]    - Skip op_transformation_pass because the target or kernel does not match.
+I0816 20:12:11.018962  9496 optimizer.cc:106] == Running pass: remove_scale1_pass
+   - Skip remove_scale1_pass because the target or kernel does not match.
+I0816 20:12:11.018970  9496 optimizer.cc:115]    - Skip remove_scale1_pass because the target or kernel does not match.
+I0816 20:12:11.018975  9496 optimizer.cc:106] == Running pass: assign_value_calc_offline_pass
+   - Skip assign_value_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.018980  9496 optimizer.cc:115]    - Skip assign_value_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.018985  9496 optimizer.cc:106] == Running pass: p_norm_fill_constant_max_div_fuse_pass
+   - Skip p_norm_fill_constant_max_div_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.018990  9496 optimizer.cc:115]    - Skip p_norm_fill_constant_max_div_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.018994  9496 optimizer.cc:106] == Running pass: fill_constant_calc_offline_pass
+   - Skip fill_constant_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019001  9496 optimizer.cc:115]    - Skip fill_constant_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019004  9496 optimizer.cc:106] == Running pass: range_calc_offline_pass
+   - Skip range_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019011  9496 optimizer.cc:115]    - Skip range_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019014  9496 optimizer.cc:106] == Running pass: scale_calc_offline_pass
+   - Skip scale_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019021  9496 optimizer.cc:115]    - Skip scale_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019026  9496 optimizer.cc:106] == Running pass: unsqueeze_calc_offline_pass
+   - Skip unsqueeze_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019032  9496 optimizer.cc:115]    - Skip unsqueeze_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019037  9496 optimizer.cc:106] == Running pass: ssd_boxes_calc_offline_pass
+   - Skip ssd_boxes_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019042  9496 optimizer.cc:115]    - Skip ssd_boxes_calc_offline_pass because the target or kernel does not match.
+I0816 20:12:11.019047  9496 optimizer.cc:106] == Running pass: adaptive_1x1_pool2d_convert_global_pass
+   - Skip adaptive_1x1_pool2d_convert_global_pass because the target or kernel does not match.
+I0816 20:12:11.019053  9496 optimizer.cc:115]    - Skip adaptive_1x1_pool2d_convert_global_pass because the target or kernel does not match.
+I0816 20:12:11.019057  9496 optimizer.cc:106] == Running pass: lite_unsqueeze2_pad3d_squeeze2_fuse_pass
+I0816 20:12:11.019259  9496 optimizer.cc:127] == Finished running: lite_unsqueeze2_pad3d_squeeze2_fuse_pass
+I0816 20:12:11.019268  9496 optimizer.cc:106] == Running pass: lite_conv_elementwise_fuse_pass
+I0816 20:12:11.020761  9496 optimizer.cc:127] == Finished running: lite_conv_elementwise_fuse_pass
+I0816 20:12:11.020776  9496 optimizer.cc:106] == Running pass: lite_conv_bn_fuse_pass
+I0816 20:12:11.027799  9496 pattern_matcher.cc:108] detected 14 subgraph
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.033522  9496 pattern_matcher.cc:108] detected 13 subgraph
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.035962  9496 optimizer.cc:127] == Finished running: lite_conv_bn_fuse_pass
+I0816 20:12:11.035982  9496 optimizer.cc:106] == Running pass: lite_conv_elementwise_fuse_pass
+I0816 20:12:11.036798  9496 optimizer.cc:127] == Finished running: lite_conv_elementwise_fuse_pass
+I0816 20:12:11.036814  9496 optimizer.cc:106] == Running pass: lite_conv_conv_fuse_pass
+   - Skip lite_conv_conv_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.036823  9496 optimizer.cc:115]    - Skip lite_conv_conv_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.036828  9496 optimizer.cc:106] == Running pass: lite_conv_activation_fuse_pass
+I0816 20:12:11.037547  9496 pattern_matcher.cc:108] detected 14 subgraph
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for conv2d host/float/NCHW get 0 kernels
+pick kernel for conv2d host/float/any get 0 kernels
+pick kernel for conv2d host/any/NCHW get 0 kernels
+pick kernel for conv2d host/any/any get 0 kernels
+pick kernel for conv2d host/any/NHWC get 0 kernels
+pick kernel for conv2d host/float16/any get 0 kernels
+pick kernel for conv2d host/float16/NHWC get 0 kernels
+pick kernel for conv2d fpga/float/NCHW get 0 kernels
+pick kernel for conv2d fpga/float/any get 0 kernels
+pick kernel for conv2d fpga/any/NCHW get 0 kernels
+pick kernel for conv2d fpga/any/any get 0 kernels
+pick kernel for conv2d fpga/any/NHWC get 0 kernels
+pick kernel for conv2d fpga/float16/any get 0 kernels
+pick kernel for conv2d fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.039922  9496 pattern_matcher.cc:108] detected 13 subgraph
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/float/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d host/any/any get 0 kernels
+pick kernel for depthwise_conv2d host/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d host/float16/any get 0 kernels
+pick kernel for depthwise_conv2d host/float16/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/float/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NCHW get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
+pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.041687  9496 optimizer.cc:127] == Finished running: lite_conv_activation_fuse_pass
+I0816 20:12:11.041697  9496 optimizer.cc:106] == Running pass: lite_var_conv_2d_activation_fuse_pass
+   - Skip lite_var_conv_2d_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.041707  9496 optimizer.cc:115]    - Skip lite_var_conv_2d_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.041711  9496 optimizer.cc:106] == Running pass: lite_match_matrix_activation_fuse_pass
+   - Skip lite_match_matrix_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.041718  9496 optimizer.cc:115]    - Skip lite_match_matrix_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.041723  9496 optimizer.cc:106] == Running pass: lite_squeeze2_matmul_fuse_pass
+I0816 20:12:11.041853  9496 optimizer.cc:127] == Finished running: lite_squeeze2_matmul_fuse_pass
+I0816 20:12:11.041860  9496 optimizer.cc:106] == Running pass: lite_reshape2_matmul_fuse_pass
+I0816 20:12:11.042037  9496 optimizer.cc:127] == Finished running: lite_reshape2_matmul_fuse_pass
+I0816 20:12:11.042044  9496 optimizer.cc:106] == Running pass: lite_matmul_element_add_fuse_pass
+I0816 20:12:11.042511  9496 pattern_matcher.cc:108] detected 1 subgraph
+pick kernel for fc host/float/NCHW get 0 kernels
+pick kernel for fc host/float/any get 0 kernels
+pick kernel for fc host/any/NCHW get 0 kernels
+pick kernel for fc host/any/any get 0 kernels
+pick kernel for fc host/any/NHWC get 0 kernels
+pick kernel for fc host/float16/any get 0 kernels
+pick kernel for fc host/float16/NHWC get 0 kernels
+pick kernel for fc fpga/float/NCHW get 0 kernels
+pick kernel for fc fpga/float/any get 0 kernels
+pick kernel for fc fpga/any/NCHW get 0 kernels
+pick kernel for fc fpga/any/any get 0 kernels
+pick kernel for fc fpga/any/NHWC get 0 kernels
+pick kernel for fc fpga/float16/any get 0 kernels
+pick kernel for fc fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.042732  9496 optimizer.cc:127] == Finished running: lite_matmul_element_add_fuse_pass
+I0816 20:12:11.042742  9496 optimizer.cc:106] == Running pass: lite_matmul_fuse_pass
+I0816 20:12:11.042807  9496 optimizer.cc:127] == Finished running: lite_matmul_fuse_pass
+I0816 20:12:11.042814  9496 optimizer.cc:106] == Running pass: lite_fc_fuse_pass
+I0816 20:12:11.043429  9496 optimizer.cc:127] == Finished running: lite_fc_fuse_pass
+I0816 20:12:11.043447  9496 optimizer.cc:106] == Running pass: lite_shuffle_channel_fuse_pass
+I0816 20:12:11.043797  9496 optimizer.cc:127] == Finished running: lite_shuffle_channel_fuse_pass
+I0816 20:12:11.043813  9496 optimizer.cc:106] == Running pass: lite_transpose_softmax_transpose_fuse_pass
+I0816 20:12:11.043956  9496 optimizer.cc:127] == Finished running: lite_transpose_softmax_transpose_fuse_pass
+I0816 20:12:11.043969  9496 optimizer.cc:106] == Running pass: lite_interpolate_fuse_pass
+I0816 20:12:11.044293  9496 optimizer.cc:127] == Finished running: lite_interpolate_fuse_pass
+I0816 20:12:11.044307  9496 optimizer.cc:106] == Running pass: identity_scale_eliminate_pass
+I0816 20:12:11.044420  9496 pattern_matcher.cc:108] detected 1 subgraph
+pick kernel for softmax host/float/NCHW get 0 kernels
+pick kernel for softmax host/float/any get 0 kernels
+pick kernel for softmax host/any/NCHW get 0 kernels
+pick kernel for softmax host/any/any get 0 kernels
+pick kernel for softmax host/any/NHWC get 0 kernels
+pick kernel for softmax host/float16/any get 0 kernels
+pick kernel for softmax host/float16/NHWC get 0 kernels
+pick kernel for softmax fpga/float/NCHW get 0 kernels
+pick kernel for softmax fpga/float/any get 0 kernels
+pick kernel for softmax fpga/any/NCHW get 0 kernels
+pick kernel for softmax fpga/any/any get 0 kernels
+pick kernel for softmax fpga/any/NHWC get 0 kernels
+pick kernel for softmax fpga/float16/any get 0 kernels
+pick kernel for softmax fpga/float16/NHWC get 0 kernels
+I0816 20:12:11.044549  9496 optimizer.cc:127] == Finished running: identity_scale_eliminate_pass
+I0816 20:12:11.044557  9496 optimizer.cc:106] == Running pass: lite_scales_fuse_pass
+I0816 20:12:11.044647  9496 optimizer.cc:127] == Finished running: lite_scales_fuse_pass
+I0816 20:12:11.044654  9496 optimizer.cc:106] == Running pass: lite_sequence_reverse_embedding_fuse_pass
+   - Skip lite_sequence_reverse_embedding_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044662  9496 optimizer.cc:115]    - Skip lite_sequence_reverse_embedding_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044667  9496 optimizer.cc:106] == Running pass: elementwise_mul_constant_eliminate_pass
+I0816 20:12:11.044783  9496 optimizer.cc:127] == Finished running: elementwise_mul_constant_eliminate_pass
+I0816 20:12:11.044792  9496 optimizer.cc:106] == Running pass: lite_sequence_pool_concat_fuse_pass
+   - Skip lite_sequence_pool_concat_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044800  9496 optimizer.cc:115]    - Skip lite_sequence_pool_concat_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044806  9496 optimizer.cc:106] == Running pass: lite_scale_activation_fuse_pass
+   - Skip lite_scale_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044839  9496 optimizer.cc:115]    - Skip lite_scale_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044845  9496 optimizer.cc:106] == Running pass: lite_scaleacts_fuse_pass
+   - Skip lite_scaleacts_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044852  9496 optimizer.cc:115]    - Skip lite_scaleacts_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044857  9496 optimizer.cc:106] == Running pass: lite_elementwise_scale_fuse_pass
+   - Skip lite_elementwise_scale_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044863  9496 optimizer.cc:115]    - Skip lite_elementwise_scale_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044868  9496 optimizer.cc:106] == Running pass: lite_instance_norm_activation_fuse_pass
+   - Skip lite_instance_norm_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044874  9496 optimizer.cc:115]    - Skip lite_instance_norm_activation_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044878  9496 optimizer.cc:106] == Running pass: lite_flatten_fc_fuse_pass
+   - Skip lite_flatten_fc_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044885  9496 optimizer.cc:115]    - Skip lite_flatten_fc_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044889  9496 optimizer.cc:106] == Running pass: lite_fc_prelu_fuse_pass
+   - Skip lite_fc_prelu_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044895  9496 optimizer.cc:115]    - Skip lite_fc_prelu_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.044900  9496 optimizer.cc:106] == Running pass: lite_elementwise_activation_fuse_pass
+I0816 20:12:11.045492  9496 optimizer.cc:127] == Finished running: lite_elementwise_activation_fuse_pass
+I0816 20:12:11.045508  9496 optimizer.cc:106] == Running pass: lite_conv_scale_fuse_pass
+   - Skip lite_conv_scale_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045516  9496 optimizer.cc:115]    - Skip lite_conv_scale_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045521  9496 optimizer.cc:106] == Running pass: lite_conv_elementwise_tree_fuse_pass
+   - Skip lite_conv_elementwise_tree_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045527  9496 optimizer.cc:115]    - Skip lite_conv_elementwise_tree_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045531  9496 optimizer.cc:106] == Running pass: lite_greater_than_cast_fuse_pass
+   - Skip lite_greater_than_cast_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045538  9496 optimizer.cc:115]    - Skip lite_greater_than_cast_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045542  9496 optimizer.cc:106] == Running pass: fill_range_fuse_pass
+   - Skip fill_range_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045549  9496 optimizer.cc:115]    - Skip fill_range_fuse_pass because the target or kernel does not match.
+I0816 20:12:11.045553  9496 optimizer.cc:106] == Running pass: identity_dropout_eliminate_pass
+   - Skip identity_dropout_eliminate_pass because the target or kernel does not match.
+I0816 20:12:11.045560  9496 optimizer.cc:115]    - Skip identity_dropout_eliminate_pass because the target or kernel does not match.
+I0816 20:12:11.045564  9496 optimizer.cc:106] == Running pass: sparse_conv_detect_pass
+   - Skip sparse_conv_detect_pass because the target or kernel does not match.
+I0816 20:12:11.045570  9496 optimizer.cc:115]    - Skip sparse_conv_detect_pass because the target or kernel does not match.
+I0816 20:12:11.045606  9496 optimizer.cc:106] == Running pass: keepdims_convert_pass
+   - Skip keepdims_convert_pass because the target or kernel does not match.
+I0816 20:12:11.045614  9496 optimizer.cc:115]    - Skip keepdims_convert_pass because the target or kernel does not match.
+I0816 20:12:11.045619  9496 optimizer.cc:106] == Running pass: fix_mismatched_precision_pass
+   - Skip fix_mismatched_precision_pass because the target or kernel does not match.
+I0816 20:12:11.045625  9496 optimizer.cc:115]    - Skip fix_mismatched_precision_pass because the target or kernel does not match.
+I0816 20:12:11.045630  9496 optimizer.cc:106] == Running pass: quantization_parameters_propagation_pass
+   - Skip quantization_parameters_propagation_pass because the target or kernel does not match.
+I0816 20:12:11.045636  9496 optimizer.cc:115]    - Skip quantization_parameters_propagation_pass because the target or kernel does not match.
+I0816 20:12:11.045640  9496 optimizer.cc:106] == Running pass: restrict_quantized_op_with_same_input_output_scale_pass
+   - Skip restrict_quantized_op_with_same_input_output_scale_pass because the target or kernel does not match.
+I0816 20:12:11.045646  9496 optimizer.cc:115]    - Skip restrict_quantized_op_with_same_input_output_scale_pass because the target or kernel does not match.
+I0816 20:12:11.045650  9496 optimizer.cc:106] == Running pass: quantization_parameters_removal_pass
+   - Skip quantization_parameters_removal_pass because the target or kernel does not match.
+I0816 20:12:11.045656  9496 optimizer.cc:115]    - Skip quantization_parameters_removal_pass because the target or kernel does not match.
+I0816 20:12:11.045660  9496 optimizer.cc:106] == Running pass: nnadapter_subgraph_pass
+   - Skip nnadapter_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045666  9496 optimizer.cc:115]    - Skip nnadapter_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045670  9496 optimizer.cc:106] == Running pass: npu_subgraph_pass
+   - Skip npu_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045677  9496 optimizer.cc:115]    - Skip npu_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045682  9496 optimizer.cc:106] == Running pass: bm_subgraph_pass
+   - Skip bm_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045689  9496 optimizer.cc:115]    - Skip bm_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045693  9496 optimizer.cc:106] == Running pass: mlu_subgraph_pass
+   - Skip mlu_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045699  9496 optimizer.cc:115]    - Skip mlu_subgraph_pass because the target or kernel does not match.
+I0816 20:12:11.045703  9496 optimizer.cc:106] == Running pass: fpga_concat_fuse_pass
+I0816 20:12:11.045753  9496 optimizer.cc:127] == Finished running: fpga_concat_fuse_pass
+I0816 20:12:11.045758  9496 optimizer.cc:106] == Running pass: control_flow_op_unused_inputs_and_outputs_eliminate_pass
+   - Skip control_flow_op_unused_inputs_and_outputs_eliminate_pass because the target or kernel does not match.
+I0816 20:12:11.045765  9496 optimizer.cc:115]    - Skip control_flow_op_unused_inputs_and_outputs_eliminate_pass because the target or kernel does not match.
+I0816 20:12:11.045769  9496 optimizer.cc:106] == Running pass: static_kernel_pick_pass
+F0816 20:12:11.045840  9496 static_kernel_pick_pass.cc:71] Check failed: !instruct.kernels().empty() No kernels found for pool2d
+*** Check failure stack trace: ***
