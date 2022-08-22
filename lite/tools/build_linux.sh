@@ -13,8 +13,8 @@ TOOLCHAIN=gcc
 WITH_EXTRA=ON
 # controls whether to compile python lib, default is OFF.
 # WITH_PYTHON=OFF
-# WITH_PYTHON=ON
-# PY_VERSION="3.7"
+WITH_PYTHON=ON
+PY_VERSION="3.7"
 # ON or OFF, default is OFF
 WITH_STATIC_LIB=OFF
 # controls whether to compile cv functions into lib, default is OFF.

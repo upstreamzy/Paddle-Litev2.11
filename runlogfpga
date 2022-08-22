@@ -1,12 +1,12 @@
 the FLAGS_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1
 the FLAGS_use_optimize_nb is 0
-/home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 323
+/home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 325
 input shapes: 1,3,224,224
 the str_input_shapes.size() is 1
-will be set shape /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 329
+will be set shape /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 331
 input shape: 1,3,224,224
-will be run OutputOptModel() /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 339
-the load_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1
+will be run OutputOptModel() /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 341
+the load_model_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
 the load_param_dir is /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdiparams
 In ConfigBase constructor which have 2 params on the LITE_WITH_ARM 
 the model_test.cc will set valid place
@@ -20,7 +20,7 @@ CXXPaddleApiImpl class Init function status_is_cloned_ is false
 attention LOG command
 use_layout_preprocess_pass:18446744073709551615
 begain running config.quant_model()
-sparse_conv_detect_pass:0x55990a37c300
+sparse_conv_detect_pass:0x558b46a2e300
 Pass in a value greater than 1.0 to turn off the sparse pass internally
 CXXPaddleApiImpl class Init function raw_predictor_->Build will be running 
 Predictor::Build which have 3 params is running the first param is CxxConfig
@@ -32,9 +32,9 @@ In LoadModelPb function TransformProgramDescAnyToCpp(pb_prog, cpp_prog) will be 
 IN LoadModelPb function macro WITH_CONVERT_TO_SSA is ON 
 general::ssa::ConvertToSSA(cpp_prog) will be running 
 ConvertToSSA(general::ProgramDesc* prog) which will be return general::ProgramDesc* type is running 
-The Model is non-combined  combined is false 
 The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr. 
 The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr1. 
 The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr2. 
 The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr3. 
-please check if driver has insmoded!
+mmap failed with other than memory usage and invalid arguments! errno=9, (size=144)
+terminate called after throwing an instance of 'int'

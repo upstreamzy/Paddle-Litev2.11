@@ -303,6 +303,7 @@ function(lite_cc_binary TARGET)
     endif()
 
     if (NOT APPLE AND NOT WIN32)
+        # 以一种简单粗暴的方式增加了log
         # strip binary target to reduce size
         #if(NOT "${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
         #    add_custom_command(TARGET ${TARGET} POST_BUILD

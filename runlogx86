@@ -3,9 +3,9 @@ the FLAGS_use_optimize_nb is 0
 /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 325
 input shapes: 1,3,224,224
 WARNING: Logging before InitGoogleLogging() is written to STDERR
-I0816 20:12:10.907116  9496 model_test.cc:327] input shapes: 1,3,224,224
+I0818 11:25:49.724023 28150 model_test.cc:327] input shapes: 1,3,224,224
 the str_input_shapes.size() is 1
-I0816 20:12:10.907181  9496 model_test.cc:333] input shape: 1,3,224,224
+I0818 11:25:49.724083 28150 model_test.cc:333] input shape: 1,3,224,224
 will be set shape /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 331
 input shape: 1,3,224,224
 will be run OutputOptModel() /home/ubuntu/code/Paddle-Litev2.11/lite/api/tools/model_test.cc, main, 341
@@ -21,11 +21,11 @@ In ConfigBase constructor which have 2 params on the LITE_WITH_ARM
 CxxPaddleApiImpl class Init function is running 
 CXXPaddleApiImpl class Init function status_is_cloned_ is false 
 attention LOG command
-I0816 20:12:10.907207  9496 cxx_api_impl.cc:123] attention LOG command
+I0818 11:25:49.724104 28150 cxx_api_impl.cc:123] attention LOG command
 use_layout_preprocess_pass:18446744073709551615
 begain running config.quant_model()
-sparse_conv_detect_pass:0x55dccdcc6bb0
-I0816 20:12:10.907220  9496 cxx_api.cc:315] Load model from file.
+sparse_conv_detect_pass:0x55d4982f4bb0
+I0818 11:25:49.724117 28150 cxx_api.cc:315] Load model from file.
 Pass in a value greater than 1.0 to turn off the sparse pass internally
 CXXPaddleApiImpl class Init function raw_predictor_->Build will be running 
 Predictor::Build which have 3 params is running the first param is CxxConfig
@@ -33,8 +33,8 @@ Load model from file.
 Predictor::Build which have 7 params is running 
 model_type is lite_api::LiteModelType::kProtobuf 
 In LoadModelPb function model_buffer.is_empty() is trueLoading topology data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
-I0816 20:12:10.907267  9496 model_parser.cc:264] Loading topology data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
-I0816 20:12:10.919274  9496 model_parser.cc:289] Loading params data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdiparams
+I0818 11:25:49.724162 28150 model_parser.cc:264] Loading topology data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdmodel
+I0818 11:25:49.732208 28150 model_parser.cc:289] Loading params data from /home/ubuntu/code/Paddle-Litev2.11/tmpfile/MobileNetV1/inference.pdiparams
 In LoadModelPb function TransformProgramDescAnyToCpp(pb_prog, cpp_prog) will be running 
 IN LoadModelPb function macro WITH_CONVERT_TO_SSA is ON 
 general::ssa::ConvertToSSA(cpp_prog) will be running 
@@ -44,7 +44,7 @@ The model_parser.cc file LoadCombinedParamsPb function input argument scope is n
 The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr2. 
 The model_parser.cc file LoadCombinedParamsPb function input argument scope is nullptr3. 
 1You are not allowed to load partial data via LoadCombinedParamsPb, use LoadParam instead.
-I0816 20:12:11.003017  9496 model_parser.cc:299] 1. Model is successfully loaded!
+I0818 11:25:49.742429 28150 model_parser.cc:299] 1. Model is successfully loaded!
 The model_parser.cc file LoadCombinedParamsPb function run end 
 Predictor::Build which have 3 params and the first param is ProgramDesc is running 
 Predictor::Build `inner_places` is used to optimize passes 
@@ -2522,46 +2522,46 @@ pick kernel for fetch fpga/any/any get 0 kernels
 pick kernel for fetch fpga/any/NHWC get 0 kernels
 pick kernel for fetch fpga/float16/any get 0 kernels
 pick kernel for fetch fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.014623  9496 optimizer.cc:106] == Running pass: lite_quant_dequant_fuse_pass
-I0816 20:12:11.018791  9496 optimizer.cc:127] == Finished running: lite_quant_dequant_fuse_pass
-I0816 20:12:11.018810  9496 optimizer.cc:106] == Running pass: weight_quantization_preprocess_pass
-I0816 20:12:11.018944  9496 optimizer.cc:127] == Finished running: weight_quantization_preprocess_pass
-I0816 20:12:11.018950  9496 optimizer.cc:106] == Running pass: op_transformation_pass
+I0818 11:25:49.759210 28150 optimizer.cc:106] == Running pass: lite_quant_dequant_fuse_pass
+I0818 11:25:49.763098 28150 optimizer.cc:127] == Finished running: lite_quant_dequant_fuse_pass
+I0818 11:25:49.763113 28150 optimizer.cc:106] == Running pass: weight_quantization_preprocess_pass
+I0818 11:25:49.763244 28150 optimizer.cc:127] == Finished running: weight_quantization_preprocess_pass
+I0818 11:25:49.763252 28150 optimizer.cc:106] == Running pass: op_transformation_pass
    - Skip op_transformation_pass because the target or kernel does not match.
-I0816 20:12:11.018957  9496 optimizer.cc:115]    - Skip op_transformation_pass because the target or kernel does not match.
-I0816 20:12:11.018962  9496 optimizer.cc:106] == Running pass: remove_scale1_pass
+I0818 11:25:49.763258 28150 optimizer.cc:115]    - Skip op_transformation_pass because the target or kernel does not match.
+I0818 11:25:49.763262 28150 optimizer.cc:106] == Running pass: remove_scale1_pass
    - Skip remove_scale1_pass because the target or kernel does not match.
-I0816 20:12:11.018970  9496 optimizer.cc:115]    - Skip remove_scale1_pass because the target or kernel does not match.
-I0816 20:12:11.018975  9496 optimizer.cc:106] == Running pass: assign_value_calc_offline_pass
+I0818 11:25:49.763269 28150 optimizer.cc:115]    - Skip remove_scale1_pass because the target or kernel does not match.
+I0818 11:25:49.763273 28150 optimizer.cc:106] == Running pass: assign_value_calc_offline_pass
    - Skip assign_value_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.018980  9496 optimizer.cc:115]    - Skip assign_value_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.018985  9496 optimizer.cc:106] == Running pass: p_norm_fill_constant_max_div_fuse_pass
+I0818 11:25:49.763279 28150 optimizer.cc:115]    - Skip assign_value_calc_offline_pass because the target or kernel does not match.
+I0818 11:25:49.763284 28150 optimizer.cc:106] == Running pass: p_norm_fill_constant_max_div_fuse_pass
    - Skip p_norm_fill_constant_max_div_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.018990  9496 optimizer.cc:115]    - Skip p_norm_fill_constant_max_div_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.018994  9496 optimizer.cc:106] == Running pass: fill_constant_calc_offline_pass
+I0818 11:25:49.763290 28150 optimizer.cc:115]    - Skip p_norm_fill_constant_max_div_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.763295 28150 optimizer.cc:106] == Running pass: fill_constant_calc_offline_pass
    - Skip fill_constant_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019001  9496 optimizer.cc:115]    - Skip fill_constant_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019004  9496 optimizer.cc:106] == Running pass: range_calc_offline_pass
+I0818 11:25:49.763301 28150 optimizer.cc:115]    - Skip fill_constant_calc_offline_pass because the target or kernel does not match.
+I0818 11:25:49.763305 28150 optimizer.cc:106] == Running pass: range_calc_offline_pass
    - Skip range_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019011  9496 optimizer.cc:115]    - Skip range_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019014  9496 optimizer.cc:106] == Running pass: scale_calc_offline_pass
+I0818 11:25:49.763310 28150 optimizer.cc:115]    - Skip range_calc_offline_pass because the target or kernel does not match.
+I0818 11:25:49.763314 28150 optimizer.cc:106] == Running pass: scale_calc_offline_pass
    - Skip scale_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019021  9496 optimizer.cc:115]    - Skip scale_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019026  9496 optimizer.cc:106] == Running pass: unsqueeze_calc_offline_pass
+I0818 11:25:49.763320 28150 optimizer.cc:115]    - Skip scale_calc_offline_pass because the target or kernel does not match.
+I0818 11:25:49.763324 28150 optimizer.cc:106] == Running pass: unsqueeze_calc_offline_pass
    - Skip unsqueeze_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019032  9496 optimizer.cc:115]    - Skip unsqueeze_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019037  9496 optimizer.cc:106] == Running pass: ssd_boxes_calc_offline_pass
+I0818 11:25:49.763329 28150 optimizer.cc:115]    - Skip unsqueeze_calc_offline_pass because the target or kernel does not match.
+I0818 11:25:49.763334 28150 optimizer.cc:106] == Running pass: ssd_boxes_calc_offline_pass
    - Skip ssd_boxes_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019042  9496 optimizer.cc:115]    - Skip ssd_boxes_calc_offline_pass because the target or kernel does not match.
-I0816 20:12:11.019047  9496 optimizer.cc:106] == Running pass: adaptive_1x1_pool2d_convert_global_pass
+I0818 11:25:49.763339 28150 optimizer.cc:115]    - Skip ssd_boxes_calc_offline_pass because the target or kernel does not match.
+I0818 11:25:49.763345 28150 optimizer.cc:106] == Running pass: adaptive_1x1_pool2d_convert_global_pass
    - Skip adaptive_1x1_pool2d_convert_global_pass because the target or kernel does not match.
-I0816 20:12:11.019053  9496 optimizer.cc:115]    - Skip adaptive_1x1_pool2d_convert_global_pass because the target or kernel does not match.
-I0816 20:12:11.019057  9496 optimizer.cc:106] == Running pass: lite_unsqueeze2_pad3d_squeeze2_fuse_pass
-I0816 20:12:11.019259  9496 optimizer.cc:127] == Finished running: lite_unsqueeze2_pad3d_squeeze2_fuse_pass
-I0816 20:12:11.019268  9496 optimizer.cc:106] == Running pass: lite_conv_elementwise_fuse_pass
-I0816 20:12:11.020761  9496 optimizer.cc:127] == Finished running: lite_conv_elementwise_fuse_pass
-I0816 20:12:11.020776  9496 optimizer.cc:106] == Running pass: lite_conv_bn_fuse_pass
-I0816 20:12:11.027799  9496 pattern_matcher.cc:108] detected 14 subgraph
+I0818 11:25:49.763351 28150 optimizer.cc:115]    - Skip adaptive_1x1_pool2d_convert_global_pass because the target or kernel does not match.
+I0818 11:25:49.763355 28150 optimizer.cc:106] == Running pass: lite_unsqueeze2_pad3d_squeeze2_fuse_pass
+I0818 11:25:49.763511 28150 optimizer.cc:127] == Finished running: lite_unsqueeze2_pad3d_squeeze2_fuse_pass
+I0818 11:25:49.763518 28150 optimizer.cc:106] == Running pass: lite_conv_elementwise_fuse_pass
+I0818 11:25:49.764972 28150 optimizer.cc:127] == Finished running: lite_conv_elementwise_fuse_pass
+I0818 11:25:49.764984 28150 optimizer.cc:106] == Running pass: lite_conv_bn_fuse_pass
+I0818 11:25:49.770591 28150 pattern_matcher.cc:108] detected 14 subgraph
 pick kernel for conv2d host/float/NCHW get 0 kernels
 pick kernel for conv2d host/float/any get 0 kernels
 pick kernel for conv2d host/any/NCHW get 0 kernels
@@ -2758,7 +2758,7 @@ pick kernel for conv2d fpga/any/any get 0 kernels
 pick kernel for conv2d fpga/any/NHWC get 0 kernels
 pick kernel for conv2d fpga/float16/any get 0 kernels
 pick kernel for conv2d fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.033522  9496 pattern_matcher.cc:108] detected 13 subgraph
+I0818 11:25:49.775524 28150 pattern_matcher.cc:108] detected 13 subgraph
 pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
 pick kernel for depthwise_conv2d host/float/any get 0 kernels
 pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
@@ -2941,14 +2941,14 @@ pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
 pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
 pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
 pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.035962  9496 optimizer.cc:127] == Finished running: lite_conv_bn_fuse_pass
-I0816 20:12:11.035982  9496 optimizer.cc:106] == Running pass: lite_conv_elementwise_fuse_pass
-I0816 20:12:11.036798  9496 optimizer.cc:127] == Finished running: lite_conv_elementwise_fuse_pass
-I0816 20:12:11.036814  9496 optimizer.cc:106] == Running pass: lite_conv_conv_fuse_pass
+I0818 11:25:49.777494 28150 optimizer.cc:127] == Finished running: lite_conv_bn_fuse_pass
+I0818 11:25:49.777511 28150 optimizer.cc:106] == Running pass: lite_conv_elementwise_fuse_pass
+I0818 11:25:49.778295 28150 optimizer.cc:127] == Finished running: lite_conv_elementwise_fuse_pass
+I0818 11:25:49.778309 28150 optimizer.cc:106] == Running pass: lite_conv_conv_fuse_pass
    - Skip lite_conv_conv_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.036823  9496 optimizer.cc:115]    - Skip lite_conv_conv_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.036828  9496 optimizer.cc:106] == Running pass: lite_conv_activation_fuse_pass
-I0816 20:12:11.037547  9496 pattern_matcher.cc:108] detected 14 subgraph
+I0818 11:25:49.778317 28150 optimizer.cc:115]    - Skip lite_conv_conv_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.778322 28150 optimizer.cc:106] == Running pass: lite_conv_activation_fuse_pass
+I0818 11:25:49.778978 28150 pattern_matcher.cc:108] detected 14 subgraph
 pick kernel for conv2d host/float/NCHW get 0 kernels
 pick kernel for conv2d host/float/any get 0 kernels
 pick kernel for conv2d host/any/NCHW get 0 kernels
@@ -3145,7 +3145,7 @@ pick kernel for conv2d fpga/any/any get 0 kernels
 pick kernel for conv2d fpga/any/NHWC get 0 kernels
 pick kernel for conv2d fpga/float16/any get 0 kernels
 pick kernel for conv2d fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.039922  9496 pattern_matcher.cc:108] detected 13 subgraph
+I0818 11:25:49.780795 28150 pattern_matcher.cc:108] detected 13 subgraph
 pick kernel for depthwise_conv2d host/float/NCHW get 0 kernels
 pick kernel for depthwise_conv2d host/float/any get 0 kernels
 pick kernel for depthwise_conv2d host/any/NCHW get 0 kernels
@@ -3328,19 +3328,19 @@ pick kernel for depthwise_conv2d fpga/any/any get 0 kernels
 pick kernel for depthwise_conv2d fpga/any/NHWC get 0 kernels
 pick kernel for depthwise_conv2d fpga/float16/any get 0 kernels
 pick kernel for depthwise_conv2d fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.041687  9496 optimizer.cc:127] == Finished running: lite_conv_activation_fuse_pass
-I0816 20:12:11.041697  9496 optimizer.cc:106] == Running pass: lite_var_conv_2d_activation_fuse_pass
+I0818 11:25:49.781760 28150 optimizer.cc:127] == Finished running: lite_conv_activation_fuse_pass
+I0818 11:25:49.781769 28150 optimizer.cc:106] == Running pass: lite_var_conv_2d_activation_fuse_pass
    - Skip lite_var_conv_2d_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.041707  9496 optimizer.cc:115]    - Skip lite_var_conv_2d_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.041711  9496 optimizer.cc:106] == Running pass: lite_match_matrix_activation_fuse_pass
+I0818 11:25:49.781774 28150 optimizer.cc:115]    - Skip lite_var_conv_2d_activation_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.781777 28150 optimizer.cc:106] == Running pass: lite_match_matrix_activation_fuse_pass
    - Skip lite_match_matrix_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.041718  9496 optimizer.cc:115]    - Skip lite_match_matrix_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.041723  9496 optimizer.cc:106] == Running pass: lite_squeeze2_matmul_fuse_pass
-I0816 20:12:11.041853  9496 optimizer.cc:127] == Finished running: lite_squeeze2_matmul_fuse_pass
-I0816 20:12:11.041860  9496 optimizer.cc:106] == Running pass: lite_reshape2_matmul_fuse_pass
-I0816 20:12:11.042037  9496 optimizer.cc:127] == Finished running: lite_reshape2_matmul_fuse_pass
-I0816 20:12:11.042044  9496 optimizer.cc:106] == Running pass: lite_matmul_element_add_fuse_pass
-I0816 20:12:11.042511  9496 pattern_matcher.cc:108] detected 1 subgraph
+I0818 11:25:49.781781 28150 optimizer.cc:115]    - Skip lite_match_matrix_activation_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.781785 28150 optimizer.cc:106] == Running pass: lite_squeeze2_matmul_fuse_pass
+I0818 11:25:49.781878 28150 optimizer.cc:127] == Finished running: lite_squeeze2_matmul_fuse_pass
+I0818 11:25:49.781883 28150 optimizer.cc:106] == Running pass: lite_reshape2_matmul_fuse_pass
+I0818 11:25:49.781965 28150 optimizer.cc:127] == Finished running: lite_reshape2_matmul_fuse_pass
+I0818 11:25:49.781968 28150 optimizer.cc:106] == Running pass: lite_matmul_element_add_fuse_pass
+I0818 11:25:49.782269 28150 pattern_matcher.cc:108] detected 1 subgraph
 pick kernel for fc host/float/NCHW get 0 kernels
 pick kernel for fc host/float/any get 0 kernels
 pick kernel for fc host/any/NCHW get 0 kernels
@@ -3355,19 +3355,19 @@ pick kernel for fc fpga/any/any get 0 kernels
 pick kernel for fc fpga/any/NHWC get 0 kernels
 pick kernel for fc fpga/float16/any get 0 kernels
 pick kernel for fc fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.042732  9496 optimizer.cc:127] == Finished running: lite_matmul_element_add_fuse_pass
-I0816 20:12:11.042742  9496 optimizer.cc:106] == Running pass: lite_matmul_fuse_pass
-I0816 20:12:11.042807  9496 optimizer.cc:127] == Finished running: lite_matmul_fuse_pass
-I0816 20:12:11.042814  9496 optimizer.cc:106] == Running pass: lite_fc_fuse_pass
-I0816 20:12:11.043429  9496 optimizer.cc:127] == Finished running: lite_fc_fuse_pass
-I0816 20:12:11.043447  9496 optimizer.cc:106] == Running pass: lite_shuffle_channel_fuse_pass
-I0816 20:12:11.043797  9496 optimizer.cc:127] == Finished running: lite_shuffle_channel_fuse_pass
-I0816 20:12:11.043813  9496 optimizer.cc:106] == Running pass: lite_transpose_softmax_transpose_fuse_pass
-I0816 20:12:11.043956  9496 optimizer.cc:127] == Finished running: lite_transpose_softmax_transpose_fuse_pass
-I0816 20:12:11.043969  9496 optimizer.cc:106] == Running pass: lite_interpolate_fuse_pass
-I0816 20:12:11.044293  9496 optimizer.cc:127] == Finished running: lite_interpolate_fuse_pass
-I0816 20:12:11.044307  9496 optimizer.cc:106] == Running pass: identity_scale_eliminate_pass
-I0816 20:12:11.044420  9496 pattern_matcher.cc:108] detected 1 subgraph
+I0818 11:25:49.782363 28150 optimizer.cc:127] == Finished running: lite_matmul_element_add_fuse_pass
+I0818 11:25:49.782367 28150 optimizer.cc:106] == Running pass: lite_matmul_fuse_pass
+I0818 11:25:49.782408 28150 optimizer.cc:127] == Finished running: lite_matmul_fuse_pass
+I0818 11:25:49.782411 28150 optimizer.cc:106] == Running pass: lite_fc_fuse_pass
+I0818 11:25:49.782840 28150 optimizer.cc:127] == Finished running: lite_fc_fuse_pass
+I0818 11:25:49.782845 28150 optimizer.cc:106] == Running pass: lite_shuffle_channel_fuse_pass
+I0818 11:25:49.783018 28150 optimizer.cc:127] == Finished running: lite_shuffle_channel_fuse_pass
+I0818 11:25:49.783022 28150 optimizer.cc:106] == Running pass: lite_transpose_softmax_transpose_fuse_pass
+I0818 11:25:49.783100 28150 optimizer.cc:127] == Finished running: lite_transpose_softmax_transpose_fuse_pass
+I0818 11:25:49.783104 28150 optimizer.cc:106] == Running pass: lite_interpolate_fuse_pass
+I0818 11:25:49.783373 28150 optimizer.cc:127] == Finished running: lite_interpolate_fuse_pass
+I0818 11:25:49.783377 28150 optimizer.cc:106] == Running pass: identity_scale_eliminate_pass
+I0818 11:25:49.783432 28150 pattern_matcher.cc:108] detected 1 subgraph
 pick kernel for softmax host/float/NCHW get 0 kernels
 pick kernel for softmax host/float/any get 0 kernels
 pick kernel for softmax host/any/NCHW get 0 kernels
@@ -3382,87 +3382,87 @@ pick kernel for softmax fpga/any/any get 0 kernels
 pick kernel for softmax fpga/any/NHWC get 0 kernels
 pick kernel for softmax fpga/float16/any get 0 kernels
 pick kernel for softmax fpga/float16/NHWC get 0 kernels
-I0816 20:12:11.044549  9496 optimizer.cc:127] == Finished running: identity_scale_eliminate_pass
-I0816 20:12:11.044557  9496 optimizer.cc:106] == Running pass: lite_scales_fuse_pass
-I0816 20:12:11.044647  9496 optimizer.cc:127] == Finished running: lite_scales_fuse_pass
-I0816 20:12:11.044654  9496 optimizer.cc:106] == Running pass: lite_sequence_reverse_embedding_fuse_pass
+I0818 11:25:49.783489 28150 optimizer.cc:127] == Finished running: identity_scale_eliminate_pass
+I0818 11:25:49.783493 28150 optimizer.cc:106] == Running pass: lite_scales_fuse_pass
+I0818 11:25:49.783526 28150 optimizer.cc:127] == Finished running: lite_scales_fuse_pass
+I0818 11:25:49.783529 28150 optimizer.cc:106] == Running pass: lite_sequence_reverse_embedding_fuse_pass
    - Skip lite_sequence_reverse_embedding_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044662  9496 optimizer.cc:115]    - Skip lite_sequence_reverse_embedding_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044667  9496 optimizer.cc:106] == Running pass: elementwise_mul_constant_eliminate_pass
-I0816 20:12:11.044783  9496 optimizer.cc:127] == Finished running: elementwise_mul_constant_eliminate_pass
-I0816 20:12:11.044792  9496 optimizer.cc:106] == Running pass: lite_sequence_pool_concat_fuse_pass
+I0818 11:25:49.783533 28150 optimizer.cc:115]    - Skip lite_sequence_reverse_embedding_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783536 28150 optimizer.cc:106] == Running pass: elementwise_mul_constant_eliminate_pass
+I0818 11:25:49.783589 28150 optimizer.cc:127] == Finished running: elementwise_mul_constant_eliminate_pass
+I0818 11:25:49.783593 28150 optimizer.cc:106] == Running pass: lite_sequence_pool_concat_fuse_pass
    - Skip lite_sequence_pool_concat_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044800  9496 optimizer.cc:115]    - Skip lite_sequence_pool_concat_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044806  9496 optimizer.cc:106] == Running pass: lite_scale_activation_fuse_pass
+I0818 11:25:49.783598 28150 optimizer.cc:115]    - Skip lite_sequence_pool_concat_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783601 28150 optimizer.cc:106] == Running pass: lite_scale_activation_fuse_pass
    - Skip lite_scale_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044839  9496 optimizer.cc:115]    - Skip lite_scale_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044845  9496 optimizer.cc:106] == Running pass: lite_scaleacts_fuse_pass
+I0818 11:25:49.783605 28150 optimizer.cc:115]    - Skip lite_scale_activation_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783608 28150 optimizer.cc:106] == Running pass: lite_scaleacts_fuse_pass
    - Skip lite_scaleacts_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044852  9496 optimizer.cc:115]    - Skip lite_scaleacts_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044857  9496 optimizer.cc:106] == Running pass: lite_elementwise_scale_fuse_pass
+I0818 11:25:49.783612 28150 optimizer.cc:115]    - Skip lite_scaleacts_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783615 28150 optimizer.cc:106] == Running pass: lite_elementwise_scale_fuse_pass
    - Skip lite_elementwise_scale_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044863  9496 optimizer.cc:115]    - Skip lite_elementwise_scale_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044868  9496 optimizer.cc:106] == Running pass: lite_instance_norm_activation_fuse_pass
+I0818 11:25:49.783619 28150 optimizer.cc:115]    - Skip lite_elementwise_scale_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783622 28150 optimizer.cc:106] == Running pass: lite_instance_norm_activation_fuse_pass
    - Skip lite_instance_norm_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044874  9496 optimizer.cc:115]    - Skip lite_instance_norm_activation_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044878  9496 optimizer.cc:106] == Running pass: lite_flatten_fc_fuse_pass
+I0818 11:25:49.783625 28150 optimizer.cc:115]    - Skip lite_instance_norm_activation_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783627 28150 optimizer.cc:106] == Running pass: lite_flatten_fc_fuse_pass
    - Skip lite_flatten_fc_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044885  9496 optimizer.cc:115]    - Skip lite_flatten_fc_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044889  9496 optimizer.cc:106] == Running pass: lite_fc_prelu_fuse_pass
+I0818 11:25:49.783632 28150 optimizer.cc:115]    - Skip lite_flatten_fc_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783634 28150 optimizer.cc:106] == Running pass: lite_fc_prelu_fuse_pass
    - Skip lite_fc_prelu_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044895  9496 optimizer.cc:115]    - Skip lite_fc_prelu_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.044900  9496 optimizer.cc:106] == Running pass: lite_elementwise_activation_fuse_pass
-I0816 20:12:11.045492  9496 optimizer.cc:127] == Finished running: lite_elementwise_activation_fuse_pass
-I0816 20:12:11.045508  9496 optimizer.cc:106] == Running pass: lite_conv_scale_fuse_pass
+I0818 11:25:49.783639 28150 optimizer.cc:115]    - Skip lite_fc_prelu_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.783643 28150 optimizer.cc:106] == Running pass: lite_elementwise_activation_fuse_pass
+I0818 11:25:49.784085 28150 optimizer.cc:127] == Finished running: lite_elementwise_activation_fuse_pass
+I0818 11:25:49.784090 28150 optimizer.cc:106] == Running pass: lite_conv_scale_fuse_pass
    - Skip lite_conv_scale_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045516  9496 optimizer.cc:115]    - Skip lite_conv_scale_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045521  9496 optimizer.cc:106] == Running pass: lite_conv_elementwise_tree_fuse_pass
+I0818 11:25:49.784096 28150 optimizer.cc:115]    - Skip lite_conv_scale_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.784098 28150 optimizer.cc:106] == Running pass: lite_conv_elementwise_tree_fuse_pass
    - Skip lite_conv_elementwise_tree_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045527  9496 optimizer.cc:115]    - Skip lite_conv_elementwise_tree_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045531  9496 optimizer.cc:106] == Running pass: lite_greater_than_cast_fuse_pass
+I0818 11:25:49.784102 28150 optimizer.cc:115]    - Skip lite_conv_elementwise_tree_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.784104 28150 optimizer.cc:106] == Running pass: lite_greater_than_cast_fuse_pass
    - Skip lite_greater_than_cast_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045538  9496 optimizer.cc:115]    - Skip lite_greater_than_cast_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045542  9496 optimizer.cc:106] == Running pass: fill_range_fuse_pass
+I0818 11:25:49.784108 28150 optimizer.cc:115]    - Skip lite_greater_than_cast_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.784111 28150 optimizer.cc:106] == Running pass: fill_range_fuse_pass
    - Skip fill_range_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045549  9496 optimizer.cc:115]    - Skip fill_range_fuse_pass because the target or kernel does not match.
-I0816 20:12:11.045553  9496 optimizer.cc:106] == Running pass: identity_dropout_eliminate_pass
+I0818 11:25:49.784116 28150 optimizer.cc:115]    - Skip fill_range_fuse_pass because the target or kernel does not match.
+I0818 11:25:49.784117 28150 optimizer.cc:106] == Running pass: identity_dropout_eliminate_pass
    - Skip identity_dropout_eliminate_pass because the target or kernel does not match.
-I0816 20:12:11.045560  9496 optimizer.cc:115]    - Skip identity_dropout_eliminate_pass because the target or kernel does not match.
-I0816 20:12:11.045564  9496 optimizer.cc:106] == Running pass: sparse_conv_detect_pass
+I0818 11:25:49.784121 28150 optimizer.cc:115]    - Skip identity_dropout_eliminate_pass because the target or kernel does not match.
+I0818 11:25:49.784124 28150 optimizer.cc:106] == Running pass: sparse_conv_detect_pass
    - Skip sparse_conv_detect_pass because the target or kernel does not match.
-I0816 20:12:11.045570  9496 optimizer.cc:115]    - Skip sparse_conv_detect_pass because the target or kernel does not match.
-I0816 20:12:11.045606  9496 optimizer.cc:106] == Running pass: keepdims_convert_pass
+I0818 11:25:49.784128 28150 optimizer.cc:115]    - Skip sparse_conv_detect_pass because the target or kernel does not match.
+I0818 11:25:49.784132 28150 optimizer.cc:106] == Running pass: keepdims_convert_pass
    - Skip keepdims_convert_pass because the target or kernel does not match.
-I0816 20:12:11.045614  9496 optimizer.cc:115]    - Skip keepdims_convert_pass because the target or kernel does not match.
-I0816 20:12:11.045619  9496 optimizer.cc:106] == Running pass: fix_mismatched_precision_pass
+I0818 11:25:49.784137 28150 optimizer.cc:115]    - Skip keepdims_convert_pass because the target or kernel does not match.
+I0818 11:25:49.784139 28150 optimizer.cc:106] == Running pass: fix_mismatched_precision_pass
    - Skip fix_mismatched_precision_pass because the target or kernel does not match.
-I0816 20:12:11.045625  9496 optimizer.cc:115]    - Skip fix_mismatched_precision_pass because the target or kernel does not match.
-I0816 20:12:11.045630  9496 optimizer.cc:106] == Running pass: quantization_parameters_propagation_pass
+I0818 11:25:49.784142 28150 optimizer.cc:115]    - Skip fix_mismatched_precision_pass because the target or kernel does not match.
+I0818 11:25:49.784145 28150 optimizer.cc:106] == Running pass: quantization_parameters_propagation_pass
    - Skip quantization_parameters_propagation_pass because the target or kernel does not match.
-I0816 20:12:11.045636  9496 optimizer.cc:115]    - Skip quantization_parameters_propagation_pass because the target or kernel does not match.
-I0816 20:12:11.045640  9496 optimizer.cc:106] == Running pass: restrict_quantized_op_with_same_input_output_scale_pass
+I0818 11:25:49.784149 28150 optimizer.cc:115]    - Skip quantization_parameters_propagation_pass because the target or kernel does not match.
+I0818 11:25:49.784152 28150 optimizer.cc:106] == Running pass: restrict_quantized_op_with_same_input_output_scale_pass
    - Skip restrict_quantized_op_with_same_input_output_scale_pass because the target or kernel does not match.
-I0816 20:12:11.045646  9496 optimizer.cc:115]    - Skip restrict_quantized_op_with_same_input_output_scale_pass because the target or kernel does not match.
-I0816 20:12:11.045650  9496 optimizer.cc:106] == Running pass: quantization_parameters_removal_pass
+I0818 11:25:49.784155 28150 optimizer.cc:115]    - Skip restrict_quantized_op_with_same_input_output_scale_pass because the target or kernel does not match.
+I0818 11:25:49.784158 28150 optimizer.cc:106] == Running pass: quantization_parameters_removal_pass
    - Skip quantization_parameters_removal_pass because the target or kernel does not match.
-I0816 20:12:11.045656  9496 optimizer.cc:115]    - Skip quantization_parameters_removal_pass because the target or kernel does not match.
-I0816 20:12:11.045660  9496 optimizer.cc:106] == Running pass: nnadapter_subgraph_pass
+I0818 11:25:49.784162 28150 optimizer.cc:115]    - Skip quantization_parameters_removal_pass because the target or kernel does not match.
+I0818 11:25:49.784164 28150 optimizer.cc:106] == Running pass: nnadapter_subgraph_pass
    - Skip nnadapter_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045666  9496 optimizer.cc:115]    - Skip nnadapter_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045670  9496 optimizer.cc:106] == Running pass: npu_subgraph_pass
+I0818 11:25:49.784168 28150 optimizer.cc:115]    - Skip nnadapter_subgraph_pass because the target or kernel does not match.
+I0818 11:25:49.784170 28150 optimizer.cc:106] == Running pass: npu_subgraph_pass
    - Skip npu_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045677  9496 optimizer.cc:115]    - Skip npu_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045682  9496 optimizer.cc:106] == Running pass: bm_subgraph_pass
+I0818 11:25:49.784174 28150 optimizer.cc:115]    - Skip npu_subgraph_pass because the target or kernel does not match.
+I0818 11:25:49.784178 28150 optimizer.cc:106] == Running pass: bm_subgraph_pass
    - Skip bm_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045689  9496 optimizer.cc:115]    - Skip bm_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045693  9496 optimizer.cc:106] == Running pass: mlu_subgraph_pass
+I0818 11:25:49.784181 28150 optimizer.cc:115]    - Skip bm_subgraph_pass because the target or kernel does not match.
+I0818 11:25:49.784183 28150 optimizer.cc:106] == Running pass: mlu_subgraph_pass
    - Skip mlu_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045699  9496 optimizer.cc:115]    - Skip mlu_subgraph_pass because the target or kernel does not match.
-I0816 20:12:11.045703  9496 optimizer.cc:106] == Running pass: fpga_concat_fuse_pass
-I0816 20:12:11.045753  9496 optimizer.cc:127] == Finished running: fpga_concat_fuse_pass
-I0816 20:12:11.045758  9496 optimizer.cc:106] == Running pass: control_flow_op_unused_inputs_and_outputs_eliminate_pass
+I0818 11:25:49.784188 28150 optimizer.cc:115]    - Skip mlu_subgraph_pass because the target or kernel does not match.
+I0818 11:25:49.784190 28150 optimizer.cc:106] == Running pass: fpga_concat_fuse_pass
+I0818 11:25:49.784220 28150 optimizer.cc:127] == Finished running: fpga_concat_fuse_pass
+I0818 11:25:49.784224 28150 optimizer.cc:106] == Running pass: control_flow_op_unused_inputs_and_outputs_eliminate_pass
    - Skip control_flow_op_unused_inputs_and_outputs_eliminate_pass because the target or kernel does not match.
-I0816 20:12:11.045765  9496 optimizer.cc:115]    - Skip control_flow_op_unused_inputs_and_outputs_eliminate_pass because the target or kernel does not match.
-I0816 20:12:11.045769  9496 optimizer.cc:106] == Running pass: static_kernel_pick_pass
-F0816 20:12:11.045840  9496 static_kernel_pick_pass.cc:71] Check failed: !instruct.kernels().empty() No kernels found for pool2d
+I0818 11:25:49.784227 28150 optimizer.cc:115]    - Skip control_flow_op_unused_inputs_and_outputs_eliminate_pass because the target or kernel does not match.
+I0818 11:25:49.784230 28150 optimizer.cc:106] == Running pass: static_kernel_pick_pass
+F0818 11:25:49.784257 28150 static_kernel_pick_pass.cc:71] Check failed: !instruct.kernels().empty() No kernels found for pool2d
 *** Check failure stack trace: ***
